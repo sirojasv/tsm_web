@@ -1,0 +1,11 @@
+---
+title: "Contacto"
+---
+
+Las presentaciones relativas a `R` y las evaluaciones estarán en esta plataforma y en Canvas. **Los videos de las clases solo estarán disponibles en Canvas**.
+
+Tendremos dos vías de comunicación:
+
+-   Canal de Slack o similares: `Pendiente de confirmación con el curso`
+
+-   Contacto vía correo: pueden hacer dudas o solicitar un horario de atención a [sirojas1@uc.cl](sirojas1@uc.cl) con copia a [daleal@uc.cl](daleal@uc.cl) .

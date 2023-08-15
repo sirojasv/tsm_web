@@ -1,0 +1,28 @@
+---
+title: "Clase 0"
+subtitle: "**Instalación de `R` y `RStudio`**"
+---
+
+::: {.callout-note title="Ideas más importantes"}
+1.  Instalación de R y RStudio
+
+2.  Personalización de RStudio
+
+3.  Uso de R en la nube
+:::
+
+## Presentación de la clase
+
+<iframe src="/slides/00_clase-0/class_0.html" height="550" width="100%" allowfullscreen="true">
+
+</iframe>
+
+<a href="/slides/00_clase-0/class_0.html" download="Descarga_clase_0.html" class="download-button">Descargar presentación</a>
+
+## Referencias
+
+-   Hands-On Programming with R: Write Your Own Functions and Simulations, Appendix: Installing R and RStudio. [Click aquí](https://rstudio-education.github.io/hopr/starting.html#how-to-download-and-install-r) ⏎
+
+::: {style="font-size: 0.875em;"}
+Vuelve a la [descripción del curso](/ "Descripción del curso") ⏎
+:::

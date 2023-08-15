@@ -1,0 +1,16 @@
+---
+title: "Bibliografía"
+---
+
+## Aprendizaje de R
+
+Wickham, H., Çetinkaya-Rundel, M & Grolemund, G (2023). R for Data Science (2e). Recurso disponible en [https://r4ds.hadley.nz/](https://r4ds.hadley.nz/). También está la primera versión en español disponible [aquí](https://es.r4ds.hadley.nz/)
+
+Urdinez, F., & Cruz, A. (2020). R for Political Data Science: A Practical Guide. CRC Press. Recurso en línea en español: [Click aquí](https://arcruz0.github.io/libroadp/)
+
+## Textos para aprendizaje de métodos cuantitativos
+
+Llaudet, E. Imai, K. (2022). Data Analysis for Social Science: A Friendly and Practical Introduction
+
+Imai, K., Webb, N. (2018). Quantitative Social Science: An Introduction. También hay una versión del 2022, llamada "Quantitative Social Science: An Introduction in tidyverse", pero no está disponible en la universidad.
+

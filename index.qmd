@@ -1,0 +1,69 @@
+---
+title: "Metodología Cuantitativa y Análisis de Regresión Múltiple"
+---
+
+## Descripción del curso
+
+Gran parte de la investigación contemporánea centrada en el diseño, implementación y evaluación de intervenciones sociales descansa en el uso de métodos cuantitativos. Las exigencias de los contextos de profesionales actuales en que se conducen intervenciones sociales requieren el desarrollo de un manejo cada vez mayor de metodologías de análisis cuantitativo de datos. El curso se centra tanto en el diseño de investigación cuantitativa como en los métodos descriptivos, inferenciales y correlacionales de análisis. También pretende introducir al uso y aplicaciones de técnicas de análisis de regresión lineal múltiple y logística binaria. 
+
+A lo largo del curso se desarrollan competencias básicas e intermedias de uso del programa estadístico `R`.
+
+
+## Objetivos de aprendizaje
+
+1.  Identificar tipos de problemas de análisis de datos cuantitativos.
+2.  Articular un diseño de investigación cuantitativo a partir de sus componentes.
+3.  Tomar decisiones estratégicas y fundadas del tipo de análisis a realizar para determinado tipo de datos.
+4.  Demostrar habilidades de análisis hipotético-deductivo.
+5.  Reportar resultados del análisis de datos cuantitativos
+
+## Calendario de clases
+
+Las clases estarán programas de la siguiente manera:
+
+|          |      Fecha       | Contenidos                   |                                Presentación                                 | Código |
+|---------------|:-------------:|---------------|:-------------:|:-------------:|
+| Sesión 0 |   15 de agosto   | Instalación de R y RStudio   | [📒](slides/00_clase-0/class_0.html "Clase 0"){aria-label="Clase 0 slides"} |        |
+| Sesión 1 |   23 de agosto   | Introducción a R             |                                                                             |        |
+| Sesión 2 |   30 de agosto   | Tipos y estructuras de datos |                                                                             |        |
+| Sesión 3 | 6 de septiembre  | Introducción a tidyverse     |                                      ️                                       |        |
+| Sesión 4 | 13 de septiembre | Estadística descriptiva      |                                                                             |        |
+| Sesión 5 | 20 de septiembre | Tablas de contingencia       |                                                                             |        |
+| Sesión 6 |  18 de octubre   | Intervalos de confianza      |                                                                             |        |
+| Sesión 7 |  8 de noviembre  | Prueba χ²                    |                                                                             |        |
+| Sesión 8 | 22 de noviembre  | Regresión lineal             |                                                                             |        |
+
+## Metodología del curso
+
+El curso es práctico por lo que tiene el propósito de enseñar a programar orientado proyectos, por lo que tendremos actividades:
+
+-   Clases expositivas.
+-   Desarrollo de ejercicios en clases.
+-   Talleres de aplicación en `R`.
+
+## Evaluaciones
+
+El curso tendrá 4 evaluaciones ponderadas y organizadas de la siguiente manera:
+
+|           |   Publicación    |     Entrega      | Curso                          | Ponderación | Evaluación | Solución |
+|-----------|:---------:|:---------:|-----------|:---------:|:---------:|:---------:|
+| Trabajo 1 |   30 de agosto   | 6 de septiembre  | Metodología Cuantitativa       |     50%     |            |          |
+| Trabajo 2 | 20 de septiembre | 27 de septiembre | Metodología Cuantitativa       |     50%     |            |          |
+| Trabajo 3 |  8 de noviembre  | 15 de noviembre  | Análisis de Regresión Múltiple |     50%     |            |          |
+| Trabajo 4 | 29 de noviembre  |  6 de diciembre  | Análisis de Regresión Múltiple |     50%     |            |          |
+
+**Todas las evaluaciones se deben enviar a través de la plataforma Canvas.**
+
+## Integridad académica
+
+Las faltas a la integridad académica son acciones de plagio, omitir información, fraude y/o adulteración de documentación cometidas de forma individual o colectiva, que atenten contra los valores de honestidad, veracidad, confianza, justicia, respeto y responsabilidad, dentro del marco de actividades académicas. 
+
+Los casos de falta a la integridad académica ocurridos durante la aplicación de alguna evaluación en este curso serán sancionados automáticamente con un 1.0. Adicionalmente, y conforme a la Política de Integridad Académica de la Universidad, toda falta también será derivada al Comité de Integridad Académica de la Facultad de Ciencias Sociales. Este órgano definirá la gravedad de la falta (leve, moderada o grave) y las consecuencias de dicha falta, con foco formativo. Una vez finalizado el proceso, se ingresará el caso en el Registro de Faltas a la Integridad Académica, y se realizará seguimiento del caso. En caso de que la o el estudiante no aceptase las consecuencias establecidas por la comisión, puede solicitar la revisión de su caso a la misma. 
+
+Una vez realizada la revisión, y si aún el o la estudiante no desea asumir las consecuencias planteadas por la comisión, podrá apelar a Secretaría General de la Universidad. Los detalles de la política y la gestión de faltas a la honestidad académica se encuentran aquí: <https://integridadacademica.uc.cl>
+
+## Contribuciones y agradecimientos
+
+Esta página usa como inspiración el trabajo de la profesora [Mine Çetinkaya-Rundel](https://mine-cr.com/), Directora de Estudios de Grado del Departamento de Ciencias Estadísticas de la Universidad de Duke.
+
+-   En caso de tener interés en ese curso, la dirección es: [STA 210](https://sta210-s22.github.io/website/)

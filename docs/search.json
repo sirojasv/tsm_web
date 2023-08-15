@@ -1,0 +1,128 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Metodología Cuantitativa y Análisis de Regresión Múltiple",
+    "section": "",
+    "text": "Gran parte de la investigación contemporánea centrada en el diseño, implementación y evaluación de intervenciones sociales descansa en el uso de métodos cuantitativos. Las exigencias de los contextos de profesionales actuales en que se conducen intervenciones sociales requieren el desarrollo de un manejo cada vez mayor de metodologías de análisis cuantitativo de datos. El curso se centra tanto en el diseño de investigación cuantitativa como en los métodos descriptivos, inferenciales y correlacionales de análisis. También pretende introducir al uso y aplicaciones de técnicas de análisis de regresión lineal múltiple y logística binaria.\nA lo largo del curso se desarrollan competencias básicas e intermedias de uso del programa estadístico R."
+  },
+  {
+    "objectID": "index.html#descripción-del-curso",
+    "href": "index.html#descripción-del-curso",
+    "title": "Metodología Cuantitativa y Análisis de Regresión Múltiple",
+    "section": "",
+    "text": "Gran parte de la investigación contemporánea centrada en el diseño, implementación y evaluación de intervenciones sociales descansa en el uso de métodos cuantitativos. Las exigencias de los contextos de profesionales actuales en que se conducen intervenciones sociales requieren el desarrollo de un manejo cada vez mayor de metodologías de análisis cuantitativo de datos. El curso se centra tanto en el diseño de investigación cuantitativa como en los métodos descriptivos, inferenciales y correlacionales de análisis. También pretende introducir al uso y aplicaciones de técnicas de análisis de regresión lineal múltiple y logística binaria.\nA lo largo del curso se desarrollan competencias básicas e intermedias de uso del programa estadístico R."
+  },
+  {
+    "objectID": "index.html#objetivos-de-aprendizaje",
+    "href": "index.html#objetivos-de-aprendizaje",
+    "title": "Metodología Cuantitativa y Análisis de Regresión Múltiple",
+    "section": "Objetivos de aprendizaje",
+    "text": "Objetivos de aprendizaje\n\nIdentificar tipos de problemas de análisis de datos cuantitativos.\nArticular un diseño de investigación cuantitativo a partir de sus componentes.\nTomar decisiones estratégicas y fundadas del tipo de análisis a realizar para determinado tipo de datos.\nDemostrar habilidades de análisis hipotético-deductivo.\nReportar resultados del análisis de datos cuantitativos"
+  },
+  {
+    "objectID": "index.html#calendario-de-clases",
+    "href": "index.html#calendario-de-clases",
+    "title": "Metodología Cuantitativa y Análisis de Regresión Múltiple",
+    "section": "Calendario de clases",
+    "text": "Calendario de clases\nLas clases estarán programas de la siguiente manera:\n\n\n\n\nFecha\nContenidos\nPresentación\nCódigo\n\n\n\n\nSesión 0\n15 de agosto\nInstalación de R y RStudio\n📒\n\n\n\nSesión 1\n23 de agosto\nIntroducción a R\n\n\n\n\nSesión 2\n30 de agosto\nTipos y estructuras de datos\n\n\n\n\nSesión 3\n6 de septiembre\nIntroducción a tidyverse\n️\n\n\n\nSesión 4\n13 de septiembre\nEstadística descriptiva\n\n\n\n\nSesión 5\n20 de septiembre\nTablas de contingencia\n\n\n\n\nSesión 6\n18 de octubre\nIntervalos de confianza\n\n\n\n\nSesión 7\n8 de noviembre\nPrueba χ²\n\n\n\n\nSesión 8\n22 de noviembre\nRegresión lineal"
+  },
+  {
+    "objectID": "index.html#metodología-del-curso",
+    "href": "index.html#metodología-del-curso",
+    "title": "Metodología Cuantitativa y Análisis de Regresión Múltiple",
+    "section": "Metodología del curso",
+    "text": "Metodología del curso\nEl curso es práctico por lo que tiene el propósito de enseñar a programar orientado proyectos, por lo que tendremos actividades:\n\nClases expositivas.\nDesarrollo de ejercicios en clases.\nTalleres de aplicación en R."
+  },
+  {
+    "objectID": "index.html#evaluaciones",
+    "href": "index.html#evaluaciones",
+    "title": "Metodología Cuantitativa y Análisis de Regresión Múltiple",
+    "section": "Evaluaciones",
+    "text": "Evaluaciones\nEl curso tendrá 4 evaluaciones ponderadas y organizadas de la siguiente manera:\n\n\n\n\n\n\n\n\n\n\n\n\n\nPublicación\nEntrega\nCurso\nPonderación\nEvaluación\nSolución\n\n\n\n\nTrabajo 1\n30 de agosto\n6 de septiembre\nMetodología Cuantitativa\n50%\n\n\n\n\nTrabajo 2\n20 de septiembre\n27 de septiembre\nMetodología Cuantitativa\n50%\n\n\n\n\nTrabajo 3\n8 de noviembre\n15 de noviembre\nAnálisis de Regresión Múltiple\n50%\n\n\n\n\nTrabajo 4\n29 de noviembre\n6 de diciembre\nAnálisis de Regresión Múltiple\n50%\n\n\n\n\n\nTodas las evaluaciones se deben enviar a través de la plataforma Canvas."
+  },
+  {
+    "objectID": "index.html#integridad-académica",
+    "href": "index.html#integridad-académica",
+    "title": "Metodología Cuantitativa y Análisis de Regresión Múltiple",
+    "section": "Integridad académica",
+    "text": "Integridad académica\nLas faltas a la integridad académica son acciones de plagio, omitir información, fraude y/o adulteración de documentación cometidas de forma individual o colectiva, que atenten contra los valores de honestidad, veracidad, confianza, justicia, respeto y responsabilidad, dentro del marco de actividades académicas.\nLos casos de falta a la integridad académica ocurridos durante la aplicación de alguna evaluación en este curso serán sancionados automáticamente con un 1.0. Adicionalmente, y conforme a la Política de Integridad Académica de la Universidad, toda falta también será derivada al Comité de Integridad Académica de la Facultad de Ciencias Sociales. Este órgano definirá la gravedad de la falta (leve, moderada o grave) y las consecuencias de dicha falta, con foco formativo. Una vez finalizado el proceso, se ingresará el caso en el Registro de Faltas a la Integridad Académica, y se realizará seguimiento del caso. En caso de que la o el estudiante no aceptase las consecuencias establecidas por la comisión, puede solicitar la revisión de su caso a la misma.\nUna vez realizada la revisión, y si aún el o la estudiante no desea asumir las consecuencias planteadas por la comisión, podrá apelar a Secretaría General de la Universidad. Los detalles de la política y la gestión de faltas a la honestidad académica se encuentran aquí: https://integridadacademica.uc.cl"
+  },
+  {
+    "objectID": "index.html#contribuciones-y-agradecimientos",
+    "href": "index.html#contribuciones-y-agradecimientos",
+    "title": "Metodología Cuantitativa y Análisis de Regresión Múltiple",
+    "section": "Contribuciones y agradecimientos",
+    "text": "Contribuciones y agradecimientos\nEsta página usa como inspiración el trabajo de la profesora Mine Çetinkaya-Rundel, Directora de Estudios de Grado del Departamento de Ciencias Estadísticas de la Universidad de Duke.\n\nEn caso de tener interés en ese curso, la dirección es: STA 210"
+  },
+  {
+    "objectID": "licenses.html",
+    "href": "licenses.html",
+    "title": "Licencia",
+    "section": "",
+    "text": "via GIPHY"
+  },
+  {
+    "objectID": "course-contact.html",
+    "href": "course-contact.html",
+    "title": "Contacto",
+    "section": "",
+    "text": "Las presentaciones relativas a R y las evaluaciones estarán en esta plataforma y en Canvas. Los videos de las clases solo estarán disponibles en Canvas.\nTendremos dos vías de comunicación:\n\nCanal de Slack o similares: Pendiente de confirmación con el curso\nContacto vía correo: pueden hacer dudas o solicitar un horario de atención a sirojas1@uc.cl con copia a daleal@uc.cl ."
+  },
+  {
+    "objectID": "class/header_clase_0.html",
+    "href": "class/header_clase_0.html",
+    "title": "Clase 0",
+    "section": "",
+    "text": "Ideas más importantes\n\n\n\n\nInstalación de R y RStudio\nPersonalización de RStudio\nUso de R en la nube"
+  },
+  {
+    "objectID": "class/header_clase_0.html#presentación-de-la-clase",
+    "href": "class/header_clase_0.html#presentación-de-la-clase",
+    "title": "Clase 0",
+    "section": "Presentación de la clase",
+    "text": "Presentación de la clase\n\n\nDescargar presentación"
+  },
+  {
+    "objectID": "class/header_clase_0.html#referencias",
+    "href": "class/header_clase_0.html#referencias",
+    "title": "Clase 0",
+    "section": "Referencias",
+    "text": "Referencias\n\nHands-On Programming with R: Write Your Own Functions and Simulations, Appendix: Installing R and RStudio. Click aquí ⏎\n\n\nVuelve a la descripción del curso ⏎"
+  },
+  {
+    "objectID": "course-bib.html",
+    "href": "course-bib.html",
+    "title": "Bibliografía",
+    "section": "",
+    "text": "Wickham, H., Çetinkaya-Rundel, M & Grolemund, G (2023). R for Data Science (2e). Recurso disponible en https://r4ds.hadley.nz/. También está la primera versión en español disponible aquí\nUrdinez, F., & Cruz, A. (2020). R for Political Data Science: A Practical Guide. CRC Press. Recurso en línea en español: Click aquí"
+  },
+  {
+    "objectID": "course-bib.html#aprendizaje-de-r",
+    "href": "course-bib.html#aprendizaje-de-r",
+    "title": "Bibliografía",
+    "section": "",
+    "text": "Wickham, H., Çetinkaya-Rundel, M & Grolemund, G (2023). R for Data Science (2e). Recurso disponible en https://r4ds.hadley.nz/. También está la primera versión en español disponible aquí\nUrdinez, F., & Cruz, A. (2020). R for Political Data Science: A Practical Guide. CRC Press. Recurso en línea en español: Click aquí"
+  },
+  {
+    "objectID": "course-bib.html#textos-para-aprendizaje-de-métodos-cuantitativos",
+    "href": "course-bib.html#textos-para-aprendizaje-de-métodos-cuantitativos",
+    "title": "Bibliografía",
+    "section": "Textos para aprendizaje de métodos cuantitativos",
+    "text": "Textos para aprendizaje de métodos cuantitativos\nLlaudet, E. Imai, K. (2022). Data Analysis for Social Science: A Friendly and Practical Introduction\nImai, K., Webb, N. (2018). Quantitative Social Science: An Introduction. También hay una versión del 2022, llamada “Quantitative Social Science: An Introduction in tidyverse”, pero no está disponible en la universidad."
+  },
+  {
+    "objectID": "course-team.html#profesor",
+    "href": "course-team.html#profesor",
+    "title": "Equipo docente",
+    "section": "Profesor",
+    "text": "Profesor\n\nDaniella Leal Valenzuela      daleal@uc.cl\nDescripción:\nEl trabajo que desarrollo está vinculado con la aplicación de metodologías de investigación cuantitativa en el área de encuestas sociales y análisis estadístico. Dentro de mis temas de interés se cuenta el desarrollo de tecnologías y su impacto en el ámbito social, así como temas emergentes asociados con los desafíos del BigData en la sociedad contemporánea.\n Áreas de interés:\nAnálisis de Datos, Big Data y Medios Digitales, Encuestas Sociales, Estadística Social, Metodología de la Investigación\n Educación:\n\nSocióloga, Pontificia Universidad Católica de Chile.\nMagister en Sociología, Pontificia Universidad Católica de Chile.\n\nLa profesora estará a cargo de las cátedras en las que se impartirán los contenidos del curso relativos al diseño de investigación social, estadística descriptiva, estadística inferencial y análisis de regresión."
+  },
+  {
+    "objectID": "course-team.html#ayudante",
+    "href": "course-team.html#ayudante",
+    "title": "Equipo docente",
+    "section": "Ayudante",
+    "text": "Ayudante\n\nSebastián Rojas Vergara       sirojas1@uc.cl      sirojasv\nTrabajo en las etapas del proceso de producción estadística en el marco de encuestas sociales a hogares, lo que involucra diseño de cuestionarion y su programación, validación de la información y análisis de datos. Además, me interesa muchísimo vincular el mundo de la programación con las ciencias sociales.\n Áreas de interés:\nEncuestas Sociales, Metodología de la Investigación, Programación, Desigualdad, Opinión Pública y Videojuegos.\n Educación:\n\nSociólogo, Pontificia Universidad Católica de Chile.\nMagister en Sociología, Pontificia Universidad Católica de Chile.\nDiplomado en Ciencia de Datos, Pontificia Universidad Católica de Chile.\nDiplomado Programación y Aplicaciones de Python, Pontificia Universidad Católica de Chile. (en curso)\n\nEl ayudante estará a cargo de la aplicación de los contenidos del curso en el software R."
+  }
+]
