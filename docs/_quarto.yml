@@ -69,9 +69,9 @@ website:
 format:
   html:
     theme:
-      light: [cosmo, theme.scss]
+      light: [pandoc, theme.scss]
       dark: [cosmo, theme-dark.scss]
-    mainfont: "Montserrat"
+    mainfont: "Roboto"
     toc: true
     code-copy: true
     code-link: true
