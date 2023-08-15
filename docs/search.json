@@ -1,5 +1,75 @@
 [
   {
+    "objectID": "slides/00_clase-0/class_0.html#hola",
+    "href": "slides/00_clase-0/class_0.html#hola",
+    "title": "Instalación R y RStudio",
+    "section": "¡Hola🫡!",
+    "text": "¡Hola🫡!\n\nEn esta presentación encontrarán las instrucciones para instalar los softwares de R y RStudio en el marco de los cursos de Metodología Cuantitativa (TSM301) y Análisis de Regresión Múltiple (TMS302).\nAntes de comenzar, les presentamos un video de apenas un minuto del canal de Youtube Fazt Code para que conozcan más sobre este lenguaje de programación."
+  },
+  {
+    "objectID": "slides/00_clase-0/class_0.html#instalación-de-r",
+    "href": "slides/00_clase-0/class_0.html#instalación-de-r",
+    "title": "Instalación R y RStudio",
+    "section": "Instalación de R",
+    "text": "Instalación de R\n\n\nDeben dirigirse a la página https://cran.r-project.org/bin/windows/base/\nLuego, verán una pantalla como la que se presenta en esta imagen. Seleccionen “Download R-4.3.1 for Windows”.\nUna vez den click, comenzará la descarga de un archivo. Deben ejecutarlo y dar “siguiente” en todas las opciones.\nSi tienen otro sistema operativo, como MacOS, pueden dirigirse acá."
+  },
+  {
+    "objectID": "slides/00_clase-0/class_0.html#instalar-rstudio-i",
+    "href": "slides/00_clase-0/class_0.html#instalar-rstudio-i",
+    "title": "Instalación R y RStudio",
+    "section": "Instalar RStudio I",
+    "text": "Instalar RStudio I\n\n\nDeben ingresar a https://posit.co/download/rstudio-desktop/\nLuego, deben seleccionar la opción “Install RStudio”. Esto iniciará una descarga, la que deben ejecutar una vez termine.\nEn caso de que el programa les pregunte por la versión de R, deben escoger la que está instalada en su computadora. Si aparece 32 o 64 bits, siempre seleccionen esta última."
+  },
+  {
+    "objectID": "slides/00_clase-0/class_0.html#instalar-rstudio-ii",
+    "href": "slides/00_clase-0/class_0.html#instalar-rstudio-ii",
+    "title": "Instalación R y RStudio",
+    "section": "Instalar RStudio II",
+    "text": "Instalar RStudio II\n\n\nPara iniciar busquen en la lupa de sus computadores “RStudio”.\nFinalmente, verán una pantalla como la que se muestra a continuación:"
+  },
+  {
+    "objectID": "slides/00_clase-0/class_0.html#personalización-en-rstudio-i",
+    "href": "slides/00_clase-0/class_0.html#personalización-en-rstudio-i",
+    "title": "Instalación R y RStudio",
+    "section": "Personalización en RStudio I",
+    "text": "Personalización en RStudio I\n\n\nTemas: Si quieren cambiar los colores del software deben realizar lo siguiente en el menú superior de RStudio: Tools → Global Options → Appearance → Editor Theme. Allí encontrarán varias opciones para escoger de acuerdo con su preferencia."
+  },
+  {
+    "objectID": "slides/00_clase-0/class_0.html#personalización-en-rstudio-ii",
+    "href": "slides/00_clase-0/class_0.html#personalización-en-rstudio-ii",
+    "title": "Instalación R y RStudio",
+    "section": "Personalización en RStudio II",
+    "text": "Personalización en RStudio II\n\nAhora veremos algunos ajustes opcionales en RStudio. ¡Les recomendamos que las activen para que les sea más fácil el trabajo!\n\n\n\n\nAutoajuste: Tools → Global Options → Code → Editing → Activen opción \"Soft-wrap R source files\". Con esta opción el texto se ajustará automáticamente al ancho de su ventana\n\n\n\n\n\nParéntesis arcoíris: Tools → Global Options → Code → Display → Activen opción \"use rainbow parentheses\". En R estaremos usando paréntesis para llamar las funciones. Esta opción facilitará la visualización de los paréntesis y su pareo. Más información veremos en clases!"
+  },
+  {
+    "objectID": "slides/00_clase-0/class_0.html#correr-r-en-la-nube",
+    "href": "slides/00_clase-0/class_0.html#correr-r-en-la-nube",
+    "title": "Instalación R y RStudio",
+    "section": "Correr R en la nube",
+    "text": "Correr R en la nube\n\nPara este curso les recomendamos completamente tener instalado R y RStudio en su computador. Sin embargo, por diferentes razones pueden necesitar utilizar R desde la nube. En las siguientes diapositivas se presentan dos opciones:\n\nRStudio Cloud\nGoogle Colab"
+  },
+  {
+    "objectID": "slides/00_clase-0/class_0.html#rstudio-cloud",
+    "href": "slides/00_clase-0/class_0.html#rstudio-cloud",
+    "title": "Instalación R y RStudio",
+    "section": "RStudio Cloud",
+    "text": "RStudio Cloud\n\n\nDeben crearse una cuenta en https://login.rstudio.cloud/login.\nLuego les preguntará hacia dónde quieren dirigirse. Deben seleccionar “Posit Cloud”.\nEn el menú superior derecho, hacer click donde dice New Proyect → New RStudio Proyect\". Luego, se les generará un entorno virtual idéntico a que si instalaran RStudio."
+  },
+  {
+    "objectID": "slides/00_clase-0/class_0.html#google-colab",
+    "href": "slides/00_clase-0/class_0.html#google-colab",
+    "title": "Instalación R y RStudio",
+    "section": "Google Colab",
+    "text": "Google Colab\n\nDeben iniciar sesión con una cuenta de Google en https://colab.research.google.com/.\n\nEn el menú superior izquierdo deben ir a Archivo → Nuevo Cuaderno\". Luego a Entorno de ejecución → Cambiar entorno de ejecución → Cambiar donde dice \"Python 3\" por \"R\".\nEn estos entornos tendrán celdas con código y celdas con texto 1.\nLas celdas se pueden iniciar con los botones y se ejecutan utilizando la combinación de teclado CTRL + ENTER\n\n\n\n\n\n\n\nEste entorno se los recomendamos para cuando tengan más clases del curso."
+  },
+  {
+    "objectID": "slides/00_clase-0/class_0.html#section",
+    "href": "slides/00_clase-0/class_0.html#section",
+    "title": "Instalación R y RStudio",
+    "section": "",
+    "text": "¡Gracias! \n\n\n\n\n\nMetodología Cuantitativa - 2023"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Metodología Cuantitativa y Análisis de Regresión Múltiple",
@@ -54,13 +124,6 @@
     "title": "Metodología Cuantitativa y Análisis de Regresión Múltiple",
     "section": "Contribuciones y agradecimientos",
     "text": "Contribuciones y agradecimientos\nEsta página usa como inspiración el trabajo de la profesora Mine Çetinkaya-Rundel, Directora de Estudios de Grado del Departamento de Ciencias Estadísticas de la Universidad de Duke.\n\nEn caso de tener interés en ese curso, la dirección es: STA 210"
-  },
-  {
-    "objectID": "licenses.html",
-    "href": "licenses.html",
-    "title": "Licencia",
-    "section": "",
-    "text": "via GIPHY"
   },
   {
     "objectID": "course-contact.html",
@@ -124,5 +187,12 @@
     "title": "Equipo docente",
     "section": "Ayudante",
     "text": "Ayudante\n\nSebastián Rojas Vergara       sirojas1@uc.cl      sirojasv\nTrabajo en las etapas del proceso de producción estadística en el marco de encuestas sociales a hogares, lo que involucra diseño de cuestionarion y su programación, validación de la información y análisis de datos. Además, me interesa muchísimo vincular el mundo de la programación con las ciencias sociales.\n Áreas de interés:\nEncuestas Sociales, Metodología de la Investigación, Programación, Desigualdad, Opinión Pública y Videojuegos.\n Educación:\n\nSociólogo, Pontificia Universidad Católica de Chile.\nMagister en Sociología, Pontificia Universidad Católica de Chile.\nDiplomado en Ciencia de Datos, Pontificia Universidad Católica de Chile.\nDiplomado Programación y Aplicaciones de Python, Pontificia Universidad Católica de Chile. (en curso)\n\nEl ayudante estará a cargo de la aplicación de los contenidos del curso en el software R."
+  },
+  {
+    "objectID": "licenses.html",
+    "href": "licenses.html",
+    "title": "Licencia",
+    "section": "",
+    "text": "via GIPHY"
   }
 ]
