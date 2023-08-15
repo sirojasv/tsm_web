@@ -66,8 +66,8 @@
     "objectID": "slides/00_clase-0/class_0.html#hola",
     "href": "slides/00_clase-0/class_0.html#hola",
     "title": "Instalación R y RStudio",
-    "section": "",
-    "text": "En esta presentación encontrarán las instrucciones para instalar los softwares de R y RStudio en el marco de los cursos de Metodología Cuantitativa (TSM301) y Análisis de Regresión Múltiple (TMS302).\nAntes de comenzar, les presentamos un video de apenas un minuto del canal de Youtube Fazt Code para que conozcan más sobre este lenguaje de programación."
+    "section": "¡Hola🫡!",
+    "text": "¡Hola🫡!\n\nEn esta presentación encontrarán las instrucciones para instalar los softwares de R y RStudio en el marco de los cursos de Metodología Cuantitativa (TSM301) y Análisis de Regresión Múltiple (TMS302).\nAntes de comenzar, les presentamos un video de apenas un minuto del canal de Youtube Fazt Code para que conozcan más sobre este lenguaje de programación."
   },
   {
     "objectID": "slides/00_clase-0/class_0.html#instalación-de-r",
@@ -123,14 +123,14 @@
     "href": "slides/00_clase-0/class_0.html#google-colab",
     "title": "Instalación R y RStudio",
     "section": "Google Colab",
-    "text": "Google Colab\n\nDeben iniciar sesión con una cuenta de Google en https://colab.research.google.com/.\n\nEn el menú superior izquierdo deben ir a Archivo → Nuevo Cuaderno\". Luego a Entorno de ejecución → Cambiar entorno de ejecución → Cambiar donde dice \"Python 3\" por \"R\".\nEn estos entornos tendrán celdas con código y celdas con texto 1.\nLas celdas se pueden iniciar con los botones y se ejecutan utilizando la combinación de teclado CTRL + ENTER\n\n1 Este entorno se los recomendamos para cuando tengan más clases del curso."
+    "text": "Google Colab\n\nDeben iniciar sesión con una cuenta de Google en https://colab.research.google.com/.\n\nEn el menú superior izquierdo deben ir a Archivo → Nuevo Cuaderno\". Luego a Entorno de ejecución → Cambiar entorno de ejecución → Cambiar donde dice \"Python 3\" por \"R\".\nEn estos entornos tendrán celdas con código y celdas con texto 1.\nLas celdas se pueden iniciar con los botones y se ejecutan utilizando la combinación de teclado CTRL + ENTER\n\n\n\n\n\n\n\nEste entorno se los recomendamos para cuando tengan más clases del curso."
   },
   {
     "objectID": "slides/00_clase-0/class_0.html#section",
     "href": "slides/00_clase-0/class_0.html#section",
     "title": "Instalación R y RStudio",
     "section": "",
-    "text": "¡Gracias!"
+    "text": "¡Gracias! \n\n\n\n\n\nMetodología Cuantitativa - 2023"
   },
   {
     "objectID": "course-team.html#profesor",

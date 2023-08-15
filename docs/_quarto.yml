@@ -88,6 +88,15 @@ format:
       body-width: 1000px
       margin-width: 250px
 
+comments:
+  giscus:
+    repo: sirojasv/tsm_web
+    category: Announcements
+    mapping: pathname
+    reactions-enabled: false
+    theme: preferred_color_scheme
+    language: es
+
 execute:
   freeze: auto
 
