@@ -19,7 +19,7 @@ A lo largo del curso se desarrollan competencias básicas e intermedias de uso d
 
 ## Calendario de clases
 
-Las clases estarán programas de la siguiente manera:
+La programación de las clases es la siguiente:
 
 |          |      Fecha       | Contenidos                   |                                Presentación                                 | Código |
 |---------------|:-------------:|---------------|:-------------:|:-------------:|
@@ -35,7 +35,7 @@ Las clases estarán programas de la siguiente manera:
 
 ## Metodología del curso
 
-El curso es práctico por lo que tiene el propósito de enseñar a programar orientado proyectos, por lo que tendremos actividades:
+El curso es de carácter práctico, por lo que tiene el propósito de enseñar a programar a través de proyectos concretos. Además, se contemplan las siguientes instancias:
 
 -   Clases expositivas.
 -   Desarrollo de ejercicios en clases.
