@@ -1,7 +1,7 @@
 project:
   type: website
   output-dir: docs
-  resources: [styles.css, theme.scss, theme-dark.scc, _quarto.yml]
+  resources: [styles.css, theme.scss, theme-dark.scss, _quarto.yml]
 
 lang: es
 
