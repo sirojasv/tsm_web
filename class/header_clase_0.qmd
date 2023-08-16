@@ -28,5 +28,3 @@ subtitle: "**Instalación de `R` y `RStudio`**"
 ::: {style="font-size: 0.875em;"}
 Vuelve a la [descripción del curso](/ "Descripción del curso") ⏎
 :::
-
-<div class="giscus"></div>

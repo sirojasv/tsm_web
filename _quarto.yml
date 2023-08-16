@@ -39,11 +39,11 @@ website:
       - icon: globe
         href: https://cursos.canvas.uc.cl/
         text: "Acceso a la plataforma Canvas"
-      - icon: discord
-        href: ""
-        text: "Dudas a través de Discord"
+      # - icon: discord
+      #   href: ""
+      #   text: "Dudas a través de Discord"
       - icon: envelope
-        href: mailto:sirojas1@uc.cl
+        href: mailto:sirojas1@uc.cl?cc=daleal@uc.cl
         text: "Contactar por mail"
 
     style: "docked"
