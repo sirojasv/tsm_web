@@ -1,7 +1,7 @@
 # Metodología Cuantitativa y Análisis de Regresión Múltiple
 
 
-**Sebastián Rojas Vergara** :mailbox_with_no_mail: sirojas1@uc.cl
+**Sebastián Rojas Vergara** 📧 sirojas1@uc.cl
 
 Sitio web del curso: [sirojasv.github.io/tsm_web/](https://sirojasv.github.io/tsm_web/)
 
