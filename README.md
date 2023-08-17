@@ -1,9 +1,15 @@
 # Metodología Cuantitativa y Análisis de Regresión Múltiple
 
+Repositorio de los cursos Metodología Cuantitativa y Análisis de Regresión Múltiple, segundo semestre de 2023. Magíster de Trabajo Social, Pontificia Universidad Católica de Chile.
 
-**Sebastián Rojas Vergara** 📧 sirojas1@uc.cl
+Profesora cátedras: **Daniella Leal Valenzuela** 📧 daleal@uc.cl
+Profesor clases de `R` y autor del sitio: **Sebastián Rojas Vergara** 📧 sirojas1@uc.cl
 
-Sitio web del curso: [sirojasv.github.io/tsm_web/](https://sirojasv.github.io/tsm_web/)
+Sitio web del curso: [sirojasv.github.io/tsm_web/](https://sirojasv.github.io/tsm_web/), elaborado con [`quarto`](https://quarto.org/)
+
+- Sistema de comentarios implementado con [`giscus`](https://giscus.app/es)
+
+- Logo del curso elaborado con el paquete [`hexSticker`](https://giscus.app/es)https://github.com/GuangchuangYu/hexSticker)
 
 ## Contribuciones y agradecimientos
 
