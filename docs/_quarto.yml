@@ -60,7 +60,7 @@ website:
             text: "Equipo docente"
           - href: course-contact.qmd
             text: "Atención de estudiantes"
-      - section: "Material de clases `R`"
+      - section: "Material de clases {{< fa brands r-project >}}"
         contents:
           - href: class/header_clase_0.qmd
             text: "Clase 0"
