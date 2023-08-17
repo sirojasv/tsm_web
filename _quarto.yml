@@ -24,7 +24,7 @@ website:
       <span class="faux-block">{{< fa brands creative-commons >}} {{< fa brands creative-commons-by >}} 2023, Sebastián Ignacio Rojas Vergara </span> <br>
       <span class="faux-block"> [Licencia de uso Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/) </span> <br>
     right: |
-      <span class="faux-block">Hecho con {{< fa brands r-project >}} y [Quarto](https://quarto.org) </span> <br>
+      <span class="faux-block">Desarrollado con {{< fa brands r-project >}} y [Quarto](https://quarto.org) </span> <br>
       <span class="faux-block">Revisa el código fuente en {{< fa brands github >}} [GitHub](https://github.com/sirojasv/tsm_web) </span>
 
   sidebar:
