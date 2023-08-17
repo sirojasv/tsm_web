@@ -10,7 +10,7 @@ Sitio web del curso: [sirojasv.github.io/tsm_web/](https://sirojasv.github.io/ts
 
 - Sistema de comentarios implementado con [`giscus`](https://giscus.app/es)
 
-- Logo del curso elaborado con el paquete [`hexSticker`](https://giscus.app/es)https://github.com/GuangchuangYu/hexSticker)
+- Logo del curso elaborado con el paquete [`hexSticker`](https://github.com/GuangchuangYu/hexSticker)
 
 ## Contribuciones y agradecimientos
 
