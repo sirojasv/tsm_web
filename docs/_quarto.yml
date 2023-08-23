@@ -64,6 +64,8 @@ website:
         contents:
           - href: class/header_clase_0.qmd
             text: "Clase 0"
+          - href: class/header_clase_1.qmd
+            text: "Clase 1"
       # - section: "Placeholder"
 
 format:
