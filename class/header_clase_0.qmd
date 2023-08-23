@@ -23,8 +23,6 @@ subtitle: "**Instalación de `R` y `RStudio`**"
 
 -   Hands-On Programming with R: Write Your Own Functions and Simulations, Appendix: Installing R and RStudio. [Click aquí](https://rstudio-education.github.io/hopr/starting.html#how-to-download-and-install-r) ⏎
 
-
-
 ::: {style="font-size: 0.875em;"}
 Vuelve a la [descripción del curso](/ "Descripción del curso") ⏎
 :::
