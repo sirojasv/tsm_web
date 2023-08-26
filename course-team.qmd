@@ -1,5 +1,6 @@
 ---
 title: "Equipo docente"
+comments: false
 ---
 
 ```{r}
@@ -15,11 +16,11 @@ title: "Equipo docente"
 
 El trabajo que desarrollo está vinculado con la aplicación de metodologías de investigación cuantitativa en el área de encuestas sociales y análisis estadístico. Dentro de mis temas de interés se cuenta el desarrollo de tecnologías y su impacto en el ámbito social, así como temas emergentes asociados con los desafíos del BigData en la sociedad contemporánea.
 
- `r fontawesome::fa(name = "book-bookmark", fill = "duotone")` **Áreas de interés:**
+ `r fontawesome::fa(name = "book-bookmark", fill = "duotone")` &nbsp; **Áreas de interés:**
  
  Análisis de Datos, Big Data y Medios Digitales, Encuestas Sociales, Estadística Social, Metodología de la Investigación
  
-`r fontawesome::fa(name = "graduation-cap", fill = "duotone")` **Educación**:
+`r fontawesome::fa(name = "graduation-cap", fill = "duotone")` &nbsp; **Educación**:
 
 -   Socióloga, Pontificia Universidad Católica de Chile.
 
@@ -39,11 +40,11 @@ La profesora estará a cargo de las cátedras en las que se impartirán los cont
 
 Trabajo en las etapas del proceso de producción estadística en el marco de encuestas sociales a hogares, lo que involucra diseño de cuestionarion y su programación, validación de la información y análisis de datos. Además, me interesa muchísimo vincular el mundo de la programación con las ciencias sociales.
 
- `r fontawesome::fa(name = "book-bookmark", fill = "duotone")` **Áreas de interés:**
+ `r fontawesome::fa(name = "book-bookmark", fill = "duotone")` &nbsp; **Áreas de interés:**
  
  Encuestas Sociales, Metodología de la Investigación, Programación, Desigualdad, Opinión Pública y Videojuegos.
 
-`r fontawesome::fa(name = "graduation-cap", fill = "duotone")` **Educación**:
+`r fontawesome::fa(name = "graduation-cap", fill = "duotone")` &nbsp; **Educación**:
 
 -   Sociólogo, Pontificia Universidad Católica de Chile.
 

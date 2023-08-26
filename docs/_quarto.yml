@@ -2,9 +2,7 @@ project:
   type: website
   output-dir: docs
   resources: [styles.css, theme.scss, theme-dark.scss, _quarto.yml]
-
 lang: es
-
 website:
   page-navigation: true
   title: "TSM"
@@ -84,6 +82,7 @@ format:
     fig-cap-location: margin
     reference-location: margin
     footnotes-hover: true
+    smooth-scroll: true
     link-external-newwindow: true
     highlight-style: monokai
     css: styles.css

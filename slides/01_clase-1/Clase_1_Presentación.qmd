@@ -27,6 +27,7 @@ format:
     logo: images/logo_puc_bn.png
     css: styles.css
     footer: "Metodología Cuantitativa - 2023"
+comments: false
 execute: 
   echo: true
 ---

@@ -5,7 +5,7 @@ subtitle: |
     | Curso: Metodología Cuantitativa.
     | Magíster en Trabajo Social, Pontificia Universidad Católica de Chile.
 author: "Sebastián Rojas Vergara"
-date: today
+# date: 
 # abstract: 
 # thanks:
 # order: 

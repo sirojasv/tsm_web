@@ -1,5 +1,6 @@
 ---
 title: "Metodología Cuantitativa y Análisis de Regresión Múltiple"
+comments: false
 ---
 
 ## Descripción del curso
@@ -21,7 +22,7 @@ A lo largo del curso se desarrollan competencias básicas e intermedias de uso d
 La programación de las clases es la siguiente:
 
 |          |      Fecha       | Contenidos                   |                                                   Presentación                                                    |                                                          Notas                                                           |                                                       Código                                                       |
-|------------|:----------:|------------|:----------:|:----------:|:----------:|
+|--------|:----------:|--------------------|:----------:|:----------:|:----------:|
 | Sesión 0 |   15 de agosto   | Instalación de R y RStudio   | <a href="/slides/00_clase-0/Clase_0_Presentación.html" title = "Ver clase en otra pestaña" target="_blank">📒</a> |                                                                                                                          |                                                                                                                    |
 | Sesión 1 |   23 de agosto   | Introducción a R             | <a href="/slides/01_clase-1/Clase_1_Presentación.html" title = "Ver clase en otra pestaña" target="_blank">📒</a> | <a href="/notes/01_clase_1_notas/Clase_1_Notas.html" title = "Ver notas de clase en otra pestaña" target="_blank">💻</a> | <a href="/codes/Clase 1_Código.R" download="Clase 1_Código.R" title = "Descargar código"> {{< fa download >}} </a> |
 | Sesión 2 |   30 de agosto   | Tipos y estructuras de datos |                                                                                                                   |                                                                                                                          |                                                                                                                    |
