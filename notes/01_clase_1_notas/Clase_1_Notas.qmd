@@ -1,0 +1,481 @@
+---
+# Título y Autor
+title: "Notas clase 1: Introducción a R"
+subtitle: |
+    | Curso: Metodología Cuantitativa.
+    | Magíster en Trabajo Social, Pontificia Universidad Católica de Chile.
+author: "Sebastián Rojas Vergara"
+date: today
+# abstract: 
+# thanks:
+# order: 
+# Opciones de formato
+format: 
+  html:
+    # Fuente
+    # Despliegue de código
+    code-fold: false
+    code-line-numbers: true
+    # Tema
+    theme:
+      light: flatly
+      dark: darkly
+    highlight-style: haddock
+    # Autocontenido
+    self-contained: true
+    # estilos
+    css: styles.css
+# Tabla de contenidos
+toc: true
+toc-depth: 4
+toc-location: left
+# Numeración
+number-sections: true
+# Figuras
+fig-align: center
+fig-cap-location: top
+# Notas al pie
+footnotes-hover: true
+# Lenguaje
+lang: "es"
+# Ejecución de código
+execute: 
+  echo: true
+---
+
+```{r}
+#| label: carga paquetes
+#| include: false
+library(tidyverse)
+```
+
+<img src="images/logo_puc_bn.png" alt="Mi Imagen" style="position: fixed; top: 0; right: 0; width: 150px; height: 90px;">
+
+
+## Bases{.unnumbered}
+
+En el siguiente documento se presentan aspectos importanes sobre vectores y matrices, así como una introducción a los dataframes y tibbles.
+
+## Vectores
+
+Los **vectores** son arreglos unidimensionales que solo pueden contener **un tipo de dato**. 
+
+### Crear vectores
+
+Los vectores se definen escribiendo `c()`, que viene del inglés *combine*. Cada uno de los elementos del vector se indican separando por coma. Se puede crear un objeto para guardar ese vector asignándole un nombre seguido de `<-`, como se muestra a continuación:
+
+```{r}
+#| eval: false
+nombre_objeto <- c() # Adentro van los elementos del vector
+```
+
+Por ejemplo, en los siguientes casos se definen tres vectores que corresponden a tres tipos de datos revisados en clases: `numeric`, `character` y `logical`. Estos cumplen con el requisito de tener solamente datos de un mismo tipo.
+
+Vector con elementos de tipo numérico
+
+```{r}
+# Definiendo mi primer vector numérico
+v_numerico <- c(1, 3, 5, 7, 9)
+```
+
+Además, en el caso de los vectores numéricos se puede indicar una secuencia utilizando la notación de dos puntos `:`.
+
+```{r}
+# Entrega un vector con valores del 1 al 5
+v_numerico_1 <- c(1:5)
+v_numerico_1 
+```
+
+O de igual forma se pueden combinar secuencias con números específicos y otra secuencia. Las secuencias pueden ser incrementales o decrementales.
+
+```{r}
+# Entrega un vector con valores del 1 al 5, 9 al 7 y el número 256
+v_numerico_2 <- c(1:5, 9:7, 256)
+v_numerico_2 
+```
+
+Vector con elementos de tipo caracter.
+
+```{r}
+# Definiendo mi primer vector de caracteres
+v_caracteres <- c("Hola Magíster de Trabajo Social", "Año 2023")
+```
+
+Vector con elementos de tipo lógico.
+
+```{r}
+# Definiendo mi primer vector logico
+v_logico <- c(TRUE, FALSE, TRUE, FALSE, TRUE)
+```
+
+Se puede comprobar que el elemento definido es un vector utilizando la función `is.vector()`. Esta recibe como argumento (lo que va dentro del paréntesis) el nombre del objeto. Si es un vector, retornará `TRUE`, y si no lo es, devolverá `FALSE`.
+
+```{r}
+# Comprobando que es un vector
+is.vector(v_numerico)
+```
+
+Para cualquier vector es posible obtener su largo, es decir, el número de elementos que contiene, usando la función `length()`. Esta función retornará el valor que corresponde al largo de ese vector.
+
+En el caso del vector numérico de ejemplo, este consta de 5 elementos.
+
+```{r}
+# Obteniendo el largo del vector
+length(v_numerico)
+```
+
+Podemos comprobar el tipo de dato del vector utilizando las funciones `class()` y `typeof()`
+
+  - La función `class()` devuelve la clase del objeto.
+  - La función `typeof()` determina el método interno que usa R para guardar ese objeto.
+  
+```{r}
+# Comprobamos la clase del vector numérico
+class(v_numerico)
+typeof(v_numerico)
+# Comprobamos la clase del vector de caracteres
+class(v_caracteres)
+typeof(v_caracteres)
+
+# Comprobamos la clase del vector lógico
+class(v_logico)
+typeof(v_logico)
+```
+
+Los vectores pueden elementos vacíos que se denotan como `NA`, que es un acrónimo de *Not Available*. Esto se utiliza para indicar la ausencia de un valor. Si el valor `NA` está definido en el vector, este contará como un elemento más.
+
+```{r}
+# Definiendo un vector numérico con NA
+v_numerico_na <- c(5, 10, 33, 77, 101, 256, 5, NA, NA)
+```
+
+```{r}
+# Definiendo un vector de caracteres con NA
+v_caracteres_na <- c("Hola", "Primera Clase", NA)
+```
+
+```{r}
+# Definiendo un vector lógico con NA
+v_logico_na <- c(TRUE, FALSE, NA)
+```
+
+```{r}
+length(v_numerico_na)
+length(v_caracteres_na)
+length(v_logico_na)
+```
+
+
+### Acceso a elementos
+
+Cada elemento de un vector tiene una posición asignada, comenzando desde el 1. Para acceder a la posición del vector indicaremos el nombre del vector, seguido de paréntesis cuadrados [] (i.e. `nombre_objeto[]`).
+
+Por ejemplo, podemos acceder al segundo elemento del vector numérico y del vector de caracteres.
+
+  
+```{r}
+# Acceder a la segunda posición
+v_numerico[2]
+v_caracteres[2]
+```
+
+```{r}
+# Acceder a la segunda posición
+v_caracteres[2]
+```
+
+Utilizando el símbolo de dos puntos `:` se puede indicar un rango de posiciones del vector a las que se quiere acceder.
+
+```{r}
+# Acceder a las tres primeras posiciones del vector
+v_numerico[1:3]
+```
+
+De igual forma, se pueden utilizar otras funciones de `R` para acceder a posiciones del vector. Por ejemplo, la función `length()` devuelve el largo de un vector (también funciona para otras estructuras de datos)
+
+```{r}
+# Accede siempre a la última posición sin conocer a priori su largo
+v_numerico[length(v_numerico)]
+```
+
+Y si se quiere acceder a la penúltima posición, basta con obtener el largo del vector y restarle 1.
+
+```{r}
+# Accede siempre a la penúltima posición sin conocer a priori su largo.
+v_numerico[length(v_numerico) - 1]
+```
+
+En caso de acceder a una posición que no esté definida, el programa indicará un valor vacío denonado por `NA`
+
+```{r}
+# Notar que en el vector definido no existe la posición 3
+v_caracteres[3]
+```
+
+### Modificar o eliminar elementos
+
+Dado un vector ya creado, es posible modificar o eliminar elementos de este. Si se desea eliminar, se debe anteponer un signo menos `-` indicando la posición que se quiere eliminar.
+
+En el ejemplo a continuación definimos usando un vector usando la función `seq`, que corresponde a una secuencia que toma tres argumentos:
+
+  - from: indica el comienzo de la secuencia
+  - to: indica el final de la secuencia
+  - by: indica el incremento de la secuencia
+  
+
+```{r}
+v_completo <- seq(from = 10, to = 50, by = 10)
+v_completo 
+
+# Ahora eliminaremos el elemento que corresponda a la quinta posición
+v_cortado <- v_completo[-4]
+v_cortado
+```
+Y ahora modificaremos el valor 50 para que pase a ser 90.
+
+```{r}
+# Ahora al valor que corresponde a 50 le asignaremos el valor 90.
+v_cortado[v_cortado == 50] <- 90
+v_cortado
+```
+
+:::{.callout-note}
+Existen muchas más operaciones para vectores, como ordenarlos, reemplazar texto, generar reglas de reemplazo, etc. Estas se irán revisando a lo largo del curso con las funciones del paquete `tidyverse()`
+:::
+
+### Combinar vectores
+
+Se pueden agregar elementos a un vector ya existente. Para ello, se puede emplear emplear la misma notación `c()`:
+
+```{r}
+# Combinando vectores
+
+mi_vector <- c("Los juegos")
+mi_vector <- c(mi_vector, "del hambre")
+# Notar que ahora este vector tiene dos elementos
+mi_vector
+```
+
+También se pueden crear vectores que son combinaciones de vectores
+
+```{r}
+# Creando vectores a partir de combinaciones de vectores
+mi_vector_1 <- c(1, 3, 5, 7)
+mi_vector_2 <- c(2, 4, 6, 8)
+mi_vetor_3 <- c(mi_vector_1, mi_vector_2)
+mi_vetor_3
+```
+
+### Coerción
+
+Cuando se crean o combinan vectores que tipos de datos diferentes, `R` realizará un proceso de **coerción** automáticamente. Es decir, buscará convertir los datos al tipo más flexible, siguiente unas reglas de jerarquía. El caso más simple es cuando se tienen datos de tipo `numeric` y `character`, donde el programa forzará a que los datos sean de este último tipo.
+
+```{r}
+# Al definirse tiene datos de distinto tipo
+mi_vector_coercion <- c(40, "50 años", 33, "33") # Las comillas indican que es texto
+
+# Pero R genera una coerción
+class(mi_vector_coercion)
+```
+
+### Operaciones con vectores
+
+También se pueden realizar operaciones matemáticas con los vectores, tales como sumas, multiplicaciones, restas, etc.
+
+```{r}
+# Multiplicar el vector por 2
+mi_vector_multiplicar <- c(2, 4, 6) * 2
+mi_vector_multiplicar
+```
+
+Como se puede apreciar, la operación de multiplicar se está aplicando a cada uno de los elementos del vector. 
+
+Esto nos introduce a un concepto de `R` conocido como **vectorización**. Esto quiere decir que hay operaciones que se aplican a cada uno de los elementos. 
+
+La vectorización funciona con otras estructuras de datos que veremos a lo largo del curso. Intuitivamente, bastará conocer que cuando una operación se puede vectorizar, su tiempo de ejecución es muy rápido.
+
+### Reciclar vectores
+
+Cuando dos vectores no tienen el mismo largo, `R` realizará un proceso que se conoce como reciclaje. Este consiste en que irá tomando cada uno de los valores del vector más corto para que operen con los elementos del vector que aún no tienen su "pareja". 
+
+En el ejemplo que se presenta a continuación, se han sumado los valores del siguiente modo:
+
+$$
+\begin{gathered}
+\ 2 + 4 
+\\
+\ 2 + 5
+\\
+\text{Se acaban los valores del primer vector} 
+\\
+\ 2 + 6 
+\\
+\ 3 + 8
+\\
+\text{Se recicla el valor 2 y 3 del primer vector} 
+\end{gathered}
+$$
+
+```{r}
+# Vectores de distinto tipo
+v_largo2 <- c(2, 3)
+v_largo3 <- c(4, 5, 6, 8)
+v_largo_com <- v_largo2 + v_largo3
+v_largo_com
+```
+
+## Matrices
+
+Las matrices son arreglos bidisimensionales que solo pueden contener un tipo de dato. Las matrices son una estructura con forma rectangular, formada por filas y columnas.
+
+### Crear matrices
+
+Se definen escribiendo `matrix()`. Al menos cuatro argumentos nos resultarán relevantes de las matrices:
+
+  - data: indica el vector de datos de la matriz
+  - nrow: indica el número de filas
+  - ncol: indica el número de columnas
+  - byrow: indica si el llenado es por filas o columnas. Por defecto viene en llenado por columnas.
+  
+Ejemplo de llenado por columnas
+
+```{r}
+matriz_1 <- matrix(1:9, ncol = 3) # Llenado por columnas
+matriz_1
+```
+Ejemplo de llenado por filas
+
+```{r}
+
+matriz_2 <- matrix(1:9, ncol = 3, byrow = TRUE) # Llenado por filas
+matriz_2
+```
+
+### Crear matriz a partir de vectores
+
+Es posible crear matrices a partir de la unión de vectores. Para ello se pueden usar las siguientes funciones:
+
+  - `cbind` que viene de *column bind* (unión por columnas) donde cada vector corresponde a una columna.
+  - `rbind` que viene de *row bind* (unión por filas)
+
+Ejemplos:
+
+```{r}
+v_parte_1 <- c(1:2)
+v_parte_2 <- c(3:4)
+v_parte_3 <- c(5:6)
+v_parte_4 <- c(7:8)
+
+matriz_columna <- cbind(v_parte_1, v_parte_2, v_parte_3, v_parte_4)
+matriz_columna
+matriz_fila <- rbind(v_parte_1, v_parte_2, v_parte_3, v_parte_4)
+matriz_fila 
+```
+
+### Acceso a elementos
+
+En R las matrices siempre siguen el orden (filas, columnas). Con esta lógica se puede seleccionar sus elementos: 
+
+$$
+\begin{gathered}
+\ \text{matriz}[i,j]
+\end{gathered}
+$$
+$$
+\begin{aligned}
+\text{Donde:} 
+\\
+\ \text{matriz}[i,] = \text{selecciona la \textbf{fila} i-ésima de la matriz.} 
+\\
+\ \text{matriz}[, j] = \text{selecciona la \textbf{columna} j-ésima de la matriz.} 
+\\
+\ \text{matriz}[i, j] = \text{selecciona el j-ésimo elemento de la i-ésima fila} 
+\end{aligned}
+$$
+   
+Realicemos un ejemplo con la `matriz_2`
+
+```{r}
+matriz_2[1, 1] # Estoy seleccionando la fila 1 columna 1
+matriz_2[2, 1] # Estoy seleccionando la fila 2 columna 1
+matriz_2[1, ] # Estoy seleccionando a toda la fila 1
+matriz_2[3, ] # Estoy seleccionando a toda la fila 3
+matriz_2[, 1] # Estoy seleccionando a toda la columna 1
+```
+
+## Dataframes y tibbles 
+
+### Generando dataframes y tibbles
+
+En R los **dataframes** son arreglos de datos bidimensionales (filas y columnas), pero que permiten distintos tipos de datos.
+
+Es el caso usual de datos estructurados que se ven en los cursos de análisis de datos: las filas representan observaciones y las columnas variables.
+
+Los **tibbles** son muy similares a los dataframe, pero con mejoras de calidad de vida. La función proviene del paquete `tidyverse`.
+
+Los dataframes se generan a través de la función `data.frame()`, mientras que los tibbles con `tibble()`.
+
+```{r}
+# Se definen los vectores de datos
+nombre <- c("Constanza", "Sofia", "Gonzalo")
+carrera <- c("Ingeniería", "Administración", "Arqueología")
+gen <- c(2013, 2018, 2023)
+```
+
+```{r}
+# Generando una base de datos con data.frame()
+data_estudiantes_df <- data.frame(nombre, carrera, gen)
+data_estudiantes_df
+
+```
+
+```{r}
+# Generando una base de datos con tibble()
+data_estudiantes_tb <- tibble(nombre, carrera, gen)
+data_estudiantes_tb
+```
+
+### Acceder a elementos
+
+En los tibbles y dataframes uno también puede seleccionar directamente filas o columnas. Para ello, existen dos opciones:
+
+  - Usar la notación de `$` para acceder a columnas específicas.
+
+  - Usar la notación de `[[]]` para acceder a columnas específicas.
+
+  - Usar la notación de matrices `[i, j]` para acceder a filas y columnas.
+
+```{r}
+#| eval: false
+nombre_base$nombre_variable
+nombre_base[i, j]
+nombre_base[[]]
+```
+
+Ejemplos:
+
+```{r}
+data_estudiantes_tb$nombre # accedemos a la columna nombre con $. Esto devuelve un vector
+data_estudiantes_tb["nombre"] # accedemos a la columna nombre con []. Esto devuelve un tibble
+data_estudiantes_tb[["nombre"]] # accedemos a la columna nombre con[[]] Esto devuelve un vector
+data_estudiantes_tb[[1]] # accedemos a la columna nombre con notación por posición [[]]
+```
+
+
+```{r}
+data_estudiantes_tb[1, "nombre"] # accedemos a la fila 1 de la columna nombre
+data_estudiantes_tb[1:2, "nombre"] # accedemos a la fila 1 y 2 de la columna nombre
+data_estudiantes_tb[[3, 1]] # Accedemos a la columna 3, fila 1
+data_estudiantes_tb[1,] # Accedemos a toda la fila 1
+data_estudiantes_tb[1,3] # Accedemos a la fila 1 columna 3
+```
+
+```{r}
+data_estudiantes_tb[, -c(1)] # accedemos a todas las columnas menos nombre, por posición
+data_estudiantes_tb[, -c(1:2)] # accedemos a todas las columnas menos la 1 y la 2
+data_estudiantes_tb[, names(data_estudiantes_tb) != "nombre"] # accedemos a todas las columnas menos nombre
+```
+
+```{r}
+data_estudiantes_tb[, !names(data_estudiantes_tb) %in% c("nombre", "carrera")]
+```

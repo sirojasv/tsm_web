@@ -1,0 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+/* Centrar texto respecto eje X e Y*/
+.center-xy {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+
+/* Fuente más grande*/
+.large-text {
+  font-size: 48px;
+}
+
+/* Imágenes con bordes redondeados*/
+.reveal img {
+  border-radius: 10px;
+}
+
+.fondo-gris {
+    background-color: lightgray;
+    border-radius: 10px;
+    font-weight: bold;
+    }
+
+/* Fuente más pequeña*/
+.mini-text {
+  font-size: 24px;
+}
+
+/* Fuente aún pequeña*/
+.mini-mini-text {
+  font-size: 12px;
+}

@@ -1,0 +1,30 @@
+---
+title: "Clase 1"
+subtitle: "**Introducción a R**"
+---
+
+::: {.callout-note title="Ideas más importantes"}
+1.  Concepto de "objeto" en R
+
+2.  Estructuras de datos: vectores, matrices, dataframes
+
+3.  Instalación de librerías o paquetes
+
+4.  Buenas prácticas para comentar código
+:::
+
+## Presentación de la clase
+
+<iframe src="/slides/01_clase-1/Clase_1_Presentación.html" height="550" width="100%" allowfullscreen="true">
+
+</iframe>
+
+<a href="/slides/01_clase-1/Clase_1_Presentación.html" download="Descarga_clase_1_presentación.html" class="download-button">Descargar presentación</a>
+
+## Notas clases 1
+
+<a href="/notes/01_clase_1_notas/Clase_1_Notas.html" download="Descarga_clase_1_notas.html" class="download-button">Descargar notas</a>
+
+::: {style="font-size: 0.875em;"}
+Vuelve a la [descripción del curso](/ "Descripción del curso") ⏎
+:::
