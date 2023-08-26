@@ -12,6 +12,8 @@ date-format: "dddd D MMMM, YYYY"
 format:
   revealjs: 
     slide-number: true
+    transition: slide
+    transition-speed: slow
     #chalkboard: 
       #buttons: false
     smaller: true
