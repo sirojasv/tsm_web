@@ -235,7 +235,7 @@
     "href": "slides/01_clase-1/Clase_1_Presentación.html#instalación-de-paquetes",
     "title": "Introducción a R",
     "section": "Instalación de paquetes",
-    "text": "Instalación de paquetes\n\nLos paquetes permiten agregar funciones adicionales a R. Para su instalación, debemos usar el comando install.packages(\"nombrepaquete\").\nSe debe tener mucho cuidado con especificar de manera correcta el comando, o arrojará error.\nPara utilizar el paquete ya instalado, en la sesión actual, se debe utilizar el comando library(\"nombrepaquete\").\nPrueben instalando y llamando el paquete tidyverse.\n\n\ninstall.packages(\"tidyverse\")\n\n\n# O un código más elegante, donde se instala solo si no lo tiene\n\nif (!require(\"tidyverse\")) install.packages(\"tidyverse\")\n\nLoading required package: tidyverse\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\n# Cuando el paquete ya está instalado, se debe ejecutar library()\n\nlibrary(tidyverse)"
+    "text": "Instalación de paquetes\n\nLos paquetes permiten agregar funciones adicionales a R. Para su instalación, debemos usar el comando install.packages(\"nombrepaquete\").\nSe debe tener mucho cuidado con especificar de manera correcta el comando, o arrojará error.\nPara utilizar el paquete ya instalado, en la sesión actual, se debe utilizar el comando library(\"nombrepaquete\").\nPrueben instalando y llamando el paquete tidyverse.\n\n\ninstall.packages(\"tidyverse\")\n\n\n# O un código más elegante, donde se instala solo si no lo tiene\n\nif (!require(\"tidyverse\")) install.packages(\"tidyverse\")\n\n\n# Cuando el paquete ya está instalado, se debe ejecutar library()\n\nlibrary(tidyverse)"
   },
   {
     "objectID": "slides/01_clase-1/Clase_1_Presentación.html#dataframe-y-tibble-2",
@@ -319,7 +319,7 @@
     "href": "course-contact.html",
     "title": "Contacto",
     "section": "",
-    "text": "Las presentaciones relativas a R y las evaluaciones estarán en esta plataforma y en Canvas. Los videos de las clases solo estarán disponibles en Canvas.\nTendremos dos vías de comunicación:\n\nForos: podrán realizar consultas directamente desde la plataforma Canvas o en esta página web. Para publicar en esta página deben crearse una cuenta en https://github.com/\nContacto vía correo: pueden hacer dudas o solicitar un horario de atención a sirojas1@uc.cl con copia a daleal@uc.cl ."
+    "text": "Las presentaciones relativas a R y las evaluaciones estarán en esta plataforma y en Canvas. Los videos de las clases solo estarán disponibles en Canvas.\nTendremos dos vías de comunicación:\n\nForos: podrán realizar consultas directamente desde la plataforma Canvas o en esta página web. Para publicar en esta página deben crearse una cuenta en hyphotesis. En la parte superior derecha de las páginas con los contenidos del curso la encontrarán.\nContacto vía correo: pueden hacer dudas o solicitar un horario de atención a sirojas1@uc.cl con copia a daleal@uc.cl ."
   },
   {
     "objectID": "class/header_clase_1.html",
@@ -382,14 +382,14 @@
     "href": "course-team.html#profesor",
     "title": "Equipo docente",
     "section": "Profesor",
-    "text": "Profesor\n\nDaniella Leal Valenzuela      daleal@uc.cl\nDescripción:\nEl trabajo que desarrollo está vinculado con la aplicación de metodologías de investigación cuantitativa en el área de encuestas sociales y análisis estadístico. Dentro de mis temas de interés se cuenta el desarrollo de tecnologías y su impacto en el ámbito social, así como temas emergentes asociados con los desafíos del BigData en la sociedad contemporánea.\nÁreas de interés:\nAnálisis de Datos, Big Data y Medios Digitales, Encuestas Sociales, Estadística Social, Metodología de la Investigación\nEducación:\n\nSocióloga, Pontificia Universidad Católica de Chile.\nMagister en Sociología, Pontificia Universidad Católica de Chile.\n\nLa profesora estará a cargo de las cátedras en las que se impartirán los contenidos del curso relativos al diseño de investigación social, estadística descriptiva, estadística inferencial y análisis de regresión."
+    "text": "Profesor\n\nDaniella Leal Valenzuela      daleal@uc.cl\nDescripción:\nEl trabajo que desarrollo está vinculado con la aplicación de metodologías de investigación cuantitativa en el área de encuestas sociales y análisis estadístico. Dentro de mis temas de interés se cuenta el desarrollo de tecnologías y su impacto en el ámbito social, así como temas emergentes asociados con los desafíos del BigData en la sociedad contemporánea.\n   Áreas de interés:\nAnálisis de Datos, Big Data y Medios Digitales, Encuestas Sociales, Estadística Social, Metodología de la Investigación\n   Educación:\n\nSocióloga, Pontificia Universidad Católica de Chile.\nMagister en Sociología, Pontificia Universidad Católica de Chile.\n\nLa profesora estará a cargo de las cátedras en las que se impartirán los contenidos del curso relativos al diseño de investigación social, estadística descriptiva, estadística inferencial y análisis de regresión."
   },
   {
     "objectID": "course-team.html#ayudante",
     "href": "course-team.html#ayudante",
     "title": "Equipo docente",
     "section": "Ayudante",
-    "text": "Ayudante\n\nSebastián Rojas Vergara       sirojas1@uc.cl      sirojasv\nTrabajo en las etapas del proceso de producción estadística en el marco de encuestas sociales a hogares, lo que involucra diseño de cuestionarion y su programación, validación de la información y análisis de datos. Además, me interesa muchísimo vincular el mundo de la programación con las ciencias sociales.\nÁreas de interés:\nEncuestas Sociales, Metodología de la Investigación, Programación, Desigualdad, Opinión Pública y Videojuegos.\nEducación:\n\nSociólogo, Pontificia Universidad Católica de Chile.\nMagister en Sociología, Pontificia Universidad Católica de Chile.\nDiplomado en Ciencia de Datos, Pontificia Universidad Católica de Chile.\nDiplomado Programación y Aplicaciones de Python, Pontificia Universidad Católica de Chile. (en curso)\n\nEl ayudante estará a cargo de la aplicación de los contenidos del curso en el software R."
+    "text": "Ayudante\n\nSebastián Rojas Vergara       sirojas1@uc.cl      sirojasv\nTrabajo en las etapas del proceso de producción estadística en el marco de encuestas sociales a hogares, lo que involucra diseño de cuestionarion y su programación, validación de la información y análisis de datos. Además, me interesa muchísimo vincular el mundo de la programación con las ciencias sociales.\n   Áreas de interés:\nEncuestas Sociales, Metodología de la Investigación, Programación, Desigualdad, Opinión Pública y Videojuegos.\n   Educación:\n\nSociólogo, Pontificia Universidad Católica de Chile.\nMagister en Sociología, Pontificia Universidad Católica de Chile.\nDiplomado en Ciencia de Datos, Pontificia Universidad Católica de Chile.\nDiplomado Programación y Aplicaciones de Python, Pontificia Universidad Católica de Chile. (en curso)\n\nEl ayudante estará a cargo de la aplicación de los contenidos del curso en el software R."
   },
   {
     "objectID": "slides/00_clase-0/Clase_0_Presentación.html",
@@ -557,7 +557,7 @@
     "href": "header_class/header_clase_1.html#presentación-de-la-clase",
     "title": "Clase 1",
     "section": "Presentación de la clase",
-    "text": "Presentación de la clase\n\n\nDescargar presentación"
+    "text": "Presentación de la clase\n\n\nDescargar presentación\n\nVuelve a la descripción del curso ⏎"
   },
   {
     "objectID": "header_class/header_clase_0.html",

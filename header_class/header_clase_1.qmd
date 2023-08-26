@@ -21,10 +21,6 @@ subtitle: "**Introducción a R**"
 
 <a href="/slides/01_clase-1/Clase_1_Presentación.html" download="Descarga_clase_1_presentación.html" class="download-button">Descargar presentación</a>
 
-## Notas clases 1
-
-<a href="/notes/01_clase_1_notas/Clase_1_Notas.html" download="Descarga_clase_1_notas.html" class="download-button">Descargar notas</a>
-
 ::: {style="font-size: 0.875em;"}
 Vuelve a la [descripción del curso](/ "Descripción del curso") ⏎
 :::

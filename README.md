@@ -8,7 +8,7 @@ Profesor clases de `R` y autor del sitio: **Sebastián Rojas Vergara** 📧 siro
 
 Sitio web del curso: [sirojasv.github.io/tsm_web/](https://sirojasv.github.io/tsm_web/), elaborado con [`quarto`](https://quarto.org/)
 
-- Sistema de comentarios implementado con [`giscus`](https://giscus.app/es)
+- Sistema de comentarios implementado gracias a [`hyphotes.is`](https://web.hypothes.is/)
 
 - Logo del curso elaborado con el paquete [`hexSticker`](https://github.com/GuangchuangYu/hexSticker)
 
