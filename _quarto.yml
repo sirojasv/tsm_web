@@ -13,7 +13,6 @@ website:
   repo-url: https://github.com/sirojasv/tsm_web
   repo-actions: [edit, issue]
   open-graph: true
-
   # twitter-card:
   #   creator: ""
   #   image: "path"
@@ -62,11 +61,14 @@ website:
             text: "Atención de estudiantes"
       - section: "Material de clases {{< fa brands r-project >}}"
         contents:
-          - href: class/header_clase_0.qmd
+          - href: header_class/header_clase_0.qmd
             text: "Clase 0"
-          - href: class/header_clase_1.qmd
+          - href: header_class/header_clase_1.qmd
             text: "Clase 1"
-      # - section: "Placeholder"
+      - section: "Notas {{< fa brands r-project >}}"
+        contents:
+          - href: notes/01_clase_1_notas/Clase_1_Notas.qmd
+            text: "Notas clase 1"
 
 format:
   html:
@@ -90,14 +92,17 @@ format:
       body-width: 1000px
       margin-width: 250px
 
+# comments:
+#   giscus:
+#     repo: sirojasv/tsm_web
+#     category: Announcements
+#     mapping: pathname
+#     reactions-enabled: false
+#     theme: preferred_color_scheme
+#     language: es
+
 comments:
-  giscus:
-    repo: sirojasv/tsm_web
-    category: Announcements
-    mapping: pathname
-    reactions-enabled: false
-    theme: preferred_color_scheme
-    language: es
+  hypothesis: true
 
 execute:
   freeze: auto
