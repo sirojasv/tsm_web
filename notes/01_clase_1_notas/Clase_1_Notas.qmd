@@ -39,6 +39,7 @@ footnotes-hover: true
 # Lenguaje
 lang: "es"
 # Ejecución de código
+comments: false
 execute: 
   echo: true
 ---
