@@ -5,6 +5,7 @@ project:
 lang: es
 website:
   page-navigation: true
+  favicon: "images/favicon.png"
   title: "TSM"
   description: "Metodología Cuantitativa y Análisis de Regresión Múltiple"
   site-url: "https://sirojasv.github.io/tsm_web"
