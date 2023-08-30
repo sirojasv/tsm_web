@@ -7,6 +7,6 @@ Las presentaciones relativas a `R` y las evaluaciones estarán en esta plataform
 
 Tendremos dos vías de comunicación:
 
--   **Foros:** podrán realizar consultas directamente desde la plataforma Canvas o en esta página web. Para publicar en esta página deben crearse una cuenta en [hyphotesis](https://web.hypothes.is/). En la parte superior derecha de las páginas con los contenidos del curso la encontrarán.
+-   **Foros:** podrán realizar consultas directamente desde la plataforma Canvas o en esta página web. Para publicar en esta página deben crearse una cuenta en [hyphotesis](mailto:https://web.hypothes.is/). En la parte superior derecha de las páginas con los contenidos del curso la encontrarán.
 
--   **Contacto vía correo:** pueden hacer dudas o solicitar un horario de atención a [sirojas1@uc.cl](sirojas1@uc.cl) con copia a [daleal@uc.cl](daleal@uc.cl) .
+-   **Contacto vía correo:** pueden hacer dudas o solicitar un horario de atención a [sirojas1@uc.cl](sirojas1@uc.cl) con copia a [daleal@uc.cl](mailto:daleal@uc.cl).

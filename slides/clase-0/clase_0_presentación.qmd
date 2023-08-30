@@ -1,0 +1,183 @@
+---
+title: "Instalación R y RStudio"
+subtitle: | 
+    | Metodología Cuantitativa - TSM301
+    | Clase 0
+author: "Sebastián Rojas Vergara - sirojas1@uc.cl"
+#institute:
+#order:
+date: 08/16/2023
+date-format: "dddd D MMMM, YYYY"
+# Format Options
+format:
+  revealjs: 
+    slide-number: true
+    transition: slide
+    transition-speed: slow
+    #chalkboard: 
+      #buttons: false
+    smaller: true
+    controls: true
+    toc: false
+    number-sections: false
+    fig-dpi: 400
+    fig-responsive: true
+    embed-resources: true
+    preview-links: auto
+    theme: [dark, aquamarine.scss]
+    logo: images/logo_puc_bn.png
+    css: styles.css
+    footer: "Metodología Cuantitativa - 2023"
+comments: false
+execute: 
+  echo: true
+---
+## ¡Hola🫡!
+
+::: {.justify}
+En esta presentación encontrarán las instrucciones para instalar los softwares de R y RStudio en el marco de los cursos de Metodología Cuantitativa (TSM301) y Análisis de Regresión Múltiple (TMS302).
+
+Antes de comenzar, les presentamos un video de apenas un minuto del canal de Youtube [Fazt Code](https://www.youtube.com/channel/UCMn28O1sQGochG94HdlthbA) para que conozcan más sobre este lenguaje de programación.
+
+
+{{< video https://www.youtube.com/watch?v=nKJ4i4OgkEI width="960" height="360" >}}
+
+:::
+
+## Instalación de R
+
+:::{.justify}
+- Deben dirigirse a la página 
+[https://cran.r-project.org/bin/windows/base/](https://cran.r-project.org/bin/windows/base/)
+
+- Luego, verán una pantalla como la que se presenta en esta imagen. Seleccionen "Download R-4.3.1 for Windows". 
+
+- Una vez den click, comenzará la descarga de un archivo. Deben ejecutarlo y dar "siguiente" en todas las opciones.
+
+- Si tienen otro sistema operativo, como MacOS, pueden dirigirse [acá](https://cran.r-project.org/bin/macosx/). 
+
+![](images/instalar_r.png){width="800" height="auto" fig-align=center}
+
+:::
+
+## Instalar RStudio I
+
+:::{.justify}
+
+- Deben ingresar a [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/)
+
+- Luego, deben seleccionar la opción "Install RStudio". Esto iniciará una descarga, la que deben ejecutar una vez termine.
+
+- En caso de que el programa les pregunte por la versión de R, deben escoger la que está instalada en su computadora. Si aparece 32 o 64 bits, siempre seleccionen esta última. 
+
+![](images/pagina_rstudio.png){width=600 height=auto fig-align=center}
+
+:::
+
+## Instalar RStudio II
+
+:::{.justify}
+
+- Para iniciar busquen en la lupa de sus computadores "RStudio". 
+
+- Finalmente, verán una pantalla como la que se muestra a continuación:
+
+
+![](images/rstudio.png){width=1000 height=auto fig-align=center}
+
+:::
+
+## Personalización en RStudio  I
+
+:::{.justify}
+
+- **Temas:** Si quieren cambiar los colores del software deben realizar lo siguiente en el menú superior de RStudio: `Tools → Global Options → Appearance → Editor Theme`. Allí encontrarán varias opciones para escoger de acuerdo con su preferencia.
+
+
+![](images/personalizacion_rstudio.png){width=400 height=auto fig-align=center}
+
+:::
+
+## Personalización en RStudio  II
+
+:::{.justify}
+
+Ahora veremos algunos ajustes opcionales en RStudio. ¡Les recomendamos que las activen para que les sea más fácil el trabajo!
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+:::{.justify}
+
+- **Autoajuste:** `Tools → Global Options → Code → Editing → Activen opción "Soft-wrap R source files"`. Con esta opción el texto se ajustará automáticamente al ancho de su ventana
+:::
+
+:::
+
+::: {.column width="50%"}
+
+:::{.justify}
+
+- **Paréntesis arcoíris:** `Tools → Global Options → Code → Display → Activen opción "use rainbow parentheses"`. En `R` estaremos usando paréntesis para llamar las funciones. Esta opción facilitará la visualización de los paréntesis y su pareo. Más información veremos en clases!
+
+:::
+
+:::
+
+::::
+
+:::
+
+## Correr R en la nube
+
+:::{.justify}
+
+Para este curso les recomendamos completamente tener instalado R y RStudio en su computador. Sin embargo, por diferentes razones pueden necesitar utilizar R desde la nube. En las siguientes diapositivas se presentan dos opciones:
+
+1. RStudio Cloud
+
+2. Google Colab
+
+:::
+
+## RStudio Cloud
+
+:::{.justify}
+
+1. Deben crearse una cuenta en [https://login.rstudio.cloud/login](https://login.rstudio.cloud/login).
+
+2. Luego les preguntará hacia dónde quieren dirigirse. Deben seleccionar "Posit Cloud". 
+
+3. En el menú superior derecho, hacer click donde dice `New Proyect → New RStudio Proyect"`. Luego, se les generará un entorno virtual idéntico a que si instalaran RStudio.
+
+
+![](images/rstudio_cloud.png){width=900 height=auto fig-align=center}
+
+:::
+## Google Colab
+
+:::{.justify}
+
+Deben iniciar sesión con una cuenta de Google en [https://colab.research.google.com/](https://colab.research.google.com/). 
+
+1. En el menú superior izquierdo deben ir a `Archivo → Nuevo Cuaderno"`. Luego a `Entorno de ejecución → Cambiar entorno de ejecución → Cambiar donde dice "Python 3" por "R"`. 
+
+2. En estos entornos tendrán celdas con código y celdas con texto ^[Este entorno se los recomendamos para cuando tengan más clases del curso.]. 
+
+3. Las celdas se pueden iniciar con los botones y se ejecutan utilizando la combinación de teclado `CTRL + ENTER`
+
+![](images/google_colab.png){width=700 height=auto fig-align=center}
+
+:::
+
+##  {background-color=rgb(25,25,25)}
+
+:::{.center-xy}
+
+<div class="large-text">
+<br>
+¡Gracias! <br>
+</div>
+:::
+

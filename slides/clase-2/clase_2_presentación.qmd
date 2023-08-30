@@ -1,0 +1,393 @@
+---
+# Title & Author
+title: "Tipos y estructuras de datos en R"
+subtitle: | 
+    | Metodología Cuantitativa - TSM301
+    | Clase 2
+author: "Sebastián Rojas Vergara - sirojas1@uc.cl"
+#institute:
+#order:
+date: 08/30/2023
+date-format: "dddd D MMMM, YYYY"
+# Format Options
+format:
+  revealjs: 
+    slide-number: true
+    transition: slide
+    transition-speed: slow
+    #chalkboard: 
+      #buttons: false
+    smaller: true
+    controls: true
+    toc: false
+    number-sections: false
+    fig-dpi: 400
+    fig-responsive: true
+    embed-resources: true
+    preview-links: auto
+    theme: [dark, aquamarine.scss]
+    logo: images/logo_puc_bn.png
+    css: styles.css
+    footer: "Metodología Cuantitativa - 2023"
+comments: false
+execute: 
+  echo: true
+---
+
+## Contenidos
+
+**I. Clase anterior**
+
+**II. Tibbles**
+
+**III. Tipos de datos**
+
+##  {background-color="rgb(25,25,25)"}
+
+::: center-xy
+::: large-text
+<br> I. Clase anterior <br>
+:::
+:::
+
+## Clase anterior
+
+1.  Concepto de objeto en `R`.
+
+2.  Vectores, matrices, dataframes/tibbles.
+
+3.  Instalación de paquetes.
+
+4.  Buenas prácticas para comentar código.
+
+## Glosario
+
+::: mini-text
+| Concepto                | Descripción                                                                                                                                                                                                         |
+|--------------------|----------------------------------------------------|
+| `Consola o terminal`    | Lugar donde se puede escribir código y que retorna o "imprime" los resultados asociados a ese código.                                                                                                               |
+| `Script`                | Archivo de texto o programa que incluye el código que queremos ejecutar.                                                                                                                                            |
+| `Directorio de trabajo` | En inglés *working directory*. Indica la ubicación de los archivos de entrada y salida.                                                                                                                             |
+| `Función`               | Conjunto de instrucciones que convierten las entradas o *inputs* en los resultados u *outputs* esperados. Las funciones tienen **argumentos**, que son las entradas que necesita o especificaciones para funcionar. |
+| `Paquetes`              | Conjunto de funciones agrupadas y distribuidas mediante una librería diseñadas para temas específicos. Por ejemplo, paquetes para visualizar datos.                                                                 |
+| `Vector`                | Unidad básica de datos en R.                                                                                                                                                                                        |
+| `Dataframe o tibble`    | Tabla organizada mediante filas y columnas.                                                                                                                                                                         |
+:::
+
+##  {background-color="rgb(25,25,25)"}
+
+::: center-xy
+::: large-text
+<br> II. Tibbles <br>
+:::
+:::
+
+## Tibbles/dataframes
+
+Una característica relevante de los tibbles/dataframes es que cada columna o variable corresponde a un vector. Esto permite aplicar una serie de funciones que están disponibles para vectores, tales como:
+
+::: mini-text
+-   `sum()`: retorna la suma de elementos
+
+-   `mean()`: retorna la media aritmetica.
+
+-   `median()`: retorna la mediana.
+
+-   `sd()`: retorna la desviación estándar:
+
+-   `max()`: retorna el valor máximo.
+
+-   `min()`: retorna el valor mínimo.
+
+-   `which.max()`: retorna la posición del valor máximo.
+
+-   `which.min()`: retorna la posición del valor mínimo.
+
+-   `range()`: retorna el rango.
+
+-   `rev()`: revierte el orden de los elementos.
+
+-   `unique()`: retorna la lista de elementos únicos.
+
+-   `length()`: retorna el largo.
+:::
+
+## Datos de ejemplo:
+
+Usaremos el paquete guaguas. Este contiene el primer nombre de los bebés registrados en Chile entre 1920 y 2021 según el Servicio de Registro Civil e Identificación.
+
+```{r}
+#| message: false
+# Cargamos el paquete
+if (!require("guaguas")) install.packages("guaguas")
+library(guaguas)
+```
+
+La base de datos contiene 858.782 observaciones para cinco variables, las cuales se describen a continuación:
+
+::: mini-text
+| Nombre     | Descripción                                                              |
+|----------------|--------------------------------------------------------|
+| anio       | Año de inscripción en el Servicio de Registro Civil e Identificación     |
+| nombre     | Primer nombre inscrito de la persona                                     |
+| sexo       | Sexo registral, con categorías "Femenino", "Masculino" e "Indeterminado" |
+| n          | Número de ocurrencias del nombre                                         |
+| proporcion | proporción del nombre respecto del total de inscripciones del año        |
+:::
+
+## Cargar datos
+
+Para comenzar, se debe instalar y luego cargar el paquete `guaguas`, el cual contiene el conjunto de datos.
+
+```{r}
+#| message: false
+# Cargamos el paquete
+if (!require("guaguas")) install.packages("guaguas")
+library(guaguas)
+```
+
+Luego, se asigna ese conjunto de datos a un objeto llamado `datos`.
+
+```{r}
+# Notar que el paquete guaguas tiene una función llamada "guaguas".
+datos <- guaguas
+```
+
+Se puede visualizar usando la función `View()`:
+
+```{r}
+#| eval: false
+View(datos)
+```
+
+![](images/dataframe.png){width="300" height="auto" fig-align="center"}
+
+A continuación se presentan algunas funciones con las que cuenta `R` para inspeccionar los datos.
+
+## Funciones: Estructura (1)
+
+-   `str()`: muestra la estructura de los datos.
+
+```{r}
+str(datos)
+```
+
+## Funciones: Estructura (2)
+
+-   `dim()`: indica las dimensiones de un objeto. En este caso, el número de filas y columnas.
+
+-   `nrow()`: indica el número de filas.
+
+-   `ncol()`: indica el número de columnas.
+
+-   `names()`: entrega o define el nombre de las columnas.
+
+```{r}
+dim(datos)
+nrow(datos)
+ncol(datos)
+names(datos)
+```
+
+## Funciones: Consultar (1)
+
+-   `head(x, n =)`: muestra las primeras `n` filas del objeto `x`.
+
+-   `tail(x, n =)`: muestra las primeras `n` filas del objeto `x`.
+
+```{r}
+head(datos, n = 4)
+tail(datos, n = 4)
+```
+
+## Funciones: Resumen (1)
+
+-   `summary()`: entrega estadísticos de resumen.
+
+```{r}
+summary(datos)
+```
+
+##  {background-color="rgb(25,25,25)"}
+
+::: center-xy
+::: large-text
+<br> III. Tipos de datos <br>
+:::
+:::
+
+## Tipos de datos
+
+Como revisamos en la clase anterior, `R` cuenta con una serie de tipos de datos definidos de antemano.
+
+::: mini-text
+| **Tipo**         | **Descripción**                                        | **Ejemplo**                                                                                                            |
+|-----------------|---------------------|---------------------------------------|
+| `integer`        | Números enteros                                        | -1, 0, 1                                                                                                               |
+| `numeric`        | Números reales                                         | -0.5, 1/2, 1                                                                                                           |
+| `character`      | Texto/String                                           | "Erwin", "Armin", "Sasha", "Titanes"                                                                                   |
+| `factor`         | Datos categóricos                                      | "Trabajo Social \[1\]", "Otra carrera \[2\]"                                                                           |
+| `haven_labelled` | Valores numéricos con etiquetas asociadas              | 1 = "Muy en desacuerdo"; 2 = "En desacuerdo"; 3 "Ni de acuerdo ni en desacuerdo"; 4 = "De acuerdo"; 5 "Muy de acuerdo" |
+| `logical`        | Verdadero o falso                                      | "TRUE", "FALSE"                                                                                                        |
+| `NA`             | Valores perdidos                                       | NA                                                                                                                     |
+| `NULL`           | Objetos nulos. Es devuelto por expresiones o funciones | NULL                                                                                                                   |
+:::
+
+## Enteros y numéricos (1)
+
+Representan números enteros, sin parte decimal. Pueden ser usados en operaciones matemáticas y en el contexto de bases de datos, contienen información para las observaciones.
+
+En este caso, seleccionaremos la columna "n" que es de tipo numérica.
+
+```{r}
+datos[, "n"]  # Seleccionamos todos los casos para la columna "n"
+```
+
+```{r}
+#| include: false
+datos[, 4]  # También podría haberse llamado por su posición
+```
+
+## Enteros y numéricos (2)
+
+Y podríamos ordenar las filas de esa columna de manera descendente y agregarle más columnas para tener información de contexto.
+
+```{r}
+datos[order(datos$n, decreasing = TRUE), c("anio", "nombre", "n")]
+```
+
+## Enteros y numéricos (3)
+
+Al aplicar operaciones matemáticas se debe tener cuidado con los datos perdidos.
+
+```{r}
+mis_numeros <- c(7, 25, 33, 26)
+mean(mis_numeros)
+```
+
+```{r}
+mis_numeros_na <- c(7, 25, 33, 26, NA)
+mean(mis_numeros_na)
+```
+
+La media no se puede calcular si hay valores perdidos. En estos casos se debe excluir los valores perdidos usando la opción `na.rm` con valor `TRUE`.
+
+```{r}
+#| code-line-numbers: "2"
+mis_numeros_na <- c(7, 25, 33, 26, NA)
+mean(mis_numeros_na, na.rm = TRUE)
+```
+
+## Strings o texto (1)
+
+Corresponden a cadenas de texto o también denominadas secuencias de caracteres. Se reconocen porque están encerradas en comillas simples `' '` o dobles `" "`.
+
+```{r}
+mi_texto <- "Bienvenido/a. Su nombre es:"
+```
+
+Con la función `paste()` se pueden concatenar strings. Además, cuenta con el argumento `sep` que indica el separador que tendrá el texto. Por defecto es un espacio vacío.
+
+```{r}
+paste(mi_texto, "Julio Cesar", sep = " ")
+```
+
+Y podemos usar cualquier separador.
+
+```{r}
+paste(mi_texto, "Julio Cesar", sep = "------>")
+```
+
+Y se pueden concatenar más de dos strings a la vez. En estos casos con el argumento `collapse()` para separar los resultados.
+
+```{r}
+paste(mi_texto, c("Julio Cesar", "Cesar Augusto", "Calígula"), collapse = "/---/")
+```
+
+## Strings o texto (2)
+
+También está la función `paste0()`. Esta no tiene como argumento `sep` y siempre concatenará sin espacios.
+
+```{r}
+mi_texto_2 <- "30/08/"
+paste0(mi_texto_2, "2023")
+```
+
+## Strings o texto (3)
+
+Otras funciones útiles son:
+
+-   `toupper(x)`: convierte el vector a mayúsculas.
+
+-   `tolower(x)`: convierte el vector a minúsculas.
+
+-   `nchar(x)`: retorna el número de caracteres del string.
+
+```{r}
+mi_texto_3 <- "Hola Mundo"
+toupper(mi_texto_3)
+tolower(mi_texto_3)
+nchar(mi_texto_3) # Cuenta 10 porque espacio también es un caracter
+```
+
+Además R cuenta con otras funciones base para strings tales como `grep()` `gsub()`.
+
+## Factores (1)
+
+Este es un tipo de dato específico de R para datos categóricos. Los factores toman un número acotado de valores distintos, los cuales son llamados `niveles` o `levels`.
+
+Ejemplo[^1]:
+
+[^1]: Ejemplo adaptado de R For Data Science, segunda edición.
+
+-   Suponga que tiene una variable con valores para cuatro meses. Usar esta variable como un string tiene al menos dos problemas:
+    -   Los valores válidos están restringidos a 12 categorías. Solo pueden ingresarse esos valores.
+    -   Si quiero ordenarlo, lo hará alfabéticamente.
+
+```{r}
+x1 <- c("Enero", "Febrero", "Marzo", "Abril")
+x2 <- c("Enero", "Febrerooo", "Marzooo", "Abril")
+sort(x1) # No ordena como quisiéramos, porque es un string
+```
+
+## Factores (2)
+
+Los factores buscan solucionar los problemas antes mencionados. Para crear un factor lo primero que debe hacerse es definir un vector de valores válidos, los que se asignarán al factor.
+
+```{r}
+meses_levels <- c(
+  "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+  "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+)
+
+factor_x1 <- factor(x1, levels = meses_levels)
+sort(factor_x1)
+```
+
+Y cualquier valor que no sea parte de los `levels` del factor se convertirá en `NA`.
+
+```{r}
+meses_levels <- c(
+  "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+  "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+)
+factor_x2 <- factor(x2, levels = meses_levels)
+factor_x2
+```
+
+## Factores (3)
+
+Los factores nativos de R tienen algunos inconvenientes:
+
+-   Convierten directamente en `NA` los valores sin emitir alertas. Esto puede ser riesgoso.
+-   Si no se le entregan los `levels` al factor, estos serán ordenados automáticamente de manera alfabética. Sin embargo, esto no es deseable, porque no todos los computadores ordenan los strings de la misma forma.
+
+Por estas razones en el curso preferiremos paquetes que los implementan de otro modo.
+
+##  {background-color="rgb(25,25,25)"}
+
+::: center-xy
+::: large-text
+<br> ¡Gracias! <br> <https://sirojasv.github.io/tsm_web/>
+:::
+:::

@@ -13,11 +13,11 @@ subtitle: "**Instalación de `R` y `RStudio`**"
 
 ## Presentación de la clase
 
-<iframe src="/slides/00_clase-0/Clase_0_Presentación.html" height="550" width="100%" allowfullscreen="true">
+<iframe src="/slides/clase-0/clase_0_presentación.html" height="550" width="100%" allowfullscreen="true">
 
 </iframe>
 
-<a href="/slides/00_clase-0/Clase_0_Presentación.html" download="Descarga_clase_0_presentación.html" class="download-button">Descargar presentación</a>
+<a href="/slides/clase-0/clase_0_presentación.html" download="Descarga_clase_0_presentación.html" class="download-button">Descargar presentación</a>
 
 ## Referencias
 

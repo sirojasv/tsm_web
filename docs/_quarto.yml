@@ -66,7 +66,7 @@ website:
             text: "Clase 1"
       - section: "Notas {{< fa brands r-project >}}"
         contents:
-          - href: notes/01_clase_1_notas/Clase_1_Notas.qmd
+          - href: notes/clase_1_notas/clase_1_notas.qmd
             text: "Notas clase 1"
 
 format:
