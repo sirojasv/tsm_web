@@ -64,6 +64,8 @@ website:
             text: "Clase 0"
           - href: header_class/header_clase_1.qmd
             text: "Clase 1"
+          - href: header_class/header_clase_2.qmd
+            text: "Clase 2"
       - section: "Notas {{< fa brands r-project >}}"
         contents:
           - href: notes/clase_1_notas/clase_1_notas.qmd
