@@ -550,7 +550,7 @@
     "href": "header_class/header_clase_1.html",
     "title": "Clase 1",
     "section": "",
-    "text": "Ideas más importantes\n\n\n\n\nConcepto de “objeto” en R\nEstructuras de datos: vectores, matrices, dataframes\nInstalación de librerías o paquetes\nBuenas prácticas para comentar código"
+    "text": "Ideas más importantes\n\n\n\n\nConcepto de “objeto” en R.\nEstructuras de datos: vectores, matrices, dataframes.\nInstalación de librerías o paquetes.\nBuenas prácticas para comentar código."
   },
   {
     "objectID": "header_class/header_clase_1.html#presentación-de-la-clase",
@@ -682,15 +682,15 @@
     "objectID": "slides/clase-1/clase_1_presentación.html#contenidos",
     "href": "slides/clase-1/clase_1_presentación.html#contenidos",
     "title": "Introducción a R",
-    "section": "Contenidos",
-    "text": "Contenidos\nI. Resumen clase anterior\nII. Listas\nIII. Tipos de datos"
+    "section": "",
+    "text": "I. ¿Qué es R?\nII. ¿Por qué usar R?\nIII. Iniciando R\nIV. Bases de R\nV. Comentando Scripts"
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#section",
     "href": "slides/clase-1/clase_1_presentación.html#section",
     "title": "Introducción a R",
     "section": "",
-    "text": "I. Resumen clase anterior"
+    "text": "I. ¿Qué es R?"
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#qué-es-r-1",
@@ -746,7 +746,7 @@
     "href": "slides/clase-1/clase_1_presentación.html#atajos-relevantes-para-correr-scripts",
     "title": "Introducción a R",
     "section": "Atajos relevantes para correr scripts",
-    "text": "Atajos relevantes para correr scripts\n\nCTRL/CMD + ENTER → Ejecuta la línea que tienen seleccionada en el curso\nCTRL/CMD + SHIFT + ENTER → Ejecuta todo el código\nCTR/CMD + L → Limpia toda la consola de resultados de R\nCTRL/CMD + S → Guarda el script. Si este no tiene nombre, primero pedirá guardarlo en un directorio y asignarle nombre"
+    "text": "Atajos relevantes para correr scripts\n\n\nCTRL/CMD + ENTER → Ejecuta la línea que tienen seleccionada en el curso\n\nCTRL/CMD + SHIFT + ENTER → Ejecuta todo el código\n\nCTR/CMD + L → Limpia toda la consola de resultados de R\n\nCTRL/CMD + S → Guarda el script. Si este no tiene nombre, primero pedirá guardarlo en un directorio y asignarle nombre"
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#section-3",
@@ -760,14 +760,14 @@
     "href": "slides/clase-1/clase_1_presentación.html#cálculos-en-r",
     "title": "Introducción a R",
     "section": "Cálculos en R",
-    "text": "Cálculos en R\nEs posible usar R como una calculadora. Las operaciones más utilizadas son las siguientes\n\n\n\n\nOperación\n\n\n\n\n+\nSuma\n\n\n-\nResta\n\n\n*\nMultiplicación\n\n\n/\nDivisión\n\n\n^\nPotencia\n\n\nsqrt\nRaíz cuadrada\n\n\nlog()\nLogaritmo base"
+    "text": "Cálculos en R\nEs posible usar R como una calculadora. Las operaciones más utilizadas son las siguientes\n\n\n\nOperación\n\n\n\n+\nSuma\n\n\n-\nResta\n\n\n*\nMultiplicación\n\n\n/\nDivisión\n\n\n^\nPotencia\n\n\nsqrt\nRaíz cuadrada\n\n\nlog()\nLogaritmo base"
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#objetos-en-r",
     "href": "slides/clase-1/clase_1_presentación.html#objetos-en-r",
     "title": "Introducción a R",
     "section": "Objetos en R",
-    "text": "Objetos en R\n\nEn R podemos crear objetos que guarden información o resultados. Para ello, se escribe el nombre y se les asigna los valores con el operador &lt;-.\nLos nombres permiten representar resultados de manera más fácil. Ejemplo:\n\nIngresamos tres notas y las dividimos por 3. Este resultado queda guardado en el objeto llamado “promedio”.\nLuego, si queremos ver el resultado, basta con llamar al objeto promedio.\nSi el nombre del objeto ya existe, se sobreescribirá su contenido.\n\n\n\n# Guardamos esta operación matemática en un objeto llamado \"promedio\"\n\npromedio &lt;- (5.5  + 3.8 + 6.1) / 3"
+    "text": "Objetos en R\n\nEn R podemos crear objetos que guarden información o resultados. Para ello, se escribe el nombre y se les asigna los valores con el operador &lt;-.\n\nLos nombres permiten representar resultados de manera más fácil. Ejemplo:\n\nIngresamos tres notas y las dividimos por 3. Este resultado queda guardado en el objeto llamado “promedio”.\nLuego, si queremos ver el resultado, basta con llamar al objeto promedio.\nSi el nombre del objeto ya existe, se sobreescribirá su contenido.\n\n\n\n\n# Guardamos esta operación matemática en un objeto llamado \"promedio\"\n\npromedio &lt;- (5.5  + 3.8 + 6.1) / 3"
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#nombrar-objetos",
@@ -781,14 +781,14 @@
     "href": "slides/clase-1/clase_1_presentación.html#estructuras-de-datos",
     "title": "Introducción a R",
     "section": "Estructuras de datos",
-    "text": "Estructuras de datos\n\nR cuenta con clases y tipos de datos definidos de antemano, los cuales dependen de la información que contengan en su interior. Los comandos class y typeof sirven para preguntar el tipo de cada elemento.\nEn la siguiente tabla se muestran algunos de las clases más frecuentes en R.\n\n\n\n\n\n\n\n\n\n\nTipo\nDescripción\nEjemplo\n\n\n\n\ninteger\nNúmeros enteros\n-1, 0, 1\n\n\nnumeric\nNúmeros reales\n-0.5, 1/2, 1\n\n\ncharacter\nTexto/String\n“Erwin”, “Armin”, “Sasha”, “Titanes”\n\n\nfactor\nDatos categóricos\n“Trabajo Social [1]”, “Otra carrera [2]”\n\n\nhaven_labelled\nValores numéricos con etiquetas asociadas\n1 = “Muy en desacuerdo”; 2 = “En desacuerdo”; 3 “Ni de acuerdo ni en desacuerdo”; 4 = “De acuerdo”; 5 “Muy de acuerdo”\n\n\nlogical\nVerdadero o falso\n“TRUE”, “FALSE”"
+    "text": "Estructuras de datos\n\nR cuenta con clases y tipos de datos definidos de antemano, los cuales dependen de la información que contengan en su interior. Los comandos class y typeof sirven para preguntar el tipo de cada elemento.\nEn la siguiente tabla se muestran algunas de las clases más frecuentes en R.\n\n\n\n\n\n\n\n\n\nTipo\nDescripción\nEjemplo\n\n\n\ninteger\nNúmeros enteros\n-1, 0, 1\n\n\nnumeric\nNúmeros reales\n-0.5, 1/2, 1\n\n\ncharacter\nTexto/String\n“Erwin”, “Armin”, “Sasha”, “Titanes”\n\n\nfactor\nDatos categóricos\n“Trabajo Social [1]”, “Otra carrera [2]”\n\n\nhaven_labelled\nValores numéricos con etiquetas asociadas\n1 = “Muy en desacuerdo”; 2 = “En desacuerdo”; 3 “Ni de acuerdo ni en desacuerdo”; 4 = “De acuerdo”; 5 “Muy de acuerdo”\n\n\nlogical\nVerdadero o falso\n“TRUE”, “FALSE”"
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#vectores-1",
     "href": "slides/clase-1/clase_1_presentación.html#vectores-1",
     "title": "Introducción a R",
     "section": "Vectores (1)",
-    "text": "Vectores (1)\nLos vectores son ordenamientos unidimensionales que solo pueden contener un tipo de dato. Se definen con el comando c().\nLos vectores tienen valores y además una posición (index) asociada a cada valor. Esta comienza desde el número 1 en adelante.\n\n\nv_numerico &lt;- c(1, 3, 5, 7, 9) # Vector que solo contiene números\nclass(v_numerico)\n\n[1] \"numeric\""
+    "text": "Vectores (1)\nLos vectores son ordenamientos unidimensionales que solo pueden contener un tipo de dato. Se definen con el comando c().\nLos vectores tienen valores y además una posición (index) asociada a cada valor. Esta comienza desde el número 1 en adelante.\n\n\n\n\n\nv_numerico &lt;- c(1, 3, 5, 7, 9) # Vector que solo contiene números\nclass(v_numerico)\n\n[1] \"numeric\""
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#vectores-2",
@@ -809,7 +809,7 @@
     "href": "slides/clase-1/clase_1_presentación.html#vectores-4",
     "title": "Introducción a R",
     "section": "Vectores (4)",
-    "text": "Vectores (4)\nEs posible acceder a cualquier elemento de un vector a través de su posición usando la notación []1.\n\n\n\nRespondamos algunas preguntas:\n\n¿De qué tipo es este vector?\n¿Cuántos elementos o qué largo tiene este vector?\n¿Cómo puedo acceder al primer elemento del vector?\n¿Cómo puedo acceder a los dos primeros elementos del vector?\n¿Cómo puedo acceder a la última posición, sin saber su largo a priori?\n\nNota: si tienen problemas para escribirlos con el teclado, pueden usar ALT + 91 para [ y ALT + 93 para ]. Usualmente con solo escribir uno R debería autocompletar."
+    "text": "Vectores (4)\nEs posible acceder a cualquier elemento de un vector a través de su posición usando la notación []1.1 Nota: si tienen problemas para escribirlos con el teclado, pueden usar ALT + 91 para [ y ALT + 93 para ]. Usualmente con solo escribir uno R debería autocompletar.\n\n\n\nRespondamos algunas preguntas:\n\n¿De qué tipo es este vector?\n¿Cuántos elementos o qué largo tiene este vector?\n¿Cómo puedo acceder al primer elemento del vector?\n¿Cómo puedo acceder a los dos primeros elementos del vector?\n¿Cómo puedo acceder a la última posición, sin saber su largo a priori?"
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#vectores-5",
@@ -837,7 +837,7 @@
     "href": "slides/clase-1/clase_1_presentación.html#acceder-a-elementos",
     "title": "Introducción a R",
     "section": "Acceder a elementos",
-    "text": "Acceder a elementos\n\nEn R las matrices siempre siguen el orden (filas, columnas). Con esta lógica se puede seleccionar sus elementos: mi_matriz[i, j] ~ i = filas, j = columnas.\n\nmi_matriz[i, ]: selecciona la fila i-ésima de la matriz.\nmi_matriz[, j]: selecciona la columna j-ésima de la matriz.\nmi_matriz[i, j]: selecciona el j-ésimo elemento de la i-ésima fila\n\n\nRealicemos un ejemplo con la matriz_2\n\nmatriz_2[1, 1] # Estoy seleccionando la fila 1 columna 1\n\n[1] 1\n\nmatriz_2[2, 1] # Estoy seleccionando la fila 2 columna 1\n\n[1] 4\n\nmatriz_2[1, ] # Estoy seleccionando a toda la fila 1\n\n[1] 1 2 3\n\nmatriz_2[3, ] # Estoy seleccionando a toda la fila 3\n\n[1] 7 8 9\n\nmatriz_2[, 1] # Estoy seleccionando a toda la columna 1\n\n[1] 1 4 7"
+    "text": "Acceder a elementos\n\n\nEn R las matrices siempre siguen el orden (filas, columnas). Con esta lógica se puede seleccionar sus elementos: mi_matriz[i, j] ~ i = filas, j = columnas.\n\n\nmi_matriz[i, ]: selecciona la fila i-ésima de la matriz.\n\nmi_matriz[, j]: selecciona la columna j-ésima de la matriz.\n\nmi_matriz[i, j]: selecciona el j-ésimo elemento de la i-ésima fila\n\n\n\nRealicemos un ejemplo con la matriz_2\n\nmatriz_2[1, 1] # Estoy seleccionando la fila 1 columna 1\n\n[1] 1\n\nmatriz_2[2, 1] # Estoy seleccionando la fila 2 columna 1\n\n[1] 4\n\nmatriz_2[1, ] # Estoy seleccionando a toda la fila 1\n\n[1] 1 2 3\n\nmatriz_2[3, ] # Estoy seleccionando a toda la fila 3\n\n[1] 7 8 9\n\nmatriz_2[, 1] # Estoy seleccionando a toda la columna 1\n\n[1] 1 4 7"
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#dataframe-y-tibble-1",
@@ -907,21 +907,21 @@
     "href": "slides/clase-1/clase_1_presentación.html#seccionar-un-script",
     "title": "Introducción a R",
     "section": "Seccionar un script",
-    "text": "Seccionar un script\nSe puede establecer un orden de títulos y subtítulos que ordenen el script mediante el siguiente esquema:\n\n# y cuatro guiones medios indican una sección.\n## y cuatro guiones medios indican una subsección anidada a la sección.\n### y cuatro guiones medios indican una sub-subsección.\n\n\n# Proceso 1 ----\n\n## Subproceso 1.1 ----\n\n### Sub-subproceso 1.1.1 ----\n\nPara ver la barra de navegación utilizamos el atajo CTRL/CMD + SHIFT + O."
+    "text": "Seccionar un script\nSe puede establecer un orden de títulos y subtítulos que ordenen el script mediante el siguiente esquema:\n\n\n# y cuatro guiones medios indican una sección.\n\n## y cuatro guiones medios indican una subsección anidada a la sección.\n\n### y cuatro guiones medios indican una sub-subsección.\n\n\n# Proceso 1 ----\n\n## Subproceso 1.1 ----\n\n### Sub-subproceso 1.1.1 ----\n\nPara ver la barra de navegación utilizamos el atajo CTRL/CMD + SHIFT + O."
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#guardar-un-script",
     "href": "slides/clase-1/clase_1_presentación.html#guardar-un-script",
     "title": "Introducción a R",
     "section": "Guardar un script",
-    "text": "Guardar un script\n\nSi queremos guardar este script, tenemos tres alternativas:\n\nSeleccionar el ícono de disquette que está sobre el script.\nIr a File → Save.\nUsar el atajo CTRL/CMD + S.\n\nPor último, tener en cuenta que RStudio cuenta con autocompletado y un diagnóstico de errores (aparecerá un ícono con una marca roja en forma de “x” en la línea donde hay problemas)."
+    "text": "Guardar un script\n\n\nSi queremos guardar este script, tenemos tres alternativas:\n\nSeleccionar el ícono de disquette que está sobre el script.\nIr a File → Save.\nUsar el atajo CTRL/CMD + S.\n\n\nPor último, tener en cuenta que RStudio cuenta con autocompletado y un diagnóstico de errores (aparecerá un ícono con una marca roja en forma de “x” en la línea donde hay problemas)."
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#section-4",
     "href": "slides/clase-1/clase_1_presentación.html#section-4",
     "title": "Introducción a R",
     "section": "",
-    "text": "¡Gracias!  https://sirojasv.github.io/tsm_web/\n\n\n\n\n\nMetodología Cuantitativa - 2023"
+    "text": "¡Gracias! https://sirojasv.github.io/tsm_web/"
   },
   {
     "objectID": "notes/clase_1_notas/clase_1_notas.html#bases",
@@ -1032,8 +1032,8 @@
     "objectID": "slides/clase-2/clase_2_presentación.html#contenidos",
     "href": "slides/clase-2/clase_2_presentación.html#contenidos",
     "title": "Tipos y estructuras de datos en R",
-    "section": "Contenidos",
-    "text": "Contenidos\nI. Clase anterior\nII. Tibbles\nIII. Tipos de datos"
+    "section": "",
+    "text": "I. Clase anterior\nII. Tibbles\nIII. Tipos de datos"
   },
   {
     "objectID": "slides/clase-2/clase_2_presentación.html#section",
@@ -1103,7 +1103,7 @@
     "href": "slides/clase-2/clase_2_presentación.html#section-3",
     "title": "Tipos y estructuras de datos en R",
     "section": "",
-    "text": "¡Gracias!  https://sirojasv.github.io/tsm_web/\n\n\n\n\n\nMetodología Cuantitativa - 2023"
+    "text": "¡Gracias! https://sirojasv.github.io/tsm_web/"
   },
   {
     "objectID": "slides/clase-2/clase_2_presentación.html#cálculos-en-r",
@@ -1306,7 +1306,7 @@
     "href": "slides/clase-2/clase_2_presentación.html#cargar-datos",
     "title": "Tipos y estructuras de datos en R",
     "section": "Cargar datos",
-    "text": "Cargar datos\nPara comenzar, se debe instalar y luego cargar el paquete guaguas, el cual contiene el conjunto de datos.\n\n# Cargamos el paquete\nif (!require(\"guaguas\")) install.packages(\"guaguas\")\nlibrary(guaguas)\n\nLuego, se asigna ese conjunto de datos a un objeto llamado datos.\n\n# Notar que el paquete guaguas tiene una función llamada \"guaguas\".\ndatos &lt;- guaguas\n\nSe puede visualizar usando la función View():\n\nView(datos)\n\n\nA continuación se presentan algunas funciones con las que cuenta R para inspeccionar los datos."
+    "text": "Cargar datos\nPara comenzar, se debe instalar y luego cargar el paquete guaguas, el cual contiene el conjunto de datos.\n\n# Cargamos el paquete\nif (!require(\"guaguas\")) install.packages(\"guaguas\")\nlibrary(guaguas)\n\nLuego, se asigna ese conjunto de datos a un objeto llamado datos.\n\n# Notar que el paquete guaguas tiene una función llamada \"guaguas\".\ndatos &lt;- guaguas\n\nSe puede visualizar usando la función View():\n\nView(datos)\n\n\n\n\n\nA continuación se presentan algunas funciones con las que cuenta R para inspeccionar los datos."
   },
   {
     "objectID": "slides/clase-2/clase_2_presentación.html#funciones",
@@ -1320,14 +1320,14 @@
     "href": "slides/clase-2/clase_2_presentación.html#datos-de-ejemplo",
     "title": "Tipos y estructuras de datos en R",
     "section": "Datos de ejemplo:",
-    "text": "Datos de ejemplo:\nUsaremos el paquete guaguas. Este contiene el primer nombre de los bebés registrados en Chile entre 1920 y 2021 según el Servicio de Registro Civil e Identificación.\n\n# Cargamos el paquete\nif (!require(\"guaguas\")) install.packages(\"guaguas\")\nlibrary(guaguas)\n\nLa base de datos contiene 858.782 observaciones para cinco variables, las cuales se describen a continuación:\n\n\n\n\n\n\n\n\nNombre\nDescripción\n\n\n\n\nanio\nAño de inscripción en el Servicio de Registro Civil e Identificación\n\n\nnombre\nPrimer nombre inscrito de la persona\n\n\nsexo\nSexo registral, con categorías “Femenino”, “Masculino” e “Indeterminado”\n\n\nn\nNúmero de ocurrencias del nombre\n\n\nproporcion\nproporción del nombre respecto del total de inscripciones del año"
+    "text": "Datos de ejemplo:\nUsaremos el paquete guaguas. Este contiene el primer nombre de los bebés registrados en Chile entre 1920 y 2021 según el Servicio de Registro Civil e Identificación.\n\n# Cargamos el paquete\nif (!require(\"guaguas\")) install.packages(\"guaguas\")\nlibrary(guaguas)\n\nLa base de datos contiene 858.782 observaciones para cinco variables, las cuales se describen a continuación:\n\n\n\n\n\n\n\nNombre\nDescripción\n\n\n\nanio\nAño de inscripción en el Servicio de Registro Civil e Identificación\n\n\nnombre\nPrimer nombre inscrito de la persona\n\n\nsexo\nSexo registral, con categorías “Femenino”, “Masculino” e “Indeterminado”\n\n\nn\nNúmero de ocurrencias del nombre\n\n\nproporcion\nproporción del nombre respecto del total de inscripciones del año"
   },
   {
     "objectID": "slides/clase-2/clase_2_presentación.html#funciones-estructura-1",
     "href": "slides/clase-2/clase_2_presentación.html#funciones-estructura-1",
     "title": "Tipos y estructuras de datos en R",
     "section": "Funciones: Estructura (1)",
-    "text": "Funciones: Estructura (1)\n\nstr(): muestra la estructura de los datos.\n\n\nstr(datos)\n\ntibble [858,782 × 5] (S3: tbl_df/tbl/data.frame)\n $ anio      : num [1:858782] 1920 1920 1920 1920 1920 1920 1920 1920 1920 1920 ...\n $ nombre    : chr [1:858782] \"María\" \"José\" \"Juan\" \"Luis\" ...\n $ sexo      : chr [1:858782] \"F\" \"M\" \"M\" \"M\" ...\n $ n         : num [1:858782] 2130 984 636 631 426 340 326 289 277 269 ...\n $ proporcion: num [1:858782] 0.1045 0.0483 0.0312 0.031 0.0209 ...\n - attr(*, \"spec\")=List of 3\n  ..$ cols   :List of 5\n  .. ..$ anio      : list()\n  .. .. ..- attr(*, \"class\")= chr [1:2] \"collector_double\" \"collector\"\n  .. ..$ nombre    : list()\n  .. .. ..- attr(*, \"class\")= chr [1:2] \"collector_character\" \"collector\"\n  .. ..$ sexo      : list()\n  .. .. ..- attr(*, \"class\")= chr [1:2] \"collector_character\" \"collector\"\n  .. ..$ n         : list()\n  .. .. ..- attr(*, \"class\")= chr [1:2] \"collector_double\" \"collector\"\n  .. ..$ proporcion: list()\n  .. .. ..- attr(*, \"class\")= chr [1:2] \"collector_double\" \"collector\"\n  ..$ default: list()\n  .. ..- attr(*, \"class\")= chr [1:2] \"collector_guess\" \"collector\"\n  ..$ delim  : chr \",\"\n  ..- attr(*, \"class\")= chr \"col_spec\"\n - attr(*, \"problems\")=&lt;externalptr&gt;"
+    "text": "Funciones: Estructura (1)\n\n\nstr(): muestra la estructura de los datos.\n\n\nstr(datos)\n\ntibble [858,782 × 5] (S3: tbl_df/tbl/data.frame)\n $ anio      : num [1:858782] 1920 1920 1920 1920 1920 1920 1920 1920 1920 1920 ...\n $ nombre    : chr [1:858782] \"María\" \"José\" \"Juan\" \"Luis\" ...\n $ sexo      : chr [1:858782] \"F\" \"M\" \"M\" \"M\" ...\n $ n         : num [1:858782] 2130 984 636 631 426 340 326 289 277 269 ...\n $ proporcion: num [1:858782] 0.1045 0.0483 0.0312 0.031 0.0209 ...\n - attr(*, \"spec\")=List of 3\n  ..$ cols   :List of 5\n  .. ..$ anio      : list()\n  .. .. ..- attr(*, \"class\")= chr [1:2] \"collector_double\" \"collector\"\n  .. ..$ nombre    : list()\n  .. .. ..- attr(*, \"class\")= chr [1:2] \"collector_character\" \"collector\"\n  .. ..$ sexo      : list()\n  .. .. ..- attr(*, \"class\")= chr [1:2] \"collector_character\" \"collector\"\n  .. ..$ n         : list()\n  .. .. ..- attr(*, \"class\")= chr [1:2] \"collector_double\" \"collector\"\n  .. ..$ proporcion: list()\n  .. .. ..- attr(*, \"class\")= chr [1:2] \"collector_double\" \"collector\"\n  ..$ default: list()\n  .. ..- attr(*, \"class\")= chr [1:2] \"collector_guess\" \"collector\"\n  ..$ delim  : chr \",\"\n  ..- attr(*, \"class\")= chr \"col_spec\"\n - attr(*, \"problems\")=&lt;externalptr&gt;"
   },
   {
     "objectID": "slides/clase-2/clase_2_presentación.html#funciones-estructura-2",
@@ -1355,14 +1355,14 @@
     "href": "slides/clase-2/clase_2_presentación.html#glosario",
     "title": "Tipos y estructuras de datos en R",
     "section": "Glosario",
-    "text": "Glosario\n\n\n\n\n\n\n\n\nConcepto\nDescripción\n\n\n\n\nConsola o terminal\nLugar donde se puede escribir código y que retorna o “imprime” los resultados asociados a ese código.\n\n\nScript\nArchivo de texto o programa que incluye el código que queremos ejecutar.\n\n\nDirectorio de trabajo\nEn inglés working directory. Indica la ubicación de los archivos de entrada y salida.\n\n\nFunción\nConjunto de instrucciones que convierten las entradas o inputs en los resultados u outputs esperados. Las funciones tienen argumentos, que son las entradas que necesita o especificaciones para funcionar.\n\n\nPaquetes\nConjunto de funciones agrupadas y distribuidas mediante una librería diseñadas para temas específicos. Por ejemplo, paquetes para visualizar datos.\n\n\nVector\nUnidad básica de datos en R.\n\n\nDataframe o tibble\nTabla organizada mediante filas y columnas."
+    "text": "Glosario\n\n\n\n\n\n\n\nConcepto\nDescripción\n\n\n\nConsola o terminal\nLugar donde se puede escribir código y que retorna o “imprime” los resultados asociados a ese código.\n\n\nScript\nArchivo de texto o programa que incluye el código que queremos ejecutar.\n\n\nDirectorio de trabajo\nEn inglés working directory. Indica la ubicación de los archivos de entrada y salida.\n\n\nFunción\nConjunto de instrucciones que convierten las entradas o inputs en los resultados u outputs esperados. Las funciones tienen argumentos, que son las entradas que necesita o especificaciones para funcionar.\n\n\nPaquetes\nConjunto de funciones agrupadas y distribuidas mediante una librería diseñadas para temas específicos. Por ejemplo, paquetes para visualizar datos.\n\n\nVector\nUnidad básica de datos en R.\n\n\nDataframe o tibble\nTabla organizada mediante filas y columnas."
   },
   {
     "objectID": "slides/clase-2/clase_2_presentación.html#funciones-resumen-1",
     "href": "slides/clase-2/clase_2_presentación.html#funciones-resumen-1",
     "title": "Tipos y estructuras de datos en R",
     "section": "Funciones: Resumen (1)",
-    "text": "Funciones: Resumen (1)\n\nsummary(): entrega estadísticos de resumen.\n\n\nsummary(datos)\n\n      anio         nombre              sexo                 n           \n Min.   :1920   Length:858782      Length:858782      Min.   :    1.00  \n 1st Qu.:1960   Class :character   Class :character   1st Qu.:    1.00  \n Median :1985   Mode  :character   Mode  :character   Median :    1.00  \n Mean   :1981                                         Mean   :   25.77  \n 3rd Qu.:2004                                         3rd Qu.:    3.00  \n Max.   :2021                                         Max.   :21448.00  \n   proporcion       \n Min.   :3.060e-06  \n 1st Qu.:3.790e-06  \n Median :5.130e-06  \n Mean   :1.188e-04  \n 3rd Qu.:1.437e-05  \n Max.   :1.045e-01"
+    "text": "Funciones: Resumen (1)\n\n\nsummary(): entrega estadísticos de resumen.\n\n\nsummary(datos)\n\n      anio         nombre              sexo                 n           \n Min.   :1920   Length:858782      Length:858782      Min.   :    1.00  \n 1st Qu.:1960   Class :character   Class :character   1st Qu.:    1.00  \n Median :1985   Mode  :character   Mode  :character   Median :    1.00  \n Mean   :1981                                         Mean   :   25.77  \n 3rd Qu.:2004                                         3rd Qu.:    3.00  \n Max.   :2021                                         Max.   :21448.00  \n   proporcion       \n Min.   :3.060e-06  \n 1st Qu.:3.790e-06  \n Median :5.130e-06  \n Mean   :1.188e-04  \n 3rd Qu.:1.437e-05  \n Max.   :1.045e-01"
   },
   {
     "objectID": "slides/clase-2/clase_2_presentación.html#clase-anterior",
@@ -1376,7 +1376,7 @@
     "href": "slides/clase-2/clase_2_presentación.html#tipos-de-datos",
     "title": "Tipos y estructuras de datos en R",
     "section": "Tipos de datos",
-    "text": "Tipos de datos\nComo revisamos en la clase anterior, R cuenta con una serie de tipos de datos definidos de antemano.\n\n\n\n\n\n\n\n\n\nTipo\nDescripción\nEjemplo\n\n\n\n\ninteger\nNúmeros enteros\n-1, 0, 1\n\n\nnumeric\nNúmeros reales\n-0.5, 1/2, 1\n\n\ncharacter\nTexto/String\n“Erwin”, “Armin”, “Sasha”, “Titanes”\n\n\nfactor\nDatos categóricos\n“Trabajo Social [1]”, “Otra carrera [2]”\n\n\nhaven_labelled\nValores numéricos con etiquetas asociadas\n1 = “Muy en desacuerdo”; 2 = “En desacuerdo”; 3 “Ni de acuerdo ni en desacuerdo”; 4 = “De acuerdo”; 5 “Muy de acuerdo”\n\n\nlogical\nVerdadero o falso\n“TRUE”, “FALSE”\n\n\nNA\nValores perdidos\nNA\n\n\nNULL\nObjetos nulos. Es devuelto por expresiones o funciones\nNULL"
+    "text": "Tipos de datos\nComo revisamos en la clase anterior, R cuenta con una serie de tipos de datos definidos de antemano.\n\n\n\n\n\n\n\n\nTipo\nDescripción\nEjemplo\n\n\n\ninteger\nNúmeros enteros\n-1, 0, 1\n\n\nnumeric\nNúmeros reales\n-0.5, 1/2, 1\n\n\ncharacter\nTexto/String\n“Erwin”, “Armin”, “Sasha”, “Titanes”\n\n\nfactor\nDatos categóricos\n“Trabajo Social [1]”, “Otra carrera [2]”\n\n\nhaven_labelled\nValores numéricos con etiquetas asociadas\n1 = “Muy en desacuerdo”; 2 = “En desacuerdo”; 3 “Ni de acuerdo ni en desacuerdo”; 4 = “De acuerdo”; 5 “Muy de acuerdo”\n\n\nlogical\nVerdadero o falso\n“TRUE”, “FALSE”\n\n\nNA\nValores perdidos\nNA\n\n\nNULL\nObjetos nulos. Es devuelto por expresiones o funciones\nNULL"
   },
   {
     "objectID": "slides/clase-2/clase_2_presentación.html#enteros-y-numéricos",
@@ -1411,7 +1411,7 @@
     "href": "slides/clase-2/clase_2_presentación.html#strings-o-texto-1",
     "title": "Tipos y estructuras de datos en R",
     "section": "Strings o texto (1)",
-    "text": "Strings o texto (1)\nCorresponden a cadenas de texto o también denominadas secuencias de caracteres. Se reconocen porque están encerradas en comillas simples ' ' o dobles \" \".\n\nmi_texto &lt;- \"Bienvenido/a. Su nombre es:\"\n\nCon la función paste() se pueden concatenar strings. Además, cuenta con el argumento sep que indica el separador que tendrá el texto. Por defecto es un espacio vacío.\n\npaste(mi_texto, \"Julio Cesar\", sep = \" \")\n\n[1] \"Bienvenido/a. Su nombre es: Julio Cesar\"\n\n\nY podemos usar cualquier separador\n\npaste(mi_texto, \"Julio Cesar\", sep = \"------&gt;\")\n\n[1] \"Bienvenido/a. Su nombre es:------&gt;Julio Cesar\"\n\n\nY se pueden concatenar más de dos strings a la vez. En estos casos usamos el argumento collapse() para separar los resultados\n\npaste(mi_texto, c(\"Julio Cesar\", \"Cesar Augusto\", \"Calígula\"), collapse = \"/---/\")\n\n[1] \"Bienvenido/a. Su nombre es: Julio Cesar/---/Bienvenido/a. Su nombre es: Cesar Augusto/---/Bienvenido/a. Su nombre es: Calígula\""
+    "text": "Strings o texto (1)\nCorresponden a cadenas de texto o también denominadas secuencias de caracteres. Se reconocen porque están encerradas en comillas simples ' ' o dobles \" \".\n\nmi_texto &lt;- \"Bienvenido/a. Su nombre es:\"\n\nCon la función paste() se pueden concatenar strings. Además, cuenta con el argumento sep que indica el separador que tendrá el texto. Por defecto es un espacio vacío.\n\npaste(mi_texto, \"Julio Cesar\", sep = \" \")\n\n[1] \"Bienvenido/a. Su nombre es: Julio Cesar\"\n\n\nY podemos usar cualquier separador.\n\npaste(mi_texto, \"Julio Cesar\", sep = \"------&gt;\")\n\n[1] \"Bienvenido/a. Su nombre es:------&gt;Julio Cesar\"\n\n\nY se pueden concatenar más de dos strings a la vez. En estos casos con el argumento collapse() para separar los resultados.\n\npaste(mi_texto, c(\"Julio Cesar\", \"Cesar Augusto\", \"Calígula\"), collapse = \"/---/\")\n\n[1] \"Bienvenido/a. Su nombre es: Julio Cesar/---/Bienvenido/a. Su nombre es: Cesar Augusto/---/Bienvenido/a. Su nombre es: Calígula\""
   },
   {
     "objectID": "slides/clase-2/clase_2_presentación.html#strings-o-texto-2",
@@ -1425,7 +1425,7 @@
     "href": "slides/clase-2/clase_2_presentación.html#strings-o-texto-3",
     "title": "Tipos y estructuras de datos en R",
     "section": "Strings o texto (3)",
-    "text": "Strings o texto (3)\nOtras funciones útiles son:\n\ntoupper(x): convierte el vector a mayúsculas.\ntolower(x): convierte el vector a minúsculas.\nnchar(x): retorna el número de caracteres del string.\n\n\nmi_texto_3 &lt;- \"Hola Mundo\"\ntoupper(mi_texto_3)\n\n[1] \"HOLA MUNDO\"\n\ntolower(mi_texto_3)\n\n[1] \"hola mundo\"\n\nnchar(mi_texto_3)\n\n[1] 10\n\n\nAdemás R cuenta con otras funciones base para strings tales como grep() gsub()."
+    "text": "Strings o texto (3)\nOtras funciones útiles son:\n\ntoupper(x): convierte el vector a mayúsculas.\ntolower(x): convierte el vector a minúsculas.\nnchar(x): retorna el número de caracteres del string.\n\n\nmi_texto_3 &lt;- \"Hola Mundo\"\ntoupper(mi_texto_3)\n\n[1] \"HOLA MUNDO\"\n\ntolower(mi_texto_3)\n\n[1] \"hola mundo\"\n\nnchar(mi_texto_3) # Cuenta 10 porque espacio también es un caracter\n\n[1] 10\n\n\nAdemás R cuenta con otras funciones base para strings tales como grep() gsub()."
   },
   {
     "objectID": "slides/clase-2/clase_2_presentación.html#enteros-y-numéricos-2-1",
@@ -1446,14 +1446,14 @@
     "href": "slides/clase-2/clase_2_presentación.html#factores-1",
     "title": "Tipos y estructuras de datos en R",
     "section": "Factores (1)",
-    "text": "Factores (1)\nEste es un tipo de dato específico de R para datos categóricos. Los factores toman un número acotado de valores distintos, los cuales son llamados niveles.\nEjemplo1:\n\nSuponga que tiene una variable con valores para cuatro meses. Usar esta variable como un string tiene al menos dos problemas:\n\nLos valores válidos a máximo 12 categorías.\nSi quiero ordenarlo, lo hará alfabéticamente.\n\n\n\nx1 &lt;- c(\"Enero\", \"Febrero\", \"Marzo\", \"Abril\")\nx2 &lt;- c(\"Enero\", \"Febrerooo\", \"Marzooo\", \"Abril\")\nsort(x1) # No ordena como quisiéramos, porque es un string\n\n[1] \"Abril\"   \"Enero\"   \"Febrero\" \"Marzo\"  \n\n\nEjemplo adaptado de R For Data Science, segunda edición."
+    "text": "Factores (1)\nEste es un tipo de dato específico de R para datos categóricos. Los factores toman un número acotado de valores distintos, los cuales son llamados niveles o levels.\nEjemplo1:1 Ejemplo adaptado de R For Data Science, segunda edición.\n\nSuponga que tiene una variable con valores para cuatro meses. Usar esta variable como un string tiene al menos dos problemas:\n\nLos valores válidos están restringidos a 12 categorías. Solo pueden ingresarse esos valores.\nSi quiero ordenarlo, lo hará alfabéticamente.\n\n\n\n\nx1 &lt;- c(\"Enero\", \"Febrero\", \"Marzo\", \"Abril\")\nx2 &lt;- c(\"Enero\", \"Febrerooo\", \"Marzooo\", \"Abril\")\nsort(x1) # No ordena como quisiéramos, porque es un string\n\n[1] \"Abril\"   \"Enero\"   \"Febrero\" \"Marzo\""
   },
   {
     "objectID": "slides/clase-2/clase_2_presentación.html#factores-2",
     "href": "slides/clase-2/clase_2_presentación.html#factores-2",
     "title": "Tipos y estructuras de datos en R",
     "section": "Factores (2)",
-    "text": "Factores (2)\nLos factores buscan solucionar los problemas antes mencionados. Para crear un factor lo primero que debe hacerse es definir un vector de valores válidos:\n\nmeses_levels &lt;- c(\n  \"Enero\", \"Febrero\", \"Marzo\", \"Abril\", \"Mayo\", \"Junio\",\n  \"Julio\", \"Agosto\", \"Septiembre\", \"Octubre\", \"Noviembre\", \"Diciembre\"\n)\n\nfactor_x1 &lt;- factor(x1, levels = meses_levels)\nsort(factor_x1)\n\n[1] Enero   Febrero Marzo   Abril  \n12 Levels: Enero Febrero Marzo Abril Mayo Junio Julio Agosto ... Diciembre\n\n\nY cualquier valor que no sea parte de los levels del factor se convertirá en NA.\n\nmeses_levels &lt;- c(\n  \"Enero\", \"Febrero\", \"Marzo\", \"Abril\", \"Mayo\", \"Junio\",\n  \"Julio\", \"Agosto\", \"Septiembre\", \"Octubre\", \"Noviembre\", \"Diciembre\"\n)\nfactor_x2 &lt;- factor(x2, levels = meses_levels)\nfactor_x2\n\n[1] Enero &lt;NA&gt;  &lt;NA&gt;  Abril\n12 Levels: Enero Febrero Marzo Abril Mayo Junio Julio Agosto ... Diciembre"
+    "text": "Factores (2)\nLos factores buscan solucionar los problemas antes mencionados. Para crear un factor lo primero que debe hacerse es definir un vector de valores válidos, los que se asignarán al factor.\n\nmeses_levels &lt;- c(\n  \"Enero\", \"Febrero\", \"Marzo\", \"Abril\", \"Mayo\", \"Junio\",\n  \"Julio\", \"Agosto\", \"Septiembre\", \"Octubre\", \"Noviembre\", \"Diciembre\"\n)\n\nfactor_x1 &lt;- factor(x1, levels = meses_levels)\nsort(factor_x1)\n\n[1] Enero   Febrero Marzo   Abril  \n12 Levels: Enero Febrero Marzo Abril Mayo Junio Julio Agosto ... Diciembre\n\n\nY cualquier valor que no sea parte de los levels del factor se convertirá en NA.\n\nmeses_levels &lt;- c(\n  \"Enero\", \"Febrero\", \"Marzo\", \"Abril\", \"Mayo\", \"Junio\",\n  \"Julio\", \"Agosto\", \"Septiembre\", \"Octubre\", \"Noviembre\", \"Diciembre\"\n)\nfactor_x2 &lt;- factor(x2, levels = meses_levels)\nfactor_x2\n\n[1] Enero &lt;NA&gt;  &lt;NA&gt;  Abril\n12 Levels: Enero Febrero Marzo Abril Mayo Junio Julio Agosto ... Diciembre"
   },
   {
     "objectID": "slides/clase-2/clase_2_presentación.html#factores-3",
@@ -1461,5 +1461,26 @@
     "title": "Tipos y estructuras de datos en R",
     "section": "Factores (3)",
     "text": "Factores (3)\nLos factores nativos de R tienen algunos inconvenientes:\n\nConvierten directamente en NA los valores sin emitir alertas. Esto puede ser riesgoso.\nSi no se le entregan los levels al factor, estos serán ordenados automáticamente de manera alfabética. Sin embargo, esto no es deseable, porque no todos los computadores ordenan los strings de la misma forma.\n\nPor estas razones en el curso preferiremos paquetes que los implementan de otro modo."
+  },
+  {
+    "objectID": "slides/clase-2/clase_2_presentación.html",
+    "href": "slides/clase-2/clase_2_presentación.html",
+    "title": "Tipos y estructuras de datos en R",
+    "section": "",
+    "text": "I. Clase anterior\nII. Tibbles\nIII. Tipos de datos"
+  },
+  {
+    "objectID": "header_class/header_clase_2.html",
+    "href": "header_class/header_clase_2.html",
+    "title": "Clase 2",
+    "section": "",
+    "text": "Ideas más importantes\n\n\n\n\nFunciones básicas para dataframes/tibbles.\nProfundizando en tipos de datos\nFunciones disponibles según el tipo de dato.\nIntroducción a los factores."
+  },
+  {
+    "objectID": "header_class/header_clase_2.html#presentación-de-la-clase",
+    "href": "header_class/header_clase_2.html#presentación-de-la-clase",
+    "title": "Clase 2",
+    "section": "Presentación de la clase",
+    "text": "Presentación de la clase\n\n\nDescargar presentación\n\nVuelve a la descripción del curso ⏎"
   }
 ]
