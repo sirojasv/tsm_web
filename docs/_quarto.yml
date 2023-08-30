@@ -58,7 +58,7 @@ website:
             text: "Equipo docente"
           - href: course-contact.qmd
             text: "Atención de estudiantes"
-      - section: "Material de clases {{< fa brands r-project >}}"
+      - section: "Clases {{< fa brands r-project >}}"
         contents:
           - href: header_class/header_clase_0.qmd
             text: "Clase 0"
@@ -70,6 +70,10 @@ website:
         contents:
           - href: notes/clase_1_notas/clase_1_notas.qmd
             text: "Notas clase 1"
+      - section: "Evaluaciones"
+        contents:
+          - href: exams/trabajo_1/trabajo_1_tsm301.qmd
+            text: "Trabajo 1"
 
 format:
   html:
