@@ -1,0 +1,27 @@
+---
+title: "Clase 2"
+subtitle: "**Tipos y estructuras de datos en R**"
+---
+
+::: {.callout-note title="Ideas más importantes"}
+
+1. Funciones básicas para dataframes/tibbles.
+
+2. Profundizando en tipos de datos
+
+3. Funciones disponibles según el tipo de dato.
+
+4.  Introducción a los factores.
+:::
+
+## Presentación de la clase
+
+<iframe src="/slides/clase-2/clase_2_presentación.html" height="550" width="100%" allowfullscreen="true">
+
+</iframe>
+
+<a href="/slides/clase-2/clase_2_presentación.html" download="Descarga_clase_2_presentación.html" class="download-button">Descargar presentación</a>
+
+::: {style="font-size: 0.875em;"}
+Vuelve a la [descripción del curso](/ "Descripción del curso") ⏎
+:::

@@ -36,7 +36,7 @@ La profesora estará a cargo de las cátedras en las que se impartirán los cont
 
 ![](images/team/seba.jpg){style="float:right;padding: 0 0 0 10px;border-radius:50%; " fig-alt="Headshot of Sebastián Rojas" width="200"}
 
-[**Sebastián Rojas Vergara** `r fontawesome::fa(name = "linkedin", fill = "duotone")`](https://www.linkedin.com/in/sirojasv/) &nbsp;&nbsp;&nbsp;   [`r fontawesome::fa(name = "envelope", fill = "duotone")` sirojas1\@uc.cl](sirojas1@uc.cl) &nbsp;&nbsp;&nbsp; [`r fontawesome::fa(name = "github", fill = "duotone")` sirojasv](https://github.com/sirojasv)
+[**Sebastián Rojas Vergara** `r fontawesome::fa(name = "linkedin", fill = "duotone")`](https://www.linkedin.com/in/sirojasv/) &nbsp;&nbsp;&nbsp;   [`r fontawesome::fa(name = "envelope", fill = "duotone")` sirojas1\@uc.cl](mailto:sirojas1@uc.cl) &nbsp;&nbsp;&nbsp; [`r fontawesome::fa(name = "github", fill = "duotone")` sirojasv](https://github.com/sirojasv)
 
 Trabajo en las etapas del proceso de producción estadística en el marco de encuestas sociales a hogares, lo que involucra diseño de cuestionarion y su programación, validación de la información y análisis de datos. Además, me interesa muchísimo vincular el mundo de la programación con las ciencias sociales.
 

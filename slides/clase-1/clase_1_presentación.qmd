@@ -1,0 +1,548 @@
+---
+# Title & Author
+title: "Introducción a R"
+subtitle: | 
+    | Metodología Cuantitativa - TSM301
+    | Clase 1
+author: "Sebastián Rojas Vergara - sirojas1@uc.cl"
+#institute:
+#order:
+date: 08/23/2023
+date-format: "dddd D MMMM, YYYY"
+# Format Options
+format:
+  revealjs: 
+    slide-number: true
+    transition: slide
+    transition-speed: slow
+    #chalkboard: 
+      #buttons: false
+    smaller: true
+    controls: true
+    toc: false
+    number-sections: false
+    fig-dpi: 400
+    fig-responsive: true
+    embed-resources: true
+    preview-links: auto
+    theme: [dark, aquamarine.scss]
+    logo: images/logo_puc_bn.png
+    css: styles.css
+    footer: "Metodología Cuantitativa - 2023"
+comments: false
+execute: 
+  echo: true
+---
+
+
+## Contenidos
+
+**I. ¿Qué es R?**
+
+**II. ¿Por qué usar R?**
+
+**III. Iniciando R**
+
+**IV. Bases de R**
+
+**V. Comentando Scripts**
+
+
+##  {background-color=rgb(25,25,25)}
+
+:::{.center-xy}
+
+<div class="large-text">
+<br>
+I. ¿Qué es R? <br>
+</div>
+:::
+
+## ¿Qué es R? (1)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- R es un lenguaje de programación para la computación estadística y la visualización creado por Robert Gentleman y Ross Ihaka, profesores de estadística de la Universidad de Auckland en Nueva Zelanda. 
+
+- Tiene la ventaja de ser **gratuito** y **libre**. 
+
+- Una forma de contribuir al desarrollo de R es mediante la creación de un **paquete**.
+
+- Implica escribir código, que es la manera que tenemos de comunicarnos con el lenguaje.
+
+- Lo usaremos a través del IDE RStudio.
+
+:::
+
+
+::: {.column width="50%"}
+
+![](images/logo_r.png){width=200 height=auto fig-align=center}
+
+![](images/logo_rstudio.png){width=400 height=auto fig-align=center}
+
+:::
+
+:::
+
+##  {background-color=rgb(25,25,25)}
+
+:::{.center-xy}
+
+<div class="large-text">
+<br>
+II. ¿Por qué usar R? <br>
+</div>
+:::
+
+## ¿Por qué usar R? Caracteristicas (1)
+
+- **Gratuito**. A diferencia de otros softwares de ciencias sociales (v.g. SPSS) o el propio Excel.
+
+- **Libre**. Permite que la comunidad introduzca nuevas funciones al software.
+
+- **Potencia**. Permite articular de mejor forma el procesamiento, análisis, visualización y reportería de datos.
+
+- **Campo de aplicación**. Estadística, negocios, ciencia de datos, ciencias naturales, etc.
+
+Pero también tiene desventajas 🥺
+
+- Curva de aprendizaje empinada.
+
+- No está pensado para ejecutar comandos por interfaz gráfica, lo que puede ser difícil para algunas personas.
+
+## ¿Por qué usar R? Crecimiento (2)
+
+El uso de `R` ha aumentado durante los últimos 15 años. Este fenómeno se ha replicado en las ciencias sociales.
+
+![](images/tiobe_r.png){width=1600 height=auto fig-align=center}
+
+##  {background-color=rgb(25,25,25)}
+
+:::{.center-xy}
+
+<div class="large-text">
+<br>
+III. Iniciando R <br>
+</div>
+:::
+
+## RStudio
+
+Al abrir `RStudio` se encontrarán con tres paneles:
+
+- La **Consola** marcada por el recuadro color <span class="fondo-gris" style = "color:#800080">lila</span>
+
+- El **Enviroment** o ambiente de trabajo en un color <span class="fondo-gris" style = "color:#FA8072">salmón</span>
+
+- Las **Utilidades** en color <span class="fondo-gris" style = "color:#228B22">verde</span>
+
+![](images/panel_rstudio.png){width=1200 height=auto fig-align=center}
+
+## Comenzar un script
+
+Los comandos que ejecutaremos directamente en la consola no mantienen un registro, por lo que usaremos un `Script` de R para conservar el código. Para iniciar un Script tenemos dos alternativas:
+
+1. Seleccionar **`File → New File → R Script`**
+
+2. Usar el atajo de teclado **`CTRL/CMD + SHIFT + N`**
+
+La forma más sencilla de utilizar `R` sería como una calculadora:
+
+```{r}
+# Esto es una suma
+
+1 + 1
+```
+
+## Atajos relevantes para correr scripts
+
+- **`CTRL/CMD + ENTER →`** Ejecuta la línea que tienen seleccionada en el curso
+- **`CTRL/CMD + SHIFT + ENTER →`** Ejecuta todo el código
+- **`CTR/CMD + L →`** Limpia toda la consola de resultados de R
+- **`CTRL/CMD + S →`** Guarda el script. Si este no tiene nombre, primero pedirá guardarlo en un directorio y asignarle nombre
+
+##  {background-color=rgb(25,25,25)}
+
+:::{.center-xy}
+
+<div class="large-text">
+<br>
+IV. Bases de R <br>
+</div>
+:::
+
+## Cálculos en R
+
+Es posible usar R como una calculadora. Las operaciones más utilizadas son las siguientes
+
+|   | **Operación**|
+|---|---|
+|`+`|Suma|
+|`-`|Resta|
+|`*`|Multiplicación|
+|`/`|División|
+|`^`|Potencia|
+|`sqrt` |Raíz cuadrada|
+|`log()`|Logaritmo base|
+
+## Objetos en R
+
+- En R podemos crear objetos que guarden información o resultados. Para ello, se escribe el nombre y se les asigna los valores con el operador **`<-`**.
+
+- Los nombres permiten representar resultados de manera más fácil. Ejemplo:
+
+  1. Ingresamos tres notas y las dividimos por 3. Este resultado queda guardado en el objeto llamado **"promedio"**.
+
+  2. Luego, si queremos ver el resultado, basta con llamar al objeto **promedio**.
+
+  3. Si el nombre del objeto ya existe, se sobreescribirá su contenido.
+   
+```{r}
+# Guardamos esta operación matemática en un objeto llamado "promedio"
+
+promedio <- (5.5  + 3.8 + 6.1) / 3
+```
+
+## Nombrar objetos
+
+- Evite caracteres especiales como tildes, ñ, espacios, etc.
+
+- Consistencia en los nombres de variables. Puede usar nomenclaturas como **Snake Case** donde los nombres se escriben en el formato "nombre_objeto" o **Camel Case** que sigue el estándar "NombreObjeto".
+
+- Recordar que R es sensible a mayúsculas y minúsculas. En el ejemplo anterior, definimos el objeto **`promedio`**. Si escribiéramos **`Promedio`** el software no lo reconocerá.
+
+## Estructuras de datos
+
+- R cuenta con clases y tipos de datos definidos de antemano, los cuales dependen de la información que contengan en su interior. Los comandos **`class`** y **`typeof`** sirven para preguntar el tipo de cada elemento.
+
+- En la siguiente tabla se muestran algunas de las clases más frecuentes en R.
+
+::: {.mini-text}
+| **Tipo**  |**Descripción**|**Ejemplo**
+| ---- |----------------|------------------------------------|
+|`integer`|Números enteros|-1, 0, 1|
+|`numeric`|Números reales|-0.5, 1/2, 1|
+|`character`|Texto/String|"Erwin", "Armin", "Sasha", "Titanes"|
+|`factor`|Datos categóricos|"Trabajo Social [1]", "Otra carrera [2]"|
+|`haven_labelled`|Valores numéricos con etiquetas asociadas|1 = "Muy en desacuerdo"; 2 = "En desacuerdo"; 3 "Ni de acuerdo ni en desacuerdo"; 4 = "De acuerdo"; 5 "Muy de acuerdo"|
+|`logical`|Verdadero o falso|"TRUE", "FALSE"|
+:::
+
+## Vectores (1)
+
+Los **vectores** son ordenamientos unidimensionales que solo pueden contener un tipo de dato. Se definen con el comando **`c()`**.
+
+Los vectores tienen valores y además una posición (index) asociada a cada valor. Esta comienza desde el número 1 en adelante.
+
+![](images/vectores.png){width=150 height=auto fig-align=center}
+
+```{r}
+v_numerico <- c(1, 3, 5, 7, 9) # Vector que solo contiene números
+class(v_numerico)
+```
+
+## Vectores (2)
+
+- Un vector solamente puede contener caracteres o solamente puede contener números. En los casos en que se produzca una mezcla, R realizará una transformación en los datos para que contengan solo un tipo de dato.  
+
+Con el comando `class()` y `typeof()` se puede obtener información sobre los objetos
+
+- `class()` nos dirá de qué clase es el objeto. Para este curso, de preferencia usaremos este.
+
+- `typeof()` nos dirá el modo de almacenamiento de ese objeto.
+
+```{r}
+class(v_numerico)
+
+typeof(v_numerico)
+```
+
+## Vectores (3)
+
+- Si un vector contiene más de un tipo de dato, el programa forzará a que todos los datos sean del mismo tipo. Este proceso se conoce como **coerción**. 
+
+- Noten que si el texto está entre comillas, el programa lo reconocerá como un caracter. 
+
+```{r}
+
+ejemplo_character <- "Soy un character inocente"
+
+class(ejemplo_character)
+typeof(ejemplo_character)
+
+v_char <- c(40, "50 años", 33, "33") # Las comillas indican que es texto
+
+
+# ¿Y si comprobamos la clase del últio vector que generamos?
+
+# ¡Pregunta! ¿Por qué es de clase character?
+class(v_char)
+typeof(v_char)
+```
+
+## Vectores (4)
+
+Es posible acceder a cualquier elemento de un vector a través de su posición usando la notación **`[]`**[^1].
+
+::: {.mini-mini-text}
+
+[^1]: Nota: si tienen problemas para escribirlos con el teclado, pueden usar `ALT + 91` para [ y `ALT + 93` para ]. Usualmente con solo escribir uno R debería autocompletar.
+
+
+:::
+
+Respondamos algunas preguntas:
+
+- ¿De qué tipo es este vector?
+
+- ¿Cuántos elementos o qué largo tiene este vector?
+
+- ¿Cómo puedo acceder al primer elemento del vector?
+
+- ¿Cómo puedo acceder a los dos primeros elementos del vector?
+
+- ¿Cómo puedo acceder a la última posición, sin saber su largo a priori?
+
+
+## Vectores (5)
+
+```{r}
+
+despedida <- c("Eren", "Mikasa", "Armin", "Gracias por todo",
+              "Casi terminas :/", "Este 2023")
+
+class(despedida)
+
+length(despedida)
+
+despedida[1]
+
+despedida[1:2]
+
+despedida[length(despedida)] # length es una función de R que entrega el largo de un vector
+```
+
+## Matrices (1)
+
+- Las **matrices** son estructuras bidimensionales, pues tienen filas y columnas, pero donde solo puede existir un tipo de dato. Se crean con el comando **`matrix()`**. Este comando sigue la siguiente estructura:
+
+**`matrix(vector, nrow = n, ncol = m, byrow = FALSE)`**
+
+  - Primero se especifican los datos de la matriz.
+  - Luego se especifica el número de filas.
+  - Luego se especifica el número de columnas.
+  - El argumento byrow puede tomar dos valores. Si es FALSE, la matriz se llenará por columnas, es decir, completará una columna y luego continuará con los valores. Si el argumento es TRUE, se llenará por filas, es decir, completará una fila y luego pasará a la siguiente. El valor por defecto siempre es FALSE para esta función.
+
+## Matrices (2)
+
+Ejemplo de llenado por columnas
+
+```{r}
+matriz_1 <- matrix(1:9, ncol = 3) # Llenado por columnas
+matriz_1
+```
+Ejemplo de llenado por filas
+
+```{r}
+
+matriz_2 <- matrix(1:9, ncol = 3, byrow = TRUE) # Llenado por filas
+matriz_2
+```
+
+## Acceder a elementos
+
+- En R las matrices siempre siguen el orden (filas, columnas). Con esta lógica se puede seleccionar sus elementos: **`mi_matriz[i, j] ~ i = filas, j = columnas`**.
+
+   - **`mi_matriz[i, ]`**: selecciona la **fila** i-ésima de la matriz.
+   - **`mi_matriz[, j]`**: selecciona la **columna** j-ésima de la matriz.
+   - **`mi_matriz[i, j]`**: selecciona el j-ésimo elemento de la i-ésima fila
+   
+Realicemos un ejemplo con la `matriz_2`
+
+```{r}
+matriz_2[1, 1] # Estoy seleccionando la fila 1 columna 1
+matriz_2[2, 1] # Estoy seleccionando la fila 2 columna 1
+matriz_2[1, ] # Estoy seleccionando a toda la fila 1
+matriz_2[3, ] # Estoy seleccionando a toda la fila 3
+matriz_2[, 1] # Estoy seleccionando a toda la columna 1
+```
+
+## Dataframe y tibble (1)
+
+En R los **dataframe** son arreglos de datos bidimensionales (filas y columnas), pero que permiten distintos tipos de datos.
+
+Es el caso usual de datos estructurados que se ven en los cursos de análisis de datos: las filas representan observaciones y las columnas variables.
+
+Los **tibbles** son muy similares a los dataframe, pero con mejoras de calidad de vida. La función proviene del paquete **`tidyverse`**.
+
+Los dataframes se generan a través de la función **`data.frame()`**, mientras que los tibbles con **`tibble()`**.
+
+Para trabajar con tibbles, requeriremos un paso previo antes 😮
+
+## Instalación de paquetes
+
+- Los paquetes permiten agregar funciones adicionales a R. Para su instalación, debemos usar el comando **`install.packages("nombrepaquete")`**. 
+
+- Se debe tener mucho cuidado con especificar de manera correcta el comando, o arrojará error.
+
+- Para utilizar el paquete ya instalado, en la sesión actual, se debe utilizar el comando **`library("nombrepaquete")`**.
+
+- Prueben instalando y llamando el paquete **`tidyverse`**.
+
+```{r}
+#| eval: false
+
+install.packages("tidyverse")
+```
+
+```{r}
+#| message: false
+# O un código más elegante, donde se instala solo si no lo tiene
+
+if (!require("tidyverse")) install.packages("tidyverse")
+```
+
+```{r}
+# Cuando el paquete ya está instalado, se debe ejecutar library()
+
+library(tidyverse)
+
+```
+
+## Dataframe y tibble (2)
+
+- En los tibbles y dataframes uno también puede seleccionar directamente filas o columnas. Para ello, existen dos opciones:
+
+- Usar la notación de `$` para acceder a columnas específicas.
+
+- Usar la notación de `[[]]` para acceder a columnas específicas.
+
+- Usar la notación de matrices `[i, j]` para acceder a filas y columnas.
+
+```{r}
+#| eval: false
+nombre_base$nombre_variable
+nombre_base[i, j]
+nombre_base[[]]
+```
+
+## Generando un tibble (1)
+
+Para este ejemplo crearemos tres vectores y luego los guardaremos como un tibble.
+
+```{r}
+nombre <- c("Constanza", "Sofia", "Gonzalo")
+carrera <- c("Ingeniería", "Administración", "Arqueología")
+gen <- c(2013, 2018, 2023)
+```
+
+```{r}
+# Generando una base de datos con comando data.frame
+data_estudiantes_df <- data.frame(nombre, carrera, gen)
+
+data_estudiantes_df
+
+# Generando una base de datos con comando tibble
+
+if (!require("tidyverse")) install.packages("tidyverse")
+# Con este código el programa instalará el paquete
+# solo si no lo tiene
+
+library(tidyverse)
+```
+
+## Generando un tibble (2)
+
+```{r}
+data_estudiantes_tb <- tibble(nombre, carrera, gen)
+
+data_estudiantes_tb
+
+# Con el comando View() con la primera en mayúscula, verán este tibble en RStudio.
+
+View(data_estudiantes_tb)
+```
+
+## Acceder a elementos del tibble  (1)
+
+```{r}
+data_estudiantes_tb$nombre # accedemos a la columna nombre con $. Esto devuelve un vector
+data_estudiantes_tb["nombre"] # accedemos a la columna nombre con []. Esto devuelve un tibble
+data_estudiantes_tb[["nombre"]] # accedemos a la columna nombre con[[]] Esto devuelve un vector
+data_estudiantes_tb[[1]] # accedemos a la columna nombre con notación por posición [[]]
+```
+
+## Acceder a elementos del tibble (2)
+
+```{r}
+data_estudiantes_tb[1, "nombre"] # accedemos a la fila 1 de la columna nombre
+data_estudiantes_tb[1:2, "nombre"] # accedemos a la fila 1 y 2 de la columna nombre
+data_estudiantes_tb[[3, 1]] # Accedemos a la columna 3, fila 1
+data_estudiantes_tb[1,] # Accedemos a toda la fila 1
+data_estudiantes_tb[1,3] # Accedemos a la fila 1 columna 3
+```
+
+## Acceder a elementos del tibble (3)
+
+Acceder de manera negativa o excluyendo elementos
+
+```{r}
+data_estudiantes_tb[, -c(1)] # accedemos a todas las columnas menos nombre, por posición
+data_estudiantes_tb[, -c(1:2)] # accedemos a todas las columnas menos la 1 y la 2
+data_estudiantes_tb[, names(data_estudiantes_tb) != "nombre"] # accedemos a todas las columnas menos nombre
+```
+
+## Acceder a elementos del tibble (4)
+
+Acceder de manera negativa o excluyendo elementos
+
+```{r}
+data_estudiantes_tb[, !names(data_estudiantes_tb) %in% c("nombre", "carrera")]
+```
+
+## Seccionar un script 
+
+Se puede establecer un orden de títulos y subtítulos que ordenen el script mediante el siguiente esquema:
+
+   - **#** y cuatro guiones medios indican una sección.
+   - **##** y cuatro guiones medios indican una subsección anidada a la sección.
+   - **###** y cuatro guiones medios indican una sub-subsección.
+   
+```{r}
+# Proceso 1 ----
+
+## Subproceso 1.1 ----
+
+### Sub-subproceso 1.1.1 ----
+```
+
+Para ver la barra de navegación utilizamos el atajo **`CTRL/CMD + SHIFT + O`**.
+
+---
+
+## Guardar un script
+   
+- Si queremos guardar este script, tenemos tres alternativas:
+
+   1. Seleccionar el ícono de disquette que está sobre el script.
+   
+   2. Ir a **`File → Save`**.
+   
+   3. Usar el atajo **`CTRL/CMD + S`**.
+   
+- Por último, tener en cuenta que RStudio cuenta con **autocompletado** y un **diagnóstico de errores** (aparecerá un ícono con una marca roja en forma de "x" en la línea donde hay problemas).
+
+
+##  {background-color=rgb(25,25,25)}
+
+:::{.center-xy}
+
+<div class="large-text">
+<br>
+¡Gracias! <br>
+[https://sirojasv.github.io/tsm_web/](https://sirojasv.github.io/tsm_web/)
+</div>
+:::
