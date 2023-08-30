@@ -10,7 +10,7 @@ comments: false
 
 ![](images/team/dani.jpg){style="float:right;padding: 0 0 0 10px;border-radius:50%; "fig-alt="Headshot of Daniella Leal" width="200"}
 
-[**Daniella Leal Valenzuela**](https://sociologia.uc.cl/profesor/daniella-leal/) &nbsp;&nbsp;&nbsp;  [`r fontawesome::fa(name = "envelope", fill = "duotone")` daleal@uc.cl](daleal@uc.cl)
+[**Daniella Leal Valenzuela**](https://sociologia.uc.cl/profesor/daniella-leal/) &nbsp;&nbsp;&nbsp;  [`r fontawesome::fa(name = "envelope", fill = "duotone")` daleal@uc.cl](mailto:daleal@uc.cl)
 
 **Descripción:**
 
