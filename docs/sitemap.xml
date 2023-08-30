@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sirojasv.github.io/tsm_web/index.html</loc>
+<<<<<<< HEAD
     <lastmod>2023-08-30T07:04:06.020Z</lastmod>
+=======
+    <lastmod>2023-08-27T20:41:01.339Z</lastmod>
+>>>>>>> gh-pages
   </url>
   <url>
     <loc>https://sirojasv.github.io/tsm_web/slides/01_clase-1/Clase_1_Presentación.html</loc>
@@ -14,7 +18,11 @@
   </url>
   <url>
     <loc>https://sirojasv.github.io/tsm_web/course-contact.html</loc>
+<<<<<<< HEAD
     <lastmod>2023-08-30T07:01:41.642Z</lastmod>
+=======
+    <lastmod>2023-08-26T22:18:58.087Z</lastmod>
+>>>>>>> gh-pages
   </url>
   <url>
     <loc>https://sirojasv.github.io/tsm_web/class/header_clase_1.html</loc>
@@ -50,6 +58,7 @@
   </url>
   <url>
     <loc>https://sirojasv.github.io/tsm_web/header_class/header_clase_1.html</loc>
+<<<<<<< HEAD
     <lastmod>2023-08-30T07:04:14.336Z</lastmod>
   </url>
   <url>
@@ -79,5 +88,16 @@
   <url>
     <loc>https://sirojasv.github.io/tsm_web/slides/clase-2/clase_2_presentación.html</loc>
     <lastmod>2023-08-30T10:49:25.191Z</lastmod>
+=======
+    <lastmod>2023-08-26T22:18:58.395Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sirojasv.github.io/tsm_web/header_class/header_clase_0.html</loc>
+    <lastmod>2023-08-26T22:19:09.249Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sirojasv.github.io/tsm_web/notes/01_clase_1_notas/Clase_1_Notas.html</loc>
+    <lastmod>2023-08-27T20:41:11.960Z</lastmod>
+>>>>>>> gh-pages
   </url>
 </urlset>
