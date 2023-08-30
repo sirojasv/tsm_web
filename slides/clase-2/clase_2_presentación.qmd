@@ -44,8 +44,8 @@ execute:
 
 ##  {background-color="rgb(25,25,25)"}
 
-::: center-xy
-::: large-text
+:::{.center-xy}
+:::{.large-text}
 <br> I. Clase anterior <br>
 :::
 :::
@@ -62,7 +62,7 @@ execute:
 
 ## Glosario
 
-::: mini-text
+:::{.mini-text}
 | Concepto                | Descripción                                                                                                                                                                                                         |
 |--------------------|----------------------------------------------------|
 | `Consola o terminal`    | Lugar donde se puede escribir código y que retorna o "imprime" los resultados asociados a ese código.                                                                                                               |
@@ -76,8 +76,8 @@ execute:
 
 ##  {background-color="rgb(25,25,25)"}
 
-::: center-xy
-::: large-text
+:::{.center-xy}
+:::{.large-text}
 <br> II. Tibbles <br>
 :::
 :::
@@ -86,7 +86,7 @@ execute:
 
 Una característica relevante de los tibbles/dataframes es que cada columna o variable corresponde a un vector. Esto permite aplicar una serie de funciones que están disponibles para vectores, tales como:
 
-::: mini-text
+:::{.mini-text}
 -   `sum()`: retorna la suma de elementos
 
 -   `mean()`: retorna la media aritmetica.
@@ -125,7 +125,7 @@ library(guaguas)
 
 La base de datos contiene 858.782 observaciones para cinco variables, las cuales se describen a continuación:
 
-::: mini-text
+:::{.mini-text}
 | Nombre     | Descripción                                                              |
 |----------------|--------------------------------------------------------|
 | anio       | Año de inscripción en el Servicio de Registro Civil e Identificación     |
@@ -210,8 +210,8 @@ summary(datos)
 
 ##  {background-color="rgb(25,25,25)"}
 
-::: center-xy
-::: large-text
+:::{.center-xy}
+:::{.large-text}
 <br> III. Tipos de datos <br>
 :::
 :::
@@ -386,8 +386,8 @@ Por estas razones en el curso preferiremos paquetes que los implementan de otro 
 
 ##  {background-color="rgb(25,25,25)"}
 
-::: center-xy
-::: large-text
+:::{.center-xy}
+:::{.large-text}
 <br> ¡Gracias! <br> <https://sirojasv.github.io/tsm_web/>
 :::
 :::
