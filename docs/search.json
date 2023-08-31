@@ -712,6 +712,7 @@
     "title": "Introducción a R",
     "section": "",
     "text": "¡Gracias!  https://sirojasv.github.io/tsm_web/\n\n\n\n\n\nMetodología Cuantitativa - 2023"
+<<<<<<< HEAD
   },
   {
     "objectID": "notes/clase_1_notas/clase_1_notas.html",
@@ -719,5 +720,7 @@
     "title": "Notas clase 1: Introducción a R",
     "section": "",
     "text": "library(tidyverse)"
+=======
+>>>>>>> gh-pages
   }
 ]
