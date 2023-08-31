@@ -2,66 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sirojasv.github.io/tsm_web/index.html</loc>
-<<<<<<< HEAD
-    <lastmod>2023-08-31T18:01:36.043Z</lastmod>
-=======
-    <lastmod>2023-08-30T12:08:40.342Z</lastmod>
->>>>>>> gh-pages
-  </url>
-  <url>
-    <loc>https://sirojasv.github.io/tsm_web/slides/clase-2/clase_2_presentación.html</loc>
-    <lastmod>2023-08-30T12:08:59.480Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sirojasv.github.io/tsm_web/slides/clase-0/clase_0_presentación.html</loc>
-    <lastmod>2023-08-30T12:08:15.258Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sirojasv.github.io/tsm_web/licenses.html</loc>
-    <lastmod>2023-08-30T12:07:45.553Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sirojasv.github.io/tsm_web/header_class/header_clase_1.html</loc>
-    <lastmod>2023-08-30T12:07:45.009Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sirojasv.github.io/tsm_web/exams/trabajo_1/trabajo_1_tsm301.html</loc>
-<<<<<<< HEAD
-    <lastmod>2023-08-31T17:57:37.840Z</lastmod>
-=======
-    <lastmod>2023-08-30T12:09:12.671Z</lastmod>
->>>>>>> gh-pages
-  </url>
-  <url>
-    <loc>https://sirojasv.github.io/tsm_web/course-contact.html</loc>
-    <lastmod>2023-08-30T12:07:38.111Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sirojasv.github.io/tsm_web/course-bib.html</loc>
-    <lastmod>2023-08-30T12:07:37.829Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sirojasv.github.io/tsm_web/course-team.html</loc>
-    <lastmod>2023-08-30T12:07:40.163Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sirojasv.github.io/tsm_web/header_class/header_clase_0.html</loc>
-    <lastmod>2023-08-30T12:07:44.736Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sirojasv.github.io/tsm_web/header_class/header_clase_2.html</loc>
-    <lastmod>2023-08-30T12:07:45.288Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sirojasv.github.io/tsm_web/notes/clase_1_notas/clase_1_notas.html</loc>
-<<<<<<< HEAD
-    <lastmod>2023-08-31T17:59:13.988Z</lastmod>
-=======
-    <lastmod>2023-08-30T12:08:55.110Z</lastmod>
->>>>>>> gh-pages
-  </url>
-  <url>
-    <loc>https://sirojasv.github.io/tsm_web/slides/clase-1/clase_1_presentación.html</loc>
-    <lastmod>2023-08-30T12:09:02.341Z</lastmod>
+    <lastmod>2023-08-31T18:13:11.577Z</lastmod>
   </url>
 </urlset>
