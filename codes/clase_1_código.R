@@ -155,18 +155,12 @@ data_estudiantes_tb$nombre # accedemos a la columna nombre con $. Esto devuelve 
 data_estudiantes_tb["nombre"] # accedemos a la columna nombre con []. Esto devuelve un tibble
 data_estudiantes_tb[["nombre"]] # accedemos a la columna nombre con[[]] Esto devuelve un vector
 data_estudiantes_tb[[1]] # accedemos a la columna nombre con notación por posición [[]]
-
 data_estudiantes_tb[1, "nombre"] # accedemos a la fila 1 de la columna nombre
 data_estudiantes_tb[1:2, "nombre"] # accedemos a la fila 1 y 2 de la columna nombre
-
-data_estudiantes_tb[[3, 1]] # Accedemos a la fila 3 para la columna 1
-data_estudiantes_tb[3, 1] # Accedemos a la fila 3 para la columna 1
-
-# Notar que las dos instrucciones de arriba son equivalentes, pero la primera devuelve un vector.
-
+data_estudiantes_tb[[3, 1]] # Accedemos a la fila 3 para la columna 1. Retorna un vector
+data_estudiantes_tb[3, 1] # Accedemos a la fila 3 para la columna 1. Retorna un tibble
 data_estudiantes_tb[1,] # Accedemos a toda la fila 1
 data_estudiantes_tb[1,3] # Accedemos a la fila 1 columna 3
-
 data_estudiantes_tb[, -c(1)] # accedemos a todas las columnas menos nombre, por posición
 data_estudiantes_tb[, -c(1:2)] # accedemos a todas las columnas menos la 1 y la 2
 data_estudiantes_tb[, names(data_estudiantes_tb) != "nombre"] # accedemos a todas las columnas menos nombre
