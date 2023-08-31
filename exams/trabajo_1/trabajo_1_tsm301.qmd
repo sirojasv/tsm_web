@@ -84,7 +84,7 @@ Respecto del artículo, responda lo siguiente:
  
  b. Indique cuál es la relación entre variables que buscan probar los autores. ¿Qué tipo de hipótesis es? `Puntaje: 0,5` 
  
- c. En la tabla 1 se presentan las siguientes variables. Indique el tipo y nivel de medición de las siguientes variables:
+ c. En la tabla 1 se presentan las siguientes variables. Indique el tipo y nivel de medición:
  
     - Desertar en la educación
     - Medida disciplinaria
@@ -100,7 +100,7 @@ d. ¿Cuáles son los principales resultados del estudio? `Puntaje: 1,0`
 
  a. ¿Cuál es el tema de la investigación? ¿Cuál es el objetivo de la investigación? `Puntaje: 1,0`
  
- b. En el artículo se prsenta el concepto de "internet y tecnologías de la información y comunicación (TICS)". Usando los resultados del texto, proponga al menos una dimensión y su indicador. `Puntaje: 0,5`
+ b. En el artículo se presenta el concepto de "internet y tecnologías de la información y comunicación (TICS)". Usando los resultados del texto, proponga al menos una dimensión y su indicador. `Puntaje: 0,5`
  
  c. En la figura 1 del reporte se presenta el uso de internet por edad. A partir de esta información, elabore una hipótesis e indique de qué tipo es `Puntaje: 0,5`
  

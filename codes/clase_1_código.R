@@ -1,6 +1,10 @@
 ####### Clase 1. Introducción a R #######
 # Metodología Cuantitativa, 2023.
 
+# 0. Librerias ---
+
+library(tidyvers)
+
 # 1. Vectores ----
 
 # Definiendo mi primer vector numérico
@@ -56,9 +60,6 @@ length(v_logico_na)
 v_numerico[2]
 v_caracteres[2]
 
-# Acceder a la segunda posición
-v_caracteres[2]
-
 # Acceder a las tres primeras posiciones del vector
 v_numerico[1:3]
 
@@ -92,8 +93,8 @@ mi_vector
 # Creando vectores a partir de combinaciones de vectores
 mi_vector_1 <- c(1, 3, 5, 7)
 mi_vector_2 <- c(2, 4, 6, 8)
-mi_vetor_3 <- c(mi_vector_1, mi_vector_2)
-mi_vetor_3
+mi_vector_3 <- c(mi_vector_1, mi_vector_2)
+mi_vector_3
 
 # Al definirse tiene datos de distinto tipo
 mi_vector_coercion <- c(40, "50 años", 33, "33") # Las comillas indican que es texto
@@ -157,7 +158,12 @@ data_estudiantes_tb[[1]] # accedemos a la columna nombre con notación por posic
 
 data_estudiantes_tb[1, "nombre"] # accedemos a la fila 1 de la columna nombre
 data_estudiantes_tb[1:2, "nombre"] # accedemos a la fila 1 y 2 de la columna nombre
-data_estudiantes_tb[[3, 1]] # Accedemos a la columna 3, fila 1
+
+data_estudiantes_tb[[3, 1]] # Accedemos a la fila 3 para la columna 1
+data_estudiantes_tb[3, 1] # Accedemos a la fila 3 para la columna 1
+
+# Notar que las dos instrucciones de arriba son equivalentes, pero la primera devuelve un vector.
+
 data_estudiantes_tb[1,] # Accedemos a toda la fila 1
 data_estudiantes_tb[1,3] # Accedemos a la fila 1 columna 3
 
