@@ -463,12 +463,9 @@ data_estudiantes_tb[[1]] # accedemos a la columna nombre con notación por posic
 ```{r}
 data_estudiantes_tb[1, "nombre"] # accedemos a la fila 1 de la columna nombre
 data_estudiantes_tb[1:2, "nombre"] # accedemos a la fila 1 y 2 de la columna nombre
-
 data_estudiantes_tb[[3, 1]] # Accedemos a la fila 3 para la columna 1. Retorna un vector
 data_estudiantes_tb[3, 1] # Accedemos a la fila 3 para la columna 1. Retorna un tibble
-
 data_estudiantes_tb[1,] # Accedemos a toda la fila 1
-
 data_estudiantes_tb[1,3] # Accedemos a la fila 1 columna 3
 ```
 
