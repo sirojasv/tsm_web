@@ -50,7 +50,7 @@ execute:
 
 ##  {background-color=rgb(25,25,25)}
 
-:::{.center-xy}
+::: {.center-xy}
 
 <div class="large-text">
 <br>
@@ -89,7 +89,7 @@ I. ¿Qué es R? <br>
 
 ##  {background-color=rgb(25,25,25)}
 
-:::{.center-xy}
+::: {.center-xy}
 
 <div class="large-text">
 <br>
