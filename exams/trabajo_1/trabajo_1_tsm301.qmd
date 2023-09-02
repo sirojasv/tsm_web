@@ -71,7 +71,7 @@ library(tidyverse)
 
 Para este ejercicio de metodología de investigación se requiere leer los siguientes artículos y reportes:
 
-  - Observatorio del Envejecimiento (2022). [*Uso de Internet y Tecnologías de la Información y Comunicación en las Personas Mayores*](https://drive.google.com/file/d/1zrA53X5y4m_uqnDlVFCRkSOdCTZzNMiU/view). Centro de Estudios de Vejez y Envejecimiento de la Pontificia Universidad Católica de Chile y Compañía de Seguros Confuturo.
+  - Observatorio del Envejecimiento (2022). [*Uso de Internet y Tecnologías de la Información y Comunicación en las Personas Mayores*]((https://observatorioenvejecimiento.uc.cl/wp-content/uploads/2022/06/Observatorio-Reporte-TICS.pdf). Centro de Estudios de Vejez y Envejecimiento de la Pontificia Universidad Católica de Chile y Compañía de Seguros Confuturo.
   - Bennett, F., Contreras, D., Morales, M. (2020). [*Medidas disciplinarias y su vínculo con la deserción escolar en Chile*](https://drive.google.com/file/d/1zrA53X5y4m_uqnDlVFCRkSOdCTZzNMiU/view). Serie de Documentos de Trabajo COES, Documento de trabajo Nº45, pp. 1-9.
 
 A partir de la lectura de estos documentos, responda las siguientes preguntas:
@@ -86,11 +86,11 @@ Respecto del artículo, responda lo siguiente:
  
  c. En la tabla 1 se presentan las siguientes variables. Indique el tipo y nivel de medición:
  
-    - Desertar en la educación
-    - Medida disciplinaria
-    - Edad
-    - Tipo de escuela
-    - Promedio de notas
+    - Desertar en la educación.
+    - Medida disciplinaria.
+    - Edad.
+    - Tipo de escuela.
+    - Promedio de notas.
   
 `Puntaje: 0,5`
   
@@ -102,13 +102,13 @@ d. ¿Cuáles son los principales resultados del estudio? `Puntaje: 1,0`
  
  b. En el artículo se presenta el concepto de "internet y tecnologías de la información y comunicación (TICS)". Usando los resultados del texto, proponga al menos una dimensión y su indicador. `Puntaje: 0,5`
  
- c. En la figura 1 del reporte se presenta el uso de internet por edad. A partir de esta información, elabore una hipótesis e indique de qué tipo es `Puntaje: 0,5`
+ c. En la figura 1 del reporte se presenta el uso de internet por edad. A partir de esta información, elabore una hipótesis e indique de qué tipo es. `Puntaje: 0,5`
  
  d. ¿Cuáles son los resultados de la investigación? Indique respecto de las personas mayores (60 años y más):
  
-    - Uso de internet
-    - Uso de smartphones
-    - Realización de videollamadas
+    - Uso de internet.
+    - Uso de smartphones.
+    - Realización de videollamadas.
     
 A partir de los resultados que usted expuso, ¿es posible plantear que la edad es el factor explicativo de estas diferencias en el uso de internet y TICS? `Puntaje: 1,0`
  

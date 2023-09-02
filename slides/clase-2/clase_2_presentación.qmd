@@ -65,7 +65,7 @@ execute:
 :::{.mini-text}
 | Concepto                | Descripción                                                                                                                                                                                                         |
 |--------------------|----------------------------------------------------|
-| `Consola o terminal`    | Lugar donde se puede escribir código y que retorna o "imprime" los resultados asociados a ese código.                                                                                                               |
+| `Consola`    | Lugar donde se puede escribir código y que retorna o "imprime" los resultados asociados a ese código.                                                                                                               |
 | `Script`                | Archivo de texto o programa que incluye el código que queremos ejecutar.                                                                                                                                            |
 | `Directorio de trabajo` | En inglés *working directory*. Indica la ubicación de los archivos de entrada y salida.                                                                                                                             |
 | `Función`               | Conjunto de instrucciones que convierten las entradas o *inputs* en los resultados u *outputs* esperados. Las funciones tienen **argumentos**, que son las entradas que necesita o especificaciones para funcionar. |
