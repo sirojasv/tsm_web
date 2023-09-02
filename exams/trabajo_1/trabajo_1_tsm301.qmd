@@ -71,7 +71,7 @@ library(tidyverse)
 
 Para este ejercicio de metodología de investigación se requiere leer los siguientes artículos y reportes:
 
-  - Observatorio del Envejecimiento (2022). [*Uso de Internet y Tecnologías de la Información y Comunicación en las Personas Mayores*]((https://observatorioenvejecimiento.uc.cl/wp-content/uploads/2022/06/Observatorio-Reporte-TICS.pdf). Centro de Estudios de Vejez y Envejecimiento de la Pontificia Universidad Católica de Chile y Compañía de Seguros Confuturo.
+  - Observatorio del Envejecimiento (2022). [*Uso de Internet y Tecnologías de la Información y Comunicación en las Personas Mayores*](https://observatorioenvejecimiento.uc.cl/wp-content/uploads/2022/06/Observatorio-Reporte-TICS.pdf). Centro de Estudios de Vejez y Envejecimiento de la Pontificia Universidad Católica de Chile y Compañía de Seguros Confuturo.
   - Bennett, F., Contreras, D., Morales, M. (2020). [*Medidas disciplinarias y su vínculo con la deserción escolar en Chile*](https://drive.google.com/file/d/1zrA53X5y4m_uqnDlVFCRkSOdCTZzNMiU/view). Serie de Documentos de Trabajo COES, Documento de trabajo Nº45, pp. 1-9.
 
 A partir de la lectura de estos documentos, responda las siguientes preguntas:

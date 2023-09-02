@@ -43,7 +43,6 @@ website:
       - icon: envelope
         href: mailto:sirojas1@uc.cl?cc=daleal@uc.cl
         text: "Contactar por mail"
-
     style: "docked"
     search: true
     collapse-level: 1
@@ -110,9 +109,6 @@ format:
 comments:
   hypothesis: true
 
-execute:
-  freeze: auto
-
-  editor: source
+freeze: auto
 
 editor: source
