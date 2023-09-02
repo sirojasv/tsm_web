@@ -88,7 +88,7 @@
     "href": "slides/clase-2/clase_2_presentación.html#glosario",
     "title": "Tipos y estructuras de datos en R",
     "section": "Glosario",
-    "text": "Glosario\n\n\n\n\n\n\n\n\nConcepto\nDescripción\n\n\n\n\nConsola o terminal\nLugar donde se puede escribir código y que retorna o “imprime” los resultados asociados a ese código.\n\n\nScript\nArchivo de texto o programa que incluye el código que queremos ejecutar.\n\n\nDirectorio de trabajo\nEn inglés working directory. Indica la ubicación de los archivos de entrada y salida.\n\n\nFunción\nConjunto de instrucciones que convierten las entradas o inputs en los resultados u outputs esperados. Las funciones tienen argumentos, que son las entradas que necesita o especificaciones para funcionar.\n\n\nPaquetes\nConjunto de funciones agrupadas y distribuidas mediante una librería diseñadas para temas específicos. Por ejemplo, paquetes para visualizar datos.\n\n\nVector\nUnidad básica de datos en R.\n\n\nDataframe o tibble\nTabla organizada mediante filas y columnas."
+    "text": "Glosario\n\n\n\n\n\n\n\n\nConcepto\nDescripción\n\n\n\n\nConsola\nLugar donde se puede escribir código y que retorna o “imprime” los resultados asociados a ese código.\n\n\nScript\nArchivo de texto o programa que incluye el código que queremos ejecutar.\n\n\nDirectorio de trabajo\nEn inglés working directory. Indica la ubicación de los archivos de entrada y salida.\n\n\nFunción\nConjunto de instrucciones que convierten las entradas o inputs en los resultados u outputs esperados. Las funciones tienen argumentos, que son las entradas que necesita o especificaciones para funcionar.\n\n\nPaquetes\nConjunto de funciones agrupadas y distribuidas mediante una librería diseñadas para temas específicos. Por ejemplo, paquetes para visualizar datos.\n\n\nVector\nUnidad básica de datos en R.\n\n\nDataframe o tibble\nTabla organizada mediante filas y columnas."
   },
   {
     "objectID": "slides/clase-2/clase_2_presentación.html#section-1",
@@ -241,8 +241,8 @@
     "objectID": "slides/clase-0/clase_0_presentación.html#hola",
     "href": "slides/clase-0/clase_0_presentación.html#hola",
     "title": "Instalación R y RStudio",
-    "section": "¡Hola🫡!",
-    "text": "¡Hola🫡!\n\nEn esta presentación encontrarán las instrucciones para instalar los softwares de R y RStudio en el marco de los cursos de Metodología Cuantitativa (TSM301) y Análisis de Regresión Múltiple (TMS302).\nAntes de comenzar, les presentamos un video de apenas un minuto del canal de Youtube Fazt Code para que conozcan más sobre este lenguaje de programación."
+    "section": "",
+    "text": "En esta presentación encontrarán las instrucciones para instalar los softwares de R y RStudio en el marco de los cursos de Metodología Cuantitativa (TSM301) y Análisis de Regresión Múltiple (TMS302).\nAntes de comenzar, les presentamos un video de apenas un minuto del canal de Youtube Fazt Code para que conozcan más sobre este lenguaje de programación."
   },
   {
     "objectID": "slides/clase-0/clase_0_presentación.html#instalación-de-r",
@@ -298,14 +298,14 @@
     "href": "slides/clase-0/clase_0_presentación.html#google-colab",
     "title": "Instalación R y RStudio",
     "section": "Google Colab",
-    "text": "Google Colab\n\nDeben iniciar sesión con una cuenta de Google en https://colab.research.google.com/.\n\nEn el menú superior izquierdo deben ir a Archivo → Nuevo Cuaderno\". Luego a Entorno de ejecución → Cambiar entorno de ejecución → Cambiar donde dice \"Python 3\" por \"R\".\nEn estos entornos tendrán celdas con código y celdas con texto 1.\nLas celdas se pueden iniciar con los botones y se ejecutan utilizando la combinación de teclado CTRL + ENTER\n\n\n\n\n\n\n\nEste entorno se los recomendamos para cuando tengan más clases del curso."
+    "text": "Google Colab\n\nDeben iniciar sesión con una cuenta de Google en https://colab.research.google.com/.\n\nEn el menú superior izquierdo deben ir a Archivo → Nuevo Cuaderno\". Luego a Entorno de ejecución → Cambiar entorno de ejecución → Cambiar donde dice \"Python 3\" por \"R\".\nEn estos entornos tendrán celdas con código y celdas con texto 1.\nLas celdas se pueden iniciar con los botones y se ejecutan utilizando la combinación de teclado CTRL + ENTER\n\n1 Este entorno se los recomendamos para cuando tengan más clases del curso."
   },
   {
     "objectID": "slides/clase-0/clase_0_presentación.html#section",
     "href": "slides/clase-0/clase_0_presentación.html#section",
     "title": "Instalación R y RStudio",
     "section": "",
-    "text": "¡Gracias! \n\n\n\n\n\nMetodología Cuantitativa - 2023"
+    "text": "¡Gracias!"
   },
   {
     "objectID": "licenses.html",
@@ -347,14 +347,14 @@
     "href": "exams/trabajo_1/trabajo_1_tsm301.html#artículo-bennett-et-al.",
     "title": "Trabajo 1",
     "section": "\n1 Artículo Bennett et al.",
-    "text": "1 Artículo Bennett et al.\nRespecto del artículo, responda lo siguiente:\n\n¿Cuál es el tema de la investigación? ¿Cuál es el objetivo de la investigación? Puntaje: 1,0\nIndique cuál es la relación entre variables que buscan probar los autores. ¿Qué tipo de hipótesis es? Puntaje: 0,5\n\nEn la tabla 1 se presentan las siguientes variables. Indique el tipo y nivel de medición:\n\nDesertar en la educación\nMedida disciplinaria\nEdad\nTipo de escuela\nPromedio de notas\n\n\n\nPuntaje: 0,5\n\n¿Cuáles son los principales resultados del estudio? Puntaje: 1,0"
+    "text": "1 Artículo Bennett et al.\nRespecto del artículo, responda lo siguiente:\n\n¿Cuál es el tema de la investigación? ¿Cuál es el objetivo de la investigación? Puntaje: 1,0\nIndique cuál es la relación entre variables que buscan probar los autores. ¿Qué tipo de hipótesis es? Puntaje: 0,5\n\nEn la tabla 1 se presentan las siguientes variables. Indique el tipo y nivel de medición:\n\nDesertar en la educación.\nMedida disciplinaria.\nEdad.\nTipo de escuela.\nPromedio de notas.\n\n\n\nPuntaje: 0,5\n\n¿Cuáles son los principales resultados del estudio? Puntaje: 1,0"
   },
   {
     "objectID": "exams/trabajo_1/trabajo_1_tsm301.html#reporte-observatorio-del-envejecimiento-y-confuturo",
     "href": "exams/trabajo_1/trabajo_1_tsm301.html#reporte-observatorio-del-envejecimiento-y-confuturo",
     "title": "Trabajo 1",
     "section": "\n2 Reporte Observatorio del Envejecimiento y Confuturo",
-    "text": "2 Reporte Observatorio del Envejecimiento y Confuturo\n\n¿Cuál es el tema de la investigación? ¿Cuál es el objetivo de la investigación? Puntaje: 1,0\nEn el artículo se presenta el concepto de “internet y tecnologías de la información y comunicación (TICS)”. Usando los resultados del texto, proponga al menos una dimensión y su indicador. Puntaje: 0,5\nEn la figura 1 del reporte se presenta el uso de internet por edad. A partir de esta información, elabore una hipótesis e indique de qué tipo es Puntaje: 0,5\n\n¿Cuáles son los resultados de la investigación? Indique respecto de las personas mayores (60 años y más):\n\nUso de internet\nUso de smartphones\nRealización de videollamadas\n\n\n\nA partir de los resultados que usted expuso, ¿es posible plantear que la edad es el factor explicativo de estas diferencias en el uso de internet y TICS? Puntaje: 1,0"
+    "text": "2 Reporte Observatorio del Envejecimiento y Confuturo\n\n¿Cuál es el tema de la investigación? ¿Cuál es el objetivo de la investigación? Puntaje: 1,0\nEn el artículo se presenta el concepto de “internet y tecnologías de la información y comunicación (TICS)”. Usando los resultados del texto, proponga al menos una dimensión y su indicador. Puntaje: 0,5\nEn la figura 1 del reporte se presenta el uso de internet por edad. A partir de esta información, elabore una hipótesis e indique de qué tipo es. Puntaje: 0,5\n\n¿Cuáles son los resultados de la investigación? Indique respecto de las personas mayores (60 años y más):\n\nUso de internet.\nUso de smartphones.\nRealización de videollamadas.\n\n\n\nA partir de los resultados que usted expuso, ¿es posible plantear que la edad es el factor explicativo de estas diferencias en el uso de internet y TICS? Puntaje: 1,0"
   },
   {
     "objectID": "course-contact.html",
@@ -459,7 +459,7 @@
     "href": "notes/clase_1_notas/clase_1_notas.html#dataframes-y-tibbles",
     "title": "Notas clase 1: Introducción a R",
     "section": "\n3 Dataframes y tibbles",
-    "text": "3 Dataframes y tibbles\n\n3.1 Generando dataframes y tibbles\nEn R los dataframes son arreglos de datos bidimensionales (filas y columnas), pero que permiten distintos tipos de datos.\nEs el caso usual de datos estructurados que se ven en los cursos de análisis de datos: las filas representan observaciones y las columnas variables.\nLos tibbles son muy similares a los dataframe, pero con mejoras de calidad de vida. La función proviene del paquete tidyverse.\nLos dataframes se generan a través de la función data.frame(), mientras que los tibbles con tibble().\n\n# Se definen los vectores de datos\nnombre &lt;- c(\"Constanza\", \"Sofia\", \"Gonzalo\")\ncarrera &lt;- c(\"Ingeniería\", \"Administración\", \"Arqueología\")\ngen &lt;- c(2013, 2018, 2023)\n\n\n# Generando una base de datos con data.frame()\ndata_estudiantes_df &lt;- data.frame(nombre, carrera, gen)\ndata_estudiantes_df\n\n     nombre        carrera  gen\n1 Constanza     Ingeniería 2013\n2     Sofia Administración 2018\n3   Gonzalo    Arqueología 2023\n\n\n\n# Generando una base de datos con tibble()\ndata_estudiantes_tb &lt;- tibble(nombre, carrera, gen)\ndata_estudiantes_tb\n\n# A tibble: 3 × 3\n  nombre    carrera          gen\n  &lt;chr&gt;     &lt;chr&gt;          &lt;dbl&gt;\n1 Constanza Ingeniería      2013\n2 Sofia     Administración  2018\n3 Gonzalo   Arqueología     2023\n\n\n\n3.2 Acceder a elementos\nEn los tibbles y dataframes uno también puede seleccionar directamente filas o columnas. Para ello, existen dos opciones:\n\nUsar la notación de $ para acceder a columnas específicas.\nUsar la notación de [[]] para acceder a columnas específicas.\nUsar la notación de matrices [i, j] para acceder a filas y columnas.\n\n\nnombre_base$nombre_variable\nnombre_base[i, j]\nnombre_base[[]]\n\nEjemplos:\n\ndata_estudiantes_tb$nombre # accedemos a la columna nombre con $. Esto devuelve un vector\n\n[1] \"Constanza\" \"Sofia\"     \"Gonzalo\"  \n\ndata_estudiantes_tb[\"nombre\"] # accedemos a la columna nombre con []. Esto devuelve un tibble\n\n# A tibble: 3 × 1\n  nombre   \n  &lt;chr&gt;    \n1 Constanza\n2 Sofia    \n3 Gonzalo  \n\ndata_estudiantes_tb[[\"nombre\"]] # accedemos a la columna nombre con[[]] Esto devuelve un vector\n\n[1] \"Constanza\" \"Sofia\"     \"Gonzalo\"  \n\ndata_estudiantes_tb[[1]] # accedemos a la columna nombre con notación por posición [[]]\n\n[1] \"Constanza\" \"Sofia\"     \"Gonzalo\"  \n\n\n\ndata_estudiantes_tb[1, \"nombre\"] # accedemos a la fila 1 de la columna nombre\n\n# A tibble: 1 × 1\n  nombre   \n  &lt;chr&gt;    \n1 Constanza\n\ndata_estudiantes_tb[1:2, \"nombre\"] # accedemos a la fila 1 y 2 de la columna nombre\n\n# A tibble: 2 × 1\n  nombre   \n  &lt;chr&gt;    \n1 Constanza\n2 Sofia    \n\ndata_estudiantes_tb[[3, 1]] # Accedemos a la fila 3 para la columna 1\n\n[1] \"Gonzalo\"\n\ndata_estudiantes_tb[3, 1] # Accedemos a la fila 3 para la columna 1\n\n# A tibble: 1 × 1\n  nombre \n  &lt;chr&gt;  \n1 Gonzalo\n\n# Notar que las dos instrucciones de arriba son equivalentes, pero la primera devuelve un vector.\n\ndata_estudiantes_tb[1,] # Accedemos a toda la fila 1\n\n# A tibble: 1 × 3\n  nombre    carrera      gen\n  &lt;chr&gt;     &lt;chr&gt;      &lt;dbl&gt;\n1 Constanza Ingeniería  2013\n\ndata_estudiantes_tb[1,3] # Accedemos a la fila 1 columna 3\n\n# A tibble: 1 × 1\n    gen\n  &lt;dbl&gt;\n1  2013\n\n\n\ndata_estudiantes_tb[, -c(1)] # accedemos a todas las columnas menos nombre, por posición\n\n# A tibble: 3 × 2\n  carrera          gen\n  &lt;chr&gt;          &lt;dbl&gt;\n1 Ingeniería      2013\n2 Administración  2018\n3 Arqueología     2023\n\ndata_estudiantes_tb[, -c(1:2)] # accedemos a todas las columnas menos la 1 y la 2\n\n# A tibble: 3 × 1\n    gen\n  &lt;dbl&gt;\n1  2013\n2  2018\n3  2023\n\ndata_estudiantes_tb[, names(data_estudiantes_tb) != \"nombre\"] # accedemos a todas las columnas menos nombre\n\n# A tibble: 3 × 2\n  carrera          gen\n  &lt;chr&gt;          &lt;dbl&gt;\n1 Ingeniería      2013\n2 Administración  2018\n3 Arqueología     2023\n\n\n\ndata_estudiantes_tb[, !names(data_estudiantes_tb) %in% c(\"nombre\", \"carrera\")]\n\n# A tibble: 3 × 1\n    gen\n  &lt;dbl&gt;\n1  2013\n2  2018\n3  2023"
+    "text": "3 Dataframes y tibbles\n\n3.1 Generando dataframes y tibbles\nEn R los dataframes son arreglos de datos bidimensionales (filas y columnas), pero que permiten distintos tipos de datos.\nEs el caso usual de datos estructurados que se ven en los cursos de análisis de datos: las filas representan observaciones y las columnas variables.\nLos tibbles son muy similares a los dataframe, pero con mejoras de calidad de vida. La función proviene del paquete tidyverse.\nLos dataframes se generan a través de la función data.frame(), mientras que los tibbles con tibble().\n\n# Se definen los vectores de datos\nnombre &lt;- c(\"Constanza\", \"Sofia\", \"Gonzalo\")\ncarrera &lt;- c(\"Ingeniería\", \"Administración\", \"Arqueología\")\ngen &lt;- c(2013, 2018, 2023)\n\n\n# Generando una base de datos con data.frame()\ndata_estudiantes_df &lt;- data.frame(nombre, carrera, gen)\ndata_estudiantes_df\n\n     nombre        carrera  gen\n1 Constanza     Ingeniería 2013\n2     Sofia Administración 2018\n3   Gonzalo    Arqueología 2023\n\n\n\n# Generando una base de datos con tibble()\ndata_estudiantes_tb &lt;- tibble(nombre, carrera, gen)\ndata_estudiantes_tb\n\n# A tibble: 3 × 3\n  nombre    carrera          gen\n  &lt;chr&gt;     &lt;chr&gt;          &lt;dbl&gt;\n1 Constanza Ingeniería      2013\n2 Sofia     Administración  2018\n3 Gonzalo   Arqueología     2023\n\n\n\n3.2 Acceder a elementos\nEn los tibbles y dataframes uno también puede seleccionar directamente filas o columnas. Para ello, existen dos opciones:\n\nUsar la notación de $ para acceder a columnas específicas.\nUsar la notación de [[]] para acceder a columnas específicas.\nUsar la notación de matrices [i, j] para acceder a filas y columnas.\n\n\nnombre_base$nombre_variable\nnombre_base[i, j]\nnombre_base[[]]\n\nEjemplos:\n\ndata_estudiantes_tb$nombre # accedemos a la columna nombre con $. Esto devuelve un vector\n\n[1] \"Constanza\" \"Sofia\"     \"Gonzalo\"  \n\ndata_estudiantes_tb[\"nombre\"] # accedemos a la columna nombre con []. Esto devuelve un tibble\n\n# A tibble: 3 × 1\n  nombre   \n  &lt;chr&gt;    \n1 Constanza\n2 Sofia    \n3 Gonzalo  \n\ndata_estudiantes_tb[[\"nombre\"]] # accedemos a la columna nombre con[[]] Esto devuelve un vector\n\n[1] \"Constanza\" \"Sofia\"     \"Gonzalo\"  \n\ndata_estudiantes_tb[[1]] # accedemos a la columna nombre con notación por posición [[]]\n\n[1] \"Constanza\" \"Sofia\"     \"Gonzalo\"  \n\n\n\ndata_estudiantes_tb[1, \"nombre\"] # accedemos a la fila 1 de la columna nombre\n\n# A tibble: 1 × 1\n  nombre   \n  &lt;chr&gt;    \n1 Constanza\n\ndata_estudiantes_tb[1:2, \"nombre\"] # accedemos a la fila 1 y 2 de la columna nombre\n\n# A tibble: 2 × 1\n  nombre   \n  &lt;chr&gt;    \n1 Constanza\n2 Sofia    \n\ndata_estudiantes_tb[[3, 1]] # Accedemos a la fila 3 para la columna 1. Retorna un vector\n\n[1] \"Gonzalo\"\n\ndata_estudiantes_tb[3, 1] # Accedemos a la fila 3 para la columna 1. Retorna un tibble\n\n# A tibble: 1 × 1\n  nombre \n  &lt;chr&gt;  \n1 Gonzalo\n\ndata_estudiantes_tb[1,] # Accedemos a toda la fila 1\n\n# A tibble: 1 × 3\n  nombre    carrera      gen\n  &lt;chr&gt;     &lt;chr&gt;      &lt;dbl&gt;\n1 Constanza Ingeniería  2013\n\ndata_estudiantes_tb[1,3] # Accedemos a la fila 1 columna 3\n\n# A tibble: 1 × 1\n    gen\n  &lt;dbl&gt;\n1  2013\n\n\n\ndata_estudiantes_tb[, -c(1)] # accedemos a todas las columnas menos nombre, por posición\n\n# A tibble: 3 × 2\n  carrera          gen\n  &lt;chr&gt;          &lt;dbl&gt;\n1 Ingeniería      2013\n2 Administración  2018\n3 Arqueología     2023\n\ndata_estudiantes_tb[, -c(1:2)] # accedemos a todas las columnas menos la 1 y la 2\n\n# A tibble: 3 × 1\n    gen\n  &lt;dbl&gt;\n1  2013\n2  2018\n3  2023\n\ndata_estudiantes_tb[, names(data_estudiantes_tb) != \"nombre\"] # accedemos a todas las columnas menos nombre\n\n# A tibble: 3 × 2\n  carrera          gen\n  &lt;chr&gt;          &lt;dbl&gt;\n1 Ingeniería      2013\n2 Administración  2018\n3 Arqueología     2023\n\n\n\ndata_estudiantes_tb[, !names(data_estudiantes_tb) %in% c(\"nombre\", \"carrera\")]\n\n# A tibble: 3 × 1\n    gen\n  &lt;dbl&gt;\n1  2013\n2  2018\n3  2023"
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html",
@@ -472,8 +472,8 @@
     "objectID": "slides/clase-1/clase_1_presentación.html#contenidos",
     "href": "slides/clase-1/clase_1_presentación.html#contenidos",
     "title": "Introducción a R",
-    "section": "Contenidos",
-    "text": "Contenidos\nI. ¿Qué es R?\nII. ¿Por qué usar R?\nIII. Iniciando R\nIV. Bases de R\nV. Comentando Scripts"
+    "section": "",
+    "text": "I. ¿Qué es R?\nII. ¿Por qué usar R?\nIII. Iniciando R\nIV. Bases de R\nV. Comentando Scripts"
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#section",
@@ -536,7 +536,7 @@
     "href": "slides/clase-1/clase_1_presentación.html#atajos-relevantes-para-correr-scripts",
     "title": "Introducción a R",
     "section": "Atajos relevantes para correr scripts",
-    "text": "Atajos relevantes para correr scripts\n\nCTRL/CMD + ENTER → Ejecuta la línea que tienen seleccionada en el curso\nCTRL/CMD + SHIFT + ENTER → Ejecuta todo el código\nCTR/CMD + L → Limpia toda la consola de resultados de R\nCTRL/CMD + S → Guarda el script. Si este no tiene nombre, primero pedirá guardarlo en un directorio y asignarle nombre"
+    "text": "Atajos relevantes para correr scripts\n\n\nCTRL/CMD + ENTER → Ejecuta la línea que tienen seleccionada en el curso\n\nCTRL/CMD + SHIFT + ENTER → Ejecuta todo el código\n\nCTR/CMD + L → Limpia toda la consola de resultados de R\n\nCTRL/CMD + S → Guarda el script. Si este no tiene nombre, primero pedirá guardarlo en un directorio y asignarle nombre"
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#section-3",
@@ -550,14 +550,14 @@
     "href": "slides/clase-1/clase_1_presentación.html#cálculos-en-r",
     "title": "Introducción a R",
     "section": "Cálculos en R",
-    "text": "Cálculos en R\nEs posible usar R como una calculadora. Las operaciones más utilizadas son las siguientes\n\n\n\n\nOperación\n\n\n\n\n+\nSuma\n\n\n-\nResta\n\n\n*\nMultiplicación\n\n\n/\nDivisión\n\n\n^\nPotencia\n\n\nsqrt\nRaíz cuadrada\n\n\nlog()\nLogaritmo base"
+    "text": "Cálculos en R\nEs posible usar R como una calculadora. Las operaciones más utilizadas son las siguientes\n\n\n\nOperación\n\n\n\n+\nSuma\n\n\n-\nResta\n\n\n*\nMultiplicación\n\n\n/\nDivisión\n\n\n^\nPotencia\n\n\nsqrt\nRaíz cuadrada\n\n\nlog()\nLogaritmo base"
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#objetos-en-r",
     "href": "slides/clase-1/clase_1_presentación.html#objetos-en-r",
     "title": "Introducción a R",
     "section": "Objetos en R",
-    "text": "Objetos en R\n\nEn R podemos crear objetos que guarden información o resultados. Para ello, se escribe el nombre y se les asigna los valores con el operador &lt;-.\nLos nombres permiten representar resultados de manera más fácil. Ejemplo:\n\nIngresamos tres notas y las dividimos por 3. Este resultado queda guardado en el objeto llamado “promedio”.\nLuego, si queremos ver el resultado, basta con llamar al objeto promedio.\nSi el nombre del objeto ya existe, se sobreescribirá su contenido.\n\n\n\n# Guardamos esta operación matemática en un objeto llamado \"promedio\"\n\npromedio &lt;- (5.5  + 3.8 + 6.1) / 3"
+    "text": "Objetos en R\n\nEn R podemos crear objetos que guarden información o resultados. Para ello, se escribe el nombre y se les asigna los valores con el operador &lt;-.\n\nLos nombres permiten representar resultados de manera más fácil. Ejemplo:\n\nIngresamos tres notas y las dividimos por 3. Este resultado queda guardado en el objeto llamado “promedio”.\nLuego, si queremos ver el resultado, basta con llamar al objeto promedio.\nSi el nombre del objeto ya existe, se sobreescribirá su contenido.\n\n\n\n\n# Guardamos esta operación matemática en un objeto llamado \"promedio\"\n\npromedio &lt;- (5.5  + 3.8 + 6.1) / 3"
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#nombrar-objetos",
@@ -571,14 +571,14 @@
     "href": "slides/clase-1/clase_1_presentación.html#estructuras-de-datos",
     "title": "Introducción a R",
     "section": "Estructuras de datos",
-    "text": "Estructuras de datos\n\nR cuenta con clases y tipos de datos definidos de antemano, los cuales dependen de la información que contengan en su interior. Los comandos class y typeof sirven para preguntar el tipo de cada elemento.\nEn la siguiente tabla se muestran algunas de las clases más frecuentes en R.\n\n\n\n\n\n\n\n\n\n\nTipo\nDescripción\nEjemplo\n\n\n\n\ninteger\nNúmeros enteros\n-1, 0, 1\n\n\nnumeric\nNúmeros reales\n-0.5, 1/2, 1\n\n\ncharacter\nTexto/String\n“Erwin”, “Armin”, “Sasha”, “Titanes”\n\n\nfactor\nDatos categóricos\n“Trabajo Social [1]”, “Otra carrera [2]”\n\n\nhaven_labelled\nValores numéricos con etiquetas asociadas\n1 = “Muy en desacuerdo”; 2 = “En desacuerdo”; 3 “Ni de acuerdo ni en desacuerdo”; 4 = “De acuerdo”; 5 “Muy de acuerdo”\n\n\nlogical\nVerdadero o falso\n“TRUE”, “FALSE”"
+    "text": "Estructuras de datos\n\nR cuenta con clases y tipos de datos definidos de antemano, los cuales dependen de la información que contengan en su interior. Los comandos class y typeof sirven para preguntar el tipo de cada elemento.\nEn la siguiente tabla se muestran algunas de las clases más frecuentes en R.\n\n\n\n\n\n\n\n\n\nTipo\nDescripción\nEjemplo\n\n\n\ninteger\nNúmeros enteros\n-1, 0, 1\n\n\nnumeric\nNúmeros reales\n-0.5, 1/2, 1\n\n\ncharacter\nTexto/String\n“Erwin”, “Armin”, “Sasha”, “Titanes”\n\n\nfactor\nDatos categóricos\n“Trabajo Social [1]”, “Otra carrera [2]”\n\n\nhaven_labelled\nValores numéricos con etiquetas asociadas\n1 = “Muy en desacuerdo”; 2 = “En desacuerdo”; 3 “Ni de acuerdo ni en desacuerdo”; 4 = “De acuerdo”; 5 “Muy de acuerdo”\n\n\nlogical\nVerdadero o falso\n“TRUE”, “FALSE”"
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#vectores-1",
     "href": "slides/clase-1/clase_1_presentación.html#vectores-1",
     "title": "Introducción a R",
     "section": "Vectores (1)",
-    "text": "Vectores (1)\nLos vectores son ordenamientos unidimensionales que solo pueden contener un tipo de dato. Se definen con el comando c().\nLos vectores tienen valores y además una posición (index) asociada a cada valor. Esta comienza desde el número 1 en adelante.\n\n\nv_numerico &lt;- c(1, 3, 5, 7, 9) # Vector que solo contiene números\nclass(v_numerico)\n\n[1] \"numeric\""
+    "text": "Vectores (1)\nLos vectores son ordenamientos unidimensionales que solo pueden contener un tipo de dato. Se definen con el comando c().\nLos vectores tienen valores y además una posición (index) asociada a cada valor. Esta comienza desde el número 1 en adelante.\n\n\n\n\n\nv_numerico &lt;- c(1, 3, 5, 7, 9) # Vector que solo contiene números\nclass(v_numerico)\n\n[1] \"numeric\""
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#vectores-2",
@@ -599,7 +599,7 @@
     "href": "slides/clase-1/clase_1_presentación.html#vectores-4",
     "title": "Introducción a R",
     "section": "Vectores (4)",
-    "text": "Vectores (4)\nEs posible acceder a cualquier elemento de un vector a través de su posición usando la notación []1.\n\n\n\nRespondamos algunas preguntas:\n\n¿De qué tipo es este vector?\n¿Cuántos elementos o qué largo tiene este vector?\n¿Cómo puedo acceder al primer elemento del vector?\n¿Cómo puedo acceder a los dos primeros elementos del vector?\n¿Cómo puedo acceder a la última posición, sin saber su largo a priori?\n\nNota: si tienen problemas para escribirlos con el teclado, pueden usar ALT + 91 para [ y ALT + 93 para ]. Usualmente con solo escribir uno R debería autocompletar."
+    "text": "Vectores (4)\nEs posible acceder a cualquier elemento de un vector a través de su posición usando la notación []1.1 Nota: si tienen problemas para escribirlos con el teclado, pueden usar ALT + 91 para [ y ALT + 93 para ]. Usualmente con solo escribir uno R debería autocompletar.\n\n\n\nRespondamos algunas preguntas:\n\n¿De qué tipo es este vector?\n¿Cuántos elementos o qué largo tiene este vector?\n¿Cómo puedo acceder al primer elemento del vector?\n¿Cómo puedo acceder a los dos primeros elementos del vector?\n¿Cómo puedo acceder a la última posición, sin saber su largo a priori?"
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#vectores-5",
@@ -627,7 +627,7 @@
     "href": "slides/clase-1/clase_1_presentación.html#acceder-a-elementos",
     "title": "Introducción a R",
     "section": "Acceder a elementos",
-    "text": "Acceder a elementos\n\nEn R las matrices siempre siguen el orden (filas, columnas). Con esta lógica se puede seleccionar sus elementos: mi_matriz[i, j] ~ i = filas, j = columnas.\n\nmi_matriz[i, ]: selecciona la fila i-ésima de la matriz.\nmi_matriz[, j]: selecciona la columna j-ésima de la matriz.\nmi_matriz[i, j]: selecciona el j-ésimo elemento de la i-ésima fila\n\n\nRealicemos un ejemplo con la matriz_2\n\nmatriz_2[1, 1] # Estoy seleccionando la fila 1 columna 1\n\n[1] 1\n\nmatriz_2[2, 1] # Estoy seleccionando la fila 2 columna 1\n\n[1] 4\n\nmatriz_2[1, ] # Estoy seleccionando a toda la fila 1\n\n[1] 1 2 3\n\nmatriz_2[3, ] # Estoy seleccionando a toda la fila 3\n\n[1] 7 8 9\n\nmatriz_2[, 1] # Estoy seleccionando a toda la columna 1\n\n[1] 1 4 7"
+    "text": "Acceder a elementos\n\n\nEn R las matrices siempre siguen el orden (filas, columnas). Con esta lógica se puede seleccionar sus elementos: mi_matriz[i, j] ~ i = filas, j = columnas.\n\n\nmi_matriz[i, ]: selecciona la fila i-ésima de la matriz.\n\nmi_matriz[, j]: selecciona la columna j-ésima de la matriz.\n\nmi_matriz[i, j]: selecciona el j-ésimo elemento de la i-ésima fila\n\n\n\nRealicemos un ejemplo con la matriz_2\n\nmatriz_2[1, 1] # Estoy seleccionando la fila 1 columna 1\n\n[1] 1\n\nmatriz_2[2, 1] # Estoy seleccionando la fila 2 columna 1\n\n[1] 4\n\nmatriz_2[1, ] # Estoy seleccionando a toda la fila 1\n\n[1] 1 2 3\n\nmatriz_2[3, ] # Estoy seleccionando a toda la fila 3\n\n[1] 7 8 9\n\nmatriz_2[, 1] # Estoy seleccionando a toda la columna 1\n\n[1] 1 4 7"
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#dataframe-y-tibble-1",
@@ -697,30 +697,20 @@
     "href": "slides/clase-1/clase_1_presentación.html#seccionar-un-script",
     "title": "Introducción a R",
     "section": "Seccionar un script",
-    "text": "Seccionar un script\nSe puede establecer un orden de títulos y subtítulos que ordenen el script mediante el siguiente esquema:\n\n# y cuatro guiones medios indican una sección.\n## y cuatro guiones medios indican una subsección anidada a la sección.\n### y cuatro guiones medios indican una sub-subsección.\n\n\n# Proceso 1 ----\n\n## Subproceso 1.1 ----\n\n### Sub-subproceso 1.1.1 ----\n\nPara ver la barra de navegación utilizamos el atajo CTRL/CMD + SHIFT + O."
+    "text": "Seccionar un script\nSe puede establecer un orden de títulos y subtítulos que ordenen el script mediante el siguiente esquema:\n\n\n# y cuatro guiones medios indican una sección.\n\n## y cuatro guiones medios indican una subsección anidada a la sección.\n\n### y cuatro guiones medios indican una sub-subsección.\n\n\n# Proceso 1 ----\n\n## Subproceso 1.1 ----\n\n### Sub-subproceso 1.1.1 ----\n\nPara ver la barra de navegación utilizamos el atajo CTRL/CMD + SHIFT + O."
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#guardar-un-script",
     "href": "slides/clase-1/clase_1_presentación.html#guardar-un-script",
     "title": "Introducción a R",
     "section": "Guardar un script",
-    "text": "Guardar un script\n\nSi queremos guardar este script, tenemos tres alternativas:\n\nSeleccionar el ícono de disquette que está sobre el script.\nIr a File → Save.\nUsar el atajo CTRL/CMD + S.\n\nPor último, tener en cuenta que RStudio cuenta con autocompletado y un diagnóstico de errores (aparecerá un ícono con una marca roja en forma de “x” en la línea donde hay problemas)."
+    "text": "Guardar un script\n\n\nSi queremos guardar este script, tenemos tres alternativas:\n\nSeleccionar el ícono de disquette que está sobre el script.\nIr a File → Save.\nUsar el atajo CTRL/CMD + S.\n\n\nPor último, tener en cuenta que RStudio cuenta con autocompletado y un diagnóstico de errores (aparecerá un ícono con una marca roja en forma de “x” en la línea donde hay problemas)."
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html#section-4",
     "href": "slides/clase-1/clase_1_presentación.html#section-4",
     "title": "Introducción a R",
     "section": "",
-    "text": "¡Gracias!  https://sirojasv.github.io/tsm_web/\n\n\n\n\n\nMetodología Cuantitativa - 2023"
-<<<<<<< HEAD
-  },
-  {
-    "objectID": "notes/clase_1_notas/clase_1_notas.html",
-    "href": "notes/clase_1_notas/clase_1_notas.html",
-    "title": "Notas clase 1: Introducción a R",
-    "section": "",
-    "text": "library(tidyverse)"
-=======
->>>>>>> gh-pages
+    "text": "¡Gracias! https://sirojasv.github.io/tsm_web/"
   }
 ]
