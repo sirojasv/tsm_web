@@ -449,7 +449,7 @@ Algunas de sus ventajas son:
  - Permiten controlar el número de categorías válidas.
  - Mayor flexibilidad para ordenar los elementos del factor, lo que facilita su implementación en gráficos, entre otros.
 
-Para este ejemplo agregaremos una nueva variable al conjunto de datos denominada `satisfaccion`. Esta consta de cinco categorías las cuales se corresponden:
+Para este ejemplo agregaremos una nueva variable al conjunto de datos denominada `satisfaccion`. Esta consta de cinco categorías las cuales son:
 
   1. Muy Insatisfecho/a.
   2. Insatisfecho/a.
@@ -474,7 +474,7 @@ estudiantes["satisfaccion"] <- factor(estudiantes$satisfaccion,
 ## Tablas
 
 ::: {.callout-note}
-Esta sección pretende mostrar de manera suscinta y rápida la generación de tablas con R base. No vale la pena dedicarle mucho tiempo, pues existen paquetes que ofrecen opciones mucho más atractivas para formatear, visualizar y exportar tablas a distintos formatos.
+Esta sección pretende mostrar de manera sucinta y rápida la generación de tablas con R base. No vale la pena dedicarle mucho tiempo, pues existen paquetes que ofrecen opciones mucho más atractivas para formatear, visualizar y exportar tablas a distintos formatos.
 :::
 
 A partir de la variable de satisfacción creada, generaremos nuestra primera tabla de frecuencias. Las funciones relevantes para esto son las siguientes:
