@@ -518,7 +518,7 @@ A continuación se presentan algunas funciones que pueden resultar útiles para 
 ```{r}
 #| eval: false
 options(OutDec = ",", # Decimales se muestran con coma
-        scipen = 999) # Desahabilita notación científica
+        scipen = 999) # Deshabilita notación científica
 ```
 
 ```{r}
