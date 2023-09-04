@@ -1,0 +1,521 @@
+---
+# Título y Autor
+title: "Notas clase 2: Tipos y Estructuras de datos en R"
+subtitle: |
+    | Curso: Metodología Cuantitativa.
+    | Magíster en Trabajo Social, Pontificia Universidad Católica de Chile.
+author: "Sebastián Rojas Vergara"
+# date: 
+# abstract: 
+# thanks:
+# order: 
+# Opciones de formato
+format: 
+  html:
+    # Fuente
+    # Despliegue de código
+    code-fold: false
+    code-line-numbers: true
+    # Tema
+    theme:
+      light: flatly
+      dark: darkly
+    highlight-style: haddock
+    # Autocontenido
+    self-contained: true
+    # estilos
+    css: styles.css
+# Tabla de contenidos
+toc: true
+toc-depth: 4
+toc-location: right
+# Numeración
+number-sections: true
+# Figuras
+fig-align: center
+fig-cap-location: top
+# Notas al pie
+footnotes-hover: true
+# Lenguaje
+lang: "es"
+# Ejecución de código
+comments: false
+execute: 
+  echo: true
+---
+
+<img src="images/logo_puc_bn.png" alt="Logo PUC" style="position: fixed; top: 0; right: 0; width: 150px; height: 90px;">
+
+
+## Introducción{.unnumbered}
+
+Los dataframes y tibbles son estructuras de datos en que cada columna o variable corresponde a un vector, estos últimos siempre conteniendo un solo tipo de dato. Esto permite aplicar funciones que están disponibles para los vectores.
+
+Si bien hay funciones que son comunes independiente del tipo de vector, hay otras que están disponibles según sea el tipo de dato. Por ejemplo, funciones para vectores `numeric`, `character`, `factor`, etc.
+  
+::: {.callout-note}
+Las funciones que se presentan a continuación son las disponibles en R "base", es decir, aquellas nativas del lenguaje. En las próximas sesiones se verán las funciones disponibles a través del paquete `tidyverse`. 
+
+Hay al menos dos razones por las que es necesario conocer sobre las funciones de R base.
+
+ 1. Hay conceptos y funciones de R base que son transversales, independiente del paquete que estemos usando.
+ 2. Durante nuestro trabajo nos puede interactuar con personas que conozcan solo R base o realicen operaciones mezclando R base junto con otras librerías.
+ 
+Cabe mencionar que el listado que se presenta a continuación no es exhaustivo. La cantidad de funciones disponibles en R base supera ampliamente los alcances de este curso.
+:::  
+  
+## Conjunto de datos
+
+Usaremos la función `tibble()` del paquete `tibble`, que forma parte de `tidyverse`. Esto también podría haberse realizado usando la función `data.frame()`, el cual es nativo de R.
+
+::: {.callout-tip}
+En R es posible llamar a un paquete sin la necesidad de cargarlo con `library()`. Para ello, se debe escribir el nombre del paquete, seguido dos puntos `:` y luego se especifica la función de ese paquete que se desea llamar `paquete::funcion`.
+
+En el código que se presenta más adelante, se está llamando del paquete `tibble` a la función `tibble()`. Algunos elementos que se debe tener en cuenta:
+
+ - Es útil cuando queremos acceder a una función de un paquete por una o pocas veces, sin la necesidad de cargarlo.
+ - Hay paquetes que pueden tener funciones con el mismo nombre, lo que genera ciertos conflictos. Especificar directamente el paquete desde el cual se está llamando a esa función evita o disminuye ese problema (que de igual forma tiene solución). 
+ - Si el paquete no está cargado, el llamado se debe hacer cada vez que se desee usar una de sus funciones.
+:::  
+
+Crearemos un conjunto de datos de estudiantes de talleres de música con la siguiente información. 
+
+ - **nombre**: primer nombre.
+ - **apellido**: primer apellido.
+ - **edad**: edad en años.
+ - **ppa**: promedio ponderado acumulado.
+ - **pais**: país de nacionalidad del estudiante. 
+ 
+```{r}
+estudiantes <- tibble::tibble(
+  nombre = c("Ismael", "Andrea", "Ernesto",
+             "Daniela", "David", "Magdalena",
+             "Santiago"),
+  apellido = c("Fernández", "Pérez", "Leal",
+               "Núñez", "Espinoza", "Madrid",
+               "Vergara"),
+  edad = c(29, 45, 79,
+           18, 63, 80,
+           35),
+  ppa = c(5.75, 6.12, 5.06,
+          6.12, 4.73, 5.24,
+          4.94),
+  region = c("Región Metropolitana", "Región de La Araucanía", "Región de Arica y Parinacota",
+             "Región de Valparaíso", "Región Metropolitana", "Región del Ñuble",
+             "Región del Maule"),
+  pais = c("Chile") # Noten que como solo hay un único valor, R lo recicla para asigarlo a todos.
+  )
+estudiantes
+```
+
+## Explorar
+
+Las siguientes funciones permiten explorar un conjunto de datos:
+
+- `dim()`: muestra las dimensiones, es decir, el número de filas y columnas. Si se desea saber solamente las filas o columnas, se puede emplear `nrow` o `ncol` respectivamente.
+- `str()`: muestra la estructrura del conjunto de datos.
+- `names()`: muestra los nombres de las columnas.
+- `summary()`: entrega estadísticas de resumen para cada columna. 
+- `head()`: muestra las primeras n filas. Con el argumento `x` se puede especificar el número de filas. Si no se indica, mostrará 6.
+- `tail()`: muestra las últimas n filas. Con el argumento `x` se puede especificar el número de filas. Si no se indica, mostrará 6.
+- `View()`: muestra el conjunto de datos en otra ventana.
+
+```{r}
+dim(estudiantes) 
+str(estudiantes)
+names(estudiantes)
+summary(estudiantes)
+head(estudiantes, n = 2)
+tail(estudiantes, n = 2)
+```
+
+## Procesar
+
+### Crear, modificar o eliminar variables
+
+Para eliminar variables existen múltiples modos. Veremos dos:
+
+ 1. Usando la función `subset()`, que retorna un subconjunto de datos a partir de una selección. Esta tiene un argumento llamado `select` que permite indicar columnas. Las columnas también se pueden indicar en sentido negativo usando el signo menos `-` (i.e. todas menos las indicadas con signo negativo).
+ 
+ 2. Accediendo a través del nombre de las variables usando la notación `[]`.
+
+```{r}
+# Forma 1
+estudiantes <- subset(estudiantes, select = -pais)
+estudiantes
+```
+
+::: {.callout-tip}
+Es importante notar que en el código de arriba se está sobreescribiendo el objeto estudiantes para que contenga la nueva información (i.e. el conjunto sin la columna país). Este proceso ocurre porque se está creando el objeto `estudiantes <-`, el cual ya existe.
+
+- Sobreescribir un objeto permite ahorrar memoria y guardar las operaciones realizadas.
+- En vez de sobreescribir, podría asignarse a un nuevo objeto. Por ejemplo: `estudiantes_1 <- subset(estudiantes, select = -pais)` crearía un objeto llamado `estudiantes_1` que contendría la operación realizada sobre `estudiantes`, pero sin modificar el original. 
+:::
+
+```{r}
+# Forma 2
+estudiantes[, names(estudiantes) != "pais"] # Accedemos a los nombres que no sean "pais"
+```
+
+Para añadir o modificar variables hay múltiples formas. A continuación se presentan dos.
+
+ 1. Usando el operador `$`.
+ 2. Usando la notación `[]`.
+ 
+Para el conjunto de datos que ya teníamos se agregarán las siguientes variables:
+
+  - **serie_fav**: serie favorita indicada por la persona.
+  - **musica_fav**: género de música favorito indicado por la persona.
+
+```{r}
+# Forma 1
+estudiantes$serie_fav <- c("Game of Thrones", "Los Soprano", "Breaking Bad",
+                           "Breaking Bad", "Dark", "Los 80", "The Boys")
+```
+
+```{r}
+# Forma 2
+estudiantes["musica_fav"] <- c("Metal", "Reggeaton", "Trap",
+                                "Música Clásica", "Ranchera", "Pop", "Jazz")
+```
+
+```{r}
+# Forma 2, pero creando a partir de una variable ya existente
+# Para sobreescribir la variable, tendría que llamarla en la izquierda con el mismo nombre
+estudiantes["edad_mas_1"] <- estudiantes$edad + 1
+```
+Con las modificaciones realizadas el dataframe quedaría así:
+
+```{r}
+estudiantes
+```
+
+### Combinar archivos
+
+A veces se contará con dos o más conjuntos de datos que se requieren combinar. Algunos escenarios donde podría ocurrir esto son los siguientes:
+  
+  - Si se tienen más observaciones para un conjunto de datos ya existentes. En este ejemplo, si hubiera información para **más estudiantes**.
+  - Si se tiene más información para un conjunto de datos ya existente. Por ejemplo, si se obtuviera **más información** para los estudiantes.
+
+Las funciones más básicas de R base que permiten esto son las siguientes:
+
+- `rbind`: combina dataframes/tibbles a partir de columnas.
+- `cbind`: combina dataframes/tibbles a partir de columnas.
+
+::: {.callout-important}
+Para que estas operaciones funcionen los dos dataframes deben tener las mismas dimensiones. Si no existiera dato para algún caso, se debe rellenar con `NA`.
+:::
+
+
+```{r}
+# Definimos otro dataframe que uniremos
+filas <- tibble::tibble(
+  nombre = c("Pilar", "Julio"),
+  apellido = c("Farías", "Martínez"),
+  edad = c(52, NA),
+  ppa = c(6.5, 5.14),
+  region = c("Región de Antofagasta", "Región Metropolitana"),
+  serie_fav = NA,
+  musica_fav = c("Trap", "Hip hop"),
+  edad_mas_1 = edad + 1
+  )
+
+estudiantes <- rbind(estudiantes, filas)
+estudiantes
+```
+
+```{r}
+columnas <- tibble::tibble(
+  carrera = c("Trabajo Social",
+              "Ingeniería",
+              "Construcción Civil",
+              "Sociología",
+              "Estadística",
+              "Ciencia de Datos",
+              "Odontología",
+              "Letras",
+              NA))
+
+estudiantes <- cbind(estudiantes, columnas)
+estudiantes
+```
+### Ordenar dataframe
+
+La función `order()` permite ordenar las columnas de un vector. Generalmente usaremos alguna variable para hacer esta operación. 
+
+ - En el caso de variables numéricas, el orden estará dado dado por su valor.
+ - En el caso de las variables de tipo caracter, el orden por defecto será alfabético.
+
+```{r}
+# Notar que dentro del paréntesis cuadrado lo que está antes de la coma está operando sobre las filas
+# Luego, en la parte de las columnas no hay nada, pues se seleccionan todas
+estudiantes <- estudiantes[order(estudiantes$edad), ]
+estudiantes
+```
+Si se desea que la función `order()` opere de manera descendente, se puede especificar el argumento `decreasing` con valor `TRUE`.
+
+```{r}
+estudiantes <- estudiantes[order(estudiantes$edad, decreasing = TRUE), ]
+estudiantes
+```
+
+## Variables tipo numéricas
+
+R cuenta con una serie de funciones para obtener estadísticas de nuestras columnas cuyo tipo de dato sea `numeric`. 
+
+ - `mean()`: retorna la media aritmética de la columna o variable.
+ - `median()`: retorna el valor de la mediana para la columna o variable.
+ - `var()`: retorna la varianza para la columna o variable.
+ - `sd()`: retorna la desviación estándar para la columna o variable.
+ - `min()`: devuelve el valor mínimo para la columna o variable.
+ - `max()`: devuelve el valor máximo para la columna o variable.
+ - `range()`: devuelve un vector que contiene el valor mínimo y máximo para la columna o variable. Para obtenerlo con valor único, se pueden restar o aplicar la función `diff()`.
+ - `quantile()`: retorna el cuantil especificado para la variable o conjunto de datos, el cual se especifica con el argumento `probs`. Los cuantiles son valores que dividen los datos en partes iguales. Por ejemplo, el percentil 50, que corresponde a la mediana, nos dice el valor en que el 50% de los casos son menores o iguales que el percentil 50 y el 50% son mayores o iguales que el percentil 50. 
+ - `round()`: redondea a la cantidad de digitos especificada en el argumento `digits`. Por defecto lo hará al entero más cercano. Hasta los valores 0.5 redondea hasta abajo y partir de ese valor redondea hacia arriba.
+ - `ceiling()`: devuelve el próximo valor entero del número elegido. Siempre devolverá el entero posterior, salvo cuando el valor sea exacto.
+ - `trunc()`: elimina los decimales sin redondear. 
+
+::: {.callout-warning}
+
+En R existe una función `mode()`, pero esta devuelve el modo en que está almacenado un objeto (p.e. `numeric`). Más adelante veremos cómo obtener la moda en R.
+::: 
+ 
+```{r}
+mean(estudiantes$ppa)
+median(estudiantes$ppa)
+var(estudiantes$ppa)
+sd(estudiantes$ppa)
+range(estudiantes$ppa)
+max(estudiantes$ppa)
+min(estudiantes$ppa)
+```
+En caso de que haya valores perdidos en alguna variable numérica y se desee realizar alguna operación matemática, se debe especificar `na.rm = TRUE`.
+
+```{r}
+mean(estudiantes$edad) # Como tiene NA, retornará NA.
+mean(estudiantes$edad, na.rm = TRUE)
+sd(estudiantes$edad, na.rm = TRUE )
+```
+Podemos redondear o truncar ese valor de la media, según sea necesario:
+
+```{r}
+trunc(mean(estudiantes$edad, na.rm = TRUE))
+round(mean(estudiantes$edad, na.rm = TRUE), digits = 2) # Dos decimales
+```
+Y el valor entero que se encuentra más cercano a esa media es `r ceiling(mean(estudiantes$edad, na.rm = TRUE))`.
+
+```{r}
+ceiling(mean(estudiantes$edad, na.rm = TRUE))
+```
+    
+En el caso de los cuantiles, en el siguiente ejemplo se pide el cuantil 0.10, que corresponde al percentil 10. Los resultados muestran que el 10% inferior tiene valores iguales o menores a `r quantile(estudiantes$ppa, probs = 0.10)` y el 90% superior de casos tiene un valor superior a `r quantile(estudiantes$ppa, probs = 0.10)`.
+
+```{r}
+quantile(estudiantes$ppa, probs = 0.10)
+```
+
+Si se quisiera obtener esta información de manera resumida, la función `summary()` entregará parte de los resultados.
+
+```{r}
+summary(estudiantes$ppa)
+```
+
+Si se desea tener más resultados, podemos hacerlo empleando los conocimientos que tenemos sobre vectores:
+
+```{r}
+c(summary = summary(estudiantes$ppa), sd = sd(estudiantes$ppa))
+```
+Si quisiéramos obtener todas las medidas de tendencia central, dispersión y posición que nos interesan en una sola línea, una manera sencilla de hacerlo es a través de un vector.
+
+```{r}
+c(media = mean(estudiantes$ppa), 
+  mediana = median(estudiantes$ppa),
+  devest = sd(estudiantes$ppa),
+  min = min(estudiantes$ppa),
+  max = max(estudiantes$ppa),
+  rango = diff(range(estudiantes$ppa)), # En este caso diff es equivalente a restar.
+  p10 = unname(quantile(estudiantes$ppa, prob = 0.10)),
+  p25 = unname(quantile(estudiantes$ppa, prob = 0.25)),
+  p75 = unname(quantile(estudiantes$ppa, prob = 0.75)),
+  p90 = unname(quantile(estudiantes$ppa, prob = 0.90))
+  )
+```
+::: {.callout-tip}
+La función `unname()` se emplea para eliminar el nombre que R asigna al vector al momento de calcular el cuantil. Si se ejecuta el código `c(p10 = quantile(estudiantes$ppa, prob = 0.10))` notarán que el nombre queda como `p10.10%`.
+:::
+
+## Variables tipo caracter o string
+
+Las cadenas de texto o strings también cuentan con sus propias funciones. Algunas de ellas son:
+
+ - `paste()`: concatena strings. Cuenta con el argumento `sep` para indicar el separador y el argumento `collapse`.
+  - `paste0()`: concatena strings. No tiene opción de especificar un separador. Es útil cuando se desea concatenar números que están como string. 
+  - `strsplit()`: separa strings. Cuenta con el argumento `split` para indicar qué criterio se usará para dividir los textos. 
+ - `toupper()`: convierte a mayúsculas.
+ - `tolower()`: convierte a minúsculas.
+ - `nchar()`: retorna el número de caracteres.
+ - `gsub()`: reemplaza texto siguiendo un patrón especificado.
+ - `trimws()`: elimina los espacios en blanco al inicio y al final.
+ 
+ Siguiendo con el conjunto de datos de estudiantes, dejaremos en una sola variable el nombre y el apellido, para luego eliminar esta última variable. 
+ 
+```{r}
+estudiantes["nombre_apellido"] <- paste(estudiantes$nombre, estudiantes$apellido)
+estudiantes[, c("nombre", "apellido")] <- NULL # Con NULL eliminamos completamente la columna nombre.
+```
+Si quisiéramos hacer la operación inversa, usamos la función `strsplit()`.
+
+```{r}
+#| warning: false
+# En este caso al correr el código dará warning, pero no se preocupen
+estudiantes[c("nombre", "apellido")] <- do.call(rbind, strsplit(estudiantes$nombre_apellido, split = " "))
+```
+::: {.callout-caution}
+`do.call()` es una función más avanzada de R que no veremos en profundidad en este curso, pues se utiliza para ejecutar funciones con la estructura de datos de `listas` (que se presentará más adelante como material complementario). Para mayor información pueden revisar este [enlace](https://www.statology.org/do-call-in-r/).
+:::
+
+Ahora modificaremos el nombre y apellido a mayúscula.
+
+```{r}
+estudiantes["nombre"] <- toupper(estudiantes$nombre)
+estudiantes["apellido"] <- toupper(estudiantes$apellido)
+```
+::: {.callout-tip}
+
+¿Y si quisiéramos realizar la operación de arriba en una sola línea?
+
+La función `lapply()` permtie aplicar otra función sobre una lista o un vector. Hay dos argumentos que nos resultarán relevantes:
+
+  - `X`: indica el vector o la lista a la que se les aplicará la función.
+  - `FUN`: indica la función que se aplicará a cada elemento de `X`.
+  
+¡En este caso ambos argumentos están en mayúsculas!
+
+Estas funciones también son más avanzadas y existen otros modos de aplicar estas operaciones de manera más eficiente. De todas formas, si alguien está interesado/a, puede revisar [aquí](https://ademos.people.uic.edu/Chapter4.html#:~:text=Apply%20functions%20are%20a%20family,and%20often%20require%20less%20code.).
+:::
+
+```{r}
+estudiantes[c("nombre", "apellido")] <- lapply(
+  X = estudiantes[c("nombre", "apellido")], FUN = toupper)
+estudiantes
+```
+También podemos imprimir el número de caracteres que tiene cada nombre:
+
+```{r}
+nchar(estudiantes$nombre)
+```
+Y podríamos combinar algunas funciones de strings para que se vea de mejor forma en consola:
+
+```{r}
+print(paste(estudiantes$nombre, nchar(estudiantes$nombre), sep = ":"))
+```
+::: {.callout-tip}
+
+`print()` retorna el objeto en la consola. 
+
+- En general, no es necesario usar `print()`. Por ejemplo, en este documento hemos mostrado en consola el objeto `estudiantes` sin necesidad de usar esa función.
+- No obstante, print tiene algunas opciones de configuración que lo hacen útil en algunas ocasiones y además otorga mayor visibilidad sobre lo que se está realizando. 
+:::
+
+Ahora simplificaremos el texto presente en la variable `region`. Primero hay que observar el patrón:
+
+  - Todas comienzan con "Región".
+  - Algunas incluyen "Región de" y otras "Región del".
+
+Deseamos cambiar esto para que solamente quede el nombre de la región. Por lo tanto, reemplazaremos los textos indicados arriba por un espacio vacío.
+
+```{r}
+estudiantes["region_clean"] <- gsub("Región|Región de|Región del", "", estudiantes$region)
+estudiantes$region_clean
+```
+Pero vemos que ahora tenemos espacios en blanco. Podemos quitarlos usando la función `trimws()`, que los eliminará al principio y al final de una cadena de caracteres.
+
+```{r}
+estudiantes["region_clean"] <- trimws(estudiantes$region_clean)
+estudiantes$region_clean
+```
+
+## Factores
+
+Los `factores` son un tipo especial de dato en R para los datos categóricos. Estos se utilizan cuando tenemos un número reducido de categorías predefinidas, los cuales son denominados `niveles` o `levels`. Se definen utilizando el constructor `factor()`.
+
+Algunas de sus ventajas son:
+
+ - Permiten controlar el número de categorías válidas.
+ - Mayor flexibilidad para ordenar los elementos del factor, lo que facilita su implementación en gráficos, entre otros.
+
+Para este ejemplo agregaremos una nueva variable al conjunto de datos denominada `satisfaccion`. Esta consta de cinco categorías las cuales se corresponden:
+
+  1. Muy Insatisfecho/a.
+  2. Insatisfecho/a.
+  3. Ni insatisfecho/a ni satisfecho/a.
+  4. Satisfecho/a.
+  5. Muy satisfecho/a.
+  
+
+```{r}
+estudiantes$satisfaccion <-  c(1, 3, 4, 5, 2, 6, 4, 5, 5) # Ingresamos 9 valores porque la data de estudiantes son 9
+
+# Notar que solo son 8 valores porque se definió un valor 6 que no existe en el factor.
+
+estudiantes["satisfaccion"] <- factor(estudiantes$satisfaccion,
+            levels = c(1, 2, 3, 4, 5),
+            labels = c("Muy insatisfecho/a", "Insatisfecho/a", 
+                       "Ni insatisfecho/a ni satisfecho/a",
+                       "Satisfecho/a", "Muy satisfecho/a"))
+```
+
+## Tablas
+
+::: {.callout-note}
+Esta sección pretende mostrar de manera suscinta y rápida la generación de tablas con R base. No vale la pena dedicarle mucho tiempo, pues existen paquetes que ofrecen opciones mucho más atractivas para formatear, visualizar y exportar tablas a distintos formatos.
+:::
+
+A partir de la variable de satisfacción creada, generaremos nuestra primera tabla de frecuencias. Las funciones relevantes para esto son las siguientes:
+
+ - `table()`: permite crear tablas de frecuencia o contingencia mostrando sus frecuencias.
+ - `prop.table()`: calcula las proporciones de una tabla de frecuencia o contingencia.
+
+```{r}
+table(estudiantes$satisfaccion)
+table(estudiantes$satisfaccion, useNA = "ifany") # Si se especifica ifany, mostrará los NA.
+```
+Si queremos obtener una tabla que incluya las proporciones.
+
+```{r}
+prop.table(table(estudiantes$satisfaccion)) 
+```
+Y si queremos la tabla como porcentajes:
+
+```{r}
+round(prop.table(table(estudiantes$satisfaccion)) * 100, digits = 1)
+```
+Si se desea que tenga los marginales podemos usar la función `addmargins()`. Además, con la función `cat()`, podemos modificar la forma en que se imprime en consola la tabla. En este caso, se indica que cada resultado debe ir separado por un salto de línea, el cual se especifica con `\n`.
+
+```{r}
+tabla <- addmargins(round(prop.table(table(estudiantes$satisfaccion)) * 100, digits = 1))
+cat(paste(names(tabla), tabla, sep = ": "), sep = "\n")
+```
+
+## Bonus: paquetes cargados e información de sesión
+
+A continuación se presentan algunas funciones que pueden resultar útiles para obtener información sobre nuestra sesión de R o modificar el comportamiento por defecto del software:
+
+ - `options()`: función cuyos argumentos permiten cambiar el comportamiento por defecto de R en una serie de opciones. Algunas de estas son:
+    - `Out.Dec()`: especifica el caracter para indicar decimales. Por defecto es el punto, pero se puede cambiar a la coma.
+    - `scipen()`: deshabilita la notación científica. Se especifica mediante un valor, usualmente el 999, aunque podría ser otro según lo que se requiera.
+    - `max.print()`: modifica el número de líneas que pueden imprimirse en la consola. Por defecto es 99999. Por temas de rendimiento no se recomienda cambiarlo. 
+- `search()`: indica las librerías de R que están cargadas en la sesión.
+- `sessionInfo()`: Entrega información sobre el sistema operativo, la versión de R utilizada, los paquetes cargados y su versión, entre otros. 
+
+```{r}
+#| eval: false
+options(OutDec = ",", # Decimales se muestran con coma
+        scipen = 999) # Desahabilita notación científica
+```
+
+```{r}
+search()
+sessionInfo()
+```
+
