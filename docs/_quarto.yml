@@ -69,6 +69,8 @@ website:
         contents:
           - href: notes/clase_1_notas/clase_1_notas.qmd
             text: "Notas clase 1"
+          - href: notes/clase_2_notas/clase_2_notas.qmd
+            text: "Notas clase 2"
       - section: "Evaluaciones"
         contents:
           - href: exams/trabajo_1/trabajo_1_tsm301.qmd

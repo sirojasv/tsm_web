@@ -50,7 +50,7 @@ execute:
 library(tidyverse)
 ```
 
-<img src="images/logo_puc_bn.png" alt="Mi Imagen" style="position: fixed; top: 0; right: 0; width: 150px; height: 90px;">
+<img src="images/logo_puc_bn.png" alt="Logo PUC" style="position: fixed; top: 0; right: 0; width: 150px; height: 90px;">
 
 ## Instrucciones {.unnumbered}
 ::: {.callout-note title="¡Importante!"}
