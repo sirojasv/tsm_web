@@ -100,10 +100,12 @@ estudiantes <- tibble::tibble(
   ppa = c(5.75, 6.12, 5.06,
           6.12, 4.73, 5.24,
           4.94),
-  region = c("Región Metropolitana", "Región de La Araucanía", "Región de Arica y Parinacota",
-             "Región de Valparaíso", "Región Metropolitana", "Región del Ñuble",
+  region = c("Región Metropolitana", "Región de La Araucanía", 
+             "Región de Arica y Parinacota", "Región de Valparaíso", 
+             "Región Metropolitana", "Región del Ñuble",
              "Región del Maule"),
-  pais = c("Chile") # Noten que como solo hay un único valor, R lo recicla para asigarlo a todos.
+  pais = c("Chile") 
+  # Como solo hay un único valor, R lo recicla para asigarlo a todos.
   )
 estudiantes
 ```
@@ -181,7 +183,7 @@ estudiantes["musica_fav"] <- c("Metal", "Reggeaton", "Trap",
 
 ```{r}
 # Forma 2, pero creando a partir de una variable ya existente
-# Para sobreescribir la variable, tendría que llamarla en la izquierda con el mismo nombre
+# Para sobreescribir, tendría que llamarla en la izquierda con el mismo nombre
 estudiantes["edad_mas_1"] <- estudiantes$edad + 1
 ```
 Con las modificaciones realizadas el dataframe quedaría así:
@@ -247,7 +249,7 @@ La función `order()` permite ordenar las columnas de un vector. Generalmente us
  - En el caso de las variables de tipo caracter, el orden por defecto será alfabético.
 
 ```{r}
-# Notar que dentro del paréntesis cuadrado lo que está antes de la coma está operando sobre las filas
+# Dentro del paréntesis cuadrado lo que está antes de la coma opera sobre las filas
 # Luego, en la parte de las columnas no hay nada, pues se seleccionan todas
 estudiantes <- estudiantes[order(estudiantes$edad), ]
 estudiantes
@@ -361,14 +363,16 @@ Las cadenas de texto o strings también cuentan con sus propias funciones. Algun
  
 ```{r}
 estudiantes["nombre_apellido"] <- paste(estudiantes$nombre, estudiantes$apellido)
-estudiantes[, c("nombre", "apellido")] <- NULL # Con NULL eliminamos completamente la columna nombre.
+estudiantes[, c("nombre", "apellido")] <- NULL 
+# Con NULL eliminamos completamente la columna nombre.
 ```
 Si quisiéramos hacer la operación inversa, usamos la función `strsplit()`.
 
 ```{r}
 #| warning: false
 # En este caso al correr el código dará warning, pero no se preocupen
-estudiantes[c("nombre", "apellido")] <- do.call(rbind, strsplit(estudiantes$nombre_apellido, split = " "))
+estudiantes[c("nombre", "apellido")] <- do.call(
+  rbind, strsplit(estudiantes$nombre_apellido, split = " "))
 ```
 ::: {.callout-caution}
 `do.call()` es una función más avanzada de R que no veremos en profundidad en este curso, pues se utiliza para ejecutar funciones con la estructura de datos de `listas` (que se presentará más adelante como material complementario). Para mayor información pueden revisar este [enlace](https://www.statology.org/do-call-in-r/).
@@ -425,7 +429,8 @@ Ahora simplificaremos el texto presente en la variable `region`. Primero hay que
 Deseamos cambiar esto para que solamente quede el nombre de la región. Por lo tanto, reemplazaremos los textos indicados arriba por un espacio vacío.
 
 ```{r}
-estudiantes["region_clean"] <- gsub("Región|Región de|Región del", "", estudiantes$region)
+estudiantes["region_clean"] <- gsub(
+  "Región|Región de|Región del", "", estudiantes$region)
 estudiantes$region_clean
 ```
 Pero vemos que ahora tenemos espacios en blanco. Podemos quitarlos usando la función `trimws()`, que los eliminará al principio y al final de una cadena de caracteres.
@@ -454,9 +459,10 @@ Para este ejemplo agregaremos una nueva variable al conjunto de datos denominada
   
 
 ```{r}
-estudiantes$satisfaccion <-  c(1, 3, 4, 5, 2, 6, 4, 5, 5) # Ingresamos 9 valores porque la data de estudiantes son 9
+estudiantes$satisfaccion <-  c(1, 3, 4, 5, 2, 6, 4, 5, 5) 
+# Ingresamos 9 valores porque la data de estudiantes son 9
 
-# Notar que solo son 8 valores porque se definió un valor 6 que no existe en el factor.
+# Son 8 valores porque se definió un valor 6 que no existe en el factor.
 
 estudiantes["satisfaccion"] <- factor(estudiantes$satisfaccion,
             levels = c(1, 2, 3, 4, 5),
@@ -478,7 +484,8 @@ A partir de la variable de satisfacción creada, generaremos nuestra primera tab
 
 ```{r}
 table(estudiantes$satisfaccion)
-table(estudiantes$satisfaccion, useNA = "ifany") # Si se especifica ifany, mostrará los NA.
+table(estudiantes$satisfaccion, useNA = "ifany") 
+# Si se especifica ifany, mostrará los NA.
 ```
 Si queremos obtener una tabla que incluya las proporciones.
 
