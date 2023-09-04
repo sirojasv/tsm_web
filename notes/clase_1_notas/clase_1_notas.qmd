@@ -453,10 +453,14 @@ nombre_base[[]]
 Ejemplos:
 
 ```{r}
-data_estudiantes_tb$nombre # accedemos a la columna nombre con $. Esto devuelve un vector
-data_estudiantes_tb["nombre"] # accedemos a la columna nombre con []. Esto devuelve un tibble
-data_estudiantes_tb[["nombre"]] # accedemos a la columna nombre con[[]] Esto devuelve un vector
-data_estudiantes_tb[[1]] # accedemos a la columna nombre con notación por posición [[]]
+data_estudiantes_tb$nombre 
+# accedemos a la columna nombre con $. Esto devuelve un vector
+data_estudiantes_tb["nombre"] 
+# accedemos a la columna nombre con []. Esto devuelve un tibble
+data_estudiantes_tb[["nombre"]] 
+# accedemos a la columna nombre con[[]] Esto devuelve un vector
+data_estudiantes_tb[[1]] 
+# accedemos a la columna nombre con notación por posición [[]]
 ```
 
 
@@ -472,7 +476,8 @@ data_estudiantes_tb[1,3] # Accedemos a la fila 1 columna 3
 ```{r}
 data_estudiantes_tb[, -c(1)] # accedemos a todas las columnas menos nombre, por posición
 data_estudiantes_tb[, -c(1:2)] # accedemos a todas las columnas menos la 1 y la 2
-data_estudiantes_tb[, names(data_estudiantes_tb) != "nombre"] # accedemos a todas las columnas menos nombre
+data_estudiantes_tb[, names(data_estudiantes_tb) != "nombre"] 
+# accedemos a todas las columnas menos nombre
 ```
 
 ```{r}
