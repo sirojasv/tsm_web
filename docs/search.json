@@ -66,8 +66,8 @@
     "objectID": "slides/clase-3/clase_3_presentación.html#contenidos",
     "href": "slides/clase-3/clase_3_presentación.html#contenidos",
     "title": "Introducción a Tidyverse",
-    "section": "",
-    "text": "I. Tidyverse\nII. Operador pipe |&gt;\nIII. Paquete dplyr\nIV. Aplicación\nV. Ejercicio"
+    "section": "Contenidos",
+    "text": "Contenidos\nI. Tidyverse\nII. Operador pipe |&gt;\nIII. Paquete dplyr\nIV. Aplicación\nV. Ejercicio"
   },
   {
     "objectID": "slides/clase-3/clase_3_presentación.html#section",
@@ -95,14 +95,14 @@
     "href": "slides/clase-3/clase_3_presentación.html#tidyverse-3",
     "title": "Introducción a Tidyverse",
     "section": "Tidyverse (3)",
-    "text": "Tidyverse (3)\nCuando se instala tidyverse, se instalan una serie de paquetes. Aquellos que pertenecen al núcleo se cargan automáticamente cuando se ejecuta library(tidyverse).\n\n\n\n\n\ntibble: nuevo formato de dataframes con mejoras de visualización.\n\nreadr: lectura de datos “rectangulares” como formatos .csv, .tsv, etc.\n\ndplyr: funciones para el procesamiento y manipulación de datos.\n\ntidyr: funciones más avanzadas para el procesamiento de datos.\n\nstring: funciones para trabajar con datos tipo string.\n\nforcats: funciones para trabajar con factores.\n\nggplot2: visualización de datos.\n\npurrr: programación funcional, bucles, código eficiente."
+    "text": "Tidyverse (3)\nCuando se instala tidyverse, se instalan una serie de paquetes. Aquellos que pertenecen al núcleo se cargan automáticamente cuando se ejecuta library(tidyverse).\n\n\n\n\ntibble: nuevo formato de dataframes con mejoras de visualización.\nreadr: lectura de datos “rectangulares” como formatos .csv, .tsv, etc.\ndplyr: funciones para el procesamiento y manipulación de datos.\ntidyr: funciones más avanzadas para el procesamiento de datos.\nstring: funciones para trabajar con datos tipo string.\nforcats: funciones para trabajar con factores.\nggplot2: visualización de datos.\npurrr: programación funcional, bucles, código eficiente."
   },
   {
     "objectID": "slides/clase-3/clase_3_presentación.html#tidyverse-3-1",
     "href": "slides/clase-3/clase_3_presentación.html#tidyverse-3-1",
     "title": "Introducción a Tidyverse",
     "section": "Tidyverse (3)",
-    "text": "Tidyverse (3)\nOtros paquetes relevantes que se instalan, pero deben cargarse:\n\n\n\nlubridate: trabajar con fechas.\n\nreadxl: lectura de datos en formato Excel .xls y .xlsx.\n\nhaven: lectura de datos de programas estadísticos en formato SPSS, Stata y SAS.\n\nglue: alternativa a paste() que facilita combinar datos y strings.\n\nMás información disponible en la página oficial."
+    "text": "Tidyverse (3)\nOtros paquetes relevantes que se instalan, pero deben cargarse:\n\n\nlubridate: trabajar con fechas.\nreadxl: lectura de datos en formato Excel .xls y .xlsx.\nhaven: lectura de datos de programas estadísticos en formato SPSS, Stata y SAS.\nglue: alternativa a paste() que facilita combinar datos y strings.\n\nMás información disponible en la página oficial."
   },
   {
     "objectID": "slides/clase-3/clase_3_presentación.html#section-1",
@@ -137,7 +137,7 @@
     "href": "slides/clase-3/clase_3_presentación.html#operador-4",
     "title": "Introducción a Tidyverse",
     "section": "Operador |> (4)",
-    "text": "Operador |&gt; (4)\n¿Qué código les parece más legible?\n\n\n\n\n. . .\n\nMás legible: va de izquierda a derecha.\nEvita errores de prioridad de paréntesis.\nMenos sensible al número de operaciones."
+    "text": "Operador |&gt; (4)\n¿Qué código les parece más legible?\n\n\n\nMás legible: va de izquierda a derecha.\nEvita errores de prioridad de paréntesis.\nMenos sensible al número de operaciones."
   },
   {
     "objectID": "slides/clase-3/clase_3_presentación.html#section-2",
@@ -207,7 +207,7 @@
     "href": "slides/clase-3/clase_3_presentación.html#función-filter-1",
     "title": "Introducción a Tidyverse",
     "section": "Función filter() (1)",
-    "text": "Función filter() (1)\nPermite obtener un subconjunto de los datos a partir de las condiciones lógicas especificadas.\n\n\n\n\n\n\n\nSímbolo\nSignificado\n\n\n\n==\n\nIgualdad. No debe confundirse con “=”, que es un operador de asignación\n\n\n!=\nDistinto\n\n\n!\n\nNegación de una expresión lógica\n\n\n&gt;\nMayor que\n\n\n&lt;\nMenor que\n\n\n&gt;=\nMayor o igual que\n\n\n&lt;=\nMenor o igual que\n\n\n%in%\nOperador de R que indica un conjunto de elementos\n\n\n\n&\nOperador y. Todas las condiciones evaluadas deben ser verdaderas para que la expresión lo sea\n\n\n|\nOperador o. Al menos una condición debe ser verdadera para que la expresión lo sea"
+    "text": "Función filter() (1)\nPermite obtener un subconjunto de los datos a partir de las condiciones lógicas especificadas.\n\n\n\n\n\n\n\n\nSímbolo\nSignificado\n\n\n\n\n==\nIgualdad. No debe confundirse con “=”, que es un operador de asignación\n\n\n!=\nDistinto\n\n\n!\nNegación de una expresión lógica\n\n\n&gt;\nMayor que\n\n\n&lt;\nMenor que\n\n\n&gt;=\nMayor o igual que\n\n\n&lt;=\nMenor o igual que\n\n\n%in%\nOperador de R que indica un conjunto de elementos\n\n\n&\nOperador y. Todas las condiciones evaluadas deben ser verdaderas para que la expresión lo sea\n\n\n|\nOperador o. Al menos una condición debe ser verdadera para que la expresión lo sea"
   },
   {
     "objectID": "slides/clase-3/clase_3_presentación.html#función-filter-2",
@@ -298,7 +298,7 @@
     "href": "slides/clase-3/clase_3_presentación.html#función-slice-4",
     "title": "Introducción a Tidyverse",
     "section": "Función slice() (4)",
-    "text": "Función slice() (4)\nCon slice_sample se puede seleccionar una muestra aleatoria de casos, ya sea indicando con el argumento n o con prop.\n\ndata |&gt; slice_sample(n = 1) # Un caso al azar\n\n# A tibble: 1 × 5\n   anio nombre sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  1964 Jema   F         1 0.00000344\n\n\n\ndata |&gt; slice_sample(prop = 0.01) # Una muestra del 1% al azar\n\n# A tibble: 8,587 × 5\n    anio nombre    sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  2010 Castaña   F         1 0.00000398\n 2  2005 Keyler    F         1 0.00000429\n 3  2016 Mackarena F         1 0.00000429\n 4  1969 Rode      M         1 0.00000349\n 5  1989 Barinha   F         1 0.00000331\n 6  2016 Nathanael M        11 0.0000472 \n 7  1987 Janis     F        12 0.0000431 \n 8  1955 Mladen    M         1 0.00000397\n 9  1969 Marsilla  F         1 0.00000349\n10  1969 Lelis     F         2 0.00000699\n# ℹ 8,577 more rows"
+    "text": "Función slice() (4)\nCon slice_sample se puede seleccionar una muestra aleatoria de casos, ya sea indicando con el argumento n o con prop.\n\ndata |&gt; slice_sample(n = 1) # Un caso al azar\n\n# A tibble: 1 × 5\n   anio nombre     sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  1984 Ecatherina F         2 0.00000724\n\n\n\ndata |&gt; slice_sample(prop = 0.01) # Una muestra del 1% al azar\n\n# A tibble: 8,587 × 5\n    anio nombre    sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  1946 Roman     M         1 0.00000622\n 2  1955 Romilio   M        19 0.0000754 \n 3  1933 Carlos    M      1329 0.0164    \n 4  1946 Electicia F         1 0.00000622\n 5  1991 Anibet    F         1 0.00000332\n 6  2010 Ribca     F         1 0.00000398\n 7  1947 Rufina    F        11 0.0000638 \n 8  2012 Hachly    F         1 0.0000041 \n 9  2012 Amaranth  F         1 0.0000041 \n10  2007 Blue      F         2 0.00000828\n# ℹ 8,577 more rows"
   },
   {
     "objectID": "slides/clase-3/clase_3_presentación.html#función-count",
@@ -361,7 +361,7 @@
     "href": "slides/clase-3/clase_3_presentación.html#section-5",
     "title": "Introducción a Tidyverse",
     "section": "",
-    "text": "¡Gracias! https://sirojasv.github.io/tsm_web/"
+    "text": "¡Gracias!  https://sirojasv.github.io/tsm_web/\n\n\n\n\n\n\nMetodología Cuantitativa - 2023"
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html",
