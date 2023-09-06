@@ -499,7 +499,7 @@ data |> filter(nombre == "María" & sexo == "F") |>
   scale_y_continuous(labels = scales::percent) +
   annotate("text", x = 2000, y = 0.05, size = 5,
           label = "La proporción \n va a la baja", color = "black") +
-  labs(title = "Popularidad del nombre Sofía entre 1920 - 2021", x = NULL, y = NULL,
+  labs(title = "Popularidad del nombre María entre 1920 - 2021", x = NULL, y = NULL,
        caption = "Datos 1920 - 2021 según Registro Civil e Identificación.") +
    theme(text = element_text(family = "Noto Sans"),
         plot.title = element_text(color = "#0bb4ff", face = "bold"),
