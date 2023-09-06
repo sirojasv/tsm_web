@@ -7,7 +7,7 @@ subtitle: "**Tipos y estructuras de datos en R**"
 
 1. Funciones básicas para dataframes/tibbles.
 
-2. Profundizando en tipos de datos
+2. Profundizando en tipos de datos.
 
 3. Funciones disponibles según el tipo de dato.
 

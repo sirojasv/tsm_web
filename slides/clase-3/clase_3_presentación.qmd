@@ -1,0 +1,526 @@
+---
+# Title & Author
+title: "Introducción a Tidyverse"
+subtitle: | 
+    | Metodología Cuantitativa - TSM301
+    | Clase 3
+author: "Sebastián Rojas Vergara - sirojas1@uc.cl"
+#institute:
+#order:
+date: 09/06/2023
+date-format: "dddd D MMMM, YYYY"
+# Format Options
+format:
+  revealjs: 
+    slide-number: true
+    transition: slide
+    transition-speed: slow
+    #chalkboard: 
+      #buttons: false
+    smaller: true
+    controls: true
+    toc: false
+    number-sections: false
+    fig-dpi: 400
+    fig-responsive: true
+    embed-resources: true
+    preview-links: auto
+    theme: [dark, violet.scss]
+    logo: images/logo_puc_bn.png
+    css: styles.css
+    footer: "Metodología Cuantitativa - 2023"
+comments: false
+execute: 
+  echo: true
+---
+
+## Contenidos
+
+**I. Tidyverse**
+
+**II. Operador pipe `|>`**
+
+**III. Paquete dplyr**
+
+**IV. Aplicación**
+
+**V. Ejercicio**
+
+##  {background-color="rgb(25,25,25)"}
+
+::: center-xy
+::: large-text
+<br> I. Tidyverse <br>
+:::
+:::
+
+## Tidyverse (1)
+
+El entorno `tidyverse` corresponde a una colección de paquetes de R cuyo diseño está enfocado en el análisis estadístico y la ciencia de datos. Todos los paquetes que forman parte comparten una filosofía de diseño que se traduce en una estructura y gramática común.
+
+- Está diseñado para trabajar con **datos ordenados**:
+  - Cada observación es una fila.
+  - Cada variable es una columna.
+  - Cada celda es un solo valor.
+  
+![](images/tidy_data.png){width="350" height="auto" fig-align="center"}
+
+## Tidyverse (2)
+
+- Código más legible, nombres de funciones más atingentes, gramática común.
+
+:::{.mini-text}
+> "This is particularly important for R, because it’s a language that’s used primarily by non-programmers, and we want to make it as easy as possible for first-time and end-user programmers to learn the tidyverse."
+> -- *Equipo tidyverse*.
+
+:::
+
+- Concatenación de código con el operador operador `|>`.
+
+- Ciclo completo del análisis de datos.
+
+![](images/workflow.png){width="350" height="auto" fig-align="center"}
+
+## Tidyverse (3)
+Cuando se instala tidyverse, se instalan una serie de paquetes. Aquellos que pertenecen al núcleo se **cargan** automáticamente cuando se ejecuta `library(tidyverse)`.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+:::{.mini-text}
+- `tibble`: nuevo formato de dataframes con mejoras de visualización.
+- `readr`: lectura de datos "rectangulares" como formatos .csv, .tsv, etc.
+- `dplyr`: funciones para el procesamiento y manipulación de datos.
+- `tidyr`: funciones más avanzadas para el procesamiento de datos.
+- `string`: funciones para trabajar con datos tipo string.
+- `forcats`: funciones para trabajar con factores.
+- `ggplot2`: visualización de datos.
+- `purrr`: programación funcional, bucles, código eficiente.
+:::
+
+:::
+
+::: {.column width="50%"}
+![](images/tidyverse.png){width="450" height="auto" fig-align="center"}
+
+:::
+
+::::
+
+## Tidyverse (3)
+
+Otros paquetes relevantes que se instalan, pero deben cargarse:
+
+:::{.mini-text}
+- `lubridate`: trabajar con fechas.
+- `readxl`: lectura de datos en formato Excel .xls y .xlsx.
+- `haven`: lectura de datos de programas estadísticos en formato SPSS, Stata y SAS.
+- `glue`: alternativa a `paste()` que facilita combinar datos y strings.
+
+Más información disponible en la [página oficial](https://www.tidyverse.org/).
+:::
+
+##  {background-color="rgb(25,25,25)"}
+
+::: center-xy
+::: large-text
+<br> II. Operador pipe |> <br>
+:::
+:::
+
+## Operador |> (1)
+
+- Expresa de manera clara una secuencia de operaciones concatenando instrucciones de código.
+
+- Pasa el elemento que está a la izquierda como argumento de la función que está a la derecha. 
+
+- Disponible desde `R 4.1.0` (mayo 2021). Antes se usaba -y todavía- el operador `%>%`.
+
+- Se puede usar el atajo de teclado `CTRL/CMD + SHIFT + M`. Requiere habilitar `Tools → Global Options → Code → Editing → “Use native pipe operator |>”`
+
+![](images/pipe.png){width="450" height="auto" fig-align="center"}
+
+## Operador |> (2)
+
+Veamos un ejemplo usando el paquete "guaguas":
+
+```{r}
+# Cargamos tidyverse
+library(tidyverse)
+```
+
+```{r}
+data <- guaguas::guaguas
+head(data, n = 3)
+data |> head(n = 3)
+```
+## Operador |> (3)
+
+Usando las funciones de los paquetes que veremos en esta sesión, podemos comparar la sintaxis usando el operador |> versus la prioridad de paréntesis.
+
+```{r}
+data |>
+  filter(anio == 2020) |>
+  slice_head(n = 3)
+```
+
+```{r}
+slice_head(filter(data, anio == 2020), n = 3)
+```
+    
+## Operador |> (4)
+
+¿Qué código les parece más legible?
+
+![](images/signo_pregunta.png){width="10" height="auto" fig-align="center"}
+
+. . .
+
+- Más legible: va de izquierda a derecha.
+- Evita errores de prioridad de paréntesis.
+- Menos sensible al número de operaciones.
+
+##  {background-color="rgb(25,25,25)"}
+
+::: center-xy
+::: large-text
+<br> III. Paquete dplyr <br>
+:::
+:::
+
+## Paquete dplyr (1)
+
+Contiene una serie de funciones para realizar tareas comunes en el procesamiento de datos:
+
+:::{mini-text}
+
+- Explorar los datos: `glimpse()`.
+- Seleccionar variables: `select()`.
+- Filtrar observaciones: `filter()`.
+- Renombrar variables: `rename()`.
+- Ordenar los datos según criterios: `arrange()`.
+- Cambiar orden de las columnas: `relocate()`.
+- Seleccionar observaciones: `slice_head()`, `slice_tail()`, `slice_sample`, etc.
+:::
+
+## Paquete dplyr (2)
+
+:::{mini-text}
+
+- Añadir nuevas variables o modificar las existentes: `mutate()`.
+- Agrupar datos: `group_by()` o argumento `.by`.
+- Estadísticas agrupadas: `summarise()`.
+- Contar: `count()`.
+- Unir conjuntos de datos: familia de mutating y filtering `joins`.
+- Condiciones lógicas: `if_else()` y `case_when()`.
+- Operaciones por filas: `rowwise()`.
+- Identificar filas únicas/distintas: `distinct()`.
+- Transformar a perdidos: `na_if()`.
+- Aplicar operaciones a múltiples columnas: `across()`.
+- ¡Muchas otras!
+:::
+
+## Función glimpse()
+
+Permite obtener una vista rápida del conjunto de datos.
+
+```{r}
+data |> glimpse()
+```
+## Función select() (1)
+
+Permite seleccionar columnas de un conjunto de datos.
+
+```{r}
+data |> select(anio, nombre, n) |> slice_head(n = 2)
+```
+- Anteponiendo el signo menos `-` se puede hacer selección negativa.
+
+```{r}
+data |> select(-proporcion, -sexo) |> slice_head(n = 2)
+```
+
+## Función select() (2)
+
+- También se puede hacer uso de `selection helpers` como `starts_with()`, `ends_with()`, `contains()`, etc.
+
+```{r}
+# Selecciona todo lo que empieza con n
+data |> select(starts_with("n")) |> slice_head(n = 2)
+```
+```{r}
+# Selecciona todo lo que termine con o
+data |> select(ends_with("o")) |> slice_head(n = 2)
+```
+
+## Función select() (2)
+
+- O realizar una selección según el tipo de variable agregando el predicado `where()`. 
+
+```{r}
+# Selecciona todas las variables character
+data |> select(where(is.character)) |> slice_head(n = 2)
+```
+
+```{r}
+# Selecciona todas las variables numeric
+data |> select(where(is.numeric)) |> slice_head(n = 2)
+```
+- ¡Incluso permite renombrar variables! (Ver notas de la clase).
+
+Más opciones se pueden revisar escribiendo en la consola de R `?select` si se tiene cargado tidyverse.
+
+## Función rename() 
+
+Permite renombrar columnas siguiendo la estructura `nuevo_nombre = antiguo_nombre`.
+
+```{r}
+# Renombra las variables
+data |> rename(frec = n,
+               prop = proporcion)
+```
+- ¡Noten que aquí aún no se sobreescribe el objeto `data`!
+
+## Función relocate() 
+
+Cambia la posición de las columnas.
+
+```{r}
+# Va después de proporcion
+data |> relocate(anio, .after = proporcion) |>
+  slice_tail(n = 4)
+```
+
+```{r}
+# Va antes de proporcion
+data |> relocate(anio, .before = proporcion) |>
+  slice_tail(n = 4)
+```
+
+## Función filter() (1)
+
+Permite obtener un subconjunto de los datos a partir de las **condiciones lógicas** especificadas. 
+
+:::{.mini-text}
+
+| Símbolo | Significado                                                                                                                                             |
+|---------|---------------------------------------------------------------------------------|
+| `==`     | **Igualdad**. No debe confundirse con “=”, que es un operador de asignación       |
+| `!=`     | **Distinto**                                                                      |
+| `!`       | **Negación** de una expresión lógica                                              |
+| `>`       | **Mayor que**                                                                     |
+| `<`       | **Menor que**                                                                     |
+| `>=`      | **Mayor o igual que**                                                            |
+| `<=`      | **Menor o igual que**                                                             |
+| `%in%`    | Operador de R que indica un **conjunto de elementos**                               |
+| `&`       | Operador **y**. Todas las condiciones evaluadas deben ser verdaderas para que la expresión lo sea|
+| `|`       | Operador **o**. Al menos una condición debe ser verdadera para que la expresión lo sea|
+
+:::
+
+## Función filter() (2)
+
+```{r}
+# Filtro por año
+data |> filter(anio == 2021) 
+```
+
+## Función filter() (3)
+
+```{r}
+# Filtro por año y nombre
+data |> filter(anio == 2021 & nombre == "Susana") 
+```
+
+## Función filter() (4)
+
+```{r}
+# Filtro usando |
+data |> filter(anio == 2021 | anio == 2019) 
+```
+
+## Función filter() (5)
+
+```{r}
+# Filtro usando %in%
+data |> filter(anio %in% c(1998, 2006, 2007:2010)) 
+```
+
+## Función filter() (6)
+
+```{r}
+# Filtro usando negación
+data |> filter(anio == 1920 & !(nombre %in% c("María", "José")))
+```
+
+## Función filter() (7)
+
+```{r}
+data |> filter(proporcion >= 0.02 & anio > 2014)
+```
+
+## Función filter() (8)
+
+```{r}
+# Filtro usando el paquete stringr y condiciones en paréntesis
+data |> filter(stringr::str_detect(nombre, "^X") & (anio >= 2018 & anio != 2021))
+```
+## Función arrange() (1)
+
+Permite ordenar los valores a partir de columnas. Por defecto será de manera ascendente.
+
+```{r}
+data |> arrange(n)
+```
+
+## Función arrange() (2)
+
+Con la función `desc()` se puede ordenar de manera descendente.
+
+```{r}
+# Ordena por año ascendente y por frecuencia descendente
+data |> filter(nombre %in% c("Andrea", "Alberto")) |> 
+  arrange(anio, desc(n))
+```
+
+## Función slice() (1)
+
+Permite seleccionar filas basadas en su posición. 
+
+```{r}
+data |> slice(20) # Selecciona la fila en la posición 20
+```
+
+```{r}
+data |> slice(20:22) # Selecciona filas desde la 20 a 22
+```
+
+## Función slice() (2)
+
+```{r}
+data |> slice(-(1:800000)) # Selecciona todas menos desde la 1 a 800.000
+```
+
+## Función slice() (3)
+
+También cuenta con las funciones `slice_head()` y `slice_tail()`. Además del argumento `n`, incluye el argumento `prop` para seleccionar una proporción de filas.
+
+```{r}
+data |> slice_head(n = 2) # 2 Filas
+```
+```{r}
+data |> slice_tail(prop = 0.01) # Partiendo desde las últimas filas, el 1%
+```
+
+## Función slice() (4)
+
+Con `slice_sample` se puede seleccionar una muestra aleatoria de casos, ya sea indicando con el argumento `n` o con `prop`.
+
+```{r}
+data |> slice_sample(n = 1) # Un caso al azar
+```
+
+```{r}
+data |> slice_sample(prop = 0.01) # Una muestra del 1% al azar
+```
+
+## Función count()
+
+Cuenta las observaciones únicas en una o más variables. Por ejemplo, si quisieramos saber cuántos casos hay por año.
+
+```{r}
+data |> count(anio)
+```
+
+##  {background-color="rgb(25,25,25)"}
+
+::: center-xy
+::: large-text
+<br> IV. Aplicación <br>
+:::
+:::
+
+## Aplicación (1)
+
+![](images/noticia.png){width="450" height="auto" fig-align="center"}
+
+## Aplicación (2)
+
+¿Cómo han evolucionado los nombres María y Sofía a lo largo del tiempo?
+
+```{r}
+if (!require(showtext)) install.packages("showtext")
+library(showtext) # Paquete para instalar fuentes
+library(ggplot2) # Visualización de datos
+font_add_google("Noto Sans", "noto") # Agregamos fuente Noto Sans con alias noto
+```
+## Aplicación (3)
+
+```{r}
+#| fig-align: center
+data |> filter(nombre == "María" & sexo == "F") |>
+  ggplot(aes(x = anio, y = proporcion)) +
+  geom_line(size = 1, colour = "#0bb4ff") +
+  geom_area(alpha = 0.3, fill = "#0bb4ff") +
+  scale_x_continuous(breaks = seq(min(data$anio), max(data$anio), by = 10)) + 
+  scale_y_continuous(labels = scales::percent) +
+  annotate("text", x = 2000, y = 0.05, size = 5,
+           label = "La proporción \n va a la baja", color = "black") +
+  labs(title = "Popularidad del nombre María entre 1920 - 2021", x = NULL, y = NULL) + 
+  theme(text = element_text(family = "Noto Sans"),
+        plot.title = element_text(color = "#0bb4ff", face = "bold"))
+```
+
+## Aplicación (4)
+
+```{r}
+#| fig-align: center
+data |> filter(nombre == "Sofía" & sexo == "F") |>
+  ggplot(aes(x = anio, y = proporcion)) +
+  geom_line(size = 1, colour = "#f46a9b") +
+  geom_area(alpha = 0.3, fill = "#f46a9b") +
+  scale_x_continuous(breaks = seq(min(data$anio), max(data$anio), by = 10)) +
+  scale_y_continuous(labels = scales::percent) +
+  labs(title = "Popularidad del nombre Sofía entre 1920 - 2021", x = NULL, y = NULL) + 
+  theme_classic() +
+  theme(text = element_text(family = "Noto Sans"),
+        plot.title = element_text(color = "#f46a9b", face = "bold"))
+```
+
+##  {background-color="rgb(25,25,25)"}
+
+::: center-xy
+::: large-text
+<br> V. Ejercicio <br>
+:::
+:::
+
+## Ejercicio
+
+Usando el conjunto de datos de `guaguas` responda lo siguiente:
+
+1. ¿Hay alguna persona que se llame "Nicki" o "Nicky"?
+2. ¿Cuáles son los tres nombres más populares para las personas inscritas en el año 2021?
+3. ¿Cuántas personas con el nombre "Pedro" fueron inscritas entre 2015 - 2017 y el año 2020?
+4. ¿Hay alguna persona que se llame "Ibai" antes de 2017?
+5. ¿Cuántas personas con nombre Andrea y sexo registral masculino hay en el conjunto de datos?
+6. Realice su propia búsqueda. Debe cumplir al **menos** uno de los siguientes requisitos:
+    - Incluir uno o más años y uno o más nombres.
+    - Realizar una búsqueda con criterio de exclusión. 
+  
+
+##  {background-color="rgb(25,25,25)"}
+
+::: center-xy
+::: large-text
+<br> ¡Gracias! <br> <https://sirojasv.github.io/tsm_web/>
+:::
+:::
+
+```{r}
+#| include: false
+# Se añade código de JS para controlar h2
+```
+<script src="script.js"></script>

@@ -1,0 +1,27 @@
+---
+title: "Clase 3"
+subtitle: "**Introducción a tidyverse**"
+---
+
+::: {.callout-note title="Ideas más importantes"}
+
+1. Presentación de tidyverse.
+
+2. Operador |>.
+
+3. Funciones del paquete dplyr.
+
+4. Condiciones lógicas.
+:::
+
+## Presentación de la clase
+
+<iframe src="/slides/clase-3/clase_3_presentación.html" height="550" width="100%" allowfullscreen="true">
+
+</iframe>
+
+<a href="/slides/clase-3/clase_3_presentación.html" download="Descarga_clase_3_presentación.html" class="download-button">Descargar presentación</a>
+
+::: {style="font-size: 0.875em;"}
+Vuelve a la [descripción del curso](/ "Descripción del curso") ⏎
+:::
