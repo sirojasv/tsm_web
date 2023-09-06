@@ -29,6 +29,8 @@ format:
     logo: images/logo_puc_bn.png
     css: styles.css
     footer: "Metodología Cuantitativa - 2023"
+fig-cap-location: top
+fig-dpi: 400
 comments: false
 execute: 
   echo: true
@@ -450,16 +452,45 @@ data |> count(anio)
 
 ¿Cómo han evolucionado los nombres María y Sofía a lo largo del tiempo?
 
+Primero instalaremos y cargaremos algunos paquetes.
+
+Fuentes: 
+
+1. Opción 1: paquete `showtext`.
+2. Opción 2: paquete `extrafont`.
+
+Para descargar una fuente específica pueden usar todas las de libre uso disponibles en [Google Fonts](https://fonts.google.com/).
+
 ```{r}
+#| warning: false
+#| results: false
 if (!require(showtext)) install.packages("showtext")
-library(showtext) # Paquete para instalar fuentes
+if (!require(extrafont)) install.packages("extrafont")
+library(showtext) # Paquete para llamar fuentes desde google
 library(ggplot2) # Visualización de datos
-font_add_google("Noto Sans", "noto") # Agregamos fuente Noto Sans con alias noto
+library(extrafont) # Instala fuentes del sistema en R
+font_add_google("Noto Sans")
+font_add_google("Montserrat")
 ```
+
+```{r}
+#| warning: false
+#| results: false
+# Importa todos los archivos .ttf de tu sistema
+# Se ejecuta una vez, pero demora
+font_import()
+# Cargar todas las fuentes
+loadfonts(device = "win", quiet = TRUE) # Método para Windows
+```
+
 ## Aplicación (3)
 
 ```{r}
+#| warning: false
 #| fig-align: center
+#| output-location: slide
+#| label: fig-plot-maria
+#| fig-cap: "% respecto del total de nacimientos registrados por año"
 data |> filter(nombre == "María" & sexo == "F") |>
   ggplot(aes(x = anio, y = proporcion)) +
   geom_line(size = 1, colour = "#0bb4ff") +
@@ -467,26 +498,36 @@ data |> filter(nombre == "María" & sexo == "F") |>
   scale_x_continuous(breaks = seq(min(data$anio), max(data$anio), by = 10)) + 
   scale_y_continuous(labels = scales::percent) +
   annotate("text", x = 2000, y = 0.05, size = 5,
-           label = "La proporción \n va a la baja", color = "black") +
-  labs(title = "Popularidad del nombre María entre 1920 - 2021", x = NULL, y = NULL) + 
-  theme(text = element_text(family = "Noto Sans"),
-        plot.title = element_text(color = "#0bb4ff", face = "bold"))
+          label = "La proporción \n va a la baja", color = "black") +
+  labs(title = "Popularidad del nombre Sofía entre 1920 - 2021", x = NULL, y = NULL,
+       caption = "Datos 1920 - 2021 según Registro Civil e Identificación.") +
+   theme(text = element_text(family = "Noto Sans"),
+        plot.title = element_text(color = "#0bb4ff", face = "bold"),
+        plot.caption = element_text(size = 8, face = "italic", color = "azure4"))
+
 ```
 
 ## Aplicación (4)
 
 ```{r}
+#| warning: false
 #| fig-align: center
+#| output-location: slide
+#| label: fig-plot-sofia
+#| fig-cap: "% respecto del total de nacimientos registrados por año"
 data |> filter(nombre == "Sofía" & sexo == "F") |>
   ggplot(aes(x = anio, y = proporcion)) +
   geom_line(size = 1, colour = "#f46a9b") +
   geom_area(alpha = 0.3, fill = "#f46a9b") +
   scale_x_continuous(breaks = seq(min(data$anio), max(data$anio), by = 10)) +
   scale_y_continuous(labels = scales::percent) +
-  labs(title = "Popularidad del nombre Sofía entre 1920 - 2021", x = NULL, y = NULL) + 
+  labs(title = "Popularidad del nombre Sofía entre 1920 - 2021", x = NULL, y = NULL,
+       caption = "Datos 1920 - 2021 según Registro Civil e Identificación.") +
   theme_classic() +
-  theme(text = element_text(family = "Noto Sans"),
-        plot.title = element_text(color = "#f46a9b", face = "bold"))
+  theme(text = element_text(family = "Montserrat"),
+        plot.title = element_text(color = "#f46a9b", face = "bold"),
+        plot.caption = element_text(size = 8, face = "italic", color = "azure4"))
+
 ```
 
 ##  {background-color="rgb(25,25,25)"}
