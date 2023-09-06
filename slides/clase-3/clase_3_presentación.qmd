@@ -22,6 +22,7 @@ format:
     toc: false
     number-sections: false
     fig-dpi: 400
+    fig-cap-location: top
     fig-responsive: true
     embed-resources: true
     preview-links: auto
@@ -29,8 +30,6 @@ format:
     logo: images/logo_puc_bn.png
     css: styles.css
     footer: "Metodología Cuantitativa - 2023"
-fig-cap-location: top
-fig-dpi: 400
 comments: false
 execute: 
   echo: true
