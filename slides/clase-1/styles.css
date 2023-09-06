@@ -1,5 +1,3 @@
-
-
 .border {
   border: 1px solid #dee2e6;
 }
@@ -42,9 +40,10 @@
 }
 
 .fondo-gris {
-    background-color: lightgray;
+    background-color: #B2BEB5;
     border-radius: 10px;
     font-weight: bold;
+    padding: 5px;
     }
 
 /* Fuente más pequeña*/
@@ -60,9 +59,24 @@
 /* Modificar tamaños de títulos por default */
 .title {
   font-size: 80px !important;
+  border-bottom: 3px solid black;
 }
 
-
-h2 {
+h2.non-empty {
   font-size: 60px !important;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  padding-left: 15px;
+  border: 2px solid #710193;
+  border-radius: 10px;
+  color: #710193 !important;
+}
+
+table tr:hover {
+  background-color: lightgray;
+}
+
+table thead tr {
+  background-color: lightgray;
 }

@@ -24,7 +24,7 @@ format:
     fig-responsive: true
     embed-resources: true
     preview-links: auto
-    theme: [dark, aquamarine.scss]
+    theme: [dark, violet.scss]
     logo: images/logo_puc_bn.png
     css: styles.css
     footer: "Metodología Cuantitativa - 2023"
@@ -181,3 +181,8 @@ Deben iniciar sesión con una cuenta de Google en [https://colab.research.google
 </div>
 :::
 
+```{r}
+#| include: false
+# Se añade código de JS para controlar h2
+```
+<script src="script.js"></script>

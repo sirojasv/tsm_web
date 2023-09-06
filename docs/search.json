@@ -66,8 +66,8 @@
     "objectID": "slides/clase-3/clase_3_presentación.html#contenidos",
     "href": "slides/clase-3/clase_3_presentación.html#contenidos",
     "title": "Introducción a Tidyverse",
-    "section": "Contenidos",
-    "text": "Contenidos\nI. Tidyverse\nII. Operador pipe |&gt;\nIII. Paquete dplyr\nIV. Aplicación\nV. Ejercicio"
+    "section": "",
+    "text": "I. Tidyverse\nII. Operador pipe |&gt;\nIII. Paquete dplyr\nIV. Aplicación\nV. Ejercicio"
   },
   {
     "objectID": "slides/clase-3/clase_3_presentación.html#section",
@@ -95,14 +95,14 @@
     "href": "slides/clase-3/clase_3_presentación.html#tidyverse-3",
     "title": "Introducción a Tidyverse",
     "section": "Tidyverse (3)",
-    "text": "Tidyverse (3)\nCuando se instala tidyverse, se instalan una serie de paquetes. Aquellos que pertenecen al núcleo se cargan automáticamente cuando se ejecuta library(tidyverse).\n\n\n\n\ntibble: nuevo formato de dataframes con mejoras de visualización.\nreadr: lectura de datos “rectangulares” como formatos .csv, .tsv, etc.\ndplyr: funciones para el procesamiento y manipulación de datos.\ntidyr: funciones más avanzadas para el procesamiento de datos.\nstring: funciones para trabajar con datos tipo string.\nforcats: funciones para trabajar con factores.\nggplot2: visualización de datos.\npurrr: programación funcional, bucles, código eficiente."
+    "text": "Tidyverse (3)\nCuando se instala tidyverse, se instalan una serie de paquetes. Aquellos que pertenecen al núcleo se cargan automáticamente cuando se ejecuta library(tidyverse).\n\n\n\n\n\ntibble: nuevo formato de dataframes con mejoras de visualización.\n\nreadr: lectura de datos “rectangulares” como formatos .csv, .tsv, etc.\n\ndplyr: funciones para el procesamiento y manipulación de datos.\n\ntidyr: funciones más avanzadas para el procesamiento de datos.\n\nstring: funciones para trabajar con datos tipo string.\n\nforcats: funciones para trabajar con factores.\n\nggplot2: visualización de datos.\n\npurrr: programación funcional, bucles, código eficiente."
   },
   {
     "objectID": "slides/clase-3/clase_3_presentación.html#tidyverse-3-1",
     "href": "slides/clase-3/clase_3_presentación.html#tidyverse-3-1",
     "title": "Introducción a Tidyverse",
     "section": "Tidyverse (3)",
-    "text": "Tidyverse (3)\nOtros paquetes relevantes que se instalan, pero deben cargarse:\n\n\nlubridate: trabajar con fechas.\nreadxl: lectura de datos en formato Excel .xls y .xlsx.\nhaven: lectura de datos de programas estadísticos en formato SPSS, Stata y SAS.\nglue: alternativa a paste() que facilita combinar datos y strings.\n\nMás información disponible en la página oficial."
+    "text": "Tidyverse (3)\nOtros paquetes relevantes que se instalan, pero deben cargarse:\n\n\n\nlubridate: trabajar con fechas.\n\nreadxl: lectura de datos en formato Excel .xls y .xlsx.\n\nhaven: lectura de datos de programas estadísticos en formato SPSS, Stata y SAS.\n\nglue: alternativa a paste() que facilita combinar datos y strings.\n\nMás información disponible en la página oficial."
   },
   {
     "objectID": "slides/clase-3/clase_3_presentación.html#section-1",
@@ -137,7 +137,7 @@
     "href": "slides/clase-3/clase_3_presentación.html#operador-4",
     "title": "Introducción a Tidyverse",
     "section": "Operador |> (4)",
-    "text": "Operador |&gt; (4)\n¿Qué código les parece más legible?\n\n\n\nMás legible: va de izquierda a derecha.\nEvita errores de prioridad de paréntesis.\nMenos sensible al número de operaciones."
+    "text": "Operador |&gt; (4)\n¿Qué código les parece más legible?\n\n\n\n\n. . .\n\nMás legible: va de izquierda a derecha.\nEvita errores de prioridad de paréntesis.\nMenos sensible al número de operaciones."
   },
   {
     "objectID": "slides/clase-3/clase_3_presentación.html#section-2",
@@ -207,7 +207,7 @@
     "href": "slides/clase-3/clase_3_presentación.html#función-filter-1",
     "title": "Introducción a Tidyverse",
     "section": "Función filter() (1)",
-    "text": "Función filter() (1)\nPermite obtener un subconjunto de los datos a partir de las condiciones lógicas especificadas.\n\n\n\n\n\n\n\n\nSímbolo\nSignificado\n\n\n\n\n==\nIgualdad. No debe confundirse con “=”, que es un operador de asignación\n\n\n!=\nDistinto\n\n\n!\nNegación de una expresión lógica\n\n\n&gt;\nMayor que\n\n\n&lt;\nMenor que\n\n\n&gt;=\nMayor o igual que\n\n\n&lt;=\nMenor o igual que\n\n\n%in%\nOperador de R que indica un conjunto de elementos\n\n\n&\nOperador y. Todas las condiciones evaluadas deben ser verdaderas para que la expresión lo sea\n\n\n|\nOperador o. Al menos una condición debe ser verdadera para que la expresión lo sea"
+    "text": "Función filter() (1)\nPermite obtener un subconjunto de los datos a partir de las condiciones lógicas especificadas.\n\n\n\n\n\n\n\nSímbolo\nSignificado\n\n\n\n==\n\nIgualdad. No debe confundirse con “=”, que es un operador de asignación\n\n\n!=\nDistinto\n\n\n!\n\nNegación de una expresión lógica\n\n\n&gt;\nMayor que\n\n\n&lt;\nMenor que\n\n\n&gt;=\nMayor o igual que\n\n\n&lt;=\nMenor o igual que\n\n\n%in%\nOperador de R que indica un conjunto de elementos\n\n\n\n&\nOperador y. Todas las condiciones evaluadas deben ser verdaderas para que la expresión lo sea\n\n\n|\nOperador o. Al menos una condición debe ser verdadera para que la expresión lo sea"
   },
   {
     "objectID": "slides/clase-3/clase_3_presentación.html#función-filter-2",
@@ -361,7 +361,7 @@
     "href": "slides/clase-3/clase_3_presentación.html#section-5",
     "title": "Introducción a Tidyverse",
     "section": "",
-    "text": "¡Gracias!  https://sirojasv.github.io/tsm_web/\n\n\n\n\n\n\nMetodología Cuantitativa - 2023"
+    "text": "¡Gracias! https://sirojasv.github.io/tsm_web/"
   },
   {
     "objectID": "slides/clase-1/clase_1_presentación.html",
@@ -613,7 +613,7 @@
     "href": "slides/clase-1/clase_1_presentación.html#section-4",
     "title": "Introducción a R",
     "section": "",
-    "text": "¡Gracias!  https://sirojasv.github.io/tsm_web/\n\n\n\n\n\nMetodología Cuantitativa - 2023"
+    "text": "¡Gracias!  https://sirojasv.github.io/tsm_web/\n\n\n\n\n\n\nMetodología Cuantitativa - 2023"
   },
   {
     "objectID": "notes/clase_2_notas/clase_2_notas.html#introducción",
@@ -921,7 +921,7 @@
     "href": "slides/clase-0/clase_0_presentación.html#section",
     "title": "Instalación R y RStudio",
     "section": "",
-    "text": "¡Gracias! \n\n\n\n\n\nMetodología Cuantitativa - 2023"
+    "text": "¡Gracias! \n\n\n\n\n\n\nMetodología Cuantitativa - 2023"
   },
   {
     "objectID": "slides/clase-2/clase_2_presentación.html",
@@ -1096,6 +1096,6 @@
     "href": "slides/clase-2/clase_2_presentación.html#section-3",
     "title": "Tipos y estructuras de datos en R",
     "section": "",
-    "text": "¡Gracias!  https://sirojasv.github.io/tsm_web/\n\n\n\n\n\nMetodología Cuantitativa - 2023"
+    "text": "¡Gracias!  https://sirojasv.github.io/tsm_web/\n\n\n\n\n\n\nMetodología Cuantitativa - 2023"
   }
 ]
