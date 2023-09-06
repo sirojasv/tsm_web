@@ -452,8 +452,6 @@ data |> count(anio)
 
 ¿Cómo han evolucionado los nombres María y Sofía a lo largo del tiempo?
 
-Primero instalaremos y cargaremos algunos paquetes.
-
 Fuentes: 
 
 1. Opción 1: paquete `showtext`.
