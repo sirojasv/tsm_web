@@ -15,7 +15,7 @@ A lo largo del curso se desarrollan competencias básicas e intermedias de uso d
 2.  Articular un diseño de investigación cuantitativo a partir de sus componentes.
 3.  Tomar decisiones estratégicas y fundadas del tipo de análisis a realizar para determinado tipo de datos.
 4.  Demostrar habilidades de análisis hipotético-deductivo.
-5.  Reportar resultados del análisis de datos cuantitativos
+5.  Reportar resultados del análisis de datos cuantitativos.
 
 ## Calendario de clases
 
