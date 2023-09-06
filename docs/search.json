@@ -25,7 +25,7 @@
     "href": "index.html#calendario-de-clases",
     "title": "Metodología Cuantitativa y Análisis de Regresión Múltiple",
     "section": "Calendario de clases",
-    "text": "Calendario de clases\nLa programación de las clases es la siguiente:\n\n\n\n\n\n\n\n\n\n\n\n\nFecha\nContenidos\nPresentación\nNotas\nCódigo\n\n\n\n\nSesión 0\n15 de agosto\nInstalación de R y RStudio\n\n\n\n\n\nSesión 1\n23 de agosto\nIntroducción a R\n\n\n  \n\n\nSesión 2\n30 de agosto\nTipos y estructuras de datos\n\n\n  \n\n\nSesión 3\n6 de septiembre\nIntroducción a tidyverse\n️\n\n\n\n\nSesión 4\n13 de septiembre\nEstadística descriptiva\n\n\n\n\n\nSesión 5\n20 de septiembre\nTablas de contingencia\n\n\n\n\n\nSesión 6\n18 de octubre\nIntervalos de confianza\n\n\n\n\n\nSesión 7\n8 de noviembre\nPrueba χ²\n\n\n\n\n\nSesión 8\n22 de noviembre\nRegresión lineal"
+    "text": "Calendario de clases\nLa programación de las clases es la siguiente:\n\n\n\n\n\n\n\n\n\n\n\n\nFecha\nContenidos\nPresentación\nNotas\nCódigo\n\n\n\n\nSesión 0\n15 de agosto\nInstalación de R y RStudio\n\n\n\n\n\nSesión 1\n23 de agosto\nIntroducción a R\n\n\n  \n\n\nSesión 2\n30 de agosto\nTipos y estructuras de datos\n\n\n  \n\n\nSesión 3\n6 de septiembre\nIntroducción a tidyverse\n ️\n\n\n\n\nSesión 4\n13 de septiembre\nEstadística descriptiva\n\n\n\n\n\nSesión 5\n20 de septiembre\nTablas de contingencia\n\n\n\n\n\nSesión 6\n18 de octubre\nIntervalos de confianza\n\n\n\n\n\nSesión 7\n8 de noviembre\nPrueba χ²\n\n\n\n\n\nSesión 8\n22 de noviembre\nRegresión lineal"
   },
   {
     "objectID": "index.html#metodología-del-curso",
@@ -88,7 +88,7 @@
     "href": "header_class/header_clase_2.html",
     "title": "Clase 2",
     "section": "",
-    "text": "Ideas más importantes\n\n\n\n\nFunciones básicas para dataframes/tibbles.\nProfundizando en tipos de datos\nFunciones disponibles según el tipo de dato.\nIntroducción a los factores."
+    "text": "Ideas más importantes\n\n\n\n\nFunciones básicas para dataframes/tibbles.\nProfundizando en tipos de datos.\nFunciones disponibles según el tipo de dato.\nIntroducción a los factores."
   },
   {
     "objectID": "header_class/header_clase_2.html#presentación-de-la-clase",
@@ -831,5 +831,558 @@
     "title": "Notas clase 2: Tipos y Estructuras de datos en R",
     "section": "\n7 Tablas",
     "text": "7 Tablas\n\n\n\n\n\n\nNota\n\n\n\nEsta sección pretende mostrar de manera sucinta y rápida la generación de tablas con R base. No vale la pena dedicarle mucho tiempo, pues existen paquetes que ofrecen opciones mucho más atractivas para formatear, visualizar y exportar tablas a distintos formatos.\n\n\nA partir de la variable de satisfacción creada, generaremos nuestra primera tabla de frecuencias. Las funciones relevantes para esto son las siguientes:\n\n\ntable(): permite crear tablas de frecuencia o contingencia mostrando sus frecuencias.\n\nprop.table(): calcula las proporciones de una tabla de frecuencia o contingencia.\n\n\ntable(estudiantes$satisfaccion)\n\n\n               Muy insatisfecho/a                    Insatisfecho/a \n                                1                                 1 \nNi insatisfecho/a ni satisfecho/a                      Satisfecho/a \n                                1                                 2 \n                 Muy satisfecho/a \n                                3 \n\ntable(estudiantes$satisfaccion, useNA = \"ifany\") \n\n\n               Muy insatisfecho/a                    Insatisfecho/a \n                                1                                 1 \nNi insatisfecho/a ni satisfecho/a                      Satisfecho/a \n                                1                                 2 \n                 Muy satisfecho/a                              &lt;NA&gt; \n                                3                                 1 \n\n# Si se especifica ifany, mostrará los NA.\n\nSi queremos obtener una tabla que incluya las proporciones.\n\nprop.table(table(estudiantes$satisfaccion)) \n\n\n               Muy insatisfecho/a                    Insatisfecho/a \n                            0.125                             0.125 \nNi insatisfecho/a ni satisfecho/a                      Satisfecho/a \n                            0.125                             0.250 \n                 Muy satisfecho/a \n                            0.375 \n\n\nY si queremos la tabla como porcentajes:\n\nround(prop.table(table(estudiantes$satisfaccion)) * 100, digits = 1)\n\n\n               Muy insatisfecho/a                    Insatisfecho/a \n                             12.5                              12.5 \nNi insatisfecho/a ni satisfecho/a                      Satisfecho/a \n                             12.5                              25.0 \n                 Muy satisfecho/a \n                             37.5 \n\n\nSi se desea que tenga los marginales podemos usar la función addmargins(). Además, con la función cat(), podemos modificar la forma en que se imprime en consola la tabla. En este caso, se indica que cada resultado debe ir separado por un salto de línea, el cual se especifica con \\n.\n\ntabla &lt;- addmargins(round(prop.table(table(estudiantes$satisfaccion)) * 100, digits = 1))\ncat(paste(names(tabla), tabla, sep = \": \"), sep = \"\\n\")\n\nMuy insatisfecho/a: 12.5\nInsatisfecho/a: 12.5\nNi insatisfecho/a ni satisfecho/a: 12.5\nSatisfecho/a: 25\nMuy satisfecho/a: 37.5\nSum: 100"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#contenidos",
+    "href": "slides/clase-3/clase_3_presentación.html#contenidos",
+    "title": "Introducción a Tidyverse",
+    "section": "Contenidos",
+    "text": "Contenidos\nI. Tidyverse\nII. Operador pipe |&gt;\nIII. Paquete dplyr\nIV. Aplicación\nV. Ejercicio"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#section",
+    "href": "slides/clase-3/clase_3_presentación.html#section",
+    "title": "Introducción a Tidyverse",
+    "section": "",
+    "text": "I. Tidyverse"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#clase-anterior",
+    "href": "slides/clase-3/clase_3_presentación.html#clase-anterior",
+    "title": "Introducción a Tidyverse",
+    "section": "Clase anterior",
+    "text": "Clase anterior\n\nEl entorno tidyverse corresponde a una colección de paquetes de R cuyo diseño está enfocado en el análisis estadístico y la ciencia de datos. Todos los paquetes que forman parte comparten una filosofía de diseño que se traduce en una estructura y gramática común.\nEstá diseñado para trabajar con datos ordenados:\n\nCada observación es una fila.\nCada variable es una columna.\nCada celda es un solo valor."
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#glosario",
+    "href": "slides/clase-3/clase_3_presentación.html#glosario",
+    "title": "Introducción a Tidyverse",
+    "section": "Glosario",
+    "text": "Glosario\n\n\n\n\n\n\n\n\nConcepto\nDescripción\n\n\n\n\nConsola\nLugar donde se puede escribir código y que retorna o “imprime” los resultados asociados a ese código.\n\n\nScript\nArchivo de texto o programa que incluye el código que queremos ejecutar.\n\n\nDirectorio de trabajo\nEn inglés working directory. Indica la ubicación de los archivos de entrada y salida.\n\n\nFunción\nConjunto de instrucciones que convierten las entradas o inputs en los resultados u outputs esperados. Las funciones tienen argumentos, que son las entradas que necesita o especificaciones para funcionar.\n\n\nPaquetes\nConjunto de funciones agrupadas y distribuidas mediante una librería diseñadas para temas específicos. Por ejemplo, paquetes para visualizar datos.\n\n\nVector\nUnidad básica de datos en R.\n\n\nDataframe o tibble\nTabla organizada mediante filas y columnas."
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#section-1",
+    "href": "slides/clase-3/clase_3_presentación.html#section-1",
+    "title": "Introducción a Tidyverse",
+    "section": "",
+    "text": "II. Operador pipe |&gt;"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#tibblesdataframes",
+    "href": "slides/clase-3/clase_3_presentación.html#tibblesdataframes",
+    "title": "Introducción a Tidyverse",
+    "section": "Tibbles/dataframes",
+    "text": "Tibbles/dataframes\nUna característica relevante de los tibbles/dataframes es que cada columna o variable corresponde a un vector. Esto permite aplicar una serie de funciones que están disponibles para vectores, tales como:\n\n\nsum(): retorna la suma de elementos\nmean(): retorna la media aritmetica.\nmedian(): retorna la mediana.\nsd(): retorna la desviación estándar:\nmax(): retorna el valor máximo.\nmin(): retorna el valor mínimo.\nwhich.max(): retorna la posición del valor máximo.\nwhich.min(): retorna la posición del valor mínimo.\nrange(): retorna el rango.\nrev(): revierte el orden de los elementos.\nunique(): retorna la lista de elementos únicos.\nlength(): retorna el largo."
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#datos-de-ejemplo",
+    "href": "slides/clase-3/clase_3_presentación.html#datos-de-ejemplo",
+    "title": "Introducción a Tidyverse",
+    "section": "Datos de ejemplo:",
+    "text": "Datos de ejemplo:\nUsaremos el paquete guaguas. Este contiene el primer nombre de los bebés registrados en Chile entre 1920 y 2021 según el Servicio de Registro Civil e Identificación.\n\n# Cargamos el paquete\nif (!require(\"guaguas\")) install.packages(\"guaguas\")\nlibrary(guaguas)\n\nLa base de datos contiene 858.782 observaciones para cinco variables, las cuales se describen a continuación:\n\n\n\n\n\n\n\n\nNombre\nDescripción\n\n\n\n\nanio\nAño de inscripción en el Servicio de Registro Civil e Identificación\n\n\nnombre\nPrimer nombre inscrito de la persona\n\n\nsexo\nSexo registral, con categorías “Femenino”, “Masculino” e “Indeterminado”\n\n\nn\nNúmero de ocurrencias del nombre\n\n\nproporcion\nproporción del nombre respecto del total de inscripciones del año"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#cargar-datos",
+    "href": "slides/clase-3/clase_3_presentación.html#cargar-datos",
+    "title": "Introducción a Tidyverse",
+    "section": "Cargar datos",
+    "text": "Cargar datos\nPara comenzar, se debe instalar y luego cargar el paquete guaguas, el cual contiene el conjunto de datos.\n\n# Cargamos el paquete\nif (!require(\"guaguas\")) install.packages(\"guaguas\")\nlibrary(guaguas)\n\nLuego, se asigna ese conjunto de datos a un objeto llamado datos.\n\n# Notar que el paquete guaguas tiene una función llamada \"guaguas\".\ndatos &lt;- guaguas\n\nSe puede visualizar usando la función View():\n\nView(datos)\n\n\nA continuación se presentan algunas funciones con las que cuenta R para inspeccionar los datos."
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#funciones-estructura-1",
+    "href": "slides/clase-3/clase_3_presentación.html#funciones-estructura-1",
+    "title": "Introducción a Tidyverse",
+    "section": "Funciones: Estructura (1)",
+    "text": "Funciones: Estructura (1)\n\nstr(): muestra la estructura de los datos.\n\n\nstr(datos)\n\ntibble [858,782 × 5] (S3: tbl_df/tbl/data.frame)\n $ anio      : num [1:858782] 1920 1920 1920 1920 1920 1920 1920 1920 1920 1920 ...\n $ nombre    : chr [1:858782] \"María\" \"José\" \"Juan\" \"Luis\" ...\n $ sexo      : chr [1:858782] \"F\" \"M\" \"M\" \"M\" ...\n $ n         : num [1:858782] 2130 984 636 631 426 340 326 289 277 269 ...\n $ proporcion: num [1:858782] 0.1045 0.0483 0.0312 0.031 0.0209 ...\n - attr(*, \"spec\")=List of 3\n  ..$ cols   :List of 5\n  .. ..$ anio      : list()\n  .. .. ..- attr(*, \"class\")= chr [1:2] \"collector_double\" \"collector\"\n  .. ..$ nombre    : list()\n  .. .. ..- attr(*, \"class\")= chr [1:2] \"collector_character\" \"collector\"\n  .. ..$ sexo      : list()\n  .. .. ..- attr(*, \"class\")= chr [1:2] \"collector_character\" \"collector\"\n  .. ..$ n         : list()\n  .. .. ..- attr(*, \"class\")= chr [1:2] \"collector_double\" \"collector\"\n  .. ..$ proporcion: list()\n  .. .. ..- attr(*, \"class\")= chr [1:2] \"collector_double\" \"collector\"\n  ..$ default: list()\n  .. ..- attr(*, \"class\")= chr [1:2] \"collector_guess\" \"collector\"\n  ..$ delim  : chr \",\"\n  ..- attr(*, \"class\")= chr \"col_spec\"\n - attr(*, \"problems\")=&lt;externalptr&gt;"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#funciones-estructura-2",
+    "href": "slides/clase-3/clase_3_presentación.html#funciones-estructura-2",
+    "title": "Introducción a Tidyverse",
+    "section": "Funciones: Estructura (2)",
+    "text": "Funciones: Estructura (2)\n\ndim(): indica las dimensiones de un objeto. En este caso, el número de filas y columnas.\nnrow(): indica el número de filas.\nncol(): indica el número de columnas.\nnames(): entrega o define el nombre de las columnas.\n\n\ndim(datos)\n\n[1] 858782      5\n\nnrow(datos)\n\n[1] 858782\n\nncol(datos)\n\n[1] 5\n\nnames(datos)\n\n[1] \"anio\"       \"nombre\"     \"sexo\"       \"n\"          \"proporcion\""
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#funciones-consultar-1",
+    "href": "slides/clase-3/clase_3_presentación.html#funciones-consultar-1",
+    "title": "Introducción a Tidyverse",
+    "section": "Funciones: Consultar (1)",
+    "text": "Funciones: Consultar (1)\n\nhead(x, n =): muestra las primeras n filas del objeto x.\ntail(x, n =): muestra las primeras n filas del objeto x.\n\n\nhead(datos, n = 4)\n\n# A tibble: 4 × 5\n   anio nombre sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  1920 María  F      2130     0.104 \n2  1920 José   M       984     0.0483\n3  1920 Juan   M       636     0.0312\n4  1920 Luis   M       631     0.0310\n\ntail(datos, n = 4)\n\n# A tibble: 4 × 5\n   anio nombre sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  2021 Zuri   F         1 0.00000562\n2  2021 Zurick F         1 0.00000562\n3  2021 Zury   F         1 0.00000562\n4  2021 Zyhara F         1 0.00000562"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#funciones-resumen-1",
+    "href": "slides/clase-3/clase_3_presentación.html#funciones-resumen-1",
+    "title": "Introducción a Tidyverse",
+    "section": "Funciones: Resumen (1)",
+    "text": "Funciones: Resumen (1)\n\nsummary(): entrega estadísticos de resumen.\n\n\nsummary(datos)\n\n      anio         nombre              sexo                 n           \n Min.   :1920   Length:858782      Length:858782      Min.   :    1.00  \n 1st Qu.:1960   Class :character   Class :character   1st Qu.:    1.00  \n Median :1985   Mode  :character   Mode  :character   Median :    1.00  \n Mean   :1981                                         Mean   :   25.77  \n 3rd Qu.:2004                                         3rd Qu.:    3.00  \n Max.   :2021                                         Max.   :21448.00  \n   proporcion       \n Min.   :3.060e-06  \n 1st Qu.:3.790e-06  \n Median :5.130e-06  \n Mean   :1.188e-04  \n 3rd Qu.:1.437e-05  \n Max.   :1.045e-01"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#section-2",
+    "href": "slides/clase-3/clase_3_presentación.html#section-2",
+    "title": "Introducción a Tidyverse",
+    "section": "",
+    "text": "III. Paquete dplyr"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#tipos-de-datos",
+    "href": "slides/clase-3/clase_3_presentación.html#tipos-de-datos",
+    "title": "Introducción a Tidyverse",
+    "section": "Tipos de datos",
+    "text": "Tipos de datos\nComo revisamos en la clase anterior, R cuenta con una serie de tipos de datos definidos de antemano.\n\n\n\n\n\n\n\n\n\nTipo\nDescripción\nEjemplo\n\n\n\n\ninteger\nNúmeros enteros\n-1, 0, 1\n\n\nnumeric\nNúmeros reales\n-0.5, 1/2, 1\n\n\ncharacter\nTexto/String\n“Erwin”, “Armin”, “Sasha”, “Titanes”\n\n\nfactor\nDatos categóricos\n“Trabajo Social [1]”, “Otra carrera [2]”\n\n\nhaven_labelled\nValores numéricos con etiquetas asociadas\n1 = “Muy en desacuerdo”; 2 = “En desacuerdo”; 3 “Ni de acuerdo ni en desacuerdo”; 4 = “De acuerdo”; 5 “Muy de acuerdo”\n\n\nlogical\nVerdadero o falso\n“TRUE”, “FALSE”\n\n\nNA\nValores perdidos\nNA\n\n\nNULL\nObjetos nulos. Es devuelto por expresiones o funciones\nNULL"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#enteros-y-numéricos-1",
+    "href": "slides/clase-3/clase_3_presentación.html#enteros-y-numéricos-1",
+    "title": "Introducción a Tidyverse",
+    "section": "Enteros y numéricos (1)",
+    "text": "Enteros y numéricos (1)\nRepresentan números enteros, sin parte decimal. Pueden ser usados en operaciones matemáticas y en el contexto de bases de datos, contienen información para las observaciones.\nEn este caso, seleccionaremos la columna “n” que es de tipo numérica.\n\ndatos[, \"n\"]  # Seleccionamos todos los casos para la columna \"n\"\n\n# A tibble: 858,782 × 1\n       n\n   &lt;dbl&gt;\n 1  2130\n 2   984\n 3   636\n 4   631\n 5   426\n 6   340\n 7   326\n 8   289\n 9   277\n10   269\n# ℹ 858,772 more rows"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#enteros-y-numéricos-2",
+    "href": "slides/clase-3/clase_3_presentación.html#enteros-y-numéricos-2",
+    "title": "Introducción a Tidyverse",
+    "section": "Enteros y numéricos (2)",
+    "text": "Enteros y numéricos (2)\nY podríamos ordenar las filas de esa columna de manera descendente y agregarle más columnas para tener información de contexto.\n\ndatos[order(datos$n, decreasing = TRUE), c(\"anio\", \"nombre\", \"n\")]\n\n# A tibble: 858,782 × 3\n    anio nombre     n\n   &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;\n 1  1955 María  21448\n 2  1956 María  21013\n 3  1965 María  20382\n 4  1954 María  20172\n 5  1957 María  20154\n 6  1962 María  19862\n 7  1959 María  19701\n 8  1958 María  19593\n 9  1960 María  19581\n10  1953 María  19566\n# ℹ 858,772 more rows"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#enteros-y-numéricos-3",
+    "href": "slides/clase-3/clase_3_presentación.html#enteros-y-numéricos-3",
+    "title": "Introducción a Tidyverse",
+    "section": "Enteros y numéricos (3)",
+    "text": "Enteros y numéricos (3)\nAl aplicar operaciones matemáticas se debe tener cuidado con los datos perdidos.\n\nmis_numeros &lt;- c(7, 25, 33, 26)\nmean(mis_numeros)\n\n[1] 22.75\n\n\n\nmis_numeros_na &lt;- c(7, 25, 33, 26, NA)\nmean(mis_numeros_na)\n\n[1] NA\n\n\nLa media no se puede calcular si hay valores perdidos. En estos casos se debe excluir los valores perdidos usando la opción na.rm con valor TRUE.\n\nmis_numeros_na &lt;- c(7, 25, 33, 26, NA)\nmean(mis_numeros_na, na.rm = TRUE)\n\n[1] 22.75"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#strings-o-texto-1",
+    "href": "slides/clase-3/clase_3_presentación.html#strings-o-texto-1",
+    "title": "Introducción a Tidyverse",
+    "section": "Strings o texto (1)",
+    "text": "Strings o texto (1)\nCorresponden a cadenas de texto o también denominadas secuencias de caracteres. Se reconocen porque están encerradas en comillas simples ' ' o dobles \" \".\n\nmi_texto &lt;- \"Bienvenido/a. Su nombre es:\"\n\nCon la función paste() se pueden concatenar strings. Además, cuenta con el argumento sep que indica el separador que tendrá el texto. Por defecto es un espacio vacío.\n\npaste(mi_texto, \"Julio Cesar\", sep = \" \")\n\n[1] \"Bienvenido/a. Su nombre es: Julio Cesar\"\n\n\nY podemos usar cualquier separador.\n\npaste(mi_texto, \"Julio Cesar\", sep = \"------&gt;\")\n\n[1] \"Bienvenido/a. Su nombre es:------&gt;Julio Cesar\"\n\n\nY se pueden concatenar más de dos strings a la vez. En estos casos con el argumento collapse() para separar los resultados.\n\npaste(mi_texto, c(\"Julio Cesar\", \"Cesar Augusto\", \"Calígula\"), collapse = \"/---/\")\n\n[1] \"Bienvenido/a. Su nombre es: Julio Cesar/---/Bienvenido/a. Su nombre es: Cesar Augusto/---/Bienvenido/a. Su nombre es: Calígula\""
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#strings-o-texto-2",
+    "href": "slides/clase-3/clase_3_presentación.html#strings-o-texto-2",
+    "title": "Introducción a Tidyverse",
+    "section": "Strings o texto (2)",
+    "text": "Strings o texto (2)\nTambién está la función paste0(). Esta no tiene como argumento sep y siempre concatenará sin espacios.\n\nmi_texto_2 &lt;- \"30/08/\"\npaste0(mi_texto_2, \"2023\")\n\n[1] \"30/08/2023\""
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#strings-o-texto-3",
+    "href": "slides/clase-3/clase_3_presentación.html#strings-o-texto-3",
+    "title": "Introducción a Tidyverse",
+    "section": "Strings o texto (3)",
+    "text": "Strings o texto (3)\nOtras funciones útiles son:\n\ntoupper(x): convierte el vector a mayúsculas.\ntolower(x): convierte el vector a minúsculas.\nnchar(x): retorna el número de caracteres del string.\n\n\nmi_texto_3 &lt;- \"Hola Mundo\"\ntoupper(mi_texto_3)\n\n[1] \"HOLA MUNDO\"\n\ntolower(mi_texto_3)\n\n[1] \"hola mundo\"\n\nnchar(mi_texto_3) # Cuenta 10 porque espacio también es un caracter\n\n[1] 10\n\n\nAdemás R cuenta con otras funciones base para strings tales como grep() gsub()."
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#factores-1",
+    "href": "slides/clase-3/clase_3_presentación.html#factores-1",
+    "title": "Introducción a Tidyverse",
+    "section": "Factores (1)",
+    "text": "Factores (1)\nEste es un tipo de dato específico de R para datos categóricos. Los factores toman un número acotado de valores distintos, los cuales son llamados niveles o levels.\nEjemplo1:\n\nSuponga que tiene una variable con valores para cuatro meses. Usar esta variable como un string tiene al menos dos problemas:\n\nLos valores válidos están restringidos a 12 categorías. Solo pueden ingresarse esos valores.\nSi quiero ordenarlo, lo hará alfabéticamente.\n\n\n\nx1 &lt;- c(\"Enero\", \"Febrero\", \"Marzo\", \"Abril\")\nx2 &lt;- c(\"Enero\", \"Febrerooo\", \"Marzooo\", \"Abril\")\nsort(x1) # No ordena como quisiéramos, porque es un string\n\n[1] \"Abril\"   \"Enero\"   \"Febrero\" \"Marzo\"  \n\n\nEjemplo adaptado de R For Data Science, segunda edición."
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#factores-2",
+    "href": "slides/clase-3/clase_3_presentación.html#factores-2",
+    "title": "Introducción a Tidyverse",
+    "section": "Factores (2)",
+    "text": "Factores (2)\nLos factores buscan solucionar los problemas antes mencionados. Para crear un factor lo primero que debe hacerse es definir un vector de valores válidos, los que se asignarán al factor.\n\nmeses_levels &lt;- c(\n  \"Enero\", \"Febrero\", \"Marzo\", \"Abril\", \"Mayo\", \"Junio\",\n  \"Julio\", \"Agosto\", \"Septiembre\", \"Octubre\", \"Noviembre\", \"Diciembre\"\n)\n\nfactor_x1 &lt;- factor(x1, levels = meses_levels)\nsort(factor_x1)\n\n[1] Enero   Febrero Marzo   Abril  \n12 Levels: Enero Febrero Marzo Abril Mayo Junio Julio Agosto ... Diciembre\n\n\nY cualquier valor que no sea parte de los levels del factor se convertirá en NA.\n\nmeses_levels &lt;- c(\n  \"Enero\", \"Febrero\", \"Marzo\", \"Abril\", \"Mayo\", \"Junio\",\n  \"Julio\", \"Agosto\", \"Septiembre\", \"Octubre\", \"Noviembre\", \"Diciembre\"\n)\nfactor_x2 &lt;- factor(x2, levels = meses_levels)\nfactor_x2\n\n[1] Enero &lt;NA&gt;  &lt;NA&gt;  Abril\n12 Levels: Enero Febrero Marzo Abril Mayo Junio Julio Agosto ... Diciembre"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#factores-3",
+    "href": "slides/clase-3/clase_3_presentación.html#factores-3",
+    "title": "Introducción a Tidyverse",
+    "section": "Factores (3)",
+    "text": "Factores (3)\nLos factores nativos de R tienen algunos inconvenientes:\n\nConvierten directamente en NA los valores sin emitir alertas. Esto puede ser riesgoso.\nSi no se le entregan los levels al factor, estos serán ordenados automáticamente de manera alfabética. Sin embargo, esto no es deseable, porque no todos los computadores ordenan los strings de la misma forma.\n\nPor estas razones en el curso preferiremos paquetes que los implementan de otro modo."
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#section-3",
+    "href": "slides/clase-3/clase_3_presentación.html#section-3",
+    "title": "Introducción a Tidyverse",
+    "section": "",
+    "text": "IV. Aplicación"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#tidyverse",
+    "href": "slides/clase-3/clase_3_presentación.html#tidyverse",
+    "title": "Introducción a Tidyverse",
+    "section": "Tidyverse",
+    "text": "Tidyverse\nEl entorno tidyverse corresponde a una colección de paquetes de R cuyo diseño está enfocado en el análisis estadístico y la ciencia de datos. Todos los paquetes que forman parte comparten una filosofía de diseño que se traduce en una estructura y gramática común.\n\nEstá diseñado para trabajar con datos ordenados:\n\nCada observación es una fila.\nCada variable es una columna.\nCada celda es un solo valor.\n\nEn general el código es muchísimo más legible, tanto por el nombre de las funciones como el uso del operador |&gt;."
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#tidyverse-1",
+    "href": "slides/clase-3/clase_3_presentación.html#tidyverse-1",
+    "title": "Introducción a Tidyverse",
+    "section": "Tidyverse (1)",
+    "text": "Tidyverse (1)\nEl entorno tidyverse corresponde a una colección de paquetes de R cuyo diseño está enfocado en el análisis estadístico y la ciencia de datos. Todos los paquetes que forman parte comparten una filosofía de diseño que se traduce en una estructura y gramática común.\n\nEstá diseñado para trabajar con datos ordenados:\n\nCada observación es una fila.\nCada variable es una columna.\nCada celda es un solo valor."
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#tidyverse-2",
+    "href": "slides/clase-3/clase_3_presentación.html#tidyverse-2",
+    "title": "Introducción a Tidyverse",
+    "section": "Tidyverse (2)",
+    "text": "Tidyverse (2)\n\nCódigo más legible, nombres de funciones más atingentes, gramática común.\n\n\n\n“This is particularly important for R, because it’s a language that’s used primarily by non-programmers, and we want to make it as easy as possible for first-time and end-user programmers to learn the tidyverse.” – Equipo tidyverse.\n\n\n\nConcatenación de código con el operador operador |&gt;.\nCiclo completo del análisis de datos."
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#tidyverse-3",
+    "href": "slides/clase-3/clase_3_presentación.html#tidyverse-3",
+    "title": "Introducción a Tidyverse",
+    "section": "Tidyverse (3)",
+    "text": "Tidyverse (3)\nCuando se instala tidyverse, se instalan una serie de paquetes. Aquellos que pertenecen al núcleo se cargan automáticamente cuando se ejecuta library(tidyverse).\n\n\n\n\ntibble: nuevo formato de dataframes con mejoras de visualización.\nreadr: lectura de datos “rectangulares” como formatos .csv, .tsv, etc.\ndplyr: funciones para el procesamiento y manipulación de datos.\ntidyr: funciones más avanzadas para el procesamiento de datos.\nstring: funciones para trabajar con datos tipo string.\nforcats: funciones para trabajar con factores.\nggplot2: visualización de datos.\npurrr: programación funcional, bucles, código eficiente."
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#tidyverse-3-1",
+    "href": "slides/clase-3/clase_3_presentación.html#tidyverse-3-1",
+    "title": "Introducción a Tidyverse",
+    "section": "Tidyverse (3)",
+    "text": "Tidyverse (3)\nOtros paquetes relevantes que se instalan, pero deben cargarse:\n\n\nlubridate: trabajar con fechas.\nreadxl: lectura de datos en formato Excel .xls y .xlsx.\nhaven: lectura de datos de programas estadísticos en formato SPSS, Stata y SAS.\nglue: alternativa a paste() que facilita combinar datos y strings.\n\nMás información disponible en la página oficial."
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#asdsa",
+    "href": "slides/clase-3/clase_3_presentación.html#asdsa",
+    "title": "Introducción a Tidyverse",
+    "section": "asdsa",
+    "text": "asdsa\n\nflowchart LR\n    X[Import] --&gt; Z[Tidy]\n    Z[Tidy] --&gt; A[Transform]\nsubgraph\n    A[Transform] --&gt; B[Visualise]\n    B[Visualise] --&gt; C[Model]\n    C[Model] --&gt; A[Tidy]\n    C[Model] --&gt; D[Comunicate]\n\n\n\nflowchart LR\n    X[Import] --&gt; Z[Tidy]\n    Z[Tidy] --&gt; A[Transform]\nsubgraph\n    A[Transform] --&gt; B[Visualise]\n    B[Visualise] --&gt; C[Model]\n    C[Model] --&gt; A[Tidy]\n    C[Model] --&gt; D[Comunicate]"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#as",
+    "href": "slides/clase-3/clase_3_presentación.html#as",
+    "title": "Introducción a Tidyverse",
+    "section": "as",
+    "text": "as\n\nflowchart LR\n    X[Import] --&gt; Z[Tidy]\n    Z[Tidy] --&gt; A[Transform]\n    subgraph one\n    Y[Transform] --&gt; B[Visualise]\n    B[Visualise] --&gt; C[Model]\n    C[Model] --&gt; Y[Transform]\n    end\n    C[Model] --&gt; D[Comunicate]\n\n\n\nflowchart LR\n    X[Import] --&gt; Z[Tidy]\n    Z[Tidy] --&gt; A[Transform]\n    subgraph one\n    Y[Transform] --&gt; B[Visualise]\n    B[Visualise] --&gt; C[Model]\n    C[Model] --&gt; Y[Transform]\n    end\n    C[Model] --&gt; D[Comunicate]"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#x",
+    "href": "slides/clase-3/clase_3_presentación.html#x",
+    "title": "Introducción a Tidyverse",
+    "section": "X",
+    "text": "X"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#operador",
+    "href": "slides/clase-3/clase_3_presentación.html#operador",
+    "title": "Introducción a Tidyverse",
+    "section": "Operador |>",
+    "text": "Operador |&gt;\n\nExpresa de manera clara una secuencia de operacioens concatenando instrucciones de código.\nPasa el elemento que está a la izquierda como argumento de la función que está a la derecha.\nDisponible desde R 4.1.0 (mayo 2021). Antes se usaba -y todavía- el operador %&gt;%.\n\nVeamos un ejemplo usando el paquete “guaguas” de la semana pasada:\n\ndatos &lt;- guaguas\nhead(datos, n = 3)\n\n# A tibble: 3 × 5\n   anio nombre sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  1920 María  F      2130     0.104 \n2  1920 José   M       984     0.0483\n3  1920 Juan   M       636     0.0312\n\ndatos |&gt; head(n = 3)\n\n# A tibble: 3 × 5\n   anio nombre sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  1920 María  F      2130     0.104 \n2  1920 José   M       984     0.0483\n3  1920 Juan   M       636     0.0312"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#operador-1",
+    "href": "slides/clase-3/clase_3_presentación.html#operador-1",
+    "title": "Introducción a Tidyverse",
+    "section": "Operador |> (1)",
+    "text": "Operador |&gt; (1)\n\nExpresa de manera clara una secuencia de operaciones concatenando instrucciones de código.\nPasa el elemento que está a la izquierda como argumento de la función que está a la derecha.\nDisponible desde R 4.1.0 (mayo 2021). Antes se usaba -y todavía- el operador %&gt;%.\nSe puede usar el atajo de teclado CTRL/CMD + SHIFT + M. Requiere habilitar Tools → Global Options → Code → Editing → “Use native pipe operator |&gt;”"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#operador-2",
+    "href": "slides/clase-3/clase_3_presentación.html#operador-2",
+    "title": "Introducción a Tidyverse",
+    "section": "Operador |> (2)",
+    "text": "Operador |&gt; (2)\nVeamos un ejemplo usando el paquete “guaguas”:\n\n# Cargamos tidyverse\nlibrary(tidyverse)\n\n\ndata &lt;- guaguas::guaguas\nhead(data, n = 3)\n\n# A tibble: 3 × 5\n   anio nombre sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  1920 María  F      2130     0.104 \n2  1920 José   M       984     0.0483\n3  1920 Juan   M       636     0.0312\n\ndata |&gt; head(n = 3)\n\n# A tibble: 3 × 5\n   anio nombre sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  1920 María  F      2130     0.104 \n2  1920 José   M       984     0.0483\n3  1920 Juan   M       636     0.0312"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#operador-3",
+    "href": "slides/clase-3/clase_3_presentación.html#operador-3",
+    "title": "Introducción a Tidyverse",
+    "section": "Operador |> (3)",
+    "text": "Operador |&gt; (3)\nUsando las funciones de los paquetes que veremos en esta sesión, podemos comparar la sintaxis usando el operador |&gt; versus la prioridad de paréntesis.\n\ndata |&gt;\n  filter(anio == 2020) |&gt;\n  slice_head(n = 3)\n\n# A tibble: 3 × 5\n   anio nombre  sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  2020 Mateo   M      3866     0.0198\n2  2020 Agustín M      2535     0.0130\n3  2020 Sofía   F      2465     0.0126\n\n\n\nslice_head(filter(data, anio == 2020), n = 3)\n\n# A tibble: 3 × 5\n   anio nombre  sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  2020 Mateo   M      3866     0.0198\n2  2020 Agustín M      2535     0.0130\n3  2020 Sofía   F      2465     0.0126"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#operador-4",
+    "href": "slides/clase-3/clase_3_presentación.html#operador-4",
+    "title": "Introducción a Tidyverse",
+    "section": "Operador |> (4)",
+    "text": "Operador |&gt; (4)\n¿Qué código les parece más legible?\n\n\n\nMás legible: va de izquierda a derecha.\nEvita errores de prioridad de paréntesis.\nMenos sensible al número de operaciones."
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#paquete-dplyr",
+    "href": "slides/clase-3/clase_3_presentación.html#paquete-dplyr",
+    "title": "Introducción a Tidyverse",
+    "section": "Paquete dplyr",
+    "text": "Paquete dplyr\nContiene una serie de funciones para realizar tareas comunes en el procesamiento de datos:\n\nExplorar los datos.\nSeleccionar variables.\nFiltrar observaciones.\nRenombrar variables.\nOrdenar los datos según criterios.\nCambiar orden de las columnas.\nAñadir nuevas variables o modificar las existentes.\nAgrupaciones de datos.\nContar y obtener estadísticas agrupadas.\nUnir conjuntos de datos.\n¡Muchas otras!"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#paquete-dplyr-1",
+    "href": "slides/clase-3/clase_3_presentación.html#paquete-dplyr-1",
+    "title": "Introducción a Tidyverse",
+    "section": "Paquete dplyr (1)",
+    "text": "Paquete dplyr (1)\nContiene una serie de funciones para realizar tareas comunes en el procesamiento de datos:\n\n\nExplorar los datos: glimpse().\nSeleccionar variables: select().\nFiltrar observaciones: filter().\nRenombrar variables: rename().\nOrdenar los datos según criterios: arrange().\nCambiar orden de las columnas: relocate().\nSeleccionar observaciones: slice_head(), slice_tail(), slice_sample, etc."
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#paquete-dplyr-2",
+    "href": "slides/clase-3/clase_3_presentación.html#paquete-dplyr-2",
+    "title": "Introducción a Tidyverse",
+    "section": "Paquete dplyr (2)",
+    "text": "Paquete dplyr (2)\n\n\nAñadir nuevas variables o modificar las existentes: mutate().\nAgrupar datos: group_by() o argumento .by.\nEstadísticas agrupadas: summarise().\nContar: count().\nUnir conjuntos de datos: familia de mutating y filtering joins.\nCondiciones lógicas: if_else() y case_when().\nOperaciones por filas: rowwise().\nIdentificar filas únicas/distintas: distinct().\nTransformar a perdidos: na_if().\nAplicar operaciones a múltiples columnas: across().\n¡Muchas otras!"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-glimpse",
+    "href": "slides/clase-3/clase_3_presentación.html#función-glimpse",
+    "title": "Introducción a Tidyverse",
+    "section": "Función glimpse()",
+    "text": "Función glimpse()\nPermite obtener una vista rápida del conjunto de datos.\n\ndata |&gt; glimpse()\n\nRows: 858,782\nColumns: 5\n$ anio       &lt;dbl&gt; 1920, 1920, 1920, 1920, 1920, 1920, 1920, 1920, 1920, 1920,…\n$ nombre     &lt;chr&gt; \"María\", \"José\", \"Juan\", \"Luis\", \"Rosa\", \"Ana\", \"Manuel\", \"…\n$ sexo       &lt;chr&gt; \"F\", \"M\", \"M\", \"M\", \"F\", \"F\", \"M\", \"F\", \"M\", \"M\", \"F\", \"F\",…\n$ n          &lt;dbl&gt; 2130, 984, 636, 631, 426, 340, 326, 289, 277, 269, 239, 218…\n$ proporcion &lt;dbl&gt; 0.10449885, 0.04827552, 0.03120247, 0.03095717, 0.02089977,…"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#select",
+    "href": "slides/clase-3/clase_3_presentación.html#select",
+    "title": "Introducción a Tidyverse",
+    "section": "select()",
+    "text": "select()\nPermite seleccionar columnas de una base de datos.\n\ndata |&gt; select(anio, nombre, n)\n\n# A tibble: 858,782 × 3\n    anio nombre     n\n   &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;\n 1  1920 María   2130\n 2  1920 José     984\n 3  1920 Juan     636\n 4  1920 Luis     631\n 5  1920 Rosa     426\n 6  1920 Ana      340\n 7  1920 Manuel   326\n 8  1920 Olga     289\n 9  1920 Carlos   277\n10  1920 Pedro    269\n# ℹ 858,772 more rows\n\n\n\n\n\n\nMetodología Cuantitativa - 2023"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-select",
+    "href": "slides/clase-3/clase_3_presentación.html#función-select",
+    "title": "Introducción a Tidyverse",
+    "section": "Función select()",
+    "text": "Función select()\nPermite seleccionar columnas de una base de datos.\n\ndata |&gt; select(anio, nombre, n)\n\n# A tibble: 858,782 × 3\n    anio nombre     n\n   &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;\n 1  1920 María   2130\n 2  1920 José     984\n 3  1920 Juan     636\n 4  1920 Luis     631\n 5  1920 Rosa     426\n 6  1920 Ana      340\n 7  1920 Manuel   326\n 8  1920 Olga     289\n 9  1920 Carlos   277\n10  1920 Pedro    269\n# ℹ 858,772 more rows"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-select-1",
+    "href": "slides/clase-3/clase_3_presentación.html#función-select-1",
+    "title": "Introducción a Tidyverse",
+    "section": "Función select() (1)",
+    "text": "Función select() (1)\nPermite seleccionar columnas de un conjunto de datos.\n\ndata |&gt; select(anio, nombre, n) |&gt; slice_head(n = 2)\n\n# A tibble: 2 × 3\n   anio nombre     n\n  &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;\n1  1920 María   2130\n2  1920 José     984\n\n\n\nAnteponiendo el signo menos - se puede hacer selección negativa.\n\n\ndata |&gt; select(-proporcion, -sexo) |&gt; slice_head(n = 2)\n\n# A tibble: 2 × 3\n   anio nombre     n\n  &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;\n1  1920 María   2130\n2  1920 José     984"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-select-2",
+    "href": "slides/clase-3/clase_3_presentación.html#función-select-2",
+    "title": "Introducción a Tidyverse",
+    "section": "Función select() (2)",
+    "text": "Función select() (2)\n\nTambién se puede hacer uso de selection helpers como starts_with(), ends_with(), contains(), etc.\n\n\n# Selecciona todo lo que empieza con n\ndata |&gt; select(starts_with(\"n\")) |&gt; slice_head(n = 2)\n\n# A tibble: 2 × 2\n  nombre     n\n  &lt;chr&gt;  &lt;dbl&gt;\n1 María   2130\n2 José     984\n\n\n\n# Selecciona todo lo que termine con o\ndata |&gt; select(ends_with(\"o\")) |&gt; slice_head(n = 2)\n\n# A tibble: 2 × 2\n   anio sexo \n  &lt;dbl&gt; &lt;chr&gt;\n1  1920 F    \n2  1920 M"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-select-2-1",
+    "href": "slides/clase-3/clase_3_presentación.html#función-select-2-1",
+    "title": "Introducción a Tidyverse",
+    "section": "Función select() (2)",
+    "text": "Función select() (2)\n\nO realizar una selección según el tipo de variable agregando el predicado where().\n\n\n# Selecciona todas las variables character\ndata |&gt; select(where(is.character)) |&gt; slice_head(n = 2)\n\n# A tibble: 2 × 2\n  nombre sexo \n  &lt;chr&gt;  &lt;chr&gt;\n1 María  F    \n2 José   M    \n\n\n\n# Selecciona todas las variables numeric\ndata |&gt; select(where(is.numeric)) |&gt; slice_head(n = 2)\n\n# A tibble: 2 × 3\n   anio     n proporcion\n  &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  1920  2130     0.104 \n2  1920   984     0.0483\n\n\n\n¡Incluso permite renombrar variables! (Ver notas de la clase).\n\nMás opciones se pueden revisar escribiendo en la consola de R ?select si se tiene cargado tidyverse."
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-rename",
+    "href": "slides/clase-3/clase_3_presentación.html#función-rename",
+    "title": "Introducción a Tidyverse",
+    "section": "Función rename()",
+    "text": "Función rename()\nPermite renombrar columnas siguiendo la estructura nuevo_nombre = antiguo_nombre.\n\n# Renombra las variables\ndata |&gt; rename(frec = n,\n               prop = proporcion)\n\n# A tibble: 858,782 × 5\n    anio nombre sexo   frec   prop\n   &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt;\n 1  1920 María  F      2130 0.104 \n 2  1920 José   M       984 0.0483\n 3  1920 Juan   M       636 0.0312\n 4  1920 Luis   M       631 0.0310\n 5  1920 Rosa   F       426 0.0209\n 6  1920 Ana    F       340 0.0167\n 7  1920 Manuel M       326 0.0160\n 8  1920 Olga   F       289 0.0142\n 9  1920 Carlos M       277 0.0136\n10  1920 Pedro  M       269 0.0132\n# ℹ 858,772 more rows\n\n\n\n¡Noten que aquí aún no se sobreescribe el objeto data!"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-relocate",
+    "href": "slides/clase-3/clase_3_presentación.html#función-relocate",
+    "title": "Introducción a Tidyverse",
+    "section": "Función relocate()",
+    "text": "Función relocate()\nCambia la posición de las columnas.\n\n# Va después de proporcion\ndata |&gt; relocate(anio, .after = proporcion) |&gt;\n  slice_tail(n = 4)\n\n# A tibble: 4 × 5\n  nombre sexo      n proporcion  anio\n  &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt; &lt;dbl&gt;\n1 Zuri   F         1 0.00000562  2021\n2 Zurick F         1 0.00000562  2021\n3 Zury   F         1 0.00000562  2021\n4 Zyhara F         1 0.00000562  2021\n\n\n\n# Va antes de proporcion\ndata |&gt; relocate(anio, .before = proporcion) |&gt;\n  slice_tail(n = 4)\n\n# A tibble: 4 × 5\n  nombre sexo      n  anio proporcion\n  &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1 Zuri   F         1  2021 0.00000562\n2 Zurick F         1  2021 0.00000562\n3 Zury   F         1  2021 0.00000562\n4 Zyhara F         1  2021 0.00000562"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-filter",
+    "href": "slides/clase-3/clase_3_presentación.html#función-filter",
+    "title": "Introducción a Tidyverse",
+    "section": "Función filter()",
+    "text": "Función filter()\nPermite obtener un subconjunto de los datos a partir de las condiciones lógicas especificadas.\n\n\n\n\n\n\n\n\nSímbolo\nSignificado\n\n\n\n\n==\nIgualdad. No debe confundirse con “=”, que es un operador de asignación\n\n\n!=\nDistinto\n\n\n!\nNegación de una expresión lógica\n\n\n&gt;\nMayor que\n\n\n&lt;\nMenor que\n\n\n&gt;=\nMayor o igual que\n\n\n&lt;=\nMenor o igual que\n\n\n%in%\nOperador de R que indica un conjunto de elementos\n\n\n&\nOperador y. Todas las condiciones evaluadas deben ser verdaderas para que la expresión lo sea\n\n\n|\nOperador o. Al menos una condición debe ser verdadera para que la expresión lo sea"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-filter-1",
+    "href": "slides/clase-3/clase_3_presentación.html#función-filter-1",
+    "title": "Introducción a Tidyverse",
+    "section": "Función filter() (1)",
+    "text": "Función filter() (1)\nPermite obtener un subconjunto de los datos a partir de las condiciones lógicas especificadas.\n\n\n\n\n\n\n\n\nSímbolo\nSignificado\n\n\n\n\n==\nIgualdad. No debe confundirse con “=”, que es un operador de asignación\n\n\n!=\nDistinto\n\n\n!\nNegación de una expresión lógica\n\n\n&gt;\nMayor que\n\n\n&lt;\nMenor que\n\n\n&gt;=\nMayor o igual que\n\n\n&lt;=\nMenor o igual que\n\n\n%in%\nOperador de R que indica un conjunto de elementos\n\n\n&\nOperador y. Todas las condiciones evaluadas deben ser verdaderas para que la expresión lo sea\n\n\n|\nOperador o. Al menos una condición debe ser verdadera para que la expresión lo sea"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-filter-2",
+    "href": "slides/clase-3/clase_3_presentación.html#función-filter-2",
+    "title": "Introducción a Tidyverse",
+    "section": "Función filter() (2)",
+    "text": "Función filter() (2)\n\n# Filtro por año\ndata |&gt; filter(anio == 2021) \n\n# A tibble: 13,265 × 5\n    anio nombre   sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  2021 Mateo    M      3267     0.0184\n 2  2021 Emma     F      2352     0.0132\n 3  2021 Sofía    F      2251     0.0126\n 4  2021 Isabella F      2155     0.0121\n 5  2021 Lucas    M      2054     0.0115\n 6  2021 Emilia   F      2044     0.0115\n 7  2021 Agustín  M      1972     0.0111\n 8  2021 Benjamín M      1935     0.0109\n 9  2021 Agustina F      1816     0.0102\n10  2021 Santiago M      1809     0.0102\n# ℹ 13,255 more rows"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-filter-3",
+    "href": "slides/clase-3/clase_3_presentación.html#función-filter-3",
+    "title": "Introducción a Tidyverse",
+    "section": "Función filter() (3)",
+    "text": "Función filter() (3)\n\n# Filtro por año y nombre\ndata |&gt; filter(anio == 2021 & nombre == \"Susana\") \n\n# A tibble: 1 × 5\n   anio nombre sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  2021 Susana F        16  0.0000899"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-filter-4",
+    "href": "slides/clase-3/clase_3_presentación.html#función-filter-4",
+    "title": "Introducción a Tidyverse",
+    "section": "Función filter() (4)",
+    "text": "Función filter() (4)\n\n# Filtro usando |\ndata |&gt; filter(anio == 2021 | anio == 2019) \n\n# A tibble: 28,306 × 5\n    anio nombre   sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  2019 Mateo    M      4152     0.0196\n 2  2019 Isabella F      3101     0.0147\n 3  2019 Agustina F      2932     0.0139\n 4  2019 Sofía    F      2924     0.0138\n 5  2019 Agustín  M      2869     0.0136\n 6  2019 Santiago M      2658     0.0126\n 7  2019 Emilia   F      2596     0.0123\n 8  2019 Tomás    M      2570     0.0122\n 9  2019 Benjamín M      2537     0.0120\n10  2019 Lucas    M      2468     0.0117\n# ℹ 28,296 more rows"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-filter-5",
+    "href": "slides/clase-3/clase_3_presentación.html#función-filter-5",
+    "title": "Introducción a Tidyverse",
+    "section": "Función filter() (5)",
+    "text": "Función filter() (5)\n\n# Filtro usando %in%\ndata |&gt; filter(anio %in% c(1998, 2006, 2007:2010)) \n\n# A tibble: 71,792 × 5\n    anio nombre    sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  1998 Javiera   F      7473     0.0281\n 2  1998 Camila    F      7266     0.0273\n 3  1998 Nicolás   M      6090     0.0229\n 4  1998 María     F      5665     0.0213\n 5  1998 Matías    M      5591     0.0210\n 6  1998 Sebastián M      4726     0.0178\n 7  1998 Catalina  F      4706     0.0177\n 8  1998 Diego     M      4295     0.0161\n 9  1998 José      M      4184     0.0157\n10  1998 Francisca F      3872     0.0145\n# ℹ 71,782 more rows"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-filter-6",
+    "href": "slides/clase-3/clase_3_presentación.html#función-filter-6",
+    "title": "Introducción a Tidyverse",
+    "section": "Función filter() (6)",
+    "text": "Función filter() (6)\n\n# Filtro usando negación\ndata |&gt; filter(anio == 1920 & !(nombre %in% c(\"María\", \"José\")))\n\n# A tibble: 2,026 × 5\n    anio nombre sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  1920 Juan   M       636     0.0312\n 2  1920 Luis   M       631     0.0310\n 3  1920 Rosa   F       426     0.0209\n 4  1920 Ana    F       340     0.0167\n 5  1920 Manuel M       326     0.0160\n 6  1920 Olga   F       289     0.0142\n 7  1920 Carlos M       277     0.0136\n 8  1920 Pedro  M       269     0.0132\n 9  1920 Juana  F       239     0.0117\n10  1920 Marta  F       218     0.0107\n# ℹ 2,016 more rows"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-filter-7",
+    "href": "slides/clase-3/clase_3_presentación.html#función-filter-7",
+    "title": "Introducción a Tidyverse",
+    "section": "Función filter() (7)",
+    "text": "Función filter() (7)\n\ndata |&gt; filter(proporcion &gt;= 0.02 & anio &gt; 2014)\n\n# A tibble: 3 × 5\n   anio nombre  sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  2015 Agustín M      5355     0.0218\n2  2017 Mateo   M      4736     0.0216\n3  2018 Mateo   M      4468     0.0201"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-filter-7-1",
+    "href": "slides/clase-3/clase_3_presentación.html#función-filter-7-1",
+    "title": "Introducción a Tidyverse",
+    "section": "Función filter() (7)",
+    "text": "Función filter() (7)\n\n# Filtro usando el paquete stringr y condiciones en paréntesis\ndata |&gt; filter(stringr::str_detect(nombre, \"^X\") & (anio &gt;= 2018 & anio != 2021))\n\n# A tibble: 88 × 5\n    anio nombre  sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  2018 Xiomara F        41 0.000184  \n 2  2018 Ximena  F        27 0.000121  \n 3  2018 Xavier  M         8 0.0000359 \n 4  2018 Xin     F         8 0.0000359 \n 5  2018 Xander  M         3 0.0000135 \n 6  2018 Xavi    M         2 0.00000898\n 7  2018 Xaviera F         2 0.00000898\n 8  2018 Xiang   M         2 0.00000898\n 9  2018 Xabi    M         1 0.00000449\n10  2018 Xaschey F         1 0.00000449\n# ℹ 78 more rows"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-arrange",
+    "href": "slides/clase-3/clase_3_presentación.html#función-arrange",
+    "title": "Introducción a Tidyverse",
+    "section": "Función Arrange()",
+    "text": "Función Arrange()\nPermite ordenar los valores a partir de columnas. Por defecto será de manera ascendente.\n\ndata |&gt; arrange(n)\n\n# A tibble: 858,782 × 5\n    anio nombre    sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  1920 Aaron     M         1  0.0000491\n 2  1920 Abdolina  F         1  0.0000491\n 3  1920 Abdon     M         1  0.0000491\n 4  1920 Abigail   F         1  0.0000491\n 5  1920 Abrahan   M         1  0.0000491\n 6  1920 Abrelena  F         1  0.0000491\n 7  1920 Accidalia F         1  0.0000491\n 8  1920 Acencio   M         1  0.0000491\n 9  1920 Adalia    F         1  0.0000491\n10  1920 Adelino   M         1  0.0000491\n# ℹ 858,772 more rows\n\n\nCon la función desc() se puede ordenar de manera descendente.\n\ndata |&gt; filter(anio == 2021) |&gt; \n  arrange(desc(nombre))\n\n# A tibble: 13,265 × 5\n    anio nombre sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  2021 Übbe   M         1 0.00000562\n 2  2021 Úrsula F         4 0.0000225 \n 3  2021 Özlem  F         2 0.0000112 \n 4  2021 Ózlem  F         1 0.00000562\n 5  2021 Óscar  M         7 0.0000393 \n 6  2021 Óliver M         4 0.0000225 \n 7  2021 Íñigo  M         7 0.0000393 \n 8  2021 Ízan   M         1 0.00000562\n 9  2021 Ívar   M         2 0.0000112 \n10  2021 Ítalo  M         4 0.0000225 \n# ℹ 13,255 more rows"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-arrange-1",
+    "href": "slides/clase-3/clase_3_presentación.html#función-arrange-1",
+    "title": "Introducción a Tidyverse",
+    "section": "Función arrange() (1)",
+    "text": "Función arrange() (1)\nPermite ordenar los valores a partir de columnas. Por defecto será de manera ascendente.\n\ndata |&gt; arrange(n)\n\n# A tibble: 858,782 × 5\n    anio nombre    sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  1920 Aaron     M         1  0.0000491\n 2  1920 Abdolina  F         1  0.0000491\n 3  1920 Abdon     M         1  0.0000491\n 4  1920 Abigail   F         1  0.0000491\n 5  1920 Abrahan   M         1  0.0000491\n 6  1920 Abrelena  F         1  0.0000491\n 7  1920 Accidalia F         1  0.0000491\n 8  1920 Acencio   M         1  0.0000491\n 9  1920 Adalia    F         1  0.0000491\n10  1920 Adelino   M         1  0.0000491\n# ℹ 858,772 more rows"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-arrange-1-1",
+    "href": "slides/clase-3/clase_3_presentación.html#función-arrange-1-1",
+    "title": "Introducción a Tidyverse",
+    "section": "Función Arrange() (1)",
+    "text": "Función Arrange() (1)\nCon la función desc() se puede ordenar de manera descendente.\n\ndata |&gt; filter(anio == 2021) |&gt; \n  arrange(desc(nombre))\n\n# A tibble: 13,265 × 5\n    anio nombre sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  2021 Übbe   M         1 0.00000562\n 2  2021 Úrsula F         4 0.0000225 \n 3  2021 Özlem  F         2 0.0000112 \n 4  2021 Ózlem  F         1 0.00000562\n 5  2021 Óscar  M         7 0.0000393 \n 6  2021 Óliver M         4 0.0000225 \n 7  2021 Íñigo  M         7 0.0000393 \n 8  2021 Ízan   M         1 0.00000562\n 9  2021 Ívar   M         2 0.0000112 \n10  2021 Ítalo  M         4 0.0000225 \n# ℹ 13,255 more rows"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-arrange-2",
+    "href": "slides/clase-3/clase_3_presentación.html#función-arrange-2",
+    "title": "Introducción a Tidyverse",
+    "section": "Función arrange() (2)",
+    "text": "Función arrange() (2)\nCon la función desc() se puede ordenar de manera descendente.\n\n# Ordena por año ascendente y por frecuencia descendente\ndata |&gt; filter(nombre %in% c(\"Andrea\", \"Alberto\")) |&gt; \n  arrange(anio, desc(n))\n\n# A tibble: 218 × 5\n    anio nombre  sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  1920 Alberto M        53   0.00260 \n 2  1920 Andrea  F         8   0.000392\n 3  1921 Alberto M       130   0.00282 \n 4  1921 Andrea  F        19   0.000412\n 5  1922 Alberto M       121   0.00249 \n 6  1922 Andrea  F        19   0.000391\n 7  1923 Alberto M       168   0.00332 \n 8  1923 Andrea  F        14   0.000276\n 9  1924 Alberto M       137   0.00247 \n10  1924 Andrea  F        25   0.000451\n# ℹ 208 more rows"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-slice-1",
+    "href": "slides/clase-3/clase_3_presentación.html#función-slice-1",
+    "title": "Introducción a Tidyverse",
+    "section": "Función slice() (1)",
+    "text": "Función slice() (1)\nPermite seleccionar filas basadas en su posición.\n\ndata |&gt; slice(20) # Selecciona la fila en la posición 20\n\n# A tibble: 1 × 5\n   anio nombre    sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  1920 Margarita F       146    0.00716\n\n\n\ndata |&gt; slice(20:22) # Selecciona filas desde la 20 a 22\n\n# A tibble: 3 × 5\n   anio nombre    sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  1920 Margarita F       146    0.00716\n2  1920 Héctor    M       138    0.00677\n3  1920 Julio     M       134    0.00657"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-slice-3",
+    "href": "slides/clase-3/clase_3_presentación.html#función-slice-3",
+    "title": "Introducción a Tidyverse",
+    "section": "Función slice() (3)",
+    "text": "Función slice() (3)\nTambién cuenta con las funciones slice_head() y slice_tail(). Además del argumento n, incluye el argumento prop para seleccionar una proporción de filas.\n\ndata |&gt; slice_head(n = 2) # 2 Filas\n\n# A tibble: 2 × 5\n   anio nombre sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  1920 María  F      2130     0.104 \n2  1920 José   M       984     0.0483\n\n\n\ndata |&gt; slice_tail(prop = 0.01) # Partiendo desde las últimas filas, el 1%\n\n# A tibble: 8,587 × 5\n    anio nombre    sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  2021 Amenadil  M         1 0.00000562\n 2  2021 Amets     F         1 0.00000562\n 3  2021 Ameyalin  F         1 0.00000562\n 4  2021 Ameyalli  F         1 0.00000562\n 5  2021 Amiel     F         1 0.00000562\n 6  2021 Amien     M         1 0.00000562\n 7  2021 Amillaray F         1 0.00000562\n 8  2021 Amin      M         1 0.00000562\n 9  2021 Amina     F         1 0.00000562\n10  2021 Amirha    F         1 0.00000562\n# ℹ 8,577 more rows"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-slice-2",
+    "href": "slides/clase-3/clase_3_presentación.html#función-slice-2",
+    "title": "Introducción a Tidyverse",
+    "section": "Función slice() (2)",
+    "text": "Función slice() (2)\n\ndata |&gt; slice(-(1:800000)) # Selecciona todas menos desde la 1 a 800.000\n\n# A tibble: 58,782 × 5\n    anio nombre     sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  2017 Widekenley M         1 0.00000456\n 2  2017 Wideleïca  F         1 0.00000456\n 3  2017 Wideleyca  F         1 0.00000456\n 4  2017 Widelini   F         1 0.00000456\n 5  2017 Widelka    F         1 0.00000456\n 6  2017 Widenaëlle F         1 0.00000456\n 7  2017 Widialine  F         1 0.00000456\n 8  2017 Widjina    F         1 0.00000456\n 9  2017 Widjinaïca F         1 0.00000456\n10  2017 Widlanne   F         1 0.00000456\n# ℹ 58,772 more rows"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-slice-4",
+    "href": "slides/clase-3/clase_3_presentación.html#función-slice-4",
+    "title": "Introducción a Tidyverse",
+    "section": "Función slice() (4)",
+    "text": "Función slice() (4)\nCon slice_sample se puede seleccionar una muestra aleatoria de casos, ya sea indicando con el argumento n o con prop.\n\ndata |&gt; slice_sample(n = 1) # Un caso al azar\n\n# A tibble: 1 × 5\n   anio nombre sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  1996 Geffry M         1 0.00000358\n\n\n\ndata |&gt; slice_sample(prop = 0.01) # Una muestra del 1% al azar\n\n# A tibble: 8,587 × 5\n    anio nombre     sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  2013 Christhián M         1 0.00000412\n 2  2006 Aldhair    M         1 0.00000429\n 3  1991 Jojhan     M         1 0.00000332\n 4  1984 Flabio     M         1 0.00000362\n 5  1952 Isladan    M         1 0.00000526\n 6  1974 Cidia      F         1 0.00000326\n 7  1922 Leopoldina F         2 0.0000411 \n 8  1982 Freida     F         1 0.00000306\n 9  1951 Denni      M         1 0.00000557\n10  1942 Eufrosino  M         1 0.00000687\n# ℹ 8,577 more rows"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-count",
+    "href": "slides/clase-3/clase_3_presentación.html#función-count",
+    "title": "Introducción a Tidyverse",
+    "section": "Función count()",
+    "text": "Función count()\nCuenta las observaciones únicas en una o más variables. Por ejemplo, si quisieramos saber cuántos casos hay por año.\n\ndata |&gt; count(anio)\n\n# A tibble: 102 × 2\n    anio     n\n   &lt;dbl&gt; &lt;int&gt;\n 1  1920  2028\n 2  1921  3094\n 3  1922  3241\n 4  1923  3344\n 5  1924  3526\n 6  1925  3544\n 7  1926  3649\n 8  1927  3902\n 9  1928  4511\n10  1929  4531\n# ℹ 92 more rows"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#aplicación",
+    "href": "slides/clase-3/clase_3_presentación.html#aplicación",
+    "title": "Introducción a Tidyverse",
+    "section": "Aplicación",
+    "text": "Aplicación\n¿Cómo han evolucionado los nombres María y Sofía a lo largo del tiempo?\n\nlibrary(showtext) # Paquete para instalar fuentes\nfont_add_google(\"Noto Sans\", \"noto\") # Agregamos fuente\n\n\ndata |&gt; filter(nombre == \"María\") |&gt;\n  ggplot(aes(x = anio, y = proporcion)) +\n  geom_line(size = 1, colour = \"#0bb4ff\") +\n  scale_x_continuous(breaks = seq(min(data$anio), max(data$anio), by = 10)) + \n  annotate(\"text\", x = 2000, y = 0.05, size = 3,\n           label = \"La proporción  \\n va a la baja\", color = \"black\") +\n  labs(title = \"Popularidad del nombre María entre 1925 - 2021\",\n       x = NULL,\n       y = NULL) + \n  theme(text = element_text(family = \"noto\"),\n        plot.title = element_text(color = \"#0bb4ff\", face = \"bold\"))"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#aplicación-1",
+    "href": "slides/clase-3/clase_3_presentación.html#aplicación-1",
+    "title": "Introducción a Tidyverse",
+    "section": "Aplicación (1)",
+    "text": "Aplicación (1)"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#aplicación-2",
+    "href": "slides/clase-3/clase_3_presentación.html#aplicación-2",
+    "title": "Introducción a Tidyverse",
+    "section": "Aplicación (2)",
+    "text": "Aplicación (2)\n¿Cómo han evolucionado los nombres María y Sofía a lo largo del tiempo?\n\nif (!require(showtext)) install.packages(\"showtext\")\nlibrary(showtext) # Paquete para instalar fuentes\nlibrary(ggplot2) # Visualización de datos\nfont_add_google(\"Noto Sans\", \"noto\") # Agregamos fuente Noto Sans con alias noto"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#aplicación-3",
+    "href": "slides/clase-3/clase_3_presentación.html#aplicación-3",
+    "title": "Introducción a Tidyverse",
+    "section": "Aplicación (3)",
+    "text": "Aplicación (3)\n\ndata |&gt; filter(nombre == \"María\" & sexo == \"F\") |&gt;\n  ggplot(aes(x = anio, y = proporcion)) +\n  geom_line(size = 1, colour = \"#0bb4ff\") +\n  geom_area(alpha = 0.3, fill = \"#0bb4ff\") +\n  scale_x_continuous(breaks = seq(min(data$anio), max(data$anio), by = 10)) + \n  scale_y_continuous(labels = scales::percent) +\n  annotate(\"text\", x = 2000, y = 0.05, size = 5,\n           label = \"La proporción \\n va a la baja\", color = \"black\") +\n  labs(title = \"Popularidad del nombre María entre 1920 - 2021\", x = NULL, y = NULL) + \n  theme(text = element_text(family = \"Noto Sans\"),\n        plot.title = element_text(color = \"#0bb4ff\", face = \"bold\"))"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#ejercicio",
+    "href": "slides/clase-3/clase_3_presentación.html#ejercicio",
+    "title": "Introducción a Tidyverse",
+    "section": "Ejercicio",
+    "text": "Ejercicio\nUsando el conjunto de datos de guaguas responda lo siguiente:\n\n¿Hay alguna persona que se llame “Nicki” o “Nicky”?\n¿Cuáles son los tres nombres más populares para las personas inscritas en el año 2021?\n¿Cuántas personas con el nombre “Pedro” fueron inscritas entre 2015 - 2017 y el año 2020?\n¿Hay alguna persona que se llame “Ibai” antes de 2017?\n¿Cuántas personas con nombre Andrea y sexo registral masculino hay en el conjunto de datos?\nRealice su propia búsqueda. Debe cumplir al menos uno de los siguientes requisitos:\n\nIncluir uno o más años y uno o más nombres.\nRealizar una búsqueda con criterio de exclusión."
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#aplicación-4",
+    "href": "slides/clase-3/clase_3_presentación.html#aplicación-4",
+    "title": "Introducción a Tidyverse",
+    "section": "Aplicación (4)",
+    "text": "Aplicación (4)\n\ndata |&gt; filter(nombre == \"Sofía\" & sexo == \"F\") |&gt;\n  ggplot(aes(x = anio, y = proporcion)) +\n  geom_line(size = 1, colour = \"#f46a9b\") +\n  geom_area(alpha = 0.3, fill = \"#f46a9b\") +\n  scale_x_continuous(breaks = seq(min(data$anio), max(data$anio), by = 10)) +\n  scale_y_continuous(labels = scales::percent) +\n  labs(title = \"Popularidad del nombre Sofía entre 1920 - 2021\", x = NULL, y = NULL) + \n  theme_classic() +\n  theme(text = element_text(family = \"Noto Sans\"),\n        plot.title = element_text(color = \"#f46a9b\", face = \"bold\"))"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#función-filter-8",
+    "href": "slides/clase-3/clase_3_presentación.html#función-filter-8",
+    "title": "Introducción a Tidyverse",
+    "section": "Función filter() (8)",
+    "text": "Función filter() (8)\n\n# Filtro usando el paquete stringr y condiciones en paréntesis\ndata |&gt; filter(stringr::str_detect(nombre, \"^X\") & (anio &gt;= 2018 & anio != 2021))\n\n# A tibble: 88 × 5\n    anio nombre  sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  2018 Xiomara F        41 0.000184  \n 2  2018 Ximena  F        27 0.000121  \n 3  2018 Xavier  M         8 0.0000359 \n 4  2018 Xin     F         8 0.0000359 \n 5  2018 Xander  M         3 0.0000135 \n 6  2018 Xavi    M         2 0.00000898\n 7  2018 Xaviera F         2 0.00000898\n 8  2018 Xiang   M         2 0.00000898\n 9  2018 Xabi    M         1 0.00000449\n10  2018 Xaschey F         1 0.00000449\n# ℹ 78 more rows"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#section-4",
+    "href": "slides/clase-3/clase_3_presentación.html#section-4",
+    "title": "Introducción a Tidyverse",
+    "section": "",
+    "text": "V. Ejercicio"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#section-5",
+    "href": "slides/clase-3/clase_3_presentación.html#section-5",
+    "title": "Introducción a Tidyverse",
+    "section": "",
+    "text": "¡Gracias!  https://sirojasv.github.io/tsm_web/\n\n\n\n\n\n\nMetodología Cuantitativa - 2023"
+  },
+  {
+    "objectID": "slides/clase-3/clase_3_presentación.html#aplicación-5",
+    "href": "slides/clase-3/clase_3_presentación.html#aplicación-5",
+    "title": "Introducción a Tidyverse",
+    "section": "Aplicación (5)",
+    "text": "Aplicación (5)\nGráfico interactivo\n\nggplotly(p)"
+  },
+  {
+    "objectID": "slides/clase-2/clase_2_presentación.html",
+    "href": "slides/clase-2/clase_2_presentación.html",
+    "title": "Tipos y estructuras de datos en R",
+    "section": "",
+    "text": "I. Clase anterior\nII. Tibbles\nIII. Tipos de datos"
+  },
+  {
+    "objectID": "header_class/header_clase_3.html",
+    "href": "header_class/header_clase_3.html",
+    "title": "Clase 3",
+    "section": "",
+    "text": "Ideas más importantes\n\n\n\n\nPresentación de tidyverse.\nOperador |&gt;.\nFunciones del paquete dplyr.\nCondiciones lógicas."
+  },
+  {
+    "objectID": "header_class/header_clase_3.html#presentación-de-la-clase",
+    "href": "header_class/header_clase_3.html#presentación-de-la-clase",
+    "title": "Clase 3",
+    "section": "Presentación de la clase",
+    "text": "Presentación de la clase\n\n\nDescargar presentación\n\nVuelve a la descripción del curso ⏎"
   }
 ]
