@@ -4,11 +4,11 @@ subtitle: "**Instalación de `R` y `RStudio`**"
 ---
 
 ::: {.callout-note title="Ideas más importantes"}
-1.  Instalación de R y RStudio
+1.  Instalación de R y RStudio.
 
-2.  Personalización de RStudio
+2.  Personalización de RStudio.
 
-3.  Uso de R en la nube
+3.  Uso de R en la nube.
 :::
 
 ## Presentación de la clase
