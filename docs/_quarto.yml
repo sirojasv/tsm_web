@@ -73,6 +73,8 @@ website:
             text: "Notas clase 1"
           - href: notes/clase_2_notas/clase_2_notas.qmd
             text: "Notas clase 2"
+          - href: notes/clase_3_notas/clase_3_notas.qmd
+            text: "Notas clase 3"
       - section: "Evaluaciones"
         contents:
           - href: exams/trabajo_1/trabajo_1_tsm301.qmd

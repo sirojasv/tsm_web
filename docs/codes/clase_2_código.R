@@ -25,7 +25,7 @@ estudiantes
 
 ## 2. Explorar ----
 
-dim(estudiantes) 
+dim(estudiantes)
 str(estudiantes)
 names(estudiantes)
 summary(estudiantes)
@@ -114,7 +114,7 @@ summary(estudiantes$ppa)
 
 c(summary = summary(estudiantes$ppa), sd = sd(estudiantes$ppa))
 
-c(media = mean(estudiantes$ppa), 
+c(media = mean(estudiantes$ppa),
   mediana = median(estudiantes$ppa),
   devest = sd(estudiantes$ppa),
   min = min(estudiantes$ppa),
@@ -159,7 +159,7 @@ estudiantes$satisfaccion <-  c(1, 3, 4, 5, 2, 6, 4, 5, 5) # Ingresamos 9 valores
 
 estudiantes["satisfaccion"] <- factor(estudiantes$satisfaccion,
             levels = c(1, 2, 3, 4, 5),
-            labels = c("Muy insatisfecho/a", "Insatisfecho/a", 
+            labels = c("Muy insatisfecho/a", "Insatisfecho/a",
                        "Ni insatisfecho/a ni satisfecho/a",
                        "Satisfecho/a", "Muy satisfecho/a"))
 
@@ -168,7 +168,7 @@ estudiantes["satisfaccion"] <- factor(estudiantes$satisfaccion,
 
 table(estudiantes$satisfaccion)
 table(estudiantes$satisfaccion, useNA = "ifany") # Si se especifica ifany, mostrará los NA.
-prop.table(table(estudiantes$satisfaccion)) 
+prop.table(table(estudiantes$satisfaccion))
 round(prop.table(table(estudiantes$satisfaccion)) * 100, digits = 1)
 
 tabla <- addmargins(round(prop.table(table(estudiantes$satisfaccion)) * 100, digits = 1))

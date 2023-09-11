@@ -1,0 +1,514 @@
+---
+# Título y Autor
+title: "Notas clase 3: Introducción a Tidyverse"
+subtitle: |
+    | Curso: Metodología Cuantitativa.
+    | Magíster en Trabajo Social, Pontificia Universidad Católica de Chile.
+author: "Sebastián Rojas Vergara"
+# date: 
+# abstract: 
+# thanks:
+# order: 
+# Opciones de formato
+format: 
+  html:
+    # Fuente
+    # Despliegue de código
+    code-fold: false
+    code-line-numbers: true
+    # Tema
+    theme:
+      light: flatly
+      dark: darkly
+    highlight-style: github
+    # Autocontenido
+    self-contained: true
+    # estilos
+    css: styles.css
+# Tabla de contenidos
+toc: true
+toc-depth: 4
+toc-location: right
+# Numeración
+number-sections: true
+# Figuras
+fig-align: center
+fig-cap-location: top
+# Notas al pie
+footnotes-hover: true
+# Lenguaje
+lang: "es"
+# Ejecución de código
+comments: false
+execute: 
+  echo: true
+---
+
+<img src="images/logo_puc_bn.png" alt="Logo PUC" style="position: fixed; top: 0; right: 0; width: 150px; height: 90px;"/>
+
+## Introducción {.unnumbered}
+
+En este documento se profundizará en las funciones disponibles en tidyverse para el procesamiento, limpieza y análisis de datos. En particular, aquellas provenientes del paquete `dplyr`.
+
+Para esta sesión trabajaremos con un conjunto de datos más lúdico. En concreto, aquellos disponibles en el paquete `pokemon`. Este contiene información para 949 filas, que corresponden a los pokémon que han salido en cada generación del famoso videojuego de Nintendo y 22 columnas, que incluyen atributos para cada uno de ellos.
+
+```{r}
+#| message: false
+# Instalar paquetes y cargar librerias
+if (!require("pokemon")) install.packages("pokemon")
+library(pokemon)
+library(tidyverse)
+```
+
+```{r}
+# Asignar conjunto de datos a objeto
+data_poke <- pokemon
+```
+
+::: callout-note
+Todas los códigos utilizarán el nuevo pipe de R `|>`, disponible desde R 4.1.0.
+:::
+
+## glimpse()
+
+Permite obtener una vista rápida de la estructura del conjunto de datos, mostrando información como:
+
+-   Número de filas y columnas.
+-   Nombre y tipo de dato para las variables.
+-   Algunos datos de ejemplo.
+
+Se recomienda usar esta función cuando se inicia el trabajo con un conjunto de datos, para conocer cuál es la información disponible. También se sugiere revisar la estructura de la base de datos en la medida que se realizan modificaciones. Por ejemplo:
+
+-   Cuando se agregan o eliminan columnas.
+-   Cuando se modifican columnas cambiando su tipo de dato.
+-   Variables renombradas, etc.
+
+```{r}
+data_poke |> glimpse()
+```
+
+A continuación se detallan algunos campos relevantes con los que trabajaremos:
+
+| Columna         | Descripción                                                        |
+|----------------|-----------------------------------------------|
+| id              | Identificador numérico de cada pokémon                             |
+| pokemon         | Identificador de cada pokémon con su nombre                        |
+| height          | Altura del pokémon                                                 |
+| weight          | Peso del pokémon                                                   |
+| base_experience | Experiencia base numérica del pokémon                              |
+| type_1          | Tipo primario de cada pokémon                                      |
+| type_2          | Tipo secundario de cada pokémon                                    |
+| hp              | Valor numérico que representa la vida de cada pokémon              |
+| attack          | Valor numérico que representa el ataque de cada pokémon            |
+| defense         | Vector numérico que representa la defensa de cada pokémon          |
+| special_defense | Vector numérico que representa la defensa especial de cada pokémon |
+| speed           | Vector numérico que representa la velocidad de cada pokémon        |
+| color_1         | Color primario de cada pokémon                                     |
+| color_2         | Color secundario de cada pokémon                                   |
+| generation_id   | Valor que representa la generación de cada pokémon                 |
+
+: Variables conjunto de datos pokémon {#tbl-variables}
+
+## select()
+
+Se utiliza para seleccionar columnas de un conjunto de datos. Este procedimiento puede agruparse en dos grandes tipos:
+
+a.  Selección positiva: indicar las variables **que se desea incluir**.
+b.  Selección negativa: indicar las variables **que no se desea incluir**.
+
+La forma en que se realice la selección dependerá principalmente de las preferencias de cada analista, del tamaño del conjunto de datos y si las variables -o grupos de ellas- comparten algún patrón en sus sus nombres.
+
+Independiente del tipo de selección, se pueden usar los siguientes métodos:
+
+1.  Especificando las variables a seleccionar por nombre y/o posición.
+2.  Utilizar otras funciones como `selection helpers`.
+3.  Por un grupo de variables indicadas en un vector.
+4.  Usando `where()`, que aplicará una función a todas las variables y retornará aquellas con `TRUE`. Este método permite, entre otras opciones, seleccionar por tipo de dato.
+
+### Por nombre y/o posición
+
+En este caso, la selección de columnas se realiza indicando el nombre o posición de las columnas.
+
+-   Si se especifican los nombres, estos deben estar escritos tal y como aparecen en el conjunto de datos, respetando mayúsculas y minúsculas. Para evitar problemas en el trabajo con los datos se recomienda fuertemente tener estandarizados los nombres de variables.
+- Usualmente es más recomendable emplear nombres.
+-   La función `select()` retornará el tibble con las variables indicadas, en el mismo orden en el que se especificó la selección.
+
+```{r}
+# Seleccionamos por posición 
+data_poke |> 
+  select(2)
+```
+
+```{r}
+# Selección por nombre
+data_poke |> 
+  select(pokemon)
+```
+
+```{r}
+# Posición - Varias columnas
+data_poke |> 
+  select(2, 3, 6, 7)
+```
+
+```{r}
+# Nombre - Varias columnas
+data_poke |> 
+  select(pokemon, species_id, base_experience, type_1)
+```
+
+Otra opción es realizar una selección por rango. Aquí podemos notar que el programa internamente está usando la posición de las columnas para realizar la selección.
+
+```{r}
+# Posición - por rango
+data_poke |> 
+  select(1:7, 19)
+```
+
+```{r}
+# Nombre - por rango
+data_poke |> 
+  select(id:type_1, generation_id)
+```
+
+Para realizar una selección negativa en estos casos se puede anteponer el signo menos `-`
+
+```{r}
+# Posición - por rango, negativa
+data_poke |> 
+  select(-(1:7))
+```
+
+```{r}
+# Nombre - por rango, negativa
+data_poke |> 
+  select(-(id:type_1))
+```
+
+### Usando `selection helpers`
+
+Tidyverse tiene un paquete llamado `tidyselect` que trabaja de manera interna y cuenta con algunas funciones que facilitan el proceso de selección de variables (entre otras cosas):
+
+-   `everything()`: selecciona todas las variables.
+-   `last_col()`: selecciona la última variable.
+-   `group_cols()`: selecciona las columnas agrupadas.
+-   `starts_with`: selecciona las variables con un prefijo especificado.
+-   `ends_with`: selecciona las variables con un sufijo especificado.
+-   `contains`: selecciona las variables que contienen uno más caracteres especificados.
+-   `matches`: seleccion variables por expresiones regulares. Estas son formas de especificarle al programa que encuentre un patrón específico en una cadena de caracteres.
+-   `num_range`: selecciona variables con un patrón numérico. Por ejemplo "p01", "p02", "p03", etc.
+
+A continuación se muestran algunos ejemplos aplicando estas funciones:
+
+En este caso, se seleccionan todas las columnas, menos "id" y "url_image".
+
+```{r}
+data_poke |> 
+  select(everything(), -id, -url_image)
+```
+
+En el siguiente ejemplo se realiza un doble `select()`. Primero para eliminar la última columna del conjunto de datos. Luego, se selecciona la columna que corresponde al nombre del pokémon; la última, que en este caso es el identificador de la generación y luego la columna que muestra el tipo del pokémon.
+
+```{r}
+set.seed(1234) # Esta semilla permite replicar la selección aleatoria
+
+data_poke |> 
+  select(-url_image) |> 
+  select(pokemon, last_col(), type_1) |> 
+  slice_sample(n = 10) # Selección aleatoria
+```
+
+::: callout-tip
+La función `set.seed()` permite replicar un procedimiento aleatorio, para obtener el mismo resultado con cada ejecución. Es sumamente útil para darle reproducibilidad a un proceso que implique una selección aleatoria.
+
+Para quienes estén interesados sobre números aleatorios en los computadores, pueden revisar este video del canal de YouTube [Derivando](https://www.youtube.com/watch?v=RzEjqJHW-NU)-
+:::
+
+En el siguiente código se seleccionan los identificadores y nombres, pero además se usa la función `starts_with()` para seleccionar todo lo que comience con "type".
+
+```{r}
+data_poke |> 
+  select(id, pokemon, starts_with("type"))
+```
+
+O aquellas que terminen con "ght", empleando la función `ends_with()`.
+
+```{r}
+data_poke |> 
+  select(id, pokemon, ends_with("ght"))
+```
+
+Por su parte, la función `contains()` es más amplia, pues seleccionará todas las variables que incluyan el string especificado.
+
+```{r}
+data_poke |> 
+  select(id, pokemon, contains("_"))
+```
+
+Y la función `matches()` es mucho más potente, pues se le puede especificar cualquier patrón a través de una expresión regular. Por ejemplo, ahora seleccionaremos todas las variables que incluyan solamente letras minúsculas en su nombre.
+
+Esta expresión regular se puede definir del siguiente modo:
+
+-   `^`: indica el inicio del string.
+-   `[a-z]`: indica caracteres desde la "a" a la "z" en minúscula.
+-   `*`: indica que deben ser 0 o más repeticiones de esos caracteres.
+-   `$`: indica el fin del string.
+
+```{r}
+data_poke |> 
+  select(matches("^[a-z]*$"))
+```
+
+::: callout-note
+Expresiones regulares no es un contenido que se verá en el curso. Solo se muestra un ejemplo para que conozcan que existe esa opción.
+:::
+
+Y en cuanto a la función `num_range()`, esta es particularmente útil en conjuntos de datos que tienen nombres correlativos usando como prefijo una letra.
+
+```{r}
+data_poke |> 
+  select(pokemon, num_range("type_", 1:2))
+```
+
+### Por variables indicadas en un vector
+
+Otra forma para realizar la selección de variables es a través de un vector que incluya los nombres de cada columna. Existen dos funciones para esta operación:
+
+-   `all_of()`: define un vector de caracteres con los nombres de variables. Todos los nombres deben estar en el conjunto de datos o lanzará un error.
+
+-   `any_of()`: al igual que la función anterior, define un vector de caracteres con los nombres. Sin embargo, no arrojará error si este no existe en el conjunto.
+
+```{r}
+nombres_inicial <- c("id", "pokemon", "nombre_no_existe")
+data_poke |> select(any_of(nombres_inicial)) # Si usáramos all_of daría error.
+```
+
+```{r}
+nombres <- names(data_poke) # Función names() entrega nombres de columnas del dataframe
+data_poke |> select(any_of(nombres))
+```
+
+### Aplicando funciones a variables
+
+Muchas veces podemos estar interesados/as en realizar selecciones según el tipo de variable o aplicando alguna función. En estos casos `where()` se vuelve muy útil. Este aplica una función a todas las variables y selecciona aquellas cuyo valor de la función sea `TRUE`.
+
+Por ejemplo, podríamos aplicar funciones para consultar el tipo de dato de la columna. Esta devolverá `TRUE` en caso de que la columna sea del tipo especificado y `FALSE` en todos los otros escenarios.
+
+-   `is.numeric()`: devuelve TRUE si la variable es `numeric`.
+-   `is.character()`: devuelve TRUE si la variable es `character`.
+-   `is.factor()`: devuelve TRUE si la variable es `factor`.
+-   `is.logical()`: devuelve TRUE si la variable es `logical`.
+-   `is.date()`: devuelve TRUE si la variable es `date`.
+
+El código que se presenta en el siguiente bloque seleccionará todas las variables de tipo `numeric`.
+
+```{r}
+data_poke |> select(where(is.numeric))
+```
+
+Y este todas las variables de tipo `character`
+
+```{r}
+data_poke |> select(where(is.character))
+```
+
+Y de igual forma podríamos aplicar otra función para obtener solo las variables numéricas cuya media aritmética sea superior a 50.
+
+```{r}
+data_poke |> select(where(~ is.numeric(.x) && mean(.x, na.rm = T) > 50))
+```
+
+::: callout-important
+Este código puede ser más complejo, por lo que puede resultar útil explicar algunos conceptos:
+
+-   En primer lugar, se utiliza `where()` para definir una función, la cual es denotada por la virgulilla `~`.
+-   Esta función evalúa para cada elemento, el cual es denotado genéricamente como `.x` si es que es de tipo numérico.
+-   Además, para cada elemento, evaluará que la media, a la cual se le remueven los casos perdidos, sea superior a 50.
+-   Para estas operaciones se utiliza el operador `&&` en vez de `&`. Esto se debe a que estamos evaluando que ambas condiciones sean verdaderas, pero **para cada columna individualmente**. Para más información se puede revisar este [link](https://www.geeksforgeeks.org/difference-between-and-in-r/).
+-   Cuando se usa `&&`, solo se evalúa la segunda condición cuando la primera es verdadera. Es decir, solo aquellas variables que sean numéricas se les evaluará si su media aritmética es superior a 50. Para quienes cumplan ambos criterios, serán seleccionadas.
+:::
+
+## rename()
+
+Esta función permite renombrar columnas siguiendo la estructura `nombre_nuevo = nombre_antiguo`. Para ello se pueden usar al menos tres métodos
+
+1.  Especificar por nombre.
+2.  Usando un vector.
+3.  Usando funciones.
+
+### Por nombre
+
+En su formulación más simple, basta con especificar el nombre nuevo y asignarlo al nombre que anteriormente tenía la variable.
+
+```{r}
+data_poke |> 
+  rename(peso = weight,
+         altura = height,
+         primer_tipo = type_1) |> 
+  select(peso, altura, primer_tipo)
+```
+
+::: callout-tip
+La función `select()` también entrega la posibilidad de renombrar variables, lo que puede reducir el código presentado anteriormente.
+:::
+
+```{r}
+data_poke |> 
+  select(peso = weight,
+         altura = height,
+         primer_tipo = type_1)
+```
+
+### Usando vectores
+
+Es posible definir un vector y aplicar la función `all_of()` o `any_of()`revisados anteriormente.
+
+```{r}
+nuevos_nombres <- c(id_pokemon = "id", id_especies = "species_id", 
+                    altura = "height", peso = "weight", 
+                    exp_base = "base_experience", 
+                    tipo_1 = "type_1", tipo_2 = "type_2")
+
+data_poke |> 
+  rename(all_of(nuevos_nombres))
+```
+
+### Aplicando funciones
+
+A veces necesitaremos realizar una transformación masiva en los nombres de la base de datos. En ese caso, la mejor opción es usar `rename_with()` junto a la función indicada.
+
+En el siguiente ejemplo, cambiaremos todos los guiones bajos de los nombres por un punto. Para ello emplearemos la función `str_replace()` del paquete `stringr`.
+
+```{r}
+data_poke |> 
+  rename_with(~str_replace(.x, "_", "."))
+```
+
+## relocate
+
+Esta función simplemente cambia la posición de las columnas, para lo cual se le indican los nombres de las columnas que desea. Adicionalmente cuenta con los argumentos `.after` y `.before` para indicar después o antes de qué columna irán las especificadas.
+
+```{r}
+data_poke |> 
+  relocate(generation_id, .after = pokemon)
+```
+
+```{r}
+data_poke |> 
+  relocate(generation_id, .before = pokemon)
+```
+
+Y de igual forma, se pueden usar las funciones de `tidyselect`.
+
+```{r}
+data_poke |> 
+  relocate(generation_id, .before = starts_with("type"))
+```
+
+## filter
+
+Permite obtener un subconjunto de observaciones a partir de las condiciones lógicas especificadas.Estas condiciones lógicas están definidas por el lenguaje de programación.
+
+Cabe mencionar que es imperativo manejar estas condiciones, pues se utilizan en múltiples etapas del procesamiento y análisis de datos.
+
+| Símbolo | Definición                                                                                          |
+|----------------|--------------------------------------------------------|
+| ==      | **Igualdad**. No debe confundirse con "=", que es un operador de asignación                         |
+| !=      | **Distinto**                                                                                        |
+| !       | **Negación** de una expresión lógica                                                                |
+| \>      | **Mayor que**                                                                                       |
+| \<      | **Menor que**                                                                                       |
+| \>=     | **Mayor o igual que**                                                                               |
+| \<=     | **Menor o igual que**                                                                               |
+| %in%    | Operador de R que indica un **conjunto de elementos**                                               |
+| &       | Operador **"y"**. Todas las condiciones evaluadas deben ser verdaderas para que la expresión lo sea |
+| \|      | Operador **"o"**. Al menos una condición debe ser verdadera para que la expresión lo sea            |
+
+: Condiciones lógicas en R {#tbl-cond_logicas}
+
+En los siguientes códigos se muestran una serie de ejemplos de aplicaciones de filtros.
+
+```{r}
+# Respetar mayúsculas y minúsculas
+# Selecciona todos los type_1 fuego
+data_poke |> 
+  filter(type_1 == "fire")
+```
+
+```{r}
+# Selecciona todos los que no sean fuego en type_1
+data_poke |> 
+  filter(type_1 != "fire")
+```
+
+```{r}
+# Selecciona cualquiera que sea ghost o steel en type_1
+data_poke |> 
+  filter(type_1 %in% c("ghost", "steel"))
+```
+
+```{r}
+# Selecciona cualquiera que no sea agua, hierba o fuego en type_1
+data_poke |> 
+  filter(!(type_1 %in% c("grass", "fire", "water")))
+```
+
+```{r}
+# Selecciona tipo hierba en type_1 de segunda generación
+data_poke |> 
+  filter(type_1 == "grass" & generation_id == 2) 
+```
+
+```{r}
+# Selecciona tipo hielo en type_1 o type_2
+data_poke |> 
+  filter(type_1 == "ice" | type_2 == "ice") 
+```
+
+Con las funciones de `stringr` se pueden realizar filtros más específicos para variables de tipo `character`. Por ejemplo, en el siguiente filtro se seleccionan todas los pokémon cuyo nombre finalice en `chu`.
+
+```{r}
+# Selecciona pokémon terminados en "on"
+data_poke |> 
+  filter(str_ends(pokemon, "chu"))
+```
+
+## arrange
+
+Es una función que ermite ordenar las filas a partir de valores de las columnas. Por defecto lo realizará de manera ascendente.
+
+```{r}
+# Ascendente
+data_poke |> 
+  arrange(attack) |> 
+  select(pokemon, attack)
+```
+
+```{r}
+# Por tipo y luego descendente por ataque
+data_poke |> 
+  arrange(type_1, desc(attack)) |> 
+  select(pokemon, type_1, attack)
+```
+
+## slice
+
+Posibilita seleccionar filas a partir de su posición. Esta selección se puede realizar
+
+-   A partir de valores únicos o rangos utilizando dos puntos `:`.
+-   Excluyendo posiciones o rango de posiciones empleando el símbolo menos `-`.
+-   Seleccionar observaciones desde el principio o final con `slice_head()` y `slice_tail()`, respectivamente.
+-   Seleccionar muestras aleatorias de casos, ya sea a partir de números o porcentajes, con los argumentos `n` y `prop` según corresponda.
+
+```{r}
+data_poke |> slice(150)
+data_poke |> slice(236:240)
+# Partiendo desde el principio, los 5 primeros
+data_poke |> slice_head(n = 5)
+# Partiendo desde el final, los 5 primeros
+data_poke |> slice_tail(n = 5)
+
+set.seed(1234)
+# Muestra aleatoria de 7 casos
+data_poke |> slice_sample(n = 7)
+```

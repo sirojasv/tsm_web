@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sirojasv.github.io/tsm_web/index.html</loc>
-    <lastmod>2023-09-06T19:04:56.153Z</lastmod>
+    <lastmod>2023-09-11T10:07:24.459Z</lastmod>
   </url>
   <url>
     <loc>https://sirojasv.github.io/tsm_web/slides/clase-3/clase_3_presentación.html</loc>
-    <lastmod>2023-09-06T19:05:00.538Z</lastmod>
+    <lastmod>2023-09-11T09:05:46.700Z</lastmod>
   </url>
   <url>
     <loc>https://sirojasv.github.io/tsm_web/slides/clase-1/clase_1_presentación.html</loc>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://sirojasv.github.io/tsm_web/notes/clase_2_notas/clase_2_notas.html</loc>
-    <lastmod>2023-09-06T17:03:31.584Z</lastmod>
+    <lastmod>2023-09-11T09:49:40.485Z</lastmod>
   </url>
   <url>
     <loc>https://sirojasv.github.io/tsm_web/licenses.html</loc>
@@ -54,7 +54,7 @@
   </url>
   <url>
     <loc>https://sirojasv.github.io/tsm_web/notes/clase_1_notas/clase_1_notas.html</loc>
-    <lastmod>2023-09-06T17:03:25.660Z</lastmod>
+    <lastmod>2023-09-11T09:49:35.258Z</lastmod>
   </url>
   <url>
     <loc>https://sirojasv.github.io/tsm_web/slides/clase-0/clase_0_presentación.html</loc>
@@ -63,5 +63,9 @@
   <url>
     <loc>https://sirojasv.github.io/tsm_web/slides/clase-2/clase_2_presentación.html</loc>
     <lastmod>2023-09-06T17:04:24.409Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sirojasv.github.io/tsm_web/notes/clase_3_notas/clase_3_notas.html</loc>
+    <lastmod>2023-09-11T10:07:22.535Z</lastmod>
   </url>
 </urlset>

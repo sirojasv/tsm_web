@@ -20,7 +20,7 @@ format:
     theme:
       light: flatly
       dark: darkly
-    highlight-style: haddock
+    highlight-style: github
     # Autocontenido
     self-contained: true
     # estilos
