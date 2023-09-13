@@ -25,7 +25,7 @@
     "href": "index.html#calendario-de-clases",
     "title": "Metodología Cuantitativa y Análisis de Regresión Múltiple",
     "section": "Calendario de clases",
-    "text": "Calendario de clases\nLa programación de las clases es la siguiente:\n\n\n\n\n\n\n\n\n\n\n\n\nFecha\nContenidos\nPresentación\nNotas\nCódigo\n\n\n\n\nSesión 0\n15 de agosto\nInstalación de R y RStudio\n\n\n\n\n\nSesión 1\n23 de agosto\nIntroducción a R\n\n\n  \n\n\nSesión 2\n30 de agosto\nTipos y estructuras de datos\n\n\n  \n\n\nSesión 3\n6 de septiembre\nIntroducción a tidyverse\n ️\n\n  \n\n\nSesión 4\n13 de septiembre\nEstadística descriptiva\n\n\n\n\n\nSesión 5\n20 de septiembre\nTablas de contingencia\n\n\n\n\n\nSesión 6\n18 de octubre\nIntervalos de confianza\n\n\n\n\n\nSesión 7\n8 de noviembre\nPrueba χ²\n\n\n\n\n\nSesión 8\n22 de noviembre\nRegresión lineal"
+    "text": "Calendario de clases\nLa programación de las clases es la siguiente:\n\n\n\n\n\n\n\n\n\n\n\n\nFecha\nContenidos\nPresentación\nNotas\nCódigo\n\n\n\n\nSesión 0\n15 de agosto\nInstalación de R y RStudio\n\n\n\n\n\nSesión 1\n23 de agosto\nIntroducción a R\n\n\n  \n\n\nSesión 2\n30 de agosto\nTipos y estructuras de datos\n\n\n  \n\n\nSesión 3\n6 de septiembre\nIntroducción a tidyverse\n ️\n\n  \n\n\nSesión 4\n13 de septiembre\nTidyverse II\n\n\n\n\n\nSesión 5\n20 de septiembre\nTablas de contingencia\n\n\n\n\n\nSesión 6\n18 de octubre\nIntervalos de confianza\n\n\n\n\n\nSesión 7\n8 de noviembre\nPrueba χ²\n\n\n\n\n\nSesión 8\n22 de noviembre\nRegresión lineal"
   },
   {
     "objectID": "index.html#metodología-del-curso",
@@ -1167,5 +1167,488 @@
     "title": "Introducción a Tidyverse",
     "section": "Aplicación (4)",
     "text": "Aplicación (4)\n\n\n\nFigura 2: % respecto del total de nacimientos registrados por año"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#contenidos",
+    "href": "slides/clase-4/clase_4_presentación.html#contenidos",
+    "title": "Tidyverse II",
+    "section": "Contenidos",
+    "text": "Contenidos\nI. Creación de variables\nII. Condicionales y recodificaciones\nIII. Ejercicio"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#section",
+    "href": "slides/clase-4/clase_4_presentación.html#section",
+    "title": "Tidyverse II",
+    "section": "",
+    "text": "I. Creación de variables"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#tidyverse-1",
+    "href": "slides/clase-4/clase_4_presentación.html#tidyverse-1",
+    "title": "Introducción a Tidyverse - Parte 2",
+    "section": "Tidyverse (1)",
+    "text": "Tidyverse (1)\nEl entorno tidyverse corresponde a una colección de paquetes de R cuyo diseño está enfocado en el análisis estadístico y la ciencia de datos. Todos los paquetes que forman parte comparten una filosofía de diseño que se traduce en una estructura y gramática común.\n\nEstá diseñado para trabajar con datos ordenados:\n\nCada observación es una fila.\nCada variable es una columna.\nCada celda es un solo valor."
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#tidyverse-2",
+    "href": "slides/clase-4/clase_4_presentación.html#tidyverse-2",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Tidyverse (2)",
+    "text": "Tidyverse (2)\n\nCódigo más legible, nombres de funciones más atingentes, gramática común.\n\n\n\n“This is particularly important for R, because it’s a language that’s used primarily by non-programmers, and we want to make it as easy as possible for first-time and end-user programmers to learn the tidyverse.” – Equipo tidyverse.\n\n\n\nConcatenación de código con el operador operador |&gt;.\nCiclo completo del análisis de datos."
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#tidyverse-3",
+    "href": "slides/clase-4/clase_4_presentación.html#tidyverse-3",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Tidyverse (3)",
+    "text": "Tidyverse (3)\nCuando se instala tidyverse, se instalan una serie de paquetes. Aquellos que pertenecen al núcleo se cargan automáticamente cuando se ejecuta library(tidyverse).\n\n\n\n\ntibble: nuevo formato de dataframes con mejoras de visualización.\nreadr: lectura de datos “rectangulares” como formatos .csv, .tsv, etc.\ndplyr: funciones para el procesamiento y manipulación de datos.\ntidyr: funciones más avanzadas para el procesamiento de datos.\nstring: funciones para trabajar con datos tipo string.\nforcats: funciones para trabajar con factores.\nggplot2: visualización de datos.\npurrr: programación funcional, bucles, código eficiente."
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#tidyverse-3-1",
+    "href": "slides/clase-4/clase_4_presentación.html#tidyverse-3-1",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Tidyverse (3)",
+    "text": "Tidyverse (3)\nOtros paquetes relevantes que se instalan, pero deben cargarse:\n\n\nlubridate: trabajar con fechas.\nreadxl: lectura de datos en formato Excel .xls y .xlsx.\nhaven: lectura de datos de programas estadísticos en formato SPSS, Stata y SAS.\nglue: alternativa a paste() que facilita combinar datos y strings.\n\nMás información disponible en la página oficial."
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#section-1",
+    "href": "slides/clase-4/clase_4_presentación.html#section-1",
+    "title": "Tidyverse II",
+    "section": "",
+    "text": "II. Condicionales y recodificaciones"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#operador-1",
+    "href": "slides/clase-4/clase_4_presentación.html#operador-1",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Operador |> (1)",
+    "text": "Operador |&gt; (1)\n\nExpresa de manera clara una secuencia de operaciones concatenando instrucciones de código.\nPasa el elemento que está a la izquierda como argumento de la función que está a la derecha.\nDisponible desde R 4.1.0 (mayo 2021). Antes se usaba -y todavía- el operador %&gt;%.\nSe puede usar el atajo de teclado CTRL/CMD + SHIFT + M. Requiere habilitar Tools → Global Options → Code → Editing → “Use native pipe operator |&gt;”"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#operador-2",
+    "href": "slides/clase-4/clase_4_presentación.html#operador-2",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Operador |> (2)",
+    "text": "Operador |&gt; (2)\nVeamos un ejemplo usando el paquete “guaguas”:\n\n# Cargamos tidyverse\nlibrary(tidyverse)\n\n\ndata &lt;- guaguas::guaguas\nhead(data, n = 3)\n\n# A tibble: 3 × 5\n   anio nombre sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  1920 María  F      2130     0.104 \n2  1920 José   M       984     0.0483\n3  1920 Juan   M       636     0.0312\n\ndata |&gt; head(n = 3)\n\n# A tibble: 3 × 5\n   anio nombre sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  1920 María  F      2130     0.104 \n2  1920 José   M       984     0.0483\n3  1920 Juan   M       636     0.0312"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#operador-3",
+    "href": "slides/clase-4/clase_4_presentación.html#operador-3",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Operador |> (3)",
+    "text": "Operador |&gt; (3)\nUsando las funciones de los paquetes que veremos en esta sesión, podemos comparar la sintaxis usando el operador |&gt; versus la prioridad de paréntesis.\n\ndata |&gt;\n  filter(anio == 2020) |&gt;\n  slice_head(n = 3)\n\n# A tibble: 3 × 5\n   anio nombre  sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  2020 Mateo   M      3866     0.0198\n2  2020 Agustín M      2535     0.0130\n3  2020 Sofía   F      2465     0.0126\n\n\n\nslice_head(filter(data, anio == 2020), n = 3)\n\n# A tibble: 3 × 5\n   anio nombre  sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  2020 Mateo   M      3866     0.0198\n2  2020 Agustín M      2535     0.0130\n3  2020 Sofía   F      2465     0.0126"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#operador-4",
+    "href": "slides/clase-4/clase_4_presentación.html#operador-4",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Operador |> (4)",
+    "text": "Operador |&gt; (4)\n¿Qué código les parece más legible?\n\n\n\nMás legible: va de izquierda a derecha.\nEvita errores de prioridad de paréntesis.\nMenos sensible al número de operaciones."
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#section-2",
+    "href": "slides/clase-4/clase_4_presentación.html#section-2",
+    "title": "Tidyverse II",
+    "section": "",
+    "text": "III. Ejercicio"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#paquete-dplyr-1",
+    "href": "slides/clase-4/clase_4_presentación.html#paquete-dplyr-1",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Paquete dplyr (1)",
+    "text": "Paquete dplyr (1)\nContiene una serie de funciones para realizar tareas comunes en el procesamiento de datos:\n\n\nExplorar los datos: glimpse().\nSeleccionar variables: select().\nFiltrar observaciones: filter().\nRenombrar variables: rename().\nOrdenar los datos según criterios: arrange().\nCambiar orden de las columnas: relocate().\nSeleccionar observaciones: slice_head(), slice_tail(), slice_sample, etc."
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#paquete-dplyr-2",
+    "href": "slides/clase-4/clase_4_presentación.html#paquete-dplyr-2",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Paquete dplyr (2)",
+    "text": "Paquete dplyr (2)\n\n\nAñadir nuevas variables o modificar las existentes: mutate().\nAgrupar datos: group_by() o argumento .by.\nEstadísticas agrupadas: summarise().\nContar: count().\nUnir conjuntos de datos: familia de mutating y filtering joins.\nCondiciones lógicas: if_else() y case_when().\nOperaciones por filas: rowwise().\nIdentificar filas únicas/distintas: distinct().\nTransformar a perdidos: na_if().\nAplicar operaciones a múltiples columnas: across().\n¡Muchas otras!"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-glimpse",
+    "href": "slides/clase-4/clase_4_presentación.html#función-glimpse",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función glimpse()",
+    "text": "Función glimpse()\nPermite obtener una vista rápida del conjunto de datos.\n\ndata |&gt; glimpse()\n\nRows: 858,782\nColumns: 5\n$ anio       &lt;dbl&gt; 1920, 1920, 1920, 1920, 1920, 1920, 1920, 1920, 1920, 1920,…\n$ nombre     &lt;chr&gt; \"María\", \"José\", \"Juan\", \"Luis\", \"Rosa\", \"Ana\", \"Manuel\", \"…\n$ sexo       &lt;chr&gt; \"F\", \"M\", \"M\", \"M\", \"F\", \"F\", \"M\", \"F\", \"M\", \"M\", \"F\", \"F\",…\n$ n          &lt;dbl&gt; 2130, 984, 636, 631, 426, 340, 326, 289, 277, 269, 239, 218…\n$ proporcion &lt;dbl&gt; 0.10449885, 0.04827552, 0.03120247, 0.03095717, 0.02089977,…"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-select-1",
+    "href": "slides/clase-4/clase_4_presentación.html#función-select-1",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función select() (1)",
+    "text": "Función select() (1)\nPermite seleccionar columnas de un conjunto de datos.\n\ndata |&gt; select(anio, nombre, n) |&gt; slice_head(n = 2)\n\n# A tibble: 2 × 3\n   anio nombre     n\n  &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;\n1  1920 María   2130\n2  1920 José     984\n\n\n\nAnteponiendo el signo menos - se puede hacer selección negativa.\n\n\ndata |&gt; select(-proporcion, -sexo) |&gt; slice_head(n = 2)\n\n# A tibble: 2 × 3\n   anio nombre     n\n  &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;\n1  1920 María   2130\n2  1920 José     984"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-select-2",
+    "href": "slides/clase-4/clase_4_presentación.html#función-select-2",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función select() (2)",
+    "text": "Función select() (2)\n\nTambién se puede hacer uso de selection helpers como starts_with(), ends_with(), contains(), etc.\n\n\n# Selecciona todo lo que empieza con n\ndata |&gt; select(starts_with(\"n\")) |&gt; slice_head(n = 2)\n\n# A tibble: 2 × 2\n  nombre     n\n  &lt;chr&gt;  &lt;dbl&gt;\n1 María   2130\n2 José     984\n\n\n\n# Selecciona todo lo que termine con o\ndata |&gt; select(ends_with(\"o\")) |&gt; slice_head(n = 2)\n\n# A tibble: 2 × 2\n   anio sexo \n  &lt;dbl&gt; &lt;chr&gt;\n1  1920 F    \n2  1920 M"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-select-2-1",
+    "href": "slides/clase-4/clase_4_presentación.html#función-select-2-1",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función select() (2)",
+    "text": "Función select() (2)\n\nO realizar una selección según el tipo de variable agregando el predicado where().\n\n\n# Selecciona todas las variables character\ndata |&gt; select(where(is.character)) |&gt; slice_head(n = 2)\n\n# A tibble: 2 × 2\n  nombre sexo \n  &lt;chr&gt;  &lt;chr&gt;\n1 María  F    \n2 José   M    \n\n\n\n# Selecciona todas las variables numeric\ndata |&gt; select(where(is.numeric)) |&gt; slice_head(n = 2)\n\n# A tibble: 2 × 3\n   anio     n proporcion\n  &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  1920  2130     0.104 \n2  1920   984     0.0483\n\n\n\n¡Incluso permite renombrar variables! (Ver notas de la clase).\n\nMás opciones se pueden revisar escribiendo en la consola de R ?select si se tiene cargado tidyverse."
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-rename",
+    "href": "slides/clase-4/clase_4_presentación.html#función-rename",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función rename()",
+    "text": "Función rename()\nPermite renombrar columnas siguiendo la estructura nuevo_nombre = antiguo_nombre.\n\n# Renombra las variables\ndata |&gt; rename(frec = n,\n               prop = proporcion)\n\n# A tibble: 858,782 × 5\n    anio nombre sexo   frec   prop\n   &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt;\n 1  1920 María  F      2130 0.104 \n 2  1920 José   M       984 0.0483\n 3  1920 Juan   M       636 0.0312\n 4  1920 Luis   M       631 0.0310\n 5  1920 Rosa   F       426 0.0209\n 6  1920 Ana    F       340 0.0167\n 7  1920 Manuel M       326 0.0160\n 8  1920 Olga   F       289 0.0142\n 9  1920 Carlos M       277 0.0136\n10  1920 Pedro  M       269 0.0132\n# ℹ 858,772 more rows\n\n\n\n¡Noten que aquí aún no se sobreescribe el objeto data!"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-relocate",
+    "href": "slides/clase-4/clase_4_presentación.html#función-relocate",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función relocate()",
+    "text": "Función relocate()\nCambia la posición de las columnas.\n\n# Va después de proporcion\ndata |&gt; relocate(anio, .after = proporcion) |&gt;\n  slice_tail(n = 4)\n\n# A tibble: 4 × 5\n  nombre sexo      n proporcion  anio\n  &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt; &lt;dbl&gt;\n1 Zuri   F         1 0.00000562  2021\n2 Zurick F         1 0.00000562  2021\n3 Zury   F         1 0.00000562  2021\n4 Zyhara F         1 0.00000562  2021\n\n\n\n# Va antes de proporcion\ndata |&gt; relocate(anio, .before = proporcion) |&gt;\n  slice_tail(n = 4)\n\n# A tibble: 4 × 5\n  nombre sexo      n  anio proporcion\n  &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1 Zuri   F         1  2021 0.00000562\n2 Zurick F         1  2021 0.00000562\n3 Zury   F         1  2021 0.00000562\n4 Zyhara F         1  2021 0.00000562"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-filter-1",
+    "href": "slides/clase-4/clase_4_presentación.html#función-filter-1",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función filter() (1)",
+    "text": "Función filter() (1)\nPermite obtener un subconjunto de los datos a partir de las condiciones lógicas especificadas.\n\n\n\n\n\n\n\n\nSímbolo\nSignificado\n\n\n\n\n==\nIgualdad. No debe confundirse con “=”, que es un operador de asignación\n\n\n!=\nDistinto\n\n\n!\nNegación de una expresión lógica\n\n\n&gt;\nMayor que\n\n\n&lt;\nMenor que\n\n\n&gt;=\nMayor o igual que\n\n\n&lt;=\nMenor o igual que\n\n\n%in%\nOperador de R que indica un conjunto de elementos\n\n\n&\nOperador y. Todas las condiciones evaluadas deben ser verdaderas para que la expresión lo sea\n\n\n|\nOperador o. Al menos una condición debe ser verdadera para que la expresión lo sea"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-filter-2",
+    "href": "slides/clase-4/clase_4_presentación.html#función-filter-2",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función filter() (2)",
+    "text": "Función filter() (2)\n\n# Filtro por año\ndata |&gt; filter(anio == 2021) \n\n# A tibble: 13,265 × 5\n    anio nombre   sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  2021 Mateo    M      3267     0.0184\n 2  2021 Emma     F      2352     0.0132\n 3  2021 Sofía    F      2251     0.0126\n 4  2021 Isabella F      2155     0.0121\n 5  2021 Lucas    M      2054     0.0115\n 6  2021 Emilia   F      2044     0.0115\n 7  2021 Agustín  M      1972     0.0111\n 8  2021 Benjamín M      1935     0.0109\n 9  2021 Agustina F      1816     0.0102\n10  2021 Santiago M      1809     0.0102\n# ℹ 13,255 more rows"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-filter-3",
+    "href": "slides/clase-4/clase_4_presentación.html#función-filter-3",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función filter() (3)",
+    "text": "Función filter() (3)\n\n# Filtro por año y nombre\ndata |&gt; filter(anio == 2021 & nombre == \"Susana\") \n\n# A tibble: 1 × 5\n   anio nombre sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  2021 Susana F        16  0.0000899"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-filter-4",
+    "href": "slides/clase-4/clase_4_presentación.html#función-filter-4",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función filter() (4)",
+    "text": "Función filter() (4)\n\n# Filtro usando |\ndata |&gt; filter(anio == 2021 | anio == 2019) \n\n# A tibble: 28,306 × 5\n    anio nombre   sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  2019 Mateo    M      4152     0.0196\n 2  2019 Isabella F      3101     0.0147\n 3  2019 Agustina F      2932     0.0139\n 4  2019 Sofía    F      2924     0.0138\n 5  2019 Agustín  M      2869     0.0136\n 6  2019 Santiago M      2658     0.0126\n 7  2019 Emilia   F      2596     0.0123\n 8  2019 Tomás    M      2570     0.0122\n 9  2019 Benjamín M      2537     0.0120\n10  2019 Lucas    M      2468     0.0117\n# ℹ 28,296 more rows"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-filter-5",
+    "href": "slides/clase-4/clase_4_presentación.html#función-filter-5",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función filter() (5)",
+    "text": "Función filter() (5)\n\n# Filtro usando %in%\ndata |&gt; filter(anio %in% c(1998, 2006, 2007:2010)) \n\n# A tibble: 71,792 × 5\n    anio nombre    sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  1998 Javiera   F      7473     0.0281\n 2  1998 Camila    F      7266     0.0273\n 3  1998 Nicolás   M      6090     0.0229\n 4  1998 María     F      5665     0.0213\n 5  1998 Matías    M      5591     0.0210\n 6  1998 Sebastián M      4726     0.0178\n 7  1998 Catalina  F      4706     0.0177\n 8  1998 Diego     M      4295     0.0161\n 9  1998 José      M      4184     0.0157\n10  1998 Francisca F      3872     0.0145\n# ℹ 71,782 more rows"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-filter-6",
+    "href": "slides/clase-4/clase_4_presentación.html#función-filter-6",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función filter() (6)",
+    "text": "Función filter() (6)\n\n# Filtro usando negación\ndata |&gt; filter(anio == 1920 & !(nombre %in% c(\"María\", \"José\")))\n\n# A tibble: 2,026 × 5\n    anio nombre sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  1920 Juan   M       636     0.0312\n 2  1920 Luis   M       631     0.0310\n 3  1920 Rosa   F       426     0.0209\n 4  1920 Ana    F       340     0.0167\n 5  1920 Manuel M       326     0.0160\n 6  1920 Olga   F       289     0.0142\n 7  1920 Carlos M       277     0.0136\n 8  1920 Pedro  M       269     0.0132\n 9  1920 Juana  F       239     0.0117\n10  1920 Marta  F       218     0.0107\n# ℹ 2,016 more rows"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-filter-7",
+    "href": "slides/clase-4/clase_4_presentación.html#función-filter-7",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función filter() (7)",
+    "text": "Función filter() (7)\n\ndata |&gt; filter(proporcion &gt;= 0.02 & anio &gt; 2014)\n\n# A tibble: 3 × 5\n   anio nombre  sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  2015 Agustín M      5355     0.0218\n2  2017 Mateo   M      4736     0.0216\n3  2018 Mateo   M      4468     0.0201"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-filter-8",
+    "href": "slides/clase-4/clase_4_presentación.html#función-filter-8",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función filter() (8)",
+    "text": "Función filter() (8)\n\n# Filtro usando el paquete stringr y condiciones en paréntesis\ndata |&gt; filter(stringr::str_detect(nombre, \"^X\") & (anio &gt;= 2018 & anio != 2021))\n\n# A tibble: 88 × 5\n    anio nombre  sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  2018 Xiomara F        41 0.000184  \n 2  2018 Ximena  F        27 0.000121  \n 3  2018 Xavier  M         8 0.0000359 \n 4  2018 Xin     F         8 0.0000359 \n 5  2018 Xander  M         3 0.0000135 \n 6  2018 Xavi    M         2 0.00000898\n 7  2018 Xaviera F         2 0.00000898\n 8  2018 Xiang   M         2 0.00000898\n 9  2018 Xabi    M         1 0.00000449\n10  2018 Xaschey F         1 0.00000449\n# ℹ 78 more rows"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-arrange-1",
+    "href": "slides/clase-4/clase_4_presentación.html#función-arrange-1",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función arrange() (1)",
+    "text": "Función arrange() (1)\nPermite ordenar los valores a partir de columnas. Por defecto será de manera ascendente.\n\ndata |&gt; arrange(n)\n\n# A tibble: 858,782 × 5\n    anio nombre    sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  1920 Aaron     M         1  0.0000491\n 2  1920 Abdolina  F         1  0.0000491\n 3  1920 Abdon     M         1  0.0000491\n 4  1920 Abigail   F         1  0.0000491\n 5  1920 Abrahan   M         1  0.0000491\n 6  1920 Abrelena  F         1  0.0000491\n 7  1920 Accidalia F         1  0.0000491\n 8  1920 Acencio   M         1  0.0000491\n 9  1920 Adalia    F         1  0.0000491\n10  1920 Adelino   M         1  0.0000491\n# ℹ 858,772 more rows"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-arrange-2",
+    "href": "slides/clase-4/clase_4_presentación.html#función-arrange-2",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función arrange() (2)",
+    "text": "Función arrange() (2)\nCon la función desc() se puede ordenar de manera descendente.\n\n# Ordena por año ascendente y por frecuencia descendente\ndata |&gt; filter(nombre %in% c(\"Andrea\", \"Alberto\")) |&gt; \n  arrange(anio, desc(n))\n\n# A tibble: 218 × 5\n    anio nombre  sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  1920 Alberto M        53   0.00260 \n 2  1920 Andrea  F         8   0.000392\n 3  1921 Alberto M       130   0.00282 \n 4  1921 Andrea  F        19   0.000412\n 5  1922 Alberto M       121   0.00249 \n 6  1922 Andrea  F        19   0.000391\n 7  1923 Alberto M       168   0.00332 \n 8  1923 Andrea  F        14   0.000276\n 9  1924 Alberto M       137   0.00247 \n10  1924 Andrea  F        25   0.000451\n# ℹ 208 more rows"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-slice-1",
+    "href": "slides/clase-4/clase_4_presentación.html#función-slice-1",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función slice() (1)",
+    "text": "Función slice() (1)\nPermite seleccionar filas basadas en su posición.\n\ndata |&gt; slice(20) # Selecciona la fila en la posición 20\n\n# A tibble: 1 × 5\n   anio nombre    sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  1920 Margarita F       146    0.00716\n\n\n\ndata |&gt; slice(20:22) # Selecciona filas desde la 20 a 22\n\n# A tibble: 3 × 5\n   anio nombre    sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  1920 Margarita F       146    0.00716\n2  1920 Héctor    M       138    0.00677\n3  1920 Julio     M       134    0.00657"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-slice-2",
+    "href": "slides/clase-4/clase_4_presentación.html#función-slice-2",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función slice() (2)",
+    "text": "Función slice() (2)\n\ndata |&gt; slice(-(1:800000)) # Selecciona todas menos desde la 1 a 800.000\n\n# A tibble: 58,782 × 5\n    anio nombre     sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  2017 Widekenley M         1 0.00000456\n 2  2017 Wideleïca  F         1 0.00000456\n 3  2017 Wideleyca  F         1 0.00000456\n 4  2017 Widelini   F         1 0.00000456\n 5  2017 Widelka    F         1 0.00000456\n 6  2017 Widenaëlle F         1 0.00000456\n 7  2017 Widialine  F         1 0.00000456\n 8  2017 Widjina    F         1 0.00000456\n 9  2017 Widjinaïca F         1 0.00000456\n10  2017 Widlanne   F         1 0.00000456\n# ℹ 58,772 more rows"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-slice-3",
+    "href": "slides/clase-4/clase_4_presentación.html#función-slice-3",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función slice() (3)",
+    "text": "Función slice() (3)\nTambién cuenta con las funciones slice_head() y slice_tail(). Además del argumento n, incluye el argumento prop para seleccionar una proporción de filas.\n\ndata |&gt; slice_head(n = 2) # 2 Filas\n\n# A tibble: 2 × 5\n   anio nombre sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  1920 María  F      2130     0.104 \n2  1920 José   M       984     0.0483\n\n\n\ndata |&gt; slice_tail(prop = 0.01) # Partiendo desde las últimas filas, el 1%\n\n# A tibble: 8,587 × 5\n    anio nombre    sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  2021 Amenadil  M         1 0.00000562\n 2  2021 Amets     F         1 0.00000562\n 3  2021 Ameyalin  F         1 0.00000562\n 4  2021 Ameyalli  F         1 0.00000562\n 5  2021 Amiel     F         1 0.00000562\n 6  2021 Amien     M         1 0.00000562\n 7  2021 Amillaray F         1 0.00000562\n 8  2021 Amin      M         1 0.00000562\n 9  2021 Amina     F         1 0.00000562\n10  2021 Amirha    F         1 0.00000562\n# ℹ 8,577 more rows"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-slice-4",
+    "href": "slides/clase-4/clase_4_presentación.html#función-slice-4",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función slice() (4)",
+    "text": "Función slice() (4)\nCon slice_sample se puede seleccionar una muestra aleatoria de casos, ya sea indicando con el argumento n o con prop.\n\ndata |&gt; slice_sample(n = 1) # Un caso al azar\n\n# A tibble: 1 × 5\n   anio nombre   sexo      n proporcion\n  &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1  1929 Herminia F       115    0.00126\n\n\n\ndata |&gt; slice_sample(prop = 0.01) # Una muestra del 1% al azar\n\n# A tibble: 8,587 × 5\n    anio nombre   sexo      n proporcion\n   &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  2018 Isaura   F         3 0.0000135 \n 2  1984 Osmar    M         2 0.00000724\n 3  2011 Icker    M         2 0.00000804\n 4  1963 Audito   M         6 0.0000210 \n 5  2017 Elunei   F         1 0.00000456\n 6  1961 Yency    M         1 0.0000037 \n 7  1946 Nemecio  M         3 0.0000187 \n 8  1976 Mari     F         4 0.0000145 \n 9  1996 Slomith  F         1 0.00000358\n10  2008 Marisela F         7 0.0000282 \n# ℹ 8,577 more rows"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-count",
+    "href": "slides/clase-4/clase_4_presentación.html#función-count",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función count()",
+    "text": "Función count()\nCuenta las observaciones únicas en una o más variables. Por ejemplo, si quisieramos saber cuántos casos hay por año.\n\ndata |&gt; count(anio)\n\n# A tibble: 102 × 2\n    anio     n\n   &lt;dbl&gt; &lt;int&gt;\n 1  1920  2028\n 2  1921  3094\n 3  1922  3241\n 4  1923  3344\n 5  1924  3526\n 6  1925  3544\n 7  1926  3649\n 8  1927  3902\n 9  1928  4511\n10  1929  4531\n# ℹ 92 more rows"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#section-3",
+    "href": "slides/clase-4/clase_4_presentación.html#section-3",
+    "title": "Tidyverse II",
+    "section": "",
+    "text": "¡Gracias!  https://sirojasv.github.io/tsm_web/\n\n\n\n\n\n\nMetodología Cuantitativa - 2023"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#aplicación-1",
+    "href": "slides/clase-4/clase_4_presentación.html#aplicación-1",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Aplicación (1)",
+    "text": "Aplicación (1)"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#aplicación-2",
+    "href": "slides/clase-4/clase_4_presentación.html#aplicación-2",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Aplicación (2)",
+    "text": "Aplicación (2)\n¿Cómo han evolucionado los nombres María y Sofía a lo largo del tiempo?\nFuentes:\n\nOpción 1: paquete showtext.\nOpción 2: paquete extrafont.\n\nPara descargar una fuente específica pueden usar todas las de libre uso disponibles en Google Fonts.\n\nif (!require(showtext)) install.packages(\"showtext\")\nif (!require(extrafont)) install.packages(\"extrafont\")\nlibrary(showtext) # Paquete para llamar fuentes desde google\nlibrary(ggplot2) # Visualización de datos\nlibrary(extrafont) # Instala fuentes del sistema en R\nfont_add_google(\"Noto Sans\")\nfont_add_google(\"Montserrat\")\n\n\n# Importa todos los archivos .ttf de tu sistema\n# Se ejecuta una vez, pero demora\nfont_import()\n# Cargar todas las fuentes\nloadfonts(device = \"win\", quiet = TRUE) # Método para Windows"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#aplicación-3",
+    "href": "slides/clase-4/clase_4_presentación.html#aplicación-3",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Aplicación (3)",
+    "text": "Aplicación (3)\n\ndata |&gt; filter(nombre == \"María\" & sexo == \"F\") |&gt;\n  ggplot(aes(x = anio, y = proporcion)) +\n  geom_line(size = 1, colour = \"#0bb4ff\") +\n  geom_area(alpha = 0.3, fill = \"#0bb4ff\") +\n  scale_x_continuous(breaks = seq(min(data$anio), max(data$anio), by = 10)) + \n  scale_y_continuous(labels = scales::percent) +\n  annotate(\"text\", x = 2000, y = 0.05, size = 5,\n          label = \"La proporción \\n va a la baja\", color = \"black\") +\n  labs(title = \"Popularidad del nombre María entre 1920 - 2021\", x = NULL, y = NULL,\n       caption = \"Datos 1920 - 2021 según Registro Civil e Identificación.\") +\n   theme(text = element_text(family = \"Noto Sans\"),\n        plot.title = element_text(color = \"#0bb4ff\", face = \"bold\"),\n        plot.caption = element_text(size = 8, face = \"italic\", color = \"azure4\"))"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#aplicación-3-output",
+    "href": "slides/clase-4/clase_4_presentación.html#aplicación-3-output",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Aplicación (3)",
+    "text": "Aplicación (3)\n\n\n\nFigura 1: % respecto del total de nacimientos registrados por año"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#aplicación-4",
+    "href": "slides/clase-4/clase_4_presentación.html#aplicación-4",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Aplicación (4)",
+    "text": "Aplicación (4)\n\ndata |&gt; filter(nombre == \"Sofía\" & sexo == \"F\") |&gt;\n  ggplot(aes(x = anio, y = proporcion)) +\n  geom_line(size = 1, colour = \"#f46a9b\") +\n  geom_area(alpha = 0.3, fill = \"#f46a9b\") +\n  scale_x_continuous(breaks = seq(min(data$anio), max(data$anio), by = 10)) +\n  scale_y_continuous(labels = scales::percent) +\n  labs(title = \"Popularidad del nombre Sofía entre 1920 - 2021\", x = NULL, y = NULL,\n       caption = \"Datos 1920 - 2021 según Registro Civil e Identificación.\") +\n  theme_classic() +\n  theme(text = element_text(family = \"Montserrat\"),\n        plot.title = element_text(color = \"#f46a9b\", face = \"bold\"),\n        plot.caption = element_text(size = 8, face = \"italic\", color = \"azure4\"))"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#aplicación-4-output",
+    "href": "slides/clase-4/clase_4_presentación.html#aplicación-4-output",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Aplicación (4)",
+    "text": "Aplicación (4)\n\n\n\nFigura 2: % respecto del total de nacimientos registrados por año"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#section-4",
+    "href": "slides/clase-4/clase_4_presentación.html#section-4",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "",
+    "text": "V. Ejercicio"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#ejercicio",
+    "href": "slides/clase-4/clase_4_presentación.html#ejercicio",
+    "title": "Tidyverse II",
+    "section": "Ejercicio",
+    "text": "Ejercicio\nEn la plataforma Canvas encontrará un subconjunto de variables de la Encuesta Casen 2022. Realice los procedimientos indicados en el script, los cuales buscan practicar.\n\nOperaciones de selección de columnas.\nOperaciones de filtrado.\nConteos de variables.\nCreación de variables y tablas resumen.\nUso de condiciones lógicas."
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#section-5",
+    "href": "slides/clase-4/clase_4_presentación.html#section-5",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "",
+    "text": "¡Gracias!  https://sirojasv.github.io/tsm_web/\n\n\n\n\n\n\nMetodología Cuantitativa - 2023"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#creación-de-variables-1",
+    "href": "slides/clase-4/clase_4_presentación.html#creación-de-variables-1",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Creación de variables (1)",
+    "text": "Creación de variables (1)\nEn R existen funciones que permiten agregar nuevas. Estas son particularmente útiles cuando:\n\nRecodificar variables.\nCrear nuevas variables a partir de otras.\nLimpiar variables.\nCambiar el formato a las variables.\n\nEn forma gráfica gracias a Allison Horts."
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#creación-de-variables",
+    "href": "slides/clase-4/clase_4_presentación.html#creación-de-variables",
+    "title": "Tidyverse II",
+    "section": "Creación de variables",
+    "text": "Creación de variables\nEn R existen funciones que permiten crear o modificar variables. Estas son particularmente útiles cuando:\n\nRecodificar variables.\nCrear nuevas variables a partir de otras.\nLimpiar variables.\nCambiar el formato a las variables."
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-mutate-1",
+    "href": "slides/clase-4/clase_4_presentación.html#función-mutate-1",
+    "title": "Tidyverse II",
+    "section": "Función mutate (1)",
+    "text": "Función mutate (1)\nEl comando mutate() permite crear nuevas columnas en el mismo conjunto de datos.\nEn forma gráfica gracias a Allison Horts."
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-mutate-2",
+    "href": "slides/clase-4/clase_4_presentación.html#función-mutate-2",
+    "title": "Tidyverse II",
+    "section": "Función mutate (2)",
+    "text": "Función mutate (2)\nCargaremos unos datos de ejemplo con información de la franquicia Star Wars, que se encuentran alojados en dplyr.\n\nlibrary(tidyverse)\nprint(starwars)\n\n# A tibble: 87 × 14\n   name     height  mass hair_color skin_color eye_color birth_year sex   gender\n   &lt;chr&gt;     &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; \n 1 Luke Sk…    172    77 blond      fair       blue            19   male  mascu…\n 2 C-3PO       167    75 &lt;NA&gt;       gold       yellow         112   none  mascu…\n 3 R2-D2        96    32 &lt;NA&gt;       white, bl… red             33   none  mascu…\n 4 Darth V…    202   136 none       white      yellow          41.9 male  mascu…\n 5 Leia Or…    150    49 brown      light      brown           19   fema… femin…\n 6 Owen La…    178   120 brown, gr… light      blue            52   male  mascu…\n 7 Beru Wh…    165    75 brown      light      blue            47   fema… femin…\n 8 R5-D4        97    32 &lt;NA&gt;       white, red red             NA   none  mascu…\n 9 Biggs D…    183    84 black      light      brown           24   male  mascu…\n10 Obi-Wan…    182    77 auburn, w… fair       blue-gray       57   male  mascu…\n# ℹ 77 more rows\n# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,\n#   vehicles &lt;list&gt;, starships &lt;list&gt;"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-mutate-3",
+    "href": "slides/clase-4/clase_4_presentación.html#función-mutate-3",
+    "title": "Tidyverse II",
+    "section": "Función mutate (3)",
+    "text": "Función mutate (3)\nEl conjunto contiene el nombre del personaje, su altura en centímetros y el peso en kilogramos. Con esta información podríamos crear una nueva columna que corresponda a su IMC.\nEl Índice de Masa Corporal (IMC) corresponde al peso en kilogramos dividido por el cuadrado de la estatura en metros.\n\ndatos &lt;- starwars\ndatos |&gt; select(name, height, mass)\n\n# A tibble: 87 × 3\n   name               height  mass\n   &lt;chr&gt;               &lt;int&gt; &lt;dbl&gt;\n 1 Luke Skywalker        172    77\n 2 C-3PO                 167    75\n 3 R2-D2                  96    32\n 4 Darth Vader           202   136\n 5 Leia Organa           150    49\n 6 Owen Lars             178   120\n 7 Beru Whitesun lars    165    75\n 8 R5-D4                  97    32\n 9 Biggs Darklighter     183    84\n10 Obi-Wan Kenobi        182    77\n# ℹ 77 more rows"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-mutate-4",
+    "href": "slides/clase-4/clase_4_presentación.html#función-mutate-4",
+    "title": "Tidyverse II",
+    "section": "Función mutate (4)",
+    "text": "Función mutate (4)\n\ndatos &lt;- datos |&gt; \n  mutate(altura_mt = height/100,\n         peso_kg = mass,\n         imc = peso_kg / (altura_mt^2))\ndatos |&gt; select(name, height, mass, altura_mt, peso_kg, imc)\n\n# A tibble: 87 × 6\n   name               height  mass altura_mt peso_kg   imc\n   &lt;chr&gt;               &lt;int&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;\n 1 Luke Skywalker        172    77      1.72      77  26.0\n 2 C-3PO                 167    75      1.67      75  26.9\n 3 R2-D2                  96    32      0.96      32  34.7\n 4 Darth Vader           202   136      2.02     136  33.3\n 5 Leia Organa           150    49      1.5       49  21.8\n 6 Owen Lars             178   120      1.78     120  37.9\n 7 Beru Whitesun lars    165    75      1.65      75  27.5\n 8 R5-D4                  97    32      0.97      32  34.0\n 9 Biggs Darklighter     183    84      1.83      84  25.1\n10 Obi-Wan Kenobi        182    77      1.82      77  23.2\n# ℹ 77 more rows"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-mutate-5",
+    "href": "slides/clase-4/clase_4_presentación.html#función-mutate-5",
+    "title": "Tidyverse II",
+    "section": "Función mutate (5)",
+    "text": "Función mutate (5)\nPuede emplearse en combinación con otras funciones y/ paquetes. Por ejemplo:\n\nFunciones matemáticas.\nCondicionales: if_else, case_when.\nAsignar casos perdidos: na_if().\nSi la variable es caracter, resulta útil el paquete stringr.\nSi es de tipo fecha, resulta útil lubridate.\nSi es factor, resulta útil forcats."
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#estadísticas-agrupadas-5",
+    "href": "slides/clase-4/clase_4_presentación.html#estadísticas-agrupadas-5",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Estadísticas agrupadas (5)",
+    "text": "Estadísticas agrupadas (5)\nEn múltiples ocasiones nos interesará realizar operaciones a partir de agrupaciones. Por ejemplo, si quisiéramos saber el IMC sexo. En estos casos el comando más apropiado es group_by().\nPor ejemplo, si quisiéramos la media de IMC por cada especie\n\ndatos &lt;- datos |&gt; \n  group_by(sex) |&gt; \n  mutate(imc_sex = mean(imc, na.rm = TRUE)) |&gt; \n  ungroup()\ndatos |&gt; select(name, sex, imc, imc_sex)\n\n# A tibble: 87 × 4\n   name               sex      imc imc_sex\n   &lt;chr&gt;              &lt;chr&gt;  &lt;dbl&gt;   &lt;dbl&gt;\n 1 Luke Skywalker     male    26.0    25.7\n 2 C-3PO              none    26.9    32.7\n 3 R2-D2              none    34.7    32.7\n 4 Darth Vader        male    33.3    25.7\n 5 Leia Organa        female  21.8    19.2\n 6 Owen Lars          male    37.9    25.7\n 7 Beru Whitesun lars female  27.5    19.2\n 8 R5-D4              none    34.0    32.7\n 9 Biggs Darklighter  male    25.1    25.7\n10 Obi-Wan Kenobi     male    23.2    25.7\n# ℹ 77 more rows"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#estadísticas-agrupadas-1",
+    "href": "slides/clase-4/clase_4_presentación.html#estadísticas-agrupadas-1",
+    "title": "Tidyverse II",
+    "section": "Estadísticas agrupadas (1)",
+    "text": "Estadísticas agrupadas (1)\nEn múltiples ocasiones nos interesará realizar operaciones a partir de agrupaciones. Por ejemplo, si quisiéramos saber el IMC sexo. En estos casos se debe usar group_by().\nUna vez realizada la operación, debe desagruparse el tibble con ungroup().\nPor ejemplo, si quisiéramos la media de IMC por sexo:\n\ndatos &lt;- datos |&gt; \n  group_by(sex) |&gt; \n  mutate(imc_sex = mean(imc, na.rm = TRUE)) |&gt; \n  ungroup()\ndatos |&gt; select(name, sex, imc, imc_sex)\n\n# A tibble: 87 × 4\n   name               sex      imc imc_sex\n   &lt;chr&gt;              &lt;chr&gt;  &lt;dbl&gt;   &lt;dbl&gt;\n 1 Luke Skywalker     male    26.0    25.7\n 2 C-3PO              none    26.9    32.7\n 3 R2-D2              none    34.7    32.7\n 4 Darth Vader        male    33.3    25.7\n 5 Leia Organa        female  21.8    19.2\n 6 Owen Lars          male    37.9    25.7\n 7 Beru Whitesun lars female  27.5    19.2\n 8 R5-D4              none    34.0    32.7\n 9 Biggs Darklighter  male    25.1    25.7\n10 Obi-Wan Kenobi     male    23.2    25.7\n# ℹ 77 more rows"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#estadísticas-agrupadas-2",
+    "href": "slides/clase-4/clase_4_presentación.html#estadísticas-agrupadas-2",
+    "title": "Tidyverse II",
+    "section": "Estadísticas agrupadas (2)",
+    "text": "Estadísticas agrupadas (2)\nEn las últimas versiones de dplyr se agregó una nueva sintaxis que simplifica las agrupaciones.\nEl argumento .by permite realizar operaciones agrupadas y luego se desagrupa automáticamente.\n\ndatos &lt;- datos |&gt; \n  mutate(imc_sex = mean(imc, na.rm = TRUE),\n         .by = sex) \ndatos |&gt; select(name, sex, imc, imc_sex)\n\n# A tibble: 87 × 4\n   name               sex      imc imc_sex\n   &lt;chr&gt;              &lt;chr&gt;  &lt;dbl&gt;   &lt;dbl&gt;\n 1 Luke Skywalker     male    26.0    25.7\n 2 C-3PO              none    26.9    32.7\n 3 R2-D2              none    34.7    32.7\n 4 Darth Vader        male    33.3    25.7\n 5 Leia Organa        female  21.8    19.2\n 6 Owen Lars          male    37.9    25.7\n 7 Beru Whitesun lars female  27.5    19.2\n 8 R5-D4              none    34.0    32.7\n 9 Biggs Darklighter  male    25.1    25.7\n10 Obi-Wan Kenobi     male    23.2    25.7\n# ℹ 77 more rows"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#estadísticas-agrupadas-3",
+    "href": "slides/clase-4/clase_4_presentación.html#estadísticas-agrupadas-3",
+    "title": "Tidyverse II",
+    "section": "Estadísticas agrupadas (3)",
+    "text": "Estadísticas agrupadas (3)\nOtra opción para realizar estadísticas agrupadsa es la función summarise(). Esta también crea nueva columnas, pero retornará un nuevo tibble que contendrá tantas filas como categorías tenga la variable de agrupación.\nSe puede usar con group_by() o el argumento .by.\n\ndatos_agrupados_1 &lt;- datos |&gt; \n  group_by(sex) |&gt; \n  summarise(imc_sex = mean(imc, na.rm = TRUE)) |&gt; \n  ungroup()\ndatos_agrupados_1\n\n# A tibble: 5 × 2\n  sex            imc_sex\n  &lt;chr&gt;            &lt;dbl&gt;\n1 female            19.2\n2 hermaphroditic   443. \n3 male              25.7\n4 none              32.7\n5 &lt;NA&gt;              15.1"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#estadísticas-agrupadas-4",
+    "href": "slides/clase-4/clase_4_presentación.html#estadísticas-agrupadas-4",
+    "title": "Tidyverse II",
+    "section": "Estadísticas agrupadas (4)",
+    "text": "Estadísticas agrupadas (4)\n\ndatos_agrupados_2 &lt;- datos |&gt; \n  summarise(imc_sex = mean(imc, na.rm = TRUE),\n            .by = sex)\ndatos_agrupados_2\n\n# A tibble: 5 × 2\n  sex            imc_sex\n  &lt;chr&gt;            &lt;dbl&gt;\n1 male              25.7\n2 none              32.7\n3 female            19.2\n4 hermaphroditic   443. \n5 &lt;NA&gt;              15.1"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-if_else",
+    "href": "slides/clase-4/clase_4_presentación.html#función-if_else",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función if_else()",
+    "text": "Función if_else()\n¿Y si quisiéramos categorizar a las personas a partir de su IMC? En ese casoo se requiere emplear condiciones lógicas para transformar la variable.\nCrearemos una nueva variable categórica que asigne un estado según el rango del IMC.\nLa función if_else() facilita esta tarea. Consta de cuatro argumentos que nos interesan.\n\nif_else(condition, true, false, missing = NULL, ..., ptype = NULL, size = NULL)\n\n\ncondition: se especifica la condición lógica que se evaluará.\ntrue: indica el valor que debe asignarse cuando la condición es verdadera.\nfalse: indica el valor que debe asignarse cuando la condición es falsa.\nmissing: indicaqué valor deben tomar los casos perdidos. Por defecto siempre será missing."
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-if_else-1",
+    "href": "slides/clase-4/clase_4_presentación.html#función-if_else-1",
+    "title": "Tidyverse II",
+    "section": "Función if_else() (1)",
+    "text": "Función if_else() (1)\n¿Y si quisiéramos categorizar a las personas a partir de su IMC? En ese casoo se requiere emplear condiciones lógicas para transformar la variable.\nCrearemos una nueva variable categórica que asigne un estado según el rango del IMC.\nLa función if_else() facilita esta tarea. Consta de cuatro argumentos que nos interesan.\n\nif_else(condition, true, false, missing = NULL, ..., ptype = NULL, size = NULL)\n\n\ncondition: se especifica la condición lógica que se evaluará.\ntrue: indica el valor que debe asignarse cuando la condición es verdadera.\nfalse: indica el valor que debe asignarse cuando la condición es falsa.\nmissing: indicaqué valor deben tomar los casos perdidos. Por defecto siempre será missing."
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-if_else-2",
+    "href": "slides/clase-4/clase_4_presentación.html#función-if_else-2",
+    "title": "Tidyverse II",
+    "section": "Función if_else() (2)",
+    "text": "Función if_else() (2)\nCrearemos una variable que asigne “25 o más” a todos los casos que tengan un IMC igual o superior a 25.0 y “Menos de 25” a todos los casos con valores menores.\n\ndatos &lt;- datos |&gt; \n  mutate(imc_dummy = \n           if_else(imc &gt;= 25.0, \"25 o más\", \"Menos de 25\", NA_character_))\ndatos |&gt; \n  select(name, imc, imc_dummy)\n\n# A tibble: 87 × 3\n   name                 imc imc_dummy  \n   &lt;chr&gt;              &lt;dbl&gt; &lt;chr&gt;      \n 1 Luke Skywalker      26.0 25 o más   \n 2 C-3PO               26.9 25 o más   \n 3 R2-D2               34.7 25 o más   \n 4 Darth Vader         33.3 25 o más   \n 5 Leia Organa         21.8 Menos de 25\n 6 Owen Lars           37.9 25 o más   \n 7 Beru Whitesun lars  27.5 25 o más   \n 8 R5-D4               34.0 25 o más   \n 9 Biggs Darklighter   25.1 25 o más   \n10 Obi-Wan Kenobi      23.2 Menos de 25\n# ℹ 77 more rows"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-case_when-1",
+    "href": "slides/clase-4/clase_4_presentación.html#función-case_when-1",
+    "title": "Tidyverse II",
+    "section": "Función case_when() (1)",
+    "text": "Función case_when() (1)\nCuando queremos hacer más de una condición lógica if_else() se vuelve menos manejable. Para esos escenarios, está la función case_when(), que es una versión generalizada que permite asignar múltiples condiciones. Su estructura es la siguiente.\n\ncase_when(..., .default = NULL, .ptype = NULL, .size = NULL)\n\n\nEn la parte de la izquierda siempre se escribe la condición lógica que se desea comprobar.\nLuego, lo que está a la derecha del símbolo de la virgulilla indica cuál será el resultado que se asignará cuando se cumpla la condición.\nEl argumento .default indica qué pasará cuando no se cumpla ninguna. Por defecto pasarán a ser missing.\nSi queremos mantener los valores anteriores cuando no se cumpla ninguna condición, en el argumento .default se puede espeficiar el mismo valor que tenía la variable antes."
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-case_when-2",
+    "href": "slides/clase-4/clase_4_presentación.html#función-case_when-2",
+    "title": "Tidyverse II",
+    "section": "Función case_when() (2)",
+    "text": "Función case_when() (2)\nVeamos un ejemplo hipotético de una base de datos con una variable edad en la cual crear una edad en tramos. 1) Niños/as (0 a 14 años); 2) Jóvenes (15 a 29); 3) Adultos (30 a 59); 4) Adultos mayores (60 y más).\n\ndata_hipotetica = tibble(edad = c(60, 30, 14, 5, 70, NA, 66, 25, 8, 1, 95, 44, 150))\ndata_hipotetica &lt;- data_hipotetica |&gt; \n  mutate(edad_tramos = \n           case_when(edad %in% 0:14 ~ 1,\n                     edad %in% 15:29 ~ 2,\n                     edad %in% 30:59 ~ 3,\n                     edad &gt;= 60 ~ 4,\n                     .default = NA_integer_\n                     )\n         )\ndata_hipotetica |&gt; slice_head(n = 10)\n\n# A tibble: 10 × 2\n    edad edad_tramos\n   &lt;dbl&gt;       &lt;dbl&gt;\n 1    60           4\n 2    30           3\n 3    14           1\n 4     5           1\n 5    70           4\n 6    NA          NA\n 7    66           4\n 8    25           2\n 9     8           1\n10     1           1"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-case_when-2-1",
+    "href": "slides/clase-4/clase_4_presentación.html#función-case_when-2-1",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Función case_when() (2)",
+    "text": "Función case_when() (2)\nAhora supongamos otro ejemplo donde queremos crear una columna con la edad, pero que excluya los casos con valores superiores a 120 años.\n\ndata_hipotetica = tibble(edad = c(60, 30, 14, 5, 70, NA, 66, 25, 8, 1, 95, 44, 150))\ndata_hipotetica &lt;- data_hipotetica |&gt; \n  mutate(edad_limpia = case_when\n         (edad &gt;= 120 ~ NA_integer_,\n           .default = edad)\n         )\ndata_hipotetica\n\n# A tibble: 13 × 2\n    edad edad_limpia\n   &lt;dbl&gt;       &lt;dbl&gt;\n 1    60          60\n 2    30          30\n 3    14          14\n 4     5           5\n 5    70          70\n 6    NA          NA\n 7    66          66\n 8    25          25\n 9     8           8\n10     1           1\n11    95          95\n12    44          44\n13   150          NA"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#función-case_when-3",
+    "href": "slides/clase-4/clase_4_presentación.html#función-case_when-3",
+    "title": "Tidyverse II",
+    "section": "Función case_when() (3)",
+    "text": "Función case_when() (3)\nAhora supongamos otro ejemplo donde queremos crear una columna con la edad, pero que excluya los casos con valores superiores a 120 años.\n\ndata_hipotetica = tibble(edad = c(60, 30, 14, 5, 70, NA, 66, 25, 8, 1, 95, 44, 150))\ndata_hipotetica &lt;- data_hipotetica |&gt; \n  mutate(edad_limpia = \n           case_when(edad &gt;= 120 ~ NA_integer_,\n                     .default = edad\n                     )\n         )\ndata_hipotetica\n\n# A tibble: 13 × 2\n    edad edad_limpia\n   &lt;dbl&gt;       &lt;dbl&gt;\n 1    60          60\n 2    30          30\n 3    14          14\n 4     5           5\n 5    70          70\n 6    NA          NA\n 7    66          66\n 8    25          25\n 9     8           8\n10     1           1\n11    95          95\n12    44          44\n13   150          NA"
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#consideraciones",
+    "href": "slides/clase-4/clase_4_presentación.html#consideraciones",
+    "title": "Introducción a Tidyverse Parte 2",
+    "section": "Consideraciones",
+    "text": "Consideraciones\nTanto para función case_when() como if_else() se debe tener en cuenta el tipo de dato al momento de especificar los valores perdidos. En concreto, debemos pedir el tipo que corresponda a la nueva variable que crearemos.\n\nNA: para especificar casos perdidos en variables lógicas o booleanas que tienen valores TRUE o FALSE.\nNA_real_: para especificar los casos perdidos en variables con números reales.\nNA_integer_: para especificar los casos perdidos en variables con números enteros.\nNA_character_: para especificar los casos perdidos en variables de tipo carácter."
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#consideraciones-1",
+    "href": "slides/clase-4/clase_4_presentación.html#consideraciones-1",
+    "title": "Tidyverse II",
+    "section": "Consideraciones (1)",
+    "text": "Consideraciones (1)\nTanto para función case_when() como if_else() se debe tener en cuenta el tipo de dato al momento de especificar los valores perdidos. En concreto, debemos pedir el tipo que corresponda a la nueva variable que crearemos.\n\nNA: para especificar casos perdidos en variables lógicas o booleanas que tienen valores TRUE o FALSE.\nNA_real_: para especificar los casos perdidos en variables con números reales.\nNA_integer_: para especificar los casos perdidos en variables con números enteros.\nNA_character_: para especificar los casos perdidos en variables de tipo carácter."
+  },
+  {
+    "objectID": "slides/clase-4/clase_4_presentación.html#consideraciones-2",
+    "href": "slides/clase-4/clase_4_presentación.html#consideraciones-2",
+    "title": "Tidyverse II",
+    "section": "Consideraciones (2)",
+    "text": "Consideraciones (2)\nSe puede cambiar el tipo de una variable empleando las siguientes funciones según corresponda al tipo de dato.\nSe debe tener en cuenta que si R no puede convertir el tipo de dato adecuadamente para una celda específica, lo transformará en NA.\n\nas.character: transforma la variable al tipo character.\nas.numeric: transforma la variable al tipo numeric.\nas.logic: transforma la variable al tipo logic.\nas_factor: esta función especial con guión bajo permite transformar a factor. Proviene del paquete haven.\n\nY muchas más."
+  },
+  {
+    "objectID": "header_class/header_clase_4.html",
+    "href": "header_class/header_clase_4.html",
+    "title": "Clase 4",
+    "section": "",
+    "text": "Ideas más importantes\n\n\n\n\nFunciones para creación de variables\nCondicionales y recodificaciones\nEstadísticas de resumen.\nUso de if_else() y case_when"
+  },
+  {
+    "objectID": "header_class/header_clase_4.html#presentación-de-la-clase",
+    "href": "header_class/header_clase_4.html#presentación-de-la-clase",
+    "title": "Clase 4",
+    "section": "Presentación de la clase",
+    "text": "Presentación de la clase\n\n\nDescargar presentación\n\nVuelve a la descripción del curso ⏎"
   }
 ]

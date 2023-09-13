@@ -1,0 +1,27 @@
+---
+title: "Clase 4"
+subtitle: "**Tidyverse II**"
+---
+
+::: {.callout-note title="Ideas más importantes"}
+
+1. Funciones para creación de variables
+
+2. Condicionales y recodificaciones
+
+3. Estadísticas de resumen.
+
+4. Uso de `if_else()` y `case_when`
+:::
+
+## Presentación de la clase
+
+<iframe src="/slides/clase-4/clase_4_presentación.html" height="550" width="100%" allowfullscreen="true">
+
+</iframe>
+
+<a href="/slides/clase-4/clase_4_presentación.html" download="Descarga_clase_4_presentación.html" class="download-button">Descargar presentación</a>
+
+::: {style="font-size: 0.875em;"}
+Vuelve a la [descripción del curso](/ "Descripción del curso") ⏎
+:::

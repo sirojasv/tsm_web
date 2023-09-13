@@ -1,0 +1,304 @@
+---
+# Title & Author
+title: "Tidyverse II"
+subtitle: | 
+    | Metodología Cuantitativa - TSM301
+    | Clase 4
+author: "Sebastián Rojas Vergara - sirojas1@uc.cl"
+#institute:
+#order:
+date: 09/13/2023
+date-format: "dddd D MMMM, YYYY"
+# Format Options
+format:
+  revealjs: 
+    slide-number: true
+    transition: slide
+    transition-speed: slow
+    #chalkboard: 
+      #buttons: false
+    smaller: true
+    controls: true
+    toc: false
+    number-sections: false
+    highlight-style: github
+    fig-dpi: 400
+    fig-cap-location: top
+    fig-responsive: true
+    embed-resources: true
+    preview-links: auto
+    theme: [dark, violet.scss]
+    logo: images/logo_puc_bn.png
+    # css: styles.css
+    footer: "Metodología Cuantitativa - 2023"
+comments: false
+execute: 
+  echo: true
+---
+
+## Contenidos
+
+**I. Creación de variables**
+
+**II. Condicionales y recodificaciones**
+
+**III. Ejercicio**
+
+##  {background-color="rgb(25,25,25)"}
+
+::: center-xy
+::: large-text
+<br> I. Creación de variables <br>
+:::
+:::
+
+## Creación de variables
+
+En R existen funciones que permiten crear o modificar variables. Estas son particularmente útiles cuando:
+
+- Recodificar variables.
+- Crear nuevas variables a partir de otras.
+- Limpiar variables.
+- Cambiar el formato a las variables.
+
+
+## Función mutate (1)
+
+El comando `mutate()` permite crear nuevas columnas en el mismo conjunto de datos.
+
+En forma gráfica gracias a [Allison Horts](https://allisonhorst.com/r-packages-functions).  
+  
+![](images/mutate.png){width="350" height="auto" fig-align="center"}
+
+## Función mutate (2)
+
+Cargaremos unos datos de ejemplo con información de la franquicia Star Wars, que se encuentran alojados en `dplyr`.
+
+```{r}
+library(tidyverse)
+print(starwars)
+```
+
+## Función mutate (3)
+
+El conjunto contiene el nombre del personaje, su altura en centímetros y el peso en kilogramos. Con esta información podríamos crear una nueva columna que corresponda a su IMC.
+
+El Índice de Masa Corporal (IMC) corresponde al peso en kilogramos dividido por el cuadrado de la estatura en metros.
+
+```{r}
+datos <- starwars
+datos |> select(name, height, mass)
+```
+
+## Función mutate (4)
+
+```{r}
+datos <- datos |> 
+  mutate(altura_mt = height/100,
+         peso_kg = mass,
+         imc = peso_kg / (altura_mt^2))
+datos |> select(name, height, mass, altura_mt, peso_kg, imc)
+```
+
+## Función mutate (5)
+
+Puede emplearse en combinación con otras funciones y/ paquetes. Por ejemplo:
+
+- Funciones matemáticas.
+- Condicionales: `if_else`, `case_when`.
+- Asignar casos perdidos: `na_if()`.
+- Si la variable es caracter, resulta útil el paquete `stringr`.
+- Si es de tipo fecha, resulta útil `lubridate`.
+- Si es factor, resulta útil `forcats`.
+
+## Estadísticas agrupadas (1)
+
+En múltiples ocasiones nos interesará realizar operaciones a partir de agrupaciones. Por ejemplo, si quisiéramos saber el IMC sexo. En estos casos se debe usar `group_by()`.
+
+Una vez realizada la operación, debe desagruparse el tibble con `ungroup()`.
+
+Por ejemplo, si quisiéramos la media de IMC por sexo:
+
+```{r}
+datos <- datos |> 
+  group_by(sex) |> 
+  mutate(imc_sex = mean(imc, na.rm = TRUE)) |> 
+  ungroup()
+datos |> select(name, sex, imc, imc_sex)
+```
+
+## Estadísticas agrupadas (2)
+
+En las últimas versiones de `dplyr` se agregó una nueva sintaxis que simplifica las agrupaciones. 
+
+El argumento `.by` permite realizar operaciones agrupadas y luego se desagrupa automáticamente.
+
+```{r}
+datos <- datos |> 
+  mutate(imc_sex = mean(imc, na.rm = TRUE),
+         .by = sex) 
+datos |> select(name, sex, imc, imc_sex)
+```
+
+## Estadísticas agrupadas (3)
+
+Otra opción para realizar estadísticas agrupadsa es la función `summarise()`. Esta también crea nueva columnas, pero retornará un **nuevo tibble** que contendrá tantas filas como categorías tenga la variable de agrupación.
+
+Se puede usar con `group_by()` o el argumento `.by`.
+
+```{r}
+datos_agrupados_1 <- datos |> 
+  group_by(sex) |> 
+  summarise(imc_sex = mean(imc, na.rm = TRUE)) |> 
+  ungroup()
+datos_agrupados_1
+```
+
+## Estadísticas agrupadas (4)
+
+```{r}
+datos_agrupados_2 <- datos |> 
+  summarise(imc_sex = mean(imc, na.rm = TRUE),
+            .by = sex)
+datos_agrupados_2
+```
+
+##  {background-color="rgb(25,25,25)"}
+
+::: center-xy
+::: large-text
+<br> II. Condicionales y recodificaciones <br>
+:::
+:::
+
+## Función if_else() (1)
+
+¿Y si quisiéramos categorizar a las personas a partir de su IMC? En ese casoo se requiere emplear condiciones lógicas para transformar la variable.
+
+Crearemos una nueva variable categórica que asigne un estado según el rango del IMC. 
+
+La función `if_else()` facilita esta tarea. Consta de cuatro argumentos que nos interesan.
+
+```{r}
+#| eval: false
+if_else(condition, true, false, missing = NULL, ..., ptype = NULL, size = NULL)
+```
+
+- `condition`: se especifica la condición lógica que se evaluará.
+- `true`: indica el valor que debe asignarse cuando la condición es verdadera.
+- `false`: indica el valor que debe asignarse cuando la condición es falsa.
+- `missing`: indicaqué valor deben tomar los casos perdidos. Por defecto siempre será missing.
+
+## Función if_else() (2)
+
+Crearemos una variable que asigne "25 o más" a todos los casos que tengan un IMC igual o superior a 25.0 y "Menos de 25" a todos los casos con valores menores.
+
+```{r}
+datos <- datos |> 
+  mutate(imc_dummy = 
+           if_else(imc >= 25.0, "25 o más", "Menos de 25", NA_character_))
+datos |> 
+  select(name, imc, imc_dummy)
+```
+
+## Función case_when() (1)
+
+Cuando queremos hacer más de una condición lógica `if_else()` se vuelve menos manejable. Para esos escenarios, está la función `case_when()`, que es una versión generalizada que permite asignar múltiples condiciones. Su estructura es la siguiente.
+
+```{r}
+#| eval: false
+case_when(..., .default = NULL, .ptype = NULL, .size = NULL)
+```
+
+- En la parte de la izquierda siempre se escribe la condición lógica que se desea comprobar.
+- Luego, lo que está a la derecha del símbolo de la virgulilla indica cuál será el resultado que se asignará cuando se cumpla la condición.
+- El argumento `.default` indica qué pasará cuando no se cumpla ninguna. Por defecto pasarán a ser missing.
+- Si queremos mantener los valores anteriores cuando no se cumpla ninguna condición, en el argumento .default se puede espeficiar el mismo valor que tenía la variable antes.
+
+## Función case_when() (2)
+
+Veamos un ejemplo hipotético de una base de datos con una variable edad en la cual crear una edad en tramos. 1) Niños/as (0 a 14 años); 2) Jóvenes (15 a 29); 3) Adultos (30 a 59); 4) Adultos mayores (60 y más).
+
+```{r}
+data_hipotetica = tibble(edad = c(60, 30, 14, 5, 70, NA, 66, 25, 8, 1, 95, 44, 150))
+data_hipotetica <- data_hipotetica |> 
+  mutate(edad_tramos = 
+           case_when(edad %in% 0:14 ~ 1,
+                     edad %in% 15:29 ~ 2,
+                     edad %in% 30:59 ~ 3,
+                     edad >= 60 ~ 4,
+                     .default = NA_integer_
+                     )
+         )
+data_hipotetica |> slice_head(n = 10)
+```
+
+## Función case_when() (3)
+
+Ahora supongamos otro ejemplo donde queremos crear una columna con la edad, pero que excluya los casos con valores superiores a 120 años.
+
+```{r}
+data_hipotetica = tibble(edad = c(60, 30, 14, 5, 70, NA, 66, 25, 8, 1, 95, 44, 150))
+data_hipotetica <- data_hipotetica |> 
+  mutate(edad_limpia = 
+           case_when(edad >= 120 ~ NA_integer_,
+                     .default = edad
+                     )
+         )
+data_hipotetica
+```
+
+## Consideraciones (1)
+
+Tanto para función `case_when()` como `if_else()` se debe tener en cuenta el tipo de dato al momento de especificar los valores perdidos. En concreto, debemos pedir el tipo que corresponda a la nueva variable que crearemos.
+
+- `NA`: para especificar casos perdidos en variables lógicas o booleanas que tienen valores `TRUE` o `FALSE`.
+- `NA_real_`: para especificar los casos perdidos en variables con números reales.
+- `NA_integer_`: para especificar los casos perdidos en variables con números enteros.
+- `NA_character_`: para especificar los casos perdidos en variables de tipo carácter.
+
+## Consideraciones (2)
+
+Se puede cambiar el tipo de una variable empleando las siguientes funciones según corresponda al tipo de dato.
+
+Se debe tener en cuenta que si R no puede convertir el tipo de dato adecuadamente para una celda específica, lo transformará en `NA`.
+
+- `as.character`: transforma la variable al tipo `character`.
+- `as.numeric`: transforma la variable al tipo `numeric`.
+- `as.logic`: transforma la variable al tipo `logic`.
+- `as_factor`: esta función especial con guión bajo permite transformar a `factor`. Proviene del paquete haven.
+
+Y muchas más.
+
+## {background-color="rgb(25,25,25)"}
+
+::: center-xy
+::: large-text
+<br> III. Ejercicio <br>
+:::
+:::
+
+## Ejercicio
+
+En la plataforma Canvas encontrará un subconjunto de variables de la Encuesta Casen 2022. Realice los procedimientos indicados en el script, los cuales buscan practicar.
+
+- Operaciones de selección de columnas.
+- Operaciones de filtrado.
+- Conteos de variables.
+- Creación de variables y tablas resumen.
+- Uso de condiciones lógicas.
+
+##  {background-color="rgb(25,25,25)"}
+
+::: center-xy
+::: large-text
+<br> ¡Gracias! <br> <https://sirojasv.github.io/tsm_web/>
+:::
+:::
+
+
+```{r}
+#| include: false
+# Se añade código de JS para controlar h2
+```
+<script src="script.js"></script>
